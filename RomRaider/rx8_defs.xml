@@ -965,7 +965,7 @@
             <scaling expression="(x * 0.5 ) + 0" to_byte="(x - 0) / 0.5" format="0.00" />
             <table name="Unknown" type="Y Axis" storagetype="float" endian="big" expression="x" to_byte="x" />
         </table>
-        <table name="Table 2D - 131 " category="Unknown 2D" type="2D" storagetype="uint8" endian="big" sizey="8">
+        <table name="Throttle Pedal Percent Decreasing Filter Factor" category="Unknown 2D" type="2D" storagetype="uint8" endian="big" sizey="8">
             <scaling expression="(x * 0.007812 ) + 0" to_byte="(x - 0) / 0.007812" format="0.00" />
             <table name="Unknown" type="Y Axis" storagetype="float" endian="big" expression="x" to_byte="x" />
         </table>
@@ -2567,40 +2567,40 @@
                 <scaling expression="x" to_byte="x" />
             </table>
         </table>
-        <table name="Accel Pedal to Throttle Position #1" category="Torque Control" type="3D" storagetype="uint16" endian="big" expression="x" to_byte="x" sizex="21" sizey="18">
+        <table name="Throttle Pedal to Throttle Plate Request - Gear 1/2" category="Throttle Control" type="3D" storagetype="uint16" endian="big" expression="x" to_byte="x" sizex="21" sizey="18">
             <scaling expression="(x * 0.003052 ) + 0" to_byte="(x - 0) / 0.003052" format="0.00" />
             <table name="Engine Speed" type="X Axis" storagetype="float" endian="big">
-                <scaling expression="x" to_byte="x" />
+                <scaling units="RPM" expression="x" to_byte="x" />
             </table>
-            <table name="Accelerator Pedal Position" type="Y Axis" storagetype="float" endian="big">
-                <scaling expression="x" to_byte="x" />
+            <table name="Throttle Pedal Position" type="Y Axis" storagetype="float" endian="big">
+                <scaling units="%" expression="x" to_byte="x" />
             </table>
         </table>
-        <table name="Accel Pedal to Throttle Position #2" category="Torque Control" type="3D" storagetype="uint16" endian="big" expression="x" to_byte="x" sizex="21" sizey="18">
+        <table name="Throttle Pedal to Throttle Plate Request - Gear Neutral" category="Throttle Control" type="3D" storagetype="uint16" endian="big" expression="x" to_byte="x" sizex="21" sizey="18">
             <scaling expression="(x * 0.003052 ) + 0" to_byte="(x - 0) / 0.003052" format="0.00" />
             <table name="Engine Speed" type="X Axis" storagetype="float" endian="big">
-                <scaling expression="x" to_byte="x" />
+                <scaling units="RPM" expression="x" to_byte="x" />
             </table>
-            <table name="Accelerator Pedal Position" type="Y Axis" storagetype="float" endian="big">
-                <scaling expression="x" to_byte="x" />
+            <table name="Throttle Pedal Position" type="Y Axis" storagetype="float" endian="big">
+                <scaling units="%" expression="x" to_byte="x" />
             </table>
         </table>
-        <table name="Accel Pedal to Throttle Position #3" category="Torque Control" type="3D" storagetype="uint16" endian="big" expression="x" to_byte="x" sizex="21" sizey="18">
+        <table name="Throttle Pedal to Throttle Plate Request - Gear 5/6" category="Throttle Control" type="3D" storagetype="uint16" endian="big" expression="x" to_byte="x" sizex="21" sizey="18">
             <scaling expression="(x * 0.003052 ) + 0" to_byte="(x - 0) / 0.003052" format="0.00" />
             <table name="Engine Speed" type="X Axis" storagetype="float" endian="big">
-                <scaling expression="x" to_byte="x" />
+                <scaling units="RPM" expression="x" to_byte="x" />
             </table>
-            <table name="Accelerator Pedal Position" type="Y Axis" storagetype="float" endian="big">
-                <scaling expression="x" to_byte="x" />
+            <table name="Throttle Pedal Position" type="Y Axis" storagetype="float" endian="big">
+                <scaling units="%" expression="x" to_byte="x" />
             </table>
         </table>
-        <table name="Accel Pedal to Throttle Position #4" category="Torque Control" type="3D" storagetype="uint16" endian="big" expression="x" to_byte="x" sizex="21" sizey="18">
+        <table name="Throttle Pedal to Throttle Plate Request - Gear 3/4" category="Throttle Control" type="3D" storagetype="uint16" endian="big" expression="x" to_byte="x" sizex="21" sizey="18">
             <scaling expression="(x * 0.003052 ) + 0" to_byte="(x - 0) / 0.003052" format="0.00" />
             <table name="Engine Speed" type="X Axis" storagetype="float" endian="big">
-                <scaling expression="x" to_byte="x" />
+                <scaling units="RPM" expression="x" to_byte="x" />
             </table>
-            <table name="Accelerator Pedal Position" type="Y Axis" storagetype="float" endian="big">
-                <scaling expression="x" to_byte="x" />
+            <table name="Throttle Pedal Position" type="Y Axis" storagetype="float" endian="big">
+                <scaling units="%" expression="x" to_byte="x" />
             </table>
         </table>
         <table name="Alternator Voltage Delta" category="Alternator Control" type="3D" storagetype="uint8" endian="big" expression="x" to_byte="x" sizex="11" sizey="12">
@@ -4003,7 +4003,7 @@
         <table name="Table 2D - 130 " storageaddress="0x073DEC">
             <table type="Y Axis" storageaddress="0x073DD8" />
         </table>
-        <table name="Table 2D - 131 " storageaddress="0x073FB8">
+        <table name="Throttle Pedal Percent Decreasing Filter Factor" storageaddress="0x073FB8">
             <table type="Y Axis" storageaddress="0x073F98" />
         </table>
         <table name="Table 2D - 132 " storageaddress="0x073FE0">
@@ -5018,19 +5018,19 @@
             <table type="X Axis" storageaddress="0x073E8C" />
             <table type="Y Axis" storageaddress="0x073EA4" />
         </table>
-        <table name="Accel Pedal to Throttle Position #1" storageaddress="0x074250">
+        <table name="Throttle Pedal to Throttle Plate Request - Gear 1/2" storageaddress="0x074250">
             <table type="X Axis" storageaddress="0x0741B4" />
             <table type="Y Axis" storageaddress="0x074208" />
         </table>
-        <table name="Accel Pedal to Throttle Position #2" storageaddress="0x0745E0">
+        <table name="Throttle Pedal to Throttle Plate Request - Gear Neutral" storageaddress="0x0745E0">
             <table type="X Axis" storageaddress="0x074544" />
             <table type="Y Axis" storageaddress="0x074598" />
         </table>
-        <table name="Accel Pedal to Throttle Position #3" storageaddress="0x074970">
+        <table name="Throttle Pedal to Throttle Plate Request - Gear 5/6" storageaddress="0x074970">
             <table type="X Axis" storageaddress="0x0748D4" />
             <table type="Y Axis" storageaddress="0x074928" />
         </table>
-        <table name="Accel Pedal to Throttle Position #4" storageaddress="0x074D00">
+        <table name="Throttle Pedal to Throttle Plate Request - Gear 3/4" storageaddress="0x074D00">
             <table type="X Axis" storageaddress="0x074C64" />
             <table type="Y Axis" storageaddress="0x074CB8" />
         </table>
@@ -6000,7 +6000,7 @@
         <table name="Table 2D - 130 " storageaddress="0x07376C">
             <table type="Y Axis" storageaddress="0x073758" />
         </table>
-        <table name="Table 2D - 131 " storageaddress="0x073938">
+        <table name="Throttle Pedal Percent Decreasing Filter Factor" storageaddress="0x073938">
             <table type="Y Axis" storageaddress="0x073918" />
         </table>
         <table name="Table 2D - 137 " storageaddress="0x07396C">
@@ -6844,19 +6844,19 @@
             <table type="X Axis" storageaddress="0x07380C" />
             <table type="Y Axis" storageaddress="0x073824" />
         </table>
-        <table name="Accel Pedal to Throttle Position #1" storageaddress="0x073A9C">
+        <table name="Throttle Pedal to Throttle Plate Request - Gear 1/2" storageaddress="0x073A9C">
             <table type="X Axis" storageaddress="0x073A00" />
             <table type="Y Axis" storageaddress="0x073A54" />
         </table>
-        <table name="Accel Pedal to Throttle Position #2" storageaddress="0x073E2C">
+        <table name="Throttle Pedal to Throttle Plate Request - Gear Neutral" storageaddress="0x073E2C">
             <table type="X Axis" storageaddress="0x073D90" />
             <table type="Y Axis" storageaddress="0x073DE4" />
         </table>
-        <table name="Accel Pedal to Throttle Position #3" storageaddress="0x0741BC">
+        <table name="Throttle Pedal to Throttle Plate Request - Gear 5/6" storageaddress="0x0741BC">
             <table type="X Axis" storageaddress="0x074120" />
             <table type="Y Axis" storageaddress="0x074174" />
         </table>
-        <table name="Accel Pedal to Throttle Position #4" storageaddress="0x07454C">
+        <table name="Throttle Pedal to Throttle Plate Request - Gear 3/4" storageaddress="0x07454C">
             <table type="X Axis" storageaddress="0x0744B0" />
             <table type="Y Axis" storageaddress="0x074504" />
         </table>
@@ -7782,7 +7782,7 @@
         <table name="Table 2D - 130 " storageaddress="0x07376C">
             <table type="Y Axis" storageaddress="0x073758" />
         </table>
-        <table name="Table 2D - 131 " storageaddress="0x073938">
+        <table name="Throttle Pedal Percent Decreasing Filter Factor" storageaddress="0x073938">
             <table type="Y Axis" storageaddress="0x073918" />
         </table>
         <table name="Table 2D - 137 " storageaddress="0x07396C">
@@ -8625,19 +8625,19 @@
             <table type="X Axis" storageaddress="0x07380C" />
             <table type="Y Axis" storageaddress="0x073824" />
         </table>
-        <table name="Accel Pedal to Throttle Position #1" storageaddress="0x073A9C">
+        <table name="Throttle Pedal to Throttle Plate Request - Gear 1/2" storageaddress="0x073A9C">
             <table type="X Axis" storageaddress="0x073A00" />
             <table type="Y Axis" storageaddress="0x073A54" />
         </table>
-        <table name="Accel Pedal to Throttle Position #2" storageaddress="0x073E2C">
+        <table name="Throttle Pedal to Throttle Plate Request - Gear Neutral" storageaddress="0x073E2C">
             <table type="X Axis" storageaddress="0x073D90" />
             <table type="Y Axis" storageaddress="0x073DE4" />
         </table>
-        <table name="Accel Pedal to Throttle Position #3" storageaddress="0x0741BC">
+        <table name="Throttle Pedal to Throttle Plate Request - Gear 5/6" storageaddress="0x0741BC">
             <table type="X Axis" storageaddress="0x074120" />
             <table type="Y Axis" storageaddress="0x074174" />
         </table>
-        <table name="Accel Pedal to Throttle Position #4" storageaddress="0x07454C">
+        <table name="Throttle Pedal to Throttle Plate Request - Gear 3/4" storageaddress="0x07454C">
             <table type="X Axis" storageaddress="0x0744B0" />
             <table type="Y Axis" storageaddress="0x074504" />
         </table>
@@ -9586,7 +9586,7 @@
         <table name="Table 2D - 130 " storageaddress="0x0735AC">
             <table type="Y Axis" storageaddress="0x073598" />
         </table>
-        <table name="Table 2D - 131 " storageaddress="0x073778">
+        <table name="Throttle Pedal Percent Decreasing Filter Factor" storageaddress="0x073778">
             <table type="Y Axis" storageaddress="0x073758" />
         </table>
         <table name="Table 2D - 132 " storageaddress="0x0737A0">
@@ -10527,19 +10527,19 @@
             <table type="X Axis" storageaddress="0x07364C" />
             <table type="Y Axis" storageaddress="0x073664" />
         </table>
-        <table name="Accel Pedal to Throttle Position #1" storageaddress="0x073A10">
+        <table name="Throttle Pedal to Throttle Plate Request - Gear 1/2" storageaddress="0x073A10">
             <table type="X Axis" storageaddress="0x073974" />
             <table type="Y Axis" storageaddress="0x0739C8" />
         </table>
-        <table name="Accel Pedal to Throttle Position #2" storageaddress="0x073DA0">
+        <table name="Throttle Pedal to Throttle Plate Request - Gear Neutral" storageaddress="0x073DA0">
             <table type="X Axis" storageaddress="0x073D04" />
             <table type="Y Axis" storageaddress="0x073D58" />
         </table>
-        <table name="Accel Pedal to Throttle Position #3" storageaddress="0x074130">
+        <table name="Throttle Pedal to Throttle Plate Request - Gear 5/6" storageaddress="0x074130">
             <table type="X Axis" storageaddress="0x074094" />
             <table type="Y Axis" storageaddress="0x0740E8" />
         </table>
-        <table name="Accel Pedal to Throttle Position #4" storageaddress="0x0744C0">
+        <table name="Throttle Pedal to Throttle Plate Request - Gear 3/4" storageaddress="0x0744C0">
             <table type="X Axis" storageaddress="0x074424" />
             <table type="Y Axis" storageaddress="0x074478" />
         </table>
@@ -11492,7 +11492,7 @@
         <table name="Table 2D - 130 " storageaddress="0x073DEC">
             <table type="Y Axis" storageaddress="0x073DD8" />
         </table>
-        <table name="Table 2D - 131 " storageaddress="0x073FB8">
+        <table name="Throttle Pedal Percent Decreasing Filter Factor" storageaddress="0x073FB8">
             <table type="Y Axis" storageaddress="0x073F98" />
         </table>
         <table name="Table 2D - 132 " storageaddress="0x073FE0">
@@ -12507,19 +12507,19 @@
             <table type="X Axis" storageaddress="0x073E8C" />
             <table type="Y Axis" storageaddress="0x073EA4" />
         </table>
-        <table name="Accel Pedal to Throttle Position #1" storageaddress="0x074250">
+        <table name="Throttle Pedal to Throttle Plate Request - Gear 1/2" storageaddress="0x074250">
             <table type="X Axis" storageaddress="0x0741B4" />
             <table type="Y Axis" storageaddress="0x074208" />
         </table>
-        <table name="Accel Pedal to Throttle Position #2" storageaddress="0x0745E0">
+        <table name="Throttle Pedal to Throttle Plate Request - Gear Neutral" storageaddress="0x0745E0">
             <table type="X Axis" storageaddress="0x074544" />
             <table type="Y Axis" storageaddress="0x074598" />
         </table>
-        <table name="Accel Pedal to Throttle Position #3" storageaddress="0x074970">
+        <table name="Throttle Pedal to Throttle Plate Request - Gear 5/6" storageaddress="0x074970">
             <table type="X Axis" storageaddress="0x0748D4" />
             <table type="Y Axis" storageaddress="0x074928" />
         </table>
-        <table name="Accel Pedal to Throttle Position #4" storageaddress="0x074D00">
+        <table name="Throttle Pedal to Throttle Plate Request - Gear 3/4" storageaddress="0x074D00">
             <table type="X Axis" storageaddress="0x074C64" />
             <table type="Y Axis" storageaddress="0x074CB8" />
         </table>
@@ -13497,7 +13497,7 @@
         <table name="Table 2D - 130 " storageaddress="0x072E5C">
             <table type="Y Axis" storageaddress="0x072E48" />
         </table>
-        <table name="Table 2D - 131 " storageaddress="0x073028">
+        <table name="Throttle Pedal Percent Decreasing Filter Factor" storageaddress="0x073028">
             <table type="Y Axis" storageaddress="0x073008" />
         </table>
         <table name="Table 2D - 132 " storageaddress="0x073050">
@@ -14386,19 +14386,19 @@
             <table type="X Axis" storageaddress="0x072EFC" />
             <table type="Y Axis" storageaddress="0x072F14" />
         </table>
-        <table name="Accel Pedal to Throttle Position #1" storageaddress="0x0732C0">
+        <table name="Throttle Pedal to Throttle Plate Request - Gear 1/2" storageaddress="0x0732C0">
             <table type="X Axis" storageaddress="0x073224" />
             <table type="Y Axis" storageaddress="0x073278" />
         </table>
-        <table name="Accel Pedal to Throttle Position #2" storageaddress="0x073650">
+        <table name="Throttle Pedal to Throttle Plate Request - Gear Neutral" storageaddress="0x073650">
             <table type="X Axis" storageaddress="0x0735B4" />
             <table type="Y Axis" storageaddress="0x073608" />
         </table>
-        <table name="Accel Pedal to Throttle Position #3" storageaddress="0x0739E0">
+        <table name="Throttle Pedal to Throttle Plate Request - Gear 5/6" storageaddress="0x0739E0">
             <table type="X Axis" storageaddress="0x073944" />
             <table type="Y Axis" storageaddress="0x073998" />
         </table>
-        <table name="Accel Pedal to Throttle Position #4" storageaddress="0x073D70">
+        <table name="Throttle Pedal to Throttle Plate Request - Gear 3/4" storageaddress="0x073D70">
             <table type="X Axis" storageaddress="0x073CD4" />
             <table type="Y Axis" storageaddress="0x073D28" />
         </table>
@@ -15316,7 +15316,7 @@
         <table name="Table 2D - 130 " storageaddress="0x073BAC">
             <table type="Y Axis" storageaddress="0x073B98" />
         </table>
-        <table name="Table 2D - 131 " storageaddress="0x073D78">
+        <table name="Throttle Pedal Percent Decreasing Filter Factor" storageaddress="0x073D78">
             <table type="Y Axis" storageaddress="0x073D58" />
         </table>
         <table name="Table 2D - 132 " storageaddress="0x073DA0">
@@ -16081,19 +16081,19 @@
             <table type="X Axis" storageaddress="0x073C4C" />
             <table type="Y Axis" storageaddress="0x073C64" />
         </table>
-        <table name="Accel Pedal to Throttle Position #1" storageaddress="0x074010">
+        <table name="Throttle Pedal to Throttle Plate Request - Gear 1/2" storageaddress="0x074010">
             <table type="X Axis" storageaddress="0x073F74" />
             <table type="Y Axis" storageaddress="0x073FC8" />
         </table>
-        <table name="Accel Pedal to Throttle Position #2" storageaddress="0x0743A0">
+        <table name="Throttle Pedal to Throttle Plate Request - Gear Neutral" storageaddress="0x0743A0">
             <table type="X Axis" storageaddress="0x074304" />
             <table type="Y Axis" storageaddress="0x074358" />
         </table>
-        <table name="Accel Pedal to Throttle Position #3" storageaddress="0x074730">
+        <table name="Throttle Pedal to Throttle Plate Request - Gear 5/6" storageaddress="0x074730">
             <table type="X Axis" storageaddress="0x074694" />
             <table type="Y Axis" storageaddress="0x0746E8" />
         </table>
-        <table name="Accel Pedal to Throttle Position #4" storageaddress="0x074AC0">
+        <table name="Throttle Pedal to Throttle Plate Request - Gear 3/4" storageaddress="0x074AC0">
             <table type="X Axis" storageaddress="0x074A24" />
             <table type="Y Axis" storageaddress="0x074A78" />
         </table>
@@ -16944,7 +16944,7 @@
         <table name="Table 2D - 130 " storageaddress="0x07376C">
             <table type="Y Axis" storageaddress="0x073758" />
         </table>
-        <table name="Table 2D - 131 " storageaddress="0x073938">
+        <table name="Throttle Pedal Percent Decreasing Filter Factor" storageaddress="0x073938">
             <table type="Y Axis" storageaddress="0x073918" />
         </table>
         <table name="Table 2D - 137 " storageaddress="0x07396C">
@@ -17766,19 +17766,19 @@
             <table type="X Axis" storageaddress="0x07380C" />
             <table type="Y Axis" storageaddress="0x073824" />
         </table>
-        <table name="Accel Pedal to Throttle Position #1" storageaddress="0x073A9C">
+        <table name="Throttle Pedal to Throttle Plate Request - Gear 1/2" storageaddress="0x073A9C">
             <table type="X Axis" storageaddress="0x073A00" />
             <table type="Y Axis" storageaddress="0x073A54" />
         </table>
-        <table name="Accel Pedal to Throttle Position #2" storageaddress="0x073E2C">
+        <table name="Throttle Pedal to Throttle Plate Request - Gear Neutral" storageaddress="0x073E2C">
             <table type="X Axis" storageaddress="0x073D90" />
             <table type="Y Axis" storageaddress="0x073DE4" />
         </table>
-        <table name="Accel Pedal to Throttle Position #3" storageaddress="0x0741BC">
+        <table name="Throttle Pedal to Throttle Plate Request - Gear 5/6" storageaddress="0x0741BC">
             <table type="X Axis" storageaddress="0x074120" />
             <table type="Y Axis" storageaddress="0x074174" />
         </table>
-        <table name="Accel Pedal to Throttle Position #4" storageaddress="0x07454C">
+        <table name="Throttle Pedal to Throttle Plate Request - Gear 3/4" storageaddress="0x07454C">
             <table type="X Axis" storageaddress="0x0744B0" />
             <table type="Y Axis" storageaddress="0x074504" />
         </table>
@@ -18675,7 +18675,7 @@
         <table name="Table 2D - 130 " storageaddress="0x07376C">
             <table type="Y Axis" storageaddress="0x073758" />
         </table>
-        <table name="Table 2D - 131 " storageaddress="0x073938">
+        <table name="Throttle Pedal Percent Decreasing Filter Factor" storageaddress="0x073938">
             <table type="Y Axis" storageaddress="0x073918" />
         </table>
         <table name="Table 2D - 137 " storageaddress="0x07396C">
@@ -19517,19 +19517,19 @@
             <table type="X Axis" storageaddress="0x07380C" />
             <table type="Y Axis" storageaddress="0x073824" />
         </table>
-        <table name="Accel Pedal to Throttle Position #1" storageaddress="0x073A9C">
+        <table name="Throttle Pedal to Throttle Plate Request - Gear 1/2" storageaddress="0x073A9C">
             <table type="X Axis" storageaddress="0x073A00" />
             <table type="Y Axis" storageaddress="0x073A54" />
         </table>
-        <table name="Accel Pedal to Throttle Position #2" storageaddress="0x073E2C">
+        <table name="Throttle Pedal to Throttle Plate Request - Gear Neutral" storageaddress="0x073E2C">
             <table type="X Axis" storageaddress="0x073D90" />
             <table type="Y Axis" storageaddress="0x073DE4" />
         </table>
-        <table name="Accel Pedal to Throttle Position #3" storageaddress="0x0741BC">
+        <table name="Throttle Pedal to Throttle Plate Request - Gear 5/6" storageaddress="0x0741BC">
             <table type="X Axis" storageaddress="0x074120" />
             <table type="Y Axis" storageaddress="0x074174" />
         </table>
-        <table name="Accel Pedal to Throttle Position #4" storageaddress="0x07454C">
+        <table name="Throttle Pedal to Throttle Plate Request - Gear 3/4" storageaddress="0x07454C">
             <table type="X Axis" storageaddress="0x0744B0" />
             <table type="Y Axis" storageaddress="0x074504" />
         </table>
@@ -20039,7 +20039,7 @@
             <year>2004</year>
             <transmission>MT</transmission>
         </romid>
-        <table name="Accel Pedal to Throttle Position #4" storageaddress="0x074078">
+        <table name="Throttle Pedal to Throttle Plate Request - Gear 3/4" storageaddress="0x074078">
             <table type="Y Axis" storageaddress="0x074030" />
             <table type="X Axis" storageaddress="0x073FDC" />
         </table>
