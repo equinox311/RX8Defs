@@ -1222,6 +1222,9 @@
 				<scaling units="degC"/>
 			</table>
         </table>
+		<table name="Secondary Injectors Allowed Threshold Hysteresis - Coolant Temperature Based" category="Fuel Injection" type="1D" storagetype="float" endian="big" expression="x" to_byte="x" size="2">
+			<scaling name="Engine Speed" units="RPM"/>
+		</table>
         <table name="Table 2D - 184 " category="Unknown 2D" type="2D" storagetype="uint8" endian="big" sizey="12">
             <scaling expression="(x * 0.01 ) + 0" to_byte="(x - 0) / 0.01" format="0.00" />
             <table name="Unknown" type="Y Axis" storagetype="float" endian="big" expression="x" to_byte="x" />
@@ -6178,6 +6181,7 @@
         <table name="Secondary Injectors Allowed Threshold - Coolant Temperature Based" storageaddress="0x077400">
             <table type="Y Axis" storageaddress="0x0773DC" />
         </table>
+		<table name="Secondary Injectors Allowed Threshold Hysteresis - Coolant Temperature Based" storageaddress="0x77188" />
         <table name="Table 2D - 188 " storageaddress="0x0777C4">
             <table type="Y Axis" storageaddress="0x077794" />
         </table>
@@ -7968,6 +7972,7 @@
         <table name="Secondary Injectors Allowed Threshold - Coolant Temperature Based" storageaddress="0x077400">
             <table type="Y Axis" storageaddress="0x0773DC" />
         </table>
+		<table name="Secondary Injectors Allowed Threshold Hysteresis - Coolant Temperature Based" storageaddress="0x77188" />
         <table name="Table 2D - 188 " storageaddress="0x0777C4">
             <table type="Y Axis" storageaddress="0x077794" />
         </table>
@@ -17135,6 +17140,7 @@
         <table name="Secondary Injectors Allowed Threshold - Coolant Temperature Based" storageaddress="0x077400">
             <table type="Y Axis" storageaddress="0x0773DC" />
         </table>
+		<table name="Secondary Injectors Allowed Threshold Hysteresis - Coolant Temperature Based" storageaddress="0x77188" />
         <table name="Table 2D - 188 " storageaddress="0x0777C4">
             <table type="Y Axis" storageaddress="0x077794" />
         </table>
@@ -18874,6 +18880,7 @@
         <table name="Secondary Injectors Allowed Threshold - Coolant Temperature Based" storageaddress="0x077400">
             <table type="Y Axis" storageaddress="0x0773DC" />
         </table>
+		<table name="Secondary Injectors Allowed Threshold Hysteresis - Coolant Temperature Based" storageaddress="0x77188" />
         <table name="Table 2D - 188 " storageaddress="0x0777C4">
             <table type="Y Axis" storageaddress="0x077794" />
         </table>
