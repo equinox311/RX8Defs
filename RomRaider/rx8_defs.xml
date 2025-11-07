@@ -1193,9 +1193,12 @@
             <scaling expression="(x * 0.01 ) + 0" to_byte="(x - 0) / 0.01" format="0.00" />
             <table name="Unknown" type="Y Axis" storagetype="float" endian="big" expression="x" to_byte="x" />
         </table>
-        <table name="Table 2D - 178" category="Unknown 2D" type="2D" storagetype="uint8" endian="big" sizey="8">
-            <scaling expression="(x * 0.007812 ) + 0" to_byte="(x - 0) / 0.007812" format="0.00" />
-            <table name="Unknown" type="Y Axis" storagetype="float" endian="big" expression="x" to_byte="x" />
+        <table name="Primary Injector Max Barometric Pressure Correction" category="Fuel Injection" type="2D" storagetype="uint8" endian="big" sizey="8">
+            <scaling units="mult" expression="(x * 0.007812 ) + 0" to_byte="(x - 0) / 0.007812" format="0.00" />
+            <table name="Barometric Pressure" type="Y Axis" storagetype="float" endian="big" expression="x" to_byte="x">
+				<scaling units="kPa"/>
+			</table>
+			<description>Used to correct the max primary injector amount based on barometric pressure when throttle position > 60%</description>
         </table>
         <table name="Table 2D - 179 Injector Ratio Poss Min Sec PW #2" category="Fuel Injection" type="2D" storagetype="uint8" endian="big" sizey="9">
             <scaling expression="(x * 0.003906 ) + 0" to_byte="(x - 0) / 0.003906" format="0.00" />
@@ -1213,9 +1216,11 @@
             <scaling expression="(x * 0.007812 ) + 0" to_byte="(x - 0) / 0.007812" format="0.00" />
             <table name="Unknown" type="Y Axis" storagetype="float" endian="big" expression="x" to_byte="x" />
         </table>
-        <table name="SSV Switchpoint " category="Variable Intake" type="2D" storagetype="uint16" endian="big" sizey="9">
-            <scaling expression="(x * 1 ) + 0" to_byte="(x - 0) / 1" format="0.00" />
-            <table name="Unknown" type="Y Axis" storagetype="float" endian="big" expression="x" to_byte="x" />
+        <table name="Secondary Injectors Allowed Threshold - Coolant Temperature Based" category="Fuel Injection" type="2D" storagetype="uint16" endian="big" sizey="9">
+            <scaling units="RPM" expression="(x * 1 ) + 0" to_byte="(x - 0) / 1" format="0.00" />
+            <table name="Coolant Temperature" type="Y Axis" storagetype="float" endian="big" expression="x" to_byte="x">
+				<scaling units="degC"/>
+			</table>
         </table>
         <table name="Table 2D - 184 " category="Unknown 2D" type="2D" storagetype="uint8" endian="big" sizey="12">
             <scaling expression="(x * 0.01 ) + 0" to_byte="(x - 0) / 0.01" format="0.00" />
@@ -4174,7 +4179,7 @@
         <table name="Table 2D - 177 Might be Primary/Secondary Ratio" storageaddress="0x07845C">
             <table type="Y Axis" storageaddress="0x078418" />
         </table>
-        <table name="Table 2D - 178" storageaddress="0x078490">
+        <table name="Primary Injector Max Barometric Pressure Correction" storageaddress="0x078490">
             <table type="Y Axis" storageaddress="0x078470" />
         </table>
         <table name="Table 2D - 179 Injector Ratio Poss Min Sec PW #2" storageaddress="0x07853C">
@@ -4189,7 +4194,7 @@
         <table name="Table 2D - 182 " storageaddress="0x0785F4">
             <table type="Y Axis" storageaddress="0x0785B0" />
         </table>
-        <table name="SSV Switchpoint " storageaddress="0x07863C">
+        <table name="Secondary Injectors Allowed Threshold - Coolant Temperature Based" storageaddress="0x07863C">
             <table type="Y Axis" storageaddress="0x078618" />
         </table>
         <table name="Table 2D - 184 " storageaddress="0x078A00">
@@ -6158,7 +6163,7 @@
         <table name="Table 2D - 177 Might be Primary/Secondary Ratio" storageaddress="0x077220">
             <table type="Y Axis" storageaddress="0x0771DC" />
         </table>
-        <table name="Table 2D - 178" storageaddress="0x077254">
+        <table name="Primary Injector Max Barometric Pressure Correction" storageaddress="0x077254">
             <table type="Y Axis" storageaddress="0x077234" />
         </table>
         <table name="Table 2D - 180 Injector Ratio Poss Min Sec PW #1" storageaddress="0x077300">
@@ -6170,7 +6175,7 @@
         <table name="Table 2D - 182 " storageaddress="0x0773B8">
             <table type="Y Axis" storageaddress="0x077374" />
         </table>
-        <table name="SSV Switchpoint " storageaddress="0x077400">
+        <table name="Secondary Injectors Allowed Threshold - Coolant Temperature Based" storageaddress="0x077400">
             <table type="Y Axis" storageaddress="0x0773DC" />
         </table>
         <table name="Table 2D - 188 " storageaddress="0x0777C4">
@@ -7948,7 +7953,7 @@
         <table name="Table 2D - 177 Might be Primary/Secondary Ratio" storageaddress="0x077220">
             <table type="Y Axis" storageaddress="0x0771DC" />
         </table>
-        <table name="Table 2D - 178" storageaddress="0x077254">
+        <table name="Primary Injector Max Barometric Pressure Correction" storageaddress="0x077254">
             <table type="Y Axis" storageaddress="0x077234" />
         </table>
         <table name="Table 2D - 180 Injector Ratio Poss Min Sec PW #1" storageaddress="0x077300">
@@ -7960,7 +7965,7 @@
         <table name="Table 2D - 182 " storageaddress="0x0773B8">
             <table type="Y Axis" storageaddress="0x077374" />
         </table>
-        <table name="SSV Switchpoint " storageaddress="0x077400">
+        <table name="Secondary Injectors Allowed Threshold - Coolant Temperature Based" storageaddress="0x077400">
             <table type="Y Axis" storageaddress="0x0773DC" />
         </table>
         <table name="Table 2D - 188 " storageaddress="0x0777C4">
@@ -9767,7 +9772,7 @@
         <table name="Table 2D - 177 Might be Primary/Secondary Ratio" storageaddress="0x078230">
             <table type="Y Axis" storageaddress="0x0781EC" />
         </table>
-        <table name="Table 2D - 178" storageaddress="0x078264">
+        <table name="Primary Injector Max Barometric Pressure Correction" storageaddress="0x078264">
             <table type="Y Axis" storageaddress="0x078244" />
         </table>
         <table name="Table 2D - 179 Injector Ratio Poss Min Sec PW #2" storageaddress="0x078380">
@@ -9782,7 +9787,7 @@
         <table name="Table 2D - 182 " storageaddress="0x0784C8">
             <table type="Y Axis" storageaddress="0x078484" />
         </table>
-        <table name="SSV Switchpoint " storageaddress="0x078510">
+        <table name="Secondary Injectors Allowed Threshold - Coolant Temperature Based" storageaddress="0x078510">
             <table type="Y Axis" storageaddress="0x0784EC" />
         </table>
         <table name="Table 2D - 184 " storageaddress="0x07890C">
@@ -11679,7 +11684,7 @@
         <table name="Table 2D - 177 Might be Primary/Secondary Ratio" storageaddress="0x07845C">
             <table type="Y Axis" storageaddress="0x078418" />
         </table>
-        <table name="Table 2D - 178" storageaddress="0x078490">
+        <table name="Primary Injector Max Barometric Pressure Correction" storageaddress="0x078490">
             <table type="Y Axis" storageaddress="0x078470" />
         </table>
         <table name="Table 2D - 179 Injector Ratio Poss Min Sec PW #2" storageaddress="0x07853C">
@@ -11694,7 +11699,7 @@
         <table name="Table 2D - 182 " storageaddress="0x0785F4">
             <table type="Y Axis" storageaddress="0x0785B0" />
         </table>
-        <table name="SSV Switchpoint " storageaddress="0x07863C">
+        <table name="Secondary Injectors Allowed Threshold - Coolant Temperature Based" storageaddress="0x07863C">
             <table type="Y Axis" storageaddress="0x078618" />
         </table>
         <table name="Table 2D - 184 " storageaddress="0x078A00">
@@ -13681,7 +13686,7 @@
         <table name="Table 2D - 177 Might be Primary/Secondary Ratio" storageaddress="0x076D84">
             <table type="Y Axis" storageaddress="0x076D40" />
         </table>
-        <table name="Table 2D - 178" storageaddress="0x076DB8">
+        <table name="Primary Injector Max Barometric Pressure Correction" storageaddress="0x076DB8">
             <table type="Y Axis" storageaddress="0x076D98" />
         </table>
         <table name="Table 2D - 179 Injector Ratio Poss Min Sec PW #2" storageaddress="0x076E64">
@@ -13696,7 +13701,7 @@
         <table name="Table 2D - 182 " storageaddress="0x076F1C">
             <table type="Y Axis" storageaddress="0x076ED8" />
         </table>
-        <table name="SSV Switchpoint " storageaddress="0x076F64">
+        <table name="Secondary Injectors Allowed Threshold - Coolant Temperature Based" storageaddress="0x076F64">
             <table type="Y Axis" storageaddress="0x076F40" />
         </table>
         <table name="Table 2D - 188 " storageaddress="0x077328">
@@ -15482,7 +15487,7 @@
         <table name="Table 2D - 177 Might be Primary/Secondary Ratio" storageaddress="0x0780E8">
             <table type="Y Axis" storageaddress="0x0780A4" />
         </table>
-        <table name="Table 2D - 178" storageaddress="0x07811C">
+        <table name="Primary Injector Max Barometric Pressure Correction" storageaddress="0x07811C">
             <table type="Y Axis" storageaddress="0x0780FC" />
         </table>
         <table name="Table 2D - 179 Injector Ratio Poss Min Sec PW #2" storageaddress="0x078238">
@@ -15497,7 +15502,7 @@
         <table name="Table 2D - 182 " storageaddress="0x078380">
             <table type="Y Axis" storageaddress="0x07833C" />
         </table>
-        <table name="SSV Switchpoint " storageaddress="0x0783C8">
+        <table name="Secondary Injectors Allowed Threshold - Coolant Temperature Based" storageaddress="0x0783C8">
             <table type="Y Axis" storageaddress="0x0783A4" />
         </table>
         <table name="Table 2D - 188 " storageaddress="0x0787C4">
@@ -17115,7 +17120,7 @@
         <table name="Table 2D - 177 Might be Primary/Secondary Ratio" storageaddress="0x077220">
             <table type="Y Axis" storageaddress="0x0771DC" />
         </table>
-        <table name="Table 2D - 178" storageaddress="0x077254">
+        <table name="Primary Injector Max Barometric Pressure Correction" storageaddress="0x077254">
             <table type="Y Axis" storageaddress="0x077234" />
         </table>
         <table name="Table 2D - 180 Injector Ratio Poss Min Sec PW #1" storageaddress="0x077300">
@@ -17127,7 +17132,7 @@
         <table name="Table 2D - 182 " storageaddress="0x0773B8">
             <table type="Y Axis" storageaddress="0x077374" />
         </table>
-        <table name="SSV Switchpoint " storageaddress="0x077400">
+        <table name="Secondary Injectors Allowed Threshold - Coolant Temperature Based" storageaddress="0x077400">
             <table type="Y Axis" storageaddress="0x0773DC" />
         </table>
         <table name="Table 2D - 188 " storageaddress="0x0777C4">
@@ -18854,7 +18859,7 @@
         <table name="Table 2D - 177 Might be Primary/Secondary Ratio" storageaddress="0x077220">
             <table type="Y Axis" storageaddress="0x0771DC" />
         </table>
-        <table name="Table 2D - 178" storageaddress="0x077254">
+        <table name="Primary Injector Max Barometric Pressure Correction" storageaddress="0x077254">
             <table type="Y Axis" storageaddress="0x077234" />
         </table>
         <table name="Table 2D - 180 Injector Ratio Poss Min Sec PW #1" storageaddress="0x077300">
@@ -18866,7 +18871,7 @@
         <table name="Table 2D - 182 " storageaddress="0x0773B8">
             <table type="Y Axis" storageaddress="0x077374" />
         </table>
-        <table name="SSV Switchpoint " storageaddress="0x077400">
+        <table name="Secondary Injectors Allowed Threshold - Coolant Temperature Based" storageaddress="0x077400">
             <table type="Y Axis" storageaddress="0x0773DC" />
         </table>
         <table name="Table 2D - 188 " storageaddress="0x0777C4">
