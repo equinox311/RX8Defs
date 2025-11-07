@@ -237,8 +237,38 @@
         <table name="Secondary Injector Size" category="Fuel Injection" type="1D" storagetype="float" endian="big" expression="x" to_byte="x" size="1" />
         <table name="Secondary Injector Size #2" category="Fuel Injection" type="1D" storagetype="float" endian="big" expression="x" to_byte="x" size="1" />
         <table name="Maximum Throttle Angle" category="Limiters" type="1D" storagetype="float" endian="big" expression="x" to_byte="x" size="1" />
-        <table name="Auxillary Valve Close" category="Outputs" type="1D" storagetype="float" endian="big" expression="x" to_byte="x" size="2" />
-        <table name="VDI Open" category="Outputs" type="1D" storagetype="float" endian="big" expression="x" to_byte="x" size="2" />
+        <table name="Auxillary Port Valve Open Threshold" category="Variable Intake" type="1D" storagetype="float" endian="big" expression="x" to_byte="x" size="2">
+			<scaling name="Engine Speed" units="RPM"/>
+		</table>
+		<table name="Auxillary Port Valve Open Threshold Hysteresis" category="Variable Intake" type="1D" storagetype="float" endian="big" expression="x" to_byte="x" size="2">
+			<scaling name="Engine Speed" units="RPM"/>
+		</table>
+		<table name="Auxillary Port Valve Allowed Threshold - Coolant Temperature" category="Variable Intake" type="1D" storagetype="float" endian="big" expression="x" to_byte="x" size="2">
+			<scaling name="Coolant Temp" units="degC"/>
+		</table>
+		<table name="Auxillary Port Valve Allowed Threshold Hysteresis - Coolant Temperature" category="Variable Intake" type="1D" storagetype="float" endian="big" expression="x" to_byte="x" size="2">
+			<scaling name="Coolant Temp" units="degC"/>
+		</table>
+		<table name="Auxillary Port Valve Allowed Threshold - Mass Air Flow" category="Variable Intake" type="1D" storagetype="float" endian="big" expression="x" to_byte="x" size="2">
+			<scaling name="Mass Air Flow" units="gram/s"/>
+		</table>
+		<table name="Auxillary Port Valve Allowed Threshold Hysteresis - Mass Air Flow" category="Variable Intake" type="1D" storagetype="float" endian="big" expression="x" to_byte="x" size="2">
+			<scaling name="Mass Air Flow" units="gram/s"/>
+		</table>
+		<table name="Variable Dynamic Effect Intake Open Threshold" category="Variable Intake" type="1D" storagetype="float" endian="big" expression="x" to_byte="x" size="2">
+			<scaling name="Engine Speed" units="RPM"/>
+		</table>
+		<table name="Variable Dynamic Effect Intake Open Threshold Hysteresis" category="Variable Intake" type="1D" storagetype="float" endian="big" expression="x" to_byte="x" size="2">
+			<scaling name="Engine Speed" units="RPM"/>
+		</table>
+		
+		<table name="Variable Fresh Air Duct Open Threshold" category="Variable Intake" type="1D" storagetype="float" endian="big" expression="x" to_byte="x" size="2">
+			<scaling name="Engine Speed" units="RPM"/>
+		</table>
+		<table name="Variable Fresh Air Duct Open Threshold Hysteresis" category="Variable Intake" type="1D" storagetype="float" endian="big" expression="x" to_byte="x" size="2">
+			<scaling name="Engine Speed" units="RPM"/>
+		</table>
+		
 		<table name="Igntion Leading Timing - DSC Mode A - Map1" category="Ignition Leading" type="1D" storagetype="uint8" endian="big" format="0.00" expression="(x - 50) / 2" to_byte="x" size="1"/>
 		<table name="Igntion Leading Timing - DSC Mode A - Map3" category="Ignition Leading" type="1D" storagetype="uint8" endian="big" format="0.00" expression="(x - 50) / 2" to_byte="x" size="1"/>
 		<table name="Closed Loop Fuelling Threshold (Engine Speed)" category="Fuel Target (Closed Loop)" type="1D" storagetype="float" endian="big" expression="x" to_byte="x" size="1" />
@@ -1183,7 +1213,7 @@
             <scaling expression="(x * 0.007812 ) + 0" to_byte="(x - 0) / 0.007812" format="0.00" />
             <table name="Unknown" type="Y Axis" storagetype="float" endian="big" expression="x" to_byte="x" />
         </table>
-        <table name="SSV Switchpoint " category="Outputs" type="2D" storagetype="uint16" endian="big" sizey="9">
+        <table name="SSV Switchpoint " category="Variable Intake" type="2D" storagetype="uint16" endian="big" sizey="9">
             <scaling expression="(x * 1 ) + 0" to_byte="(x - 0) / 1" format="0.00" />
             <table name="Unknown" type="Y Axis" storagetype="float" endian="big" expression="x" to_byte="x" />
         </table>
@@ -3586,8 +3616,8 @@
         <table name="Secondary Injector Size #2" storageaddress="0x0783B0" />
         <table name="Normal Rev Limit" storageaddress="0x06D54C" />
         <table name="Maximum Throttle Angle" storageaddress="0x073F6C" />
-        <table name="Auxillary Valve Close" storageaddress="0x078CC0" />
-        <table name="VDI Open" storageaddress="0x07A5A4" />
+        <table name="Auxillary Port Valve Open Threshold" storageaddress="0x078CC0" />
+        <table name="Variable Dynamic Effect Intake Open Threshold" storageaddress="0x07A5A4" />
         <table name="Closed Loop Fuelling Threshold (Engine Speed)" storageaddress="0x071BF8" />
         <table name="Closed Loop Fuelling Threshold (Temperature A)" storageaddress="0x071BD8" />
         <table name="Closed Loop Fuelling Threshold (Temperature B)" storageaddress="0x071BE0" />
@@ -5631,8 +5661,16 @@
         <table name="Secondary Injector Size" storageaddress="0x07716C" />
         <table name="Secondary Injector Size #2" storageaddress="0x077174" />
         <table name="Maximum Throttle Angle" storageaddress="0x0738EC" />
-        <table name="Auxillary Valve Close" storageaddress="0x0779CC" />
-        <table name="VDI Open" storageaddress="0x0792B0" />
+        <table name="Auxillary Port Valve Open Threshold" storageaddress="0x0779CC" />
+		<table name="Auxillary Port Valve Open Threshold Hysteresis" storageaddress="0x779d0" />
+		<table name="Auxillary Port Valve Allowed Threshold - Coolant Temperature" storageaddress="0x779d4" />
+		<table name="Auxillary Port Valve Allowed Threshold Hysteresis - Coolant Temperature" storageaddress="0x779d8" />
+		<table name="Auxillary Port Valve Allowed Threshold - Mass Air Flow" storageaddress="0x779dc" />
+		<table name="Auxillary Port Valve Allowed Threshold Hysteresis - Mass Air Flow" storageaddress="0x779e0" />
+        <table name="Variable Dynamic Effect Intake Open Threshold" storageaddress="0x0792B0" />
+		<table name="Variable Dynamic Effect Intake Open Threshold Hysteresis" storageaddress="0x792b4" />
+		<table name="Variable Fresh Air Duct Open Threshold" storageaddress="0x792b8" />
+		<table name="Variable Fresh Air Duct Open Threshold Hysteresis" storageaddress="0x792bc" />
         <table name="Closed Loop Fuelling Threshold (Engine Speed)" storageaddress="0x071700" />
         <table name="Closed Loop Fuelling Threshold (Temperature A)" storageaddress="0x0716E0" />
         <table name="Closed Loop Fuelling Threshold (Temperature B)" storageaddress="0x0716E8" />
@@ -7412,8 +7450,16 @@
         <table name="Secondary Injector Size #2" storageaddress="0x077174" />
         <table name="Normal Rev Limit" storageaddress="0x06DA4C" />
         <table name="Maximum Throttle Angle" storageaddress="0x0738EC" />
-        <table name="Auxillary Valve Close" storageaddress="0x0779CC" />
-        <table name="VDI Open" storageaddress="0x0792B0" />
+        <table name="Auxillary Port Valve Open Threshold" storageaddress="0x0779CC" />
+		<table name="Auxillary Port Valve Open Threshold Hysteresis" storageaddress="0x779d0" />
+		<table name="Auxillary Port Valve Allowed Threshold - Coolant Temperature" storageaddress="0x779d4" />
+		<table name="Auxillary Port Valve Allowed Threshold Hysteresis - Coolant Temperature" storageaddress="0x779d8" />
+		<table name="Auxillary Port Valve Allowed Threshold - Mass Air Flow" storageaddress="0x779dc" />
+		<table name="Auxillary Port Valve Allowed Threshold Hysteresis - Mass Air Flow" storageaddress="0x779e0" />
+        <table name="Variable Dynamic Effect Intake Open Threshold" storageaddress="0x0792B0" />
+		<table name="Variable Dynamic Effect Intake Open Threshold Hysteresis" storageaddress="0x792b4" />
+		<table name="Variable Fresh Air Duct Open Threshold" storageaddress="0x792b8" />
+		<table name="Variable Fresh Air Duct Open Threshold Hysteresis" storageaddress="0x792bc" />
         <table name="Closed Loop Fuelling Threshold (Engine Speed)" storageaddress="0x071700" />
         <table name="Closed Loop Fuelling Threshold (Temperature A)" storageaddress="0x0716E0" />
         <table name="Closed Loop Fuelling Threshold (Temperature B)" storageaddress="0x0716E8" />
@@ -9207,8 +9253,8 @@
         <table name="Secondary Injector Size #2" storageaddress="0x078194" />
         <table name="Normal Rev Limit" storageaddress="0x06C74C" />
         <table name="Maximum Throttle Angle" storageaddress="0x07372C" />
-        <table name="Auxillary Valve Close" storageaddress="0x078BCC" />
-        <table name="VDI Open" storageaddress="0x07A7DC" />
+        <table name="Auxillary Port Valve Open Threshold" storageaddress="0x078BCC" />
+        <table name="Variable Dynamic Effect Intake Open Threshold" storageaddress="0x07A7DC" />
         <table name="Closed Loop Fuelling Threshold (Engine Speed)" storageaddress="0x0712B0" />
         <table name="Closed Loop Fuelling Threshold (Temperature A)" storageaddress="0x071290" />
         <table name="Closed Loop Fuelling Threshold (Temperature B)" storageaddress="0x071298" />
@@ -11092,8 +11138,8 @@
         <table name="Secondary Injector Size #2" storageaddress="0x0783B0" />
         <table name="Normal Rev Limit" storageaddress="0x06D54C" />
         <table name="Maximum Throttle Angle" storageaddress="0x073F6C" />
-        <table name="Auxillary Valve Close" storageaddress="0x078CC0" />
-        <table name="VDI Open" storageaddress="0x07A5A4" />
+        <table name="Auxillary Port Valve Open Threshold" storageaddress="0x078CC0" />
+        <table name="Variable Dynamic Effect Intake Open Threshold" storageaddress="0x07A5A4" />
         <table name="Closed Loop Fuelling Threshold (Engine Speed)" storageaddress="0x071BF8" />
         <table name="Closed Loop Fuelling Threshold (Temperature A)" storageaddress="0x071BD8" />
         <table name="Closed Loop Fuelling Threshold (Temperature B)" storageaddress="0x071BE0" />
@@ -13115,8 +13161,8 @@
         <table name="Secondary Injector Size #2" storageaddress="0x076CD8" />
         <table name="Normal Rev Limit" storageaddress="0x06CD4C" />
         <table name="Maximum Throttle Angle" storageaddress="0x072FDC" />
-        <table name="Auxillary Valve Close" storageaddress="0x0775E8" />
-        <table name="VDI Open" storageaddress="0x078ECC" />
+        <table name="Auxillary Port Valve Open Threshold" storageaddress="0x0775E8" />
+        <table name="Variable Dynamic Effect Intake Open Threshold" storageaddress="0x078ECC" />
         <table name="Closed Loop Fuelling Threshold (Engine Speed)" storageaddress="0x070C68" />
         <table name="Closed Loop Fuelling Threshold (Temperature A)" storageaddress="0x070C48" />
         <table name="Closed Loop Fuelling Threshold (Temperature B)" storageaddress="0x070C50" />
@@ -14943,8 +14989,8 @@
         <table name="Secondary Injector Size #2" storageaddress="0x07804C" />
         <table name="Normal Rev Limit" storageaddress="0x06CD4C" />
         <table name="Maximum Throttle Angle" storageaddress="0x073D2C" />
-        <table name="Auxillary Valve Close" storageaddress="0x078A84" />
-        <table name="VDI Open" storageaddress="0x07ADF0" />
+        <table name="Auxillary Port Valve Open Threshold" storageaddress="0x078A84" />
+        <table name="Variable Dynamic Effect Intake Open Threshold" storageaddress="0x07ADF0" />
         <table name="Closed Loop Fuelling Threshold (Engine Speed)" storageaddress="0x0718B0" />
         <table name="Closed Loop Fuelling Threshold (Temperature A)" storageaddress="0x071890" />
         <table name="Closed Loop Fuelling Threshold (Temperature B)" storageaddress="0x071898" />
@@ -16628,8 +16674,16 @@
         <table name="Normal Rev Limit" storageaddress="0x06DA4C" />
 		<table name="Normal Rev Limit Hysteresis" storageaddress="0x06DA50" />
         <table name="Maximum Throttle Angle" storageaddress="0x0738EC" />
-        <table name="Auxillary Valve Close" storageaddress="0x0779CC" />
-        <table name="VDI Open" storageaddress="0x0792B0" />
+        <table name="Auxillary Port Valve Open Threshold" storageaddress="0x0779CC" />
+		<table name="Auxillary Port Valve Open Threshold Hysteresis" storageaddress="0x779d0"/>
+		<table name="Auxillary Port Valve Allowed Threshold - Coolant Temperature" storageaddress="0x779d4" />
+		<table name="Auxillary Port Valve Allowed Threshold Hysteresis - Coolant Temperature" storageaddress="0x779d8" />
+		<table name="Auxillary Port Valve Allowed Threshold - Mass Air Flow" storageaddress="0x779dc" />
+		<table name="Auxillary Port Valve Allowed Threshold Hysteresis - Mass Air Flow" storageaddress="0x779e0" />
+        <table name="Variable Dynamic Effect Intake Open Threshold" storageaddress="0x0792B0" />
+		<table name="Variable Dynamic Effect Intake Open Threshold Hysteresis" storageaddress="0x792b4" />
+		<table name="Variable Fresh Air Duct Open Threshold" storageaddress="0x792b8" />
+		<table name="Variable Fresh Air Duct Open Threshold Hysteresis" storageaddress="0x792bc" />
         <table name="Closed Loop Fuelling Threshold (Engine Speed)" storageaddress="0x071700" />
         <table name="Closed Loop Fuelling Threshold (Temperature A)" storageaddress="0x0716E0" />
         <table name="Closed Loop Fuelling Threshold (Temperature B)" storageaddress="0x0716E8" />
@@ -18300,8 +18354,16 @@
         <table name="Normal Rev Limit Normal" storageaddress="0x06DA4C" />
 		<table name="Normal Rev Limit Hysteresis" storageaddress="0x06da50" />
         <table name="Maximum Throttle Angle" storageaddress="0x0738EC" />
-        <table name="Auxillary Valve Close" storageaddress="0x0779CC" />
-        <table name="VDI Open" storageaddress="0x0792B0" />
+        <table name="Auxillary Port Valve Open Threshold" storageaddress="0x0779CC" />
+		<table name="Auxillary Port Valve Open Threshold Hysteresis" storageaddress="0x779d0" />
+		<table name="Auxillary Port Valve Allowed Threshold - Coolant Temperature" storageaddress="0x779d4" />
+		<table name="Auxillary Port Valve Allowed Threshold Hysteresis - Coolant Temperature" storageaddress="0x779d8" />
+		<table name="Auxillary Port Valve Allowed Threshold - Mass Air Flow" storageaddress="0x779dc" />
+		<table name="Auxillary Port Valve Allowed Threshold Hysteresis - Mass Air Flow" storageaddress="0x779e0" />
+        <table name="Variable Dynamic Effect Intake Open Threshold" storageaddress="0x0792B0" />
+		<table name="Variable Dynamic Effect Intake Open Threshold Hysteresis" storageaddress="0x792b4" />
+		<table name="Variable Fresh Air Duct Open Threshold" storageaddress="0x792b8" />
+		<table name="Variable Fresh Air Duct Open Threshold Hysteresis" storageaddress="0x792bc" />
         <table name="Closed Loop Fuelling Threshold (Engine Speed)" storageaddress="0x071700" />
         <table name="Closed Loop Fuelling Threshold (Temperature A)" storageaddress="0x0716E0" />
         <table name="Closed Loop Fuelling Threshold (Temperature B)" storageaddress="0x0716E8" />
