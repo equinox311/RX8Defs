@@ -2575,11 +2575,11 @@
         </table>
         <table name="Table 3D - 43 " category="22AA0" type="3D" storagetype="uint8" endian="big" expression="x" to_byte="x" sizex="7" sizey="4">
             <scaling expression="(x * 0.5 ) + 0" to_byte="(x - 0) / 0.5" format="0.00" />
-            <table name="Value" type="X Axis" storagetype="float" endian="big">
-                <scaling expression="x" to_byte="x" />
+            <table name="Manifold Absolute Pressure" type="X Axis" storagetype="float" endian="big">
+                <scaling units="kPa" expression="x" to_byte="x" />
             </table>
-            <table name="Value" type="Y Axis" storagetype="float" endian="big">
-                <scaling expression="x" to_byte="x" />
+            <table name="Barometric Pressure" type="Y Axis" storagetype="float" endian="big">
+                <scaling units="kPa" expression="x" to_byte="x" />
             </table>
         </table>
         <table name="Table 3D - 44 " category="22AA0" type="3D" storagetype="uint8" endian="big" expression="x" to_byte="x" sizex="9" sizey="9">
