@@ -210,6 +210,26 @@
 		<table name="Fuel Air Ratio" category="Fuel Injection" type="1D" storagetype="float" endian="big" expression="x" to_byte="x" size="1" >
 			<scaling units="1/AFR" format="0.00000" />
 		</table>
+		
+		<table name="Gear 1" category="Gear Detection" type="1D" storagetype="float" endian="big" expression="x" to_byte="x" size="1">
+			<scaling units="rpm/kph"/>
+		</table>
+		<table name="Gear 2" category="Gear Detection" type="1D" storagetype="float" endian="big" expression="x" to_byte="x" size="1">
+			<scaling units="rpm/kph"/>
+		</table>
+		<table name="Gear 3" category="Gear Detection" type="1D" storagetype="float" endian="big" expression="x" to_byte="x" size="1">
+			<scaling units="rpm/kph"/>
+		</table>
+		<table name="Gear 4" category="Gear Detection" type="1D" storagetype="float" endian="big" expression="x" to_byte="x" size="1">
+			<scaling units="rpm/kph"/>
+		</table>
+		<table name="Gear 5" category="Gear Detection" type="1D" storagetype="float" endian="big" expression="x" to_byte="x" size="1">
+			<scaling units="rpm/kph"/>
+		</table>
+		<table name="Gear 6" category="Gear Detection" type="1D" storagetype="float" endian="big" expression="x" to_byte="x" size="1">
+			<scaling units="rpm/kph"/>
+		</table>
+		
 		<table name="Cruise Control Max Speed - High Value" units="kph" category="Cruise Control" type="1D" storagetype="float" endian="big" expression="x" to_byte="x" size="1" />
 		<table name="Cruise Control Max Speed - Low Value" units="kph" category="Cruise Control" type="1D" storagetype="float" endian="big" expression="x" to_byte="x" size="1" />
         <table name="Barometric Pressure Sensor Min ADC Count" category="Sensors" type="1D" storagetype="uint16" endian="big" expression="x" to_byte="x" size="2" />
@@ -1185,9 +1205,11 @@
             <scaling expression="(x * 0.005 ) + 0" to_byte="(x - 0) / 0.005" format="0.00" />
             <table name="Unknown" type="Y Axis" storagetype="float" endian="big" expression="x" to_byte="x" />
         </table>
-        <table name="Table 2D - 176 " category="Fuel Injection" type="2D" storagetype="uint16" endian="big" sizey="13">
-            <scaling expression="(x * 0.005 ) + 0" to_byte="(x - 0) / 0.005" format="0.00" />
-            <table name="Unknown" type="Y Axis" storagetype="float" endian="big" expression="x" to_byte="x" />
+        <table name="Primary Fuel Injector Cranking Pulse Width" category="Fuel Injection" type="2D" storagetype="uint16" endian="big" sizey="13">
+            <scaling units="ms" expression="(x * 0.005 ) + 0" to_byte="(x - 0) / 0.005" format="0.00" />
+            <table name="Coolant Temperature" type="Y Axis" storagetype="float" endian="big" expression="x" to_byte="x">
+				<scaling units="degC"/>
+			</table>
         </table>
         <table name="Table 2D - 177 Might be Primary/Secondary Ratio" category="Fuel Injection" type="2D" storagetype="uint8" endian="big" sizey="17">
             <scaling expression="(x * 0.01 ) + 0" to_byte="(x - 0) / 0.01" format="0.00" />
@@ -1300,11 +1322,11 @@
 			</table>
         </table>
         <table name="Table 2D - 200 " category="Unknown 2D" type="2D" storagetype="uint16" endian="big" sizey="16">
-            <scaling expression="(x * 1E-05 ) + 0" to_byte="(x - 0) / 1E-05" format="0.00" />
+            <scaling expression="(x * 0.0000099999997) + 0" to_byte="(x - 0) / 0.0000099999997" format="0.0000" />
             <table name="Unknown" type="Y Axis" storagetype="float" endian="big" expression="x" to_byte="x" />
         </table>
         <table name="Table 2D - 201 " category="Unknown 2D" type="2D" storagetype="uint16" endian="big" sizey="16">
-            <scaling expression="(x * 1E-05 ) + 0" to_byte="(x - 0) / 1E-05" format="0.00" />
+            <scaling expression="(x * 0.0000099999997 ) + 0" to_byte="(x - 0) / 0.0000099999997" format="0.0000" />
             <table name="Unknown" type="Y Axis" storagetype="float" endian="big" expression="x" to_byte="x" />
         </table>
         <table name="Table 2D - 202 " category="Unknown 2D" type="2D" storagetype="uint8" endian="big" sizey="11">
@@ -4176,7 +4198,7 @@
         <table name="Table 2D - 175 " storageaddress="0x078318">
             <table type="Y Axis" storageaddress="0x0782E8" />
         </table>
-        <table name="Table 2D - 176 " storageaddress="0x078364">
+        <table name="Primary Fuel Injector Cranking Pulse Width" storageaddress="0x078364">
             <table type="Y Axis" storageaddress="0x078330" />
         </table>
         <table name="Table 2D - 177 Might be Primary/Secondary Ratio" storageaddress="0x07845C">
@@ -5640,7 +5662,13 @@
             <year>2004</year>
             <transmission>MT</transmission>
         </romid>
-
+		
+		<table name="Gear 1" storageaddress="0x754e8"/>
+		<table name="Gear 2" storageaddress="0x754ec"/>
+		<table name="Gear 3" storageaddress="0x754f0"/>
+		<table name="Gear 4" storageaddress="0x754f4"/>
+		<table name="Gear 5" storageaddress="0x754f8"/>
+		<table name="Gear 6" storageaddress="0x754fc"/>
 		<table name="Immobilizer Disable - Without RKE Installed" storageaddress="0x35230"/>
 		<table name="Immobilizer Disable - With RKE Installed" storageaddress="0x3567C"/>
 		<table name="Barometric Pressure Sensor Max ADC Count" storageaddress="0x06D46C" />
@@ -6157,7 +6185,7 @@
         <table name="Table 2D - 175 " storageaddress="0x0770DC">
             <table type="Y Axis" storageaddress="0x0770AC" />
         </table>
-        <table name="Table 2D - 176 " storageaddress="0x077128">
+        <table name="Primary Fuel Injector Cranking Pulse Width" storageaddress="0x077128">
             <table type="Y Axis" storageaddress="0x0770F4" />
         </table>
 		<table name="Secondary Air Enrichment" storageaddress="0x77908">
@@ -7536,7 +7564,7 @@
             <table type="Y Axis" storageaddress="0x07b2c8" />
         </table>
 		<table name="Table 2D - Fuel Equation Something 2 - Driver Off Throttle" storageaddress="0x07b348">
-            <table type="Y Axis" storageaddress="0x07b328" />
+            <table type="Y Axis" storageaddress="0x7b328" />
         </table>
         <table name="Igntion Leading Timing - DSC Mode A - Map1" storageaddress="0x06e8dc" />
 		<table name="Igntion Leading Timing - DSC Mode A - Map3" storageaddress="0x06e8dd" />
@@ -7948,7 +7976,7 @@
         <table name="Table 2D - 175 " storageaddress="0x0770DC">
             <table type="Y Axis" storageaddress="0x0770AC" />
         </table>
-        <table name="Table 2D - 176 " storageaddress="0x077128">
+        <table name="Primary Fuel Injector Cranking Pulse Width" storageaddress="0x077128">
             <table type="Y Axis" storageaddress="0x0770F4" />
         </table>
 		<table name="Secondary Air Enrichment" storageaddress="0x77908">
@@ -8878,10 +8906,6 @@
             <table type="X Axis" storageaddress="0x07B3E4" />
             <table type="Y Axis" storageaddress="0x07B408" />
         </table>
-		<table name="Table 3D - Fuel Equation Something - Driver On Throttle" storageaddress="0x07B3ac">
-            <table type="Y Axis" storageaddress="0x07B394" />
-            <table type="X Axis" storageaddress="0x07B370" />
-        </table>
         <table name="Table 3D - 102 " storageaddress="0x07B590">
             <table type="X Axis" storageaddress="0x07B508" />
             <table type="Y Axis" storageaddress="0x07B568" />
@@ -9771,7 +9795,7 @@
         <table name="Table 2D - 175 " storageaddress="0x0780B0">
             <table type="Y Axis" storageaddress="0x078080" />
         </table>
-        <table name="Table 2D - 176 " storageaddress="0x0780FC">
+        <table name="Primary Fuel Injector Cranking Pulse Width" storageaddress="0x0780FC">
             <table type="Y Axis" storageaddress="0x0780C8" />
         </table>
         <table name="Table 2D - 177 Might be Primary/Secondary Ratio" storageaddress="0x078230">
@@ -11683,7 +11707,7 @@
         <table name="Table 2D - 175 " storageaddress="0x078318">
             <table type="Y Axis" storageaddress="0x0782E8" />
         </table>
-        <table name="Table 2D - 176 " storageaddress="0x078364">
+        <table name="Primary Fuel Injector Cranking Pulse Width" storageaddress="0x078364">
             <table type="Y Axis" storageaddress="0x078330" />
         </table>
         <table name="Table 2D - 177 Might be Primary/Secondary Ratio" storageaddress="0x07845C">
@@ -13685,7 +13709,7 @@
         <table name="Table 2D - 175 " storageaddress="0x076C40">
             <table type="Y Axis" storageaddress="0x076C10" />
         </table>
-        <table name="Table 2D - 176 " storageaddress="0x076C8C">
+        <table name="Primary Fuel Injector Cranking Pulse Width" storageaddress="0x076C8C">
             <table type="Y Axis" storageaddress="0x076C58" />
         </table>
         <table name="Table 2D - 177 Might be Primary/Secondary Ratio" storageaddress="0x076D84">
@@ -17119,7 +17143,7 @@
         <table name="Table 2D - 175 " storageaddress="0x0770DC">
             <table type="Y Axis" storageaddress="0x0770AC" />
         </table>
-        <table name="Table 2D - 176 " storageaddress="0x077128">
+        <table name="Primary Fuel Injector Cranking Pulse Width" storageaddress="0x077128">
             <table type="Y Axis" storageaddress="0x0770F4" />
         </table>
         <table name="Table 2D - 177 Might be Primary/Secondary Ratio" storageaddress="0x077220">
@@ -18859,7 +18883,7 @@
         <table name="Table 2D - 175 " storageaddress="0x0770DC">
             <table type="Y Axis" storageaddress="0x0770AC" />
         </table>
-        <table name="Table 2D - 176 " storageaddress="0x077128">
+        <table name="Primary Fuel Injector Cranking Pulse Width" storageaddress="0x077128">
             <table type="Y Axis" storageaddress="0x0770F4" />
         </table>
         <table name="Table 2D - 177 Might be Primary/Secondary Ratio" storageaddress="0x077220">
