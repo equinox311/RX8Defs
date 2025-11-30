@@ -81,6 +81,12 @@
 		<table name="Ethanol Content Sample Threshold - Engine Load" category="Flex Fuel" type="1D" storagetype="float" endian="big" expression="x" to_byte="x" size="1">
 			<scaling units="g/rev"/>
 		</table>
+		<table name="Table 2D - Cranking Fuel Multiplier" category="Flex Fuel" type="2D" storagetype="float" endian="big" sizey="12">
+            <scaling units="mult" expression="x" to_byte="x" format="0.00" />
+            <table name="Ethanol Content" type="Y Axis" storagetype="float" endian="big" expression="x" to_byte="x">
+				<scaling units="%"/>
+			</table>
+        </table>
 		<table name="Ethanol Sensor CAN ID" category="Flex Fuel" type="1D" storagetype="uint16" endian="big" expression="x" to_byte="x" size="1" />
 		<table name="Table 3D - UNKNOWN_68d30" category="Unknown 3D" type="3D" storagetype="uint16" endian="big" expression="x" to_byte="x" sizex="8" sizey="19">
             <scaling expression="(x * 0.0078125) + 0" to_byte="(x - 0.0) / 0.0078125" format="0.00" />
@@ -9004,6 +9010,9 @@
 		<table name="Table 2D - Timing Multiplier" storageaddress="0x6C4B0">
             <table type="Y Axis" storageaddress="0x6C480" />
         </table>
+		<table name="Table 2D - Cranking Fuel Multiplier" storageaddress="0x6c954">
+            <table type="Y Axis" storageaddress="0x6c924" />	
+        </table>	
 		<table name="Ethanol Content Sample Threshold - Engine Speed" storageaddress="0x6C400"/>
 		<table name="Ethanol Content Sample Threshold - Engine Load" storageaddress="0x6C404"/>
         <table name="Ignition Dwell Time " storageaddress="0x07B6FC">

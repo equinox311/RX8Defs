@@ -139,6 +139,12 @@ any damage or injury incurred as a result of these definitions. USE AT YOUR OWN 
                 </transport>
             </transports>
 			<parameters>
+				<parameter id="PIDV" name="ECM Voltage" desc="Control Module Voltage" >
+						<address>0x010042</address>
+						<conversions>
+							<conversion storagetype="uint16" units="V" expr="x*0.0009999999" format="0.00" gauge_min="0" gauge_max="15" gauge_step=".1" />
+						</conversions>
+				</parameter>
 				<parameter id="PIDTEST" name="Coolant Temp" desc="Coolant temperature" >
 						<address>0x220005</address>
 						<conversions>
@@ -213,6 +219,12 @@ any damage or injury incurred as a result of these definitions. USE AT YOUR OWN 
 						<address>0x220555</address>
 						<conversions>
 							<conversion storagetype="uint16" units="%" expr="x" format="0" gauge_min="0" gauge_max="100" gauge_step="5" />
+						</conversions>
+				</parameter>
+				<parameter id="PIDTEST69" name="Flex Cranking Multiplier" desc="Ethanol Content" >
+						<address>0x22055C</address>
+						<conversions>
+							<conversion storagetype="uint16" units="mult" expr="x*0.01" format="0.00" gauge_min="1" gauge_max="4" gauge_step=".01" />
 						</conversions>
 				</parameter>
 				<parameter id="PIDTEST69" name="Flex Fuel Timing Multiplier" desc="Flex Fuel Timing Multiplier" >
