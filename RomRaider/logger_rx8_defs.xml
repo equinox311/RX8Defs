@@ -131,7 +131,7 @@ any damage or injury incurred as a result of these definitions. USE AT YOUR OWN 
 ]>
 <logger version="370">
     <protocols>
-		<protocol id="MAZDA" baud="500000" databits="8" stopbits="1" parity="0" connect_timeout="2000" send_timeout="55">
+		<protocol id="MAZDA" baud="500000" databits="8" stopbits="1" parity="0" connect_timeout="4000" send_timeout="55">
             <transports>	
                 <transport id="iso15765" name="CAN bus" desc="CAN bus logging ~MY2007+.">
                     <module id="ecu" address="0x000007E8" desc="Engine Control Unit" tester="0x000007E0"  fastpoll="true"/>
@@ -139,12 +139,6 @@ any damage or injury incurred as a result of these definitions. USE AT YOUR OWN 
                 </transport>
             </transports>
 			<parameters>
-				<parameter id="PIDV" name="ECM Voltage" desc="Control Module Voltage" >
-						<address>0x010042</address>
-						<conversions>
-							<conversion storagetype="uint16" units="V" expr="x*0.0009999999" format="0.00" gauge_min="0" gauge_max="15" gauge_step=".1" />
-						</conversions>
-				</parameter>
 				<parameter id="PIDTEST" name="Coolant Temp" desc="Coolant temperature" >
 						<address>0x220005</address>
 						<conversions>

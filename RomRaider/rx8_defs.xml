@@ -1217,6 +1217,10 @@
 				<scaling units="degC"/>
 			</table>
         </table>
+		<table name="Primary Fuel Injector Cranking Pulse Decay Time" category="Fuel Injection" type="2D" storagetype="uint8" endian="big" sizey="9">
+            <scaling expression="(x * 1 ) + 0" to_byte="(x - 0) / 1" format="0.00" />
+            <table name="counts" type="Y Axis" storagetype="float" endian="big" expression="x" to_byte="x" />
+        </table>
         <table name="Table 2D - 177 Might be Primary/Secondary Ratio" category="Fuel Injection" type="2D" storagetype="uint8" endian="big" sizey="17">
             <scaling expression="(x * 0.01 ) + 0" to_byte="(x - 0) / 0.01" format="0.00" />
             <table name="Unknown" type="Y Axis" storagetype="float" endian="big" expression="x" to_byte="x" />
@@ -2090,10 +2094,6 @@
             <table name="Unknown" type="Y Axis" storagetype="float" endian="big" expression="x" to_byte="x" />
         </table>
         <table name="Table 2D - 385 Check DataType" category="Unknown 2D" type="2D" storagetype="uint8" endian="big" sizey="10">
-            <scaling expression="(x * 1 ) + 0" to_byte="(x - 0) / 1" format="0.00" />
-            <table name="Unknown" type="Y Axis" storagetype="float" endian="big" expression="x" to_byte="x" />
-        </table>
-        <table name="Table 2D - 386" category="Fuel Injection" type="2D" storagetype="uint8" endian="big" sizey="9">
             <scaling expression="(x * 1 ) + 0" to_byte="(x - 0) / 1" format="0.00" />
             <table name="Unknown" type="Y Axis" storagetype="float" endian="big" expression="x" to_byte="x" />
         </table>
@@ -4834,7 +4834,7 @@
         <table name="Table 2D - 385 Check DataType" storageaddress="0x07C550">
             <table type="Y Axis" storageaddress="0x07C528" />
         </table>
-        <table name="Table 2D - 386" storageaddress="0x07C588">
+        <table name="Primary Fuel Injector Cranking Pulse Decay Time" storageaddress="0x07C588">
             <table type="Y Axis" storageaddress="0x07C564" />
         </table>
         <table name="Table 2D - 387 Check DataType" storageaddress="0x07C61C">
@@ -6745,7 +6745,7 @@
         <table name="Table 2D - 385 Check DataType" storageaddress="0x07B0D0">
             <table type="Y Axis" storageaddress="0x07B0A8" />
         </table>
-        <table name="Table 2D - 386" storageaddress="0x07B108">
+        <table name="Primary Fuel Injector Cranking Pulse Decay Time" storageaddress="0x07B108">
             <table type="Y Axis" storageaddress="0x07B0E4" />
         </table>
         <table name="Table 2D - 387 Check DataType" storageaddress="0x07B19C">
@@ -8535,7 +8535,7 @@
         <table name="Table 2D - 385 Check DataType" storageaddress="0x07B0D0">
             <table type="Y Axis" storageaddress="0x07B0A8" />
         </table>
-        <table name="Table 2D - 386" storageaddress="0x07B108">
+        <table name="Primary Fuel Injector Cranking Pulse Decay Time" storageaddress="0x07B108">
             <table type="Y Axis" storageaddress="0x07B0E4" />
         </table>
         <table name="Table 2D - 387 Check DataType" storageaddress="0x07B19C">
@@ -10374,7 +10374,7 @@
         <table name="Table 2D - 385 Check DataType" storageaddress="0x07C954">
             <table type="Y Axis" storageaddress="0x07C92C" />
         </table>
-        <table name="Table 2D - 386" storageaddress="0x07C98C">
+        <table name="Primary Fuel Injector Cranking Pulse Decay Time" storageaddress="0x07C98C">
             <table type="Y Axis" storageaddress="0x07C968" />
         </table>
         <table name="Table 2D - 387 Check DataType" storageaddress="0x07CA20">
@@ -12346,7 +12346,7 @@
         <table name="Table 2D - 385 Check DataType" storageaddress="0x07C550">
             <table type="Y Axis" storageaddress="0x07C528" />
         </table>
-        <table name="Table 2D - 386" storageaddress="0x07C588">
+        <table name="Primary Fuel Injector Cranking Pulse Decay Time" storageaddress="0x07C588">
             <table type="Y Axis" storageaddress="0x07C564" />
         </table>
         <table name="Table 2D - 387 Check DataType" storageaddress="0x07C61C">
@@ -14303,7 +14303,7 @@
         <table name="Table 2D - 385 Check DataType" storageaddress="0x07AE78">
             <table type="Y Axis" storageaddress="0x07AE50" />
         </table>
-        <table name="Table 2D - 386" storageaddress="0x07AEB0">
+        <table name="Primary Fuel Injector Cranking Pulse Decay Time" storageaddress="0x07AEB0">
             <table type="Y Axis" storageaddress="0x07AE8C" />
         </table>
         <table name="Table 2D - 387 Check DataType" storageaddress="0x07AF44">
@@ -16026,7 +16026,7 @@
         <table name="Table 2D - 385 Check DataType" storageaddress="0x07CF68">
             <table type="Y Axis" storageaddress="0x07CF40" />
         </table>
-        <table name="Table 2D - 386" storageaddress="0x07CFA0">
+        <table name="Primary Fuel Injector Cranking Pulse Decay Time" storageaddress="0x07CFA0">
             <table type="Y Axis" storageaddress="0x07CF7C" />
         </table>
         <table name="Table 2D - 387 Check DataType" storageaddress="0x07D034">
@@ -17696,7 +17696,7 @@
         <table name="Table 2D - 385 Check DataType" storageaddress="0x07B0D0">
             <table type="Y Axis" storageaddress="0x07B0A8" />
         </table>
-        <table name="Table 2D - 386" storageaddress="0x07B108">
+        <table name="Primary Fuel Injector Cranking Pulse Decay Time" storageaddress="0x07B108">
             <table type="Y Axis" storageaddress="0x07B0E4" />
         </table>
         <table name="Table 2D - 387 Check DataType" storageaddress="0x07B19C">
@@ -19436,7 +19436,7 @@
         <table name="Table 2D - 385 Check DataType" storageaddress="0x07B0D0">
             <table type="Y Axis" storageaddress="0x07B0A8" />
         </table>
-        <table name="Table 2D - 386" storageaddress="0x07B108">
+        <table name="Primary Fuel Injector Cranking Pulse Decay Time" storageaddress="0x07B108">
             <table type="Y Axis" storageaddress="0x07B0E4" />
         </table>
         <table name="Table 2D - 387 Check DataType" storageaddress="0x07B19C">
