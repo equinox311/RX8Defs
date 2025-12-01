@@ -1218,8 +1218,10 @@
 			</table>
         </table>
 		<table name="Primary Fuel Injector Cranking Pulse Decay Time" category="Fuel Injection" type="2D" storagetype="uint8" endian="big" sizey="9">
-            <scaling expression="(x * 1 ) + 0" to_byte="(x - 0) / 1" format="0.00" />
-            <table name="counts" type="Y Axis" storagetype="float" endian="big" expression="x" to_byte="x" />
+            <scaling units="counts" expression="(x * 1 ) + 0" to_byte="(x - 0) / 1" format="0.00" />
+            <table name="Coolant Temperature" type="Y Axis" storagetype="float" endian="big" expression="x" to_byte="x">
+				<scaling units="degC"/>
+			</table>
         </table>
         <table name="Table 2D - 177 Might be Primary/Secondary Ratio" category="Fuel Injection" type="2D" storagetype="uint8" endian="big" sizey="17">
             <scaling expression="(x * 0.01 ) + 0" to_byte="(x - 0) / 0.01" format="0.00" />
