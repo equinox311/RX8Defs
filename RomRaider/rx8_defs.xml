@@ -7541,6 +7541,12 @@
 		<table name="Alternator Voltage Controller - Integral Gain" storageaddress="0x74a94" />
 		<table name="Alternator Voltage Controller - Derivative Gain" storageaddress="0x74a8c" />
 		<table name="Ethanol Sensor CAN ID" storageaddress="0x4bd26" />
+		
+		<table name="Cold Enrichment - Coolant Temperature Threshold" storageaddress="0x714a8" />
+		<table name="Cold Enrichment - Intake Air Temperature Threshold" storageaddress="0x714ac"/>
+		<table name="Cold Enrichment - Cold Enrichment"  storageaddress="0x714b0"/>
+		<table name="Cold Enrichment - Cold Enrichment Decay" storageaddress="0x714b4"/>
+		
 		<table name="Max Load - Intake Temperature Compensation" storageaddress="0x078DC0">
             <table type="Y Axis" storageaddress="0x078D9C" />
         </table>
