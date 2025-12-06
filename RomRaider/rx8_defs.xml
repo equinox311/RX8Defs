@@ -81,12 +81,23 @@
 		<table name="Ethanol Content Sample Threshold - Engine Load" category="Flex Fuel" type="1D" storagetype="float" endian="big" expression="x" to_byte="x" size="1">
 			<scaling units="g/rev"/>
 		</table>
-		<table name="Table 2D - Cranking Fuel Multiplier" category="Flex Fuel" type="2D" storagetype="float" endian="big" sizey="12">
-            <scaling units="mult" expression="x" to_byte="x" format="0.00" />
-            <table name="Ethanol Content" type="Y Axis" storagetype="float" endian="big" expression="x" to_byte="x">
-				<scaling units="%"/>
-			</table>
+		
+		<table name="Table 3D - Cranking Fuel Multiplier" category="Flex Fuel" type="3D" storagetype="uint8" endian="big" expression="x" to_byte="x" sizex="12" sizey="13">
+            <scaling units="mult" expression="(x * 0.1) + 1" to_byte="(x - 1) / 0.1" format="0.00" />
+            <table name="Ethanol Conent" type="X Axis" storagetype="float" endian="big">
+                <scaling units="%" expression="x" to_byte="x" format="0" />
+            </table>
+            <table name="Coolant Temperature" type="Y Axis" storagetype="float" endian="big">
+                <scaling units="degC" expression="x" to_byte="x" format="0" />
+            </table>
         </table>
+		
+		<!-- <table name="Table 2D - Cranking Fuel Multiplier" category="Flex Fuel" type="2D" storagetype="float" endian="big" sizey="12"> -->
+            <!-- <scaling units="mult" expression="x" to_byte="x" format="0.00" /> -->
+            <!-- <table name="Ethanol Content" type="Y Axis" storagetype="float" endian="big" expression="x" to_byte="x"> -->
+				<!-- <scaling units="%"/> -->
+			<!-- </table> -->
+        <!-- </table> -->
 		<table name="Ethanol Sensor CAN ID" category="Flex Fuel" type="1D" storagetype="uint16" endian="big" expression="x" to_byte="x" size="1" />
 		<table name="Table 3D - UNKNOWN_68d30" category="Unknown 3D" type="3D" storagetype="uint16" endian="big" expression="x" to_byte="x" sizex="8" sizey="19">
             <scaling expression="(x * 0.0078125) + 0" to_byte="(x - 0.0) / 0.0078125" format="0.00" />
@@ -243,6 +254,10 @@
         <table name="Barometric Pressure Sensor Max Voltage" category="Sensors" type="1D" storagetype="float" endian="big" expression="x" to_byte="x" size="2" />
         <table name="Barometric Pressure Sensor Slope" category="Sensors" type="1D" storagetype="float" endian="big" expression="x" to_byte="x" size="1" />
         <table name="Barometric Pressure Sensor Offset" category="Sensors" type="1D" storagetype="float" endian="big" expression="x" to_byte="x" size="1" />
+		<table name="Cold Enrichment - Coolant Temperature Threshold" category="Fuel Injection" type="1D" storagetype="float" endian="big" expression="x" to_byte="x" size="1" />
+		<table name="Cold Enrichment - Intake Air Temperature Threshold" category="Fuel Injection" type="1D" storagetype="float" endian="big" expression="x" to_byte="x" size="1" />
+		<table name="Cold Enrichment - Cold Enrichment" category="Fuel Injection" type="1D" storagetype="float" endian="big" expression="x" to_byte="x" size="1" />
+		<table name="Cold Enrichment - Cold Enrichment Decay" category="Fuel Injection" type="1D" storagetype="float" endian="big" expression="x" to_byte="x" size="1" />
         <table name="Cold Rev Limit" category="Limiters" type="1D" storagetype="float" endian="big" expression="x" to_byte="x" size="1">
 			<scaling units="RPM"/>
 		</table>
@@ -9012,8 +9027,9 @@
 		<table name="Table 2D - Timing Multiplier" storageaddress="0x6C4B0">
             <table type="Y Axis" storageaddress="0x6C480" />
         </table>
-		<table name="Table 2D - Cranking Fuel Multiplier" storageaddress="0x6c954">
-            <table type="Y Axis" storageaddress="0x6c924" />	
+		<table name="Table 3D - Cranking Fuel Multiplier" storageaddress="0x6c998">
+			<table type="X Axis" storageaddress="0x6c934" />	
+            <table type="Y Axis" storageaddress="0x6c964" />	
         </table>	
 		<table name="Ethanol Content Sample Threshold - Engine Speed" storageaddress="0x6C400"/>
 		<table name="Ethanol Content Sample Threshold - Engine Load" storageaddress="0x6C404"/>
