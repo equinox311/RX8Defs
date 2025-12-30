@@ -11200,6 +11200,31 @@
             <year></year>
             <transmission>MT</transmission>
         </romid>
+		<table name="Immobilizer Disable - Without RKE Installed" storageaddress="0x755e">
+			<state name="on" data="00 09 00 09 00 09 B3 D5 00 09 00 09 00 09 00 09 00 09 00 09 00 09 00
+							09 00 09 00 09 00 09 00 09 00 09 00 09 00 09 00 09 00 09 00 09 00 09
+							00 09 00 09 00 09 A0 3D 00 09 01 F4 00 FA 55 AA AA CC B5 C4 FF FF FF
+							FF 86 9C 00 03 00 09 00 03 2F 02 FF FF C2 28 FF FF C2 2C FF FF C2 3E
+							FF FF C2 3A FF FF C2 88 FF FF C2 8C 00 01 00 01 55 AA 55 AA 00 00 FF
+							FF FF FF C2 96 FF FF C2 98 00 00 B7 E3 FF FF C2 39 00 03 FF FF B0 BB
+							00 09 A0 11 00 09 B1 CF 00 09 A0 0D 00 09 B2 5B 00 09 A0 09 00 09 B2
+							FD 00 09 A0 05 00 09 B3 4E 00 09 A0 01 00 09 2D E0 DD 30 D2 30 64 20
+							60 4C 88 05 8D 04 64 03 60 43 88 06 8F 10 00 09 D2 2C 63 20 23 38 8F
+							0B 00 09 D1 2B 60 10 20 08 8F 06 00 09 D2 29 E5 01 42 0B 64 D0 A0 01
+							2D 00 2D E0 E3 03 62 D0 62 2C 32 33 8F 0D 00 09 E1 00"/>
+					<state name="off" data="B5 6E 00 09 60 D0 60 0C 88 00 8D 11 00 09 88 01 8D 3A 00 09 88 02 8D
+							3B 00 09 88 03 8D 3C 00 09 88 04 8D 3D 00 09 88 05 8D 3E 00 09 A0 40
+							00 09 B0 8C 00 09 A0 3D 00 09 01 F4 00 FA 55 AA AA CC B5 C4 FF FF FF
+							FF 86 9C 00 03 00 09 00 03 2F 02 FF FF C2 28 FF FF C2 2C FF FF C2 3E
+							FF FF C2 3A FF FF C2 88 FF FF C2 8C 00 01 00 01 55 AA 55 AA 00 00 FF
+							FF FF FF C2 96 FF FF C2 98 00 00 B7 E3 FF FF C2 39 00 03 FF FF B0 BB
+							00 09 A0 11 00 09 B1 CF 00 09 A0 0D 00 09 B2 5B 00 09 A0 09 00 09 B2
+							FD 00 09 A0 05 00 09 B3 4E 00 09 A0 01 00 09 2D E0 DD 30 D2 30 64 20
+							60 4C 88 05 8D 04 64 03 60 43 88 06 8F 10 00 09 D2 2C 63 20 23 38 8F
+							0B 00 09 D1 2B 60 10 20 08 8F 06 00 09 D2 29 E5 01 42 0B 64 D0 A0 01
+							2D 00 2D E0 E3 03 62 D0 62 2C 32 33 8F 0D 00 09 E1 01" />
+				</table>
+		<table name="Immobilizer Disable - With RKE Installed" storageaddress="0x79aa"/>
         <table name="Barometric Pressure Sensor Max ADC Count" storageaddress="0x06CF6C" />
         <table name="Barometric Pressure Sensor Min ADC Count" storageaddress="0x06CF6E" />
         <table name="Barometric Pressure Sensor Min Voltage" storageaddress="0x07A930" />
