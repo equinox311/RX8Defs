@@ -254,10 +254,18 @@
         <table name="Barometric Pressure Sensor Max Voltage" category="Sensors" type="1D" storagetype="float" endian="big" expression="x" to_byte="x" size="2" />
         <table name="Barometric Pressure Sensor Slope" category="Sensors" type="1D" storagetype="float" endian="big" expression="x" to_byte="x" size="1" />
         <table name="Barometric Pressure Sensor Offset" category="Sensors" type="1D" storagetype="float" endian="big" expression="x" to_byte="x" size="1" />
-		<table name="Cold Enrichment - Coolant Temperature Threshold" category="Fuel Injection" type="1D" storagetype="float" endian="big" expression="x" to_byte="x" size="1" />
-		<table name="Cold Enrichment - Intake Air Temperature Threshold" category="Fuel Injection" type="1D" storagetype="float" endian="big" expression="x" to_byte="x" size="1" />
-		<table name="Cold Enrichment - Cold Enrichment" category="Fuel Injection" type="1D" storagetype="float" endian="big" expression="x" to_byte="x" size="1" />
-		<table name="Cold Enrichment - Cold Enrichment Decay" category="Fuel Injection" type="1D" storagetype="float" endian="big" expression="x" to_byte="x" size="1" />
+		<table name="Cold Enrichment - Coolant Temperature Threshold" category="Fuel Injection" type="1D" storagetype="float" endian="big" expression="x" to_byte="x" size="1">
+			<scaling format="0.000"/>
+		</table>
+		<table name="Cold Enrichment - Intake Air Temperature Threshold" category="Fuel Injection" type="1D" storagetype="float" endian="big" expression="x" to_byte="x" size="1">
+			<scaling format="0.000"/>
+		</table>
+		<table name="Cold Enrichment - Cold Enrichment" category="Fuel Injection" type="1D" storagetype="float" endian="big" expression="x" to_byte="x" size="1">
+			<scaling format="0.000"/>
+		</table>
+		<table name="Cold Enrichment - Cold Enrichment Decay" category="Fuel Injection" type="1D" storagetype="float" endian="big" expression="x" to_byte="x" size="1">
+			<scaling format="0.000"/>
+		</table>
         <table name="Cold Rev Limit" category="Limiters" type="1D" storagetype="float" endian="big" expression="x" to_byte="x" size="1">
 			<scaling units="RPM"/>
 		</table>
