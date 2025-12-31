@@ -1344,8 +1344,18 @@
 				<table type="Y Axis" name="Barometric Pressure" sizey="2"/>
 					<scaling units="multiplier" xpression="x" to_byte="x" format="0.00" />
         </table>
+
+		<table name="First Start Oil Injection Timer" category="Oil Metering" type="2D" storagetype="uint16" endian="big" sizey="6">
+            <scaling units="s after engine on" expression="(x * 16)/1000 + 0" to_byte="(x - 0)/16 * 1000" format="0.00" />
+            <table name="Coolant Temperature" type="Y Axis" storagetype="float" endian="big" expression="x" to_byte="x">
+				<scaling units="degC"/>
+			</table>
+        </table>
+		<table name="First Start Oil Injection Amount" category="Oil Metering" type="1D" storagetype="uint8" endian="big" expression="x" to_byte="x" size="1">
+			<scaling units="raw"/>
+		</table>
         <table name="Load Based Oil Injection Temperature Correction" category="Oil Metering" type="2D" storagetype="uint16" endian="big" sizey="3">
-            <scaling expression="(x * 0.001 ) + 0" to_byte="(x - 0) / 0.001" format="0.00" />
+            <scaling units="mult" expression="(x * 0.001 ) + 0" to_byte="(x - 0) / 0.001" format="0.00" />
             <table name="Coolant Temperature" type="Y Axis" storagetype="float" endian="big" expression="x" to_byte="x">
 				<scaling units="degC"/>
 			</table>
@@ -1990,6 +2000,7 @@
 				<scaling units="degC"/>
 			</table>
         </table>
+		<table name="Manifold Pressure Based Oil Injection Amount - Default" category="Oil Metering" type="1D" storagetype="uint8" endian="big" expression="x-100" to_byte="x+100" size="1" />
         <table name="Manifold Pressure Based Oil Injection Amount" category="Oil Metering" type="2D" storagetype="uint8" endian="big" sizey="6">
             <scaling expression="(x-100)" to_byte="x" format="0.00" />
             <table name="Absolute Manifold Pressure" type="Y Axis" storagetype="float" endian="big" expression="x" to_byte="x">
@@ -2006,15 +2017,15 @@
 				<scaling units="degC"/>
 			</table>
         </table>
-        <table name="Table 2D - 357 Check DataType" category="Unknown 2D" type="2D" storagetype="uint8" endian="big" sizey="6">
-            <scaling expression="(x * 1 ) + 0" to_byte="(x - 0) / 1" format="0.00" />
-            <table name="Unknown" type="Y Axis" storagetype="float" endian="big" expression="x" to_byte="x" />
+        <table name="Table 2D - 357 Check DataType" category="Oil Metering" type="2D" storagetype="float" endian="big" sizey="6">
+            <scaling expression="(x/8)+.5" to_byte="(x*8)-.5" format="0.00" />
+            <table name="Unknown" type="Y Axis" storagetype="float" formate="0" endian="big" expression="x" to_byte="x" />
         </table>
         <table name="Table 2D - 358 Check DataType" category="Unknown 2D" type="2D" storagetype="uint8" endian="big" sizey="6">
             <scaling expression="(x * 1 ) + 0" to_byte="(x - 0) / 1" format="0.00" />
             <table name="Unknown" type="Y Axis" storagetype="float" endian="big" expression="x" to_byte="x" />
         </table>
-        <table name="Table 2D - 359 Check DataType" category="Unknown 2D" type="2D" storagetype="uint8" endian="big" sizey="3">
+        <table name="Table 2D - 359 Check DataType" category="Oil Metering" type="2D" storagetype="float" endian="big" sizey="3">
             <scaling expression="(x * 1 ) + 0" to_byte="(x - 0) / 1" format="0.00" />
             <table name="Unknown" type="Y Axis" storagetype="float" endian="big" expression="x" to_byte="x" />
         </table>
@@ -4763,7 +4774,7 @@
         <table name="Intake Air Temperature Based Oil Injection Amount" storageaddress="0x078F24">
             <table type="Y Axis" storageaddress="0x078F0C" />
         </table>
-        <table name="Manifold Pressure Based Oil Injection Amount Check DataType" storageaddress="0x078F44">
+        <table name="Manifold Pressure Based Oil Injection Amount" storageaddress="0x078F44">
             <table type="Y Axis" storageaddress="0x078F2C" />
         </table>
         <table name="Table 2D - 355 Check DataType" storageaddress="0x078F78">
@@ -6698,6 +6709,7 @@
         <table name="First Start Oil Injection Timer" storageaddress="0x077CBC">
             <table type="Y Axis" storageaddress="0x077CA4" />
         </table>
+		<table name="First Start Oil Injection Amount" storageaddress="0x77b47" />
         <table name="Table 2D - 357 Check DataType" storageaddress="0x077CE0">
             <table type="Y Axis" storageaddress="0x077CC8" />
         </table>
@@ -12307,7 +12319,7 @@
         <table name="Intake Air Temperature Based Oil Injection Amount" storageaddress="0x078F24">
             <table type="Y Axis" storageaddress="0x078F0C" />
         </table>
-        <table name="Manifold Pressure Based Oil Injection Amount Check DataType" storageaddress="0x078F44">
+        <table name="Manifold Pressure Based Oil Injection Amount" storageaddress="0x078F44">
             <table type="Y Axis" storageaddress="0x078F2C" />
         </table>
         <table name="Table 2D - 355 Check DataType" storageaddress="0x078F78">
@@ -14264,7 +14276,7 @@
         <table name="Intake Air Temperature Based Oil Injection Amount" storageaddress="0x07784C">
             <table type="Y Axis" storageaddress="0x077834" />
         </table>
-        <table name="Manifold Pressure Based Oil Injection Amount Check DataType" storageaddress="0x07786C">
+        <table name="Manifold Pressure Based Oil Injection Amount" storageaddress="0x07786C">
             <table type="Y Axis" storageaddress="0x077854" />
         </table>
         <table name="Table 2D - 355 Check DataType" storageaddress="0x0778A0">
@@ -17672,7 +17684,7 @@
         <table name="Intake Air Temperature Based Oil Injection Amount" storageaddress="0x077C30">
             <table type="Y Axis" storageaddress="0x077C18" />
         </table>
-        <table name="Manifold Pressure Based Oil Injection Amount Check DataType" storageaddress="0x077C50">
+        <table name="Manifold Pressure Based Oil Injection Amount" storageaddress="0x077C50">
             <table type="Y Axis" storageaddress="0x077C38" />
         </table>
         <table name="Table 2D - 355 Check DataType" storageaddress="0x077C84">
@@ -19412,7 +19424,7 @@
         <table name="Intake Air Temperature Based Oil Injection Amount" storageaddress="0x077C30">
             <table type="Y Axis" storageaddress="0x077C18" />
         </table>
-        <table name="Manifold Pressure Based Oil Injection Amount Check DataType" storageaddress="0x077C50">
+        <table name="Manifold Pressure Based Oil Injection Amount" storageaddress="0x077C50">
             <table type="Y Axis" storageaddress="0x077C38" />
         </table>
         <table name="Table 2D - 355 Check DataType" storageaddress="0x077C84">
@@ -19421,6 +19433,7 @@
         <table name="First Start Oil Injection Timer" storageaddress="0x077CBC">
             <table type="Y Axis" storageaddress="0x077CA4" />
         </table>
+		<table name="First Start Oil Injection Amount" storageaddress="0x77b47" />
         <table name="Table 2D - 357 Check DataType" storageaddress="0x077CE0">
             <table type="Y Axis" storageaddress="0x077CC8" />
         </table>
