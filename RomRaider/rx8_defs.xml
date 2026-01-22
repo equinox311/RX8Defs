@@ -2000,7 +2000,7 @@
 				<scaling units="degC"/>
 			</table>
         </table>
-		<table name="Manifold Pressure Based Oil Injection Amount - Default" category="Oil Metering" type="1D" storagetype="uint8" endian="big" expression="x-100" to_byte="x+100" size="1" />
+	<table name="Manifold Pressure Based Oil Injection Amount - Default" category="Oil Metering" type="1D" storagetype="uint8" endian="big" expression="x-100" to_byte="x+100" size="1" />
         <table name="Manifold Pressure Based Oil Injection Amount" category="Oil Metering" type="2D" storagetype="uint8" endian="big" sizey="6">
             <scaling expression="(x-100)" to_byte="x" format="0.00" />
             <table name="Absolute Manifold Pressure" type="Y Axis" storagetype="float" endian="big" expression="x" to_byte="x">
@@ -6709,7 +6709,7 @@
         <table name="First Start Oil Injection Timer" storageaddress="0x077CBC">
             <table type="Y Axis" storageaddress="0x077CA4" />
         </table>
-		<table name="First Start Oil Injection Amount" storageaddress="0x77b47" />
+	<table name="First Start Oil Injection Amount" storageaddress="0x77b47" />
         <table name="Table 2D - 357 Check DataType" storageaddress="0x077CE0">
             <table type="Y Axis" storageaddress="0x077CC8" />
         </table>
@@ -19433,7 +19433,7 @@
         <table name="First Start Oil Injection Timer" storageaddress="0x077CBC">
             <table type="Y Axis" storageaddress="0x077CA4" />
         </table>
-		<table name="First Start Oil Injection Amount" storageaddress="0x77b47" />
+	<table name="First Start Oil Injection Amount" storageaddress="0x77b47" />
         <table name="Table 2D - 357 Check DataType" storageaddress="0x077CE0">
             <table type="Y Axis" storageaddress="0x077CC8" />
         </table>
@@ -20220,5 +20220,1833 @@
             <table type="Y Axis" storageaddress="0x074030" />
             <table type="X Axis" storageaddress="0x073FDC" />
         </table>
+    </rom>
+ <rom base="Rx8Base">
+        <romid>
+            <xmlid>60E0E600</xmlid>
+            <internalidaddress>2000</internalidaddress>
+            <internalidstring>60E0E600</internalidstring>
+            <make>Mazda</make>
+            <model>RX8</model>
+            <memmodel>SH7055</memmodel>
+            <filesize>512kb</filesize>
+        </romid>
+        <romid>
+            <xmlid>N3YMED</xmlid>
+            <internalidaddress>6C646</internalidaddress>
+            <internalidstring>N3YMED</internalidstring>
+            <make>Mazda</make>
+            <model>RX8</model>
+            <submodel>6 Port</submodel>
+            <market>JDM</market>
+            <year>2004</year>
+            <transmission>MT</transmission>
+        </romid>
+        <table name="Barometric Pressure Sensor Max ADC Count" storageaddress="0x06C76C" />
+        <table name="Barometric Pressure Sensor Min ADC Count" storageaddress="0x06C76E" />
+        <table name="Barometric Pressure Sensor Min Voltage" storageaddress="0x079258" />
+        <table name="Barometric Pressure Sensor Max Voltage" storageaddress="0x07925C" />
+        <table name="Barometric Pressure Sensor Slope" storageaddress="0x0792E8" />
+        <table name="Barometric Pressure Sensor Offset" storageaddress="0x0792E4" />
+        <table name="Cold Rev Limit" storageaddress="0x06CD44" />
+        <table name="Cold Rev Temperature Limit" storageaddress="0x06CD3C" />
+        <table name="Primary Injector Size" storageaddress="0x076CC8" />
+        <table name="Secondary Injector Size" storageaddress="0x076CD0" />
+        <table name="Secondary Injector Size #2" storageaddress="0x076CD8" />
+        <table name="Normal Rev Limit" storageaddress="0x06CD4C" />
+        <table name="Maximum Throttle Angle" storageaddress="0x072FDC" />
+        <table name="Auxillary Port Valve Open Threshold" storageaddress="0x0775E8" />
+        <table name="Variable Dynamic Effect Intake Open Threshold" storageaddress="0x078ECC" />
+        <table name="Closed Loop Fuelling Threshold (Engine Speed)" storageaddress="0x070C68" />
+        <table name="Closed Loop Fuelling Threshold (Temperature A)" storageaddress="0x070C48" />
+        <table name="Closed Loop Fuelling Threshold (Temperature B)" storageaddress="0x070C50" />
+        <table name="Closed Loop Fuelling Threshold (Unknown B)" storageaddress="0x070CCC" />
+        <table name="Closed Loop Fuelling Threshold (Temperature C)" storageaddress="0x070D0C" />
+        <table name="Fuel Injector - Unknown - Max Injection Angle1???" storageaddress="0x06C7E4">
+            <table type="Y Axis" storageaddress="0x06C7A4" />
+        </table>
+        <table name="Fuel Injector - Unknown - Max Injection Angle2???" storageaddress="0x06C834">
+            <table type="Y Axis" storageaddress="0x06C7F4" />
+        </table>
+        <table name="Fuel Injector - Unknown - Max Injection Angle3???" storageaddress="0x06C884">
+            <table type="Y Axis" storageaddress="0x06C844" />
+        </table>
+        <table name="Table 2D - 3 " storageaddress="0x06C914">
+            <table type="Y Axis" storageaddress="0x06C8EC" />
+        </table>
+        <table name="Table 2D - 4 " storageaddress="0x06C938">
+            <table type="Y Axis" storageaddress="0x06C920" />
+        </table>
+        <table name="Table 2D - 5" storageaddress="0x06C9E0">
+            <table type="Y Axis" storageaddress="0x06C9A0" />
+        </table>
+        <table name="Ignition Leading - Idle Base Timing" storageaddress="0x06CD8C">
+            <table type="Y Axis" storageaddress="0x06CD74" />
+        </table>
+        <table name="Ignition Leading - Idle Timing Load Compensation Multiplier" storageaddress="0x06CDB8">
+            <table type="Y Axis" storageaddress="0x06CD94" />
+        </table>
+        <table name="Ignition Trailing- Idle Base Timing" storageaddress="0x06CDDC">
+            <table type="Y Axis" storageaddress="0x06CDC4" />
+        </table>
+        <table name="Ignition Trailing- Idle Timing Load Compensation Multiplier" storageaddress="0x06CE08">
+            <table type="Y Axis" storageaddress="0x06CDE4" />
+        </table>
+        <table name="Table 2D - 10 " storageaddress="0x06D52C">
+            <table type="Y Axis" storageaddress="0x06D514" />
+        </table>
+        <table name="Table 2D - 11 " storageaddress="0x06D550">
+            <table type="Y Axis" storageaddress="0x06D538" />
+        </table>
+        <table name="Table 2D - 12 " storageaddress="0x06D574">
+            <table type="Y Axis" storageaddress="0x06D55C" />
+        </table>
+        <table name="Table 2D - 13 " storageaddress="0x06D598">
+            <table type="Y Axis" storageaddress="0x06D580" />
+        </table>
+        <table name="Table 2D - 14 " storageaddress="0x06D5BC">
+            <table type="Y Axis" storageaddress="0x06D5A4" />
+        </table>
+        <table name="Table 2D - 15 " storageaddress="0x06D5E0">
+            <table type="Y Axis" storageaddress="0x06D5C8" />
+        </table>
+        <table name="Table 2D - 16 " storageaddress="0x06D62C">
+            <table type="Y Axis" storageaddress="0x06D5EC" />
+        </table>
+        <table name="Table 2D - 17 " storageaddress="0x06D760">
+            <table type="Y Axis" storageaddress="0x06D744" />
+        </table>
+        <table name="Table 2D - 18 " storageaddress="0x06D784">
+            <table type="Y Axis" storageaddress="0x06D768" />
+        </table>
+        <table name="Table 2D - 19 " storageaddress="0x06D7A8">
+            <table type="Y Axis" storageaddress="0x06D78C" />
+        </table>
+        <table name="Table 2D - 20 " storageaddress="0x06D7CC">
+            <table type="Y Axis" storageaddress="0x06D7B0" />
+        </table>
+        <table name="Table 2D - 21 " storageaddress="0x06D7F0">
+            <table type="Y Axis" storageaddress="0x06D7D4" />
+        </table>
+        <table name="Table 2D - 22 " storageaddress="0x06D814">
+            <table type="Y Axis" storageaddress="0x06D7F8" />
+        </table>
+        <table name="Table 2D - 23 " storageaddress="0x06D868">
+            <table type="Y Axis" storageaddress="0x06D81C" />
+        </table>
+        <table name="Table 2D - 24 " storageaddress="0x06D8BC">
+            <table type="Y Axis" storageaddress="0x06D890" />
+        </table>
+        <table name="Idle Target A" storageaddress="0x06D8F0">
+            <table type="Y Axis" storageaddress="0x06D8D4" />
+        </table>
+        <table name="Idle Target C" storageaddress="0x06D978">
+            <table type="Y Axis" storageaddress="0x06D948" />
+        </table>
+        <table name="Idle Target D" storageaddress="0x06D9C0">
+            <table type="Y Axis" storageaddress="0x06D990" />
+        </table>
+        <table name="Idle Target E" storageaddress="0x06DA08">
+            <table type="Y Axis" storageaddress="0x06D9D8" />
+        </table>
+        <table name="Idle Target F" storageaddress="0x06DA3C">
+            <table type="Y Axis" storageaddress="0x06DA20" />
+        </table>
+        <table name="Idle Target G" storageaddress="0x06DA68">
+            <table type="Y Axis" storageaddress="0x06DA4C" />
+        </table>
+        <table name="Idle Target H" storageaddress="0x06DA94">
+            <table type="Y Axis" storageaddress="0x06DA78" />
+        </table>
+        <table name="Idle Target I" storageaddress="0x06DAC0">
+            <table type="Y Axis" storageaddress="0x06DAA4" />
+        </table>
+        <table name="Table 2D - 34 " storageaddress="0x06DB68">
+            <table type="Y Axis" storageaddress="0x06DB44" />
+        </table>
+        <table name="Table 2D - 35 " storageaddress="0x06DB98">
+            <table type="Y Axis" storageaddress="0x06DB74" />
+        </table>
+        <table name="Table 2D - 36 " storageaddress="0x06DBC8">
+            <table type="Y Axis" storageaddress="0x06DBA4" />
+        </table>
+        <table name="Table 2D - 37 " storageaddress="0x06DBF8">
+            <table type="Y Axis" storageaddress="0x06DBD4" />
+        </table>
+        <table name="Table 2D - 38 " storageaddress="0x06DC18">
+            <table type="Y Axis" storageaddress="0x06DC04" />
+        </table>
+        <table name="Table 2D - 39 " storageaddress="0x06DC38">
+            <table type="Y Axis" storageaddress="0x06DC20" />
+        </table>
+        <table name="Table 2D - 40 " storageaddress="0x06DC78">
+            <table type="Y Axis" storageaddress="0x06DC40" />
+        </table>
+        <table name="Table 2D - 41 " storageaddress="0x06DCB4">
+            <table type="Y Axis" storageaddress="0x06DCA4" />
+        </table>
+        <table name="Table 2D - 42 " storageaddress="0x06DCE0">
+            <table type="Y Axis" storageaddress="0x06DCBC" />
+        </table>
+        <table name="Table 2D - 43 " storageaddress="0x06DD18">
+            <table type="Y Axis" storageaddress="0x06DCF4" />
+        </table>
+        <table name="Table 2D - 44 " storageaddress="0x06DD50">
+            <table type="Y Axis" storageaddress="0x06DD2C" />
+        </table>
+        <table name="Table 2D - 45 " storageaddress="0x06DD78">
+            <table type="Y Axis" storageaddress="0x06DD64" />
+        </table>
+        <table name="Table 2D - 46 " storageaddress="0x06DDAC">
+            <table type="Y Axis" storageaddress="0x06DD88" />
+        </table>
+        <table name="Ignition 4" storageaddress="0x06E7FC">
+            <table type="Y Axis" storageaddress="0x06E7CC" />
+        </table>
+        <table name="Ignition 5" storageaddress="0x06E80C">
+            <table type="Y Axis" storageaddress="0x06E808" />
+        </table>
+        <table name="Ignition 6" storageaddress="0x06E840">
+            <table type="Y Axis" storageaddress="0x06E810" />
+        </table>
+        <table name="Ignition 7" storageaddress="0x06E850">
+            <table type="Y Axis" storageaddress="0x06E84C" />
+        </table>
+        <table name="Ignition 8" storageaddress="0x06E858">
+            <table type="Y Axis" storageaddress="0x06E854" />
+        </table>
+        <table name="Ignition 9" storageaddress="0x06E860">
+            <table type="Y Axis" storageaddress="0x06E85C" />
+        </table>
+        <table name="Ignition 10" storageaddress="0x06E868">
+            <table type="Y Axis" storageaddress="0x06E864" />
+        </table>
+        <table name="Ignition 11" storageaddress="0x06E870">
+            <table type="Y Axis" storageaddress="0x06E86C" />
+        </table>
+        <table name="Ignition 12" storageaddress="0x06E878">
+            <table type="Y Axis" storageaddress="0x06E874" />
+        </table>
+        <table name="Ignition 13" storageaddress="0x06E880">
+            <table type="Y Axis" storageaddress="0x06E87C" />
+        </table>
+        <table name="Table 2D - 58 " storageaddress="0x06EB20">
+            <table type="Y Axis" storageaddress="0x06EB0C" />
+        </table>
+        <table name="Table 2D - 59 " storageaddress="0x06EF54">
+            <table type="Y Axis" storageaddress="0x06EF28" />
+        </table>
+        <table name="Table 2D - 60 " storageaddress="0x06F0F4">
+            <table type="Y Axis" storageaddress="0x06F0CC" />
+        </table>
+        <table name="Table 2D - 61 " storageaddress="0x06F120">
+            <table type="Y Axis" storageaddress="0x06F100" />
+        </table>
+        <table name="Table 2D - 62 " storageaddress="0x06F150">
+            <table type="Y Axis" storageaddress="0x06F128" />
+        </table>
+        <table name="Table 2D - 63 " storageaddress="0x06F180">
+            <table type="Y Axis" storageaddress="0x06F15C" />
+        </table>
+        <table name="Table 2D - 64 " storageaddress="0x06F2A0">
+            <table type="Y Axis" storageaddress="0x06F260" />
+        </table>
+        <table name="Table 2D - 65 " storageaddress="0x06F2D4">
+            <table type="Y Axis" storageaddress="0x06F2B0" />
+        </table>
+        <table name="Table 2D - 66 " storageaddress="0x06F2EC">
+            <table type="Y Axis" storageaddress="0x06F2E0" />
+        </table>
+        <table name="Table 2D - 67 " storageaddress="0x06F314">
+            <table type="Y Axis" storageaddress="0x06F2F0" />
+        </table>
+        <table name="Table 2D - 68 " storageaddress="0x06F3A4">
+            <table type="Y Axis" storageaddress="0x06F368" />
+        </table>
+        <table name="Table 2D - 69 " storageaddress="0x06F42C">
+            <table type="Y Axis" storageaddress="0x06F410" />
+        </table>
+        <table name="Table 2D - 70 " storageaddress="0x07062C">
+            <table type="Y Axis" storageaddress="0x0705FC" />
+        </table>
+        <table name="Table 2D - 71 " storageaddress="0x070668">
+            <table type="Y Axis" storageaddress="0x070638" />
+        </table>
+        <table name="Table 2D - 72 " storageaddress="0x0706A4">
+            <table type="Y Axis" storageaddress="0x070674" />
+        </table>
+        <table name="Table 2D - 73 " storageaddress="0x0706D4">
+            <table type="Y Axis" storageaddress="0x0706B0" />
+        </table>
+        <table name="Table 2D - 74 " storageaddress="0x070704">
+            <table type="Y Axis" storageaddress="0x0706E0" />
+        </table>
+        <table name="Table 2D - 75 " storageaddress="0x070734">
+            <table type="Y Axis" storageaddress="0x070710" />
+        </table>
+        <table name="Table 2D - 76 " storageaddress="0x070764">
+            <table type="Y Axis" storageaddress="0x070740" />
+        </table>
+        <table name="Table 2D - 77 " storageaddress="0x070794">
+            <table type="Y Axis" storageaddress="0x070770" />
+        </table>
+        <table name="Table 2D - 78 " storageaddress="0x0707C4">
+            <table type="Y Axis" storageaddress="0x0707A0" />
+        </table>
+        <table name="Table 2D - 79 " storageaddress="0x07082C">
+            <table type="Y Axis" storageaddress="0x070808" />
+        </table>
+        <table name="Table 2D - 80 " storageaddress="0x070864">
+            <table type="Y Axis" storageaddress="0x070840" />
+        </table>
+        <table name="Table 2D - 82 " storageaddress="0x0708D8">
+            <table type="Y Axis" storageaddress="0x0708A8" />
+        </table>
+        <table name="Table 2D - 83 " storageaddress="0x070AE8">
+            <table type="Y Axis" storageaddress="0x070AC0" />
+        </table>
+        <table name="Table 2D - 84 " storageaddress="0x070B3C">
+            <table type="Y Axis" storageaddress="0x070B14" />
+        </table>
+        <table name="Table 2D - 85 " storageaddress="0x070B78">
+            <table type="Y Axis" storageaddress="0x070B50" />
+        </table>
+        <table name="Open Loop Fuelling Base Correction (Throttle) - Safe Mode" storageaddress="0x070D40">
+            <table type="Y Axis" storageaddress="0x070D1C" />
+        </table>
+        <table name="Open Loop Fuelling Base Correction (Throttle)" storageaddress="0x070D50">
+            <table type="Y Axis" storageaddress="0x070D4C" />
+        </table>
+        <table name="Open Loop Target - Coolant Temperature Correction" storageaddress="0x070D70">
+            <table type="Y Axis" storageaddress="0x070D54" />
+        </table>
+        <table name="Open Loop Fuelling Rich Limit - Safe Mode" storageaddress="0x070D9C">
+            <table type="Y Axis" storageaddress="0x070D78" />
+        </table>
+        <table name="Open Loop Fuelling Rich Limit" storageaddress="0x070DCC">
+            <table type="Y Axis" storageaddress="0x070DA8" />
+        </table>
+        <table name="Open Loop Temperature Correction #B" storageaddress="0x070DF4">
+            <table type="Y Axis" storageaddress="0x070DD8" />
+        </table>
+        <table name="Closed Loop Fuelling Threshold (Engine Load A)" storageaddress="0x070E44">
+            <table type="Y Axis" storageaddress="0x070DFC" />
+        </table>
+        <table name="Closed Loop Fuelling Threshold (Throttle Position) " storageaddress="0x070F98">
+            <table type="Y Axis" storageaddress="0x070F4C" />
+        </table>
+        <table name="Table 2D - 97 " storageaddress="0x070FF4">
+            <table type="Y Axis" storageaddress="0x070FAC" />
+        </table>
+        <table name="Table 2D - 98 " storageaddress="0x07100C">
+            <table type="Y Axis" storageaddress="0x071008" />
+        </table>
+        <table name="Table 2D - 99 " storageaddress="0x071058">
+            <table type="Y Axis" storageaddress="0x071010" />
+        </table>
+        <table name="Table 2D - 100 " storageaddress="0x071070">
+            <table type="Y Axis" storageaddress="0x07106C" />
+        </table>
+        <table name="Table 2D - 101 " storageaddress="0x0710BC">
+            <table type="Y Axis" storageaddress="0x071074" />
+        </table>
+        <table name="Table 2D - 102 " storageaddress="0x0710D4">
+            <table type="Y Axis" storageaddress="0x0710D0" />
+        </table>
+        <table name="Open Loop Changeover Enrichment" storageaddress="0x0710F4">
+            <table type="Y Axis" storageaddress="0x0710D8" />
+        </table>
+        <table name="Table 2D - 104 " storageaddress="0x071C90">
+            <table type="Y Axis" storageaddress="0x071C6C" />
+        </table>
+        <table name="Table 2D - 105 " storageaddress="0x071CC0">
+            <table type="Y Axis" storageaddress="0x071C9C" />
+        </table>
+        <table name="Ignition Leading - Idle Error Timing Correction - Unknown Bool False" storageaddress="0x071D1C">
+            <table type="Y Axis" storageaddress="0x071CF8" />
+        </table>
+        <table name="Ignition Leading - Idle Error Timing Correction - Unknown Bool True" storageaddress="0x071D4C">
+            <table type="Y Axis" storageaddress="0x071D28" />
+        </table>
+        <table name="Ignition Trailing - Idle Error Timing Correction - Unknown Bool False" storageaddress="0x071D7C">
+            <table type="Y Axis" storageaddress="0x071D58" />
+        </table>
+        <table name="Ignition Trailing - Idle Error Timing Correction - Unknown Bool True" storageaddress="0x071DAC">
+            <table type="Y Axis" storageaddress="0x071D88" />
+        </table>
+        <table name="Table 2D - 110 " storageaddress="0x071E40">
+            <table type="Y Axis" storageaddress="0x071DE8" />
+        </table>
+        <table name="Table 2D - 111 " storageaddress="0x071EB0">
+            <table type="Y Axis" storageaddress="0x071E58" />
+        </table>
+        <table name="Ignition Leading/Trailing - Intake Air Temperature Compensation - On Throttle" storageaddress="0x071EF4">
+            <table type="Y Axis" storageaddress="0x071ED0" />
+        </table>
+        <table name="Table 2D - 113 " storageaddress="0x071F24">
+            <table type="Y Axis" storageaddress="0x071F00" />
+        </table>
+        <table name="Table 2D - 114 " storageaddress="0x071F4C">
+            <table type="Y Axis" storageaddress="0x071F30" />
+        </table>
+        <table name="Table 2D - 115 " storageaddress="0x071F78">
+            <table type="Y Axis" storageaddress="0x071F5C" />
+        </table>
+        <table name="Table 2D - 116 " storageaddress="0x071FA4">
+            <table type="Y Axis" storageaddress="0x071F88" />
+        </table>
+        <table name="Table 2D - 117 " storageaddress="0x071FD4">
+            <table type="Y Axis" storageaddress="0x071FBC" />
+        </table>
+        <table name="DSC Mode C - Max Throttle Plate Opening Allowed" storageaddress="0x072038">
+            <table type="Y Axis" storageaddress="0x071FEC" />
+        </table>
+        <table name="Table 2D - 119 " storageaddress="0x0727E8">
+            <table type="Y Axis" storageaddress="0x0727D8" />
+        </table>
+        <table name="Table 2D - 120 " storageaddress="0x07282C">
+            <table type="Y Axis" storageaddress="0x0727EC" />
+        </table>
+        <table name="Table 2D - 121 " storageaddress="0x072BE0">
+            <table type="Y Axis" storageaddress="0x072B8C" />
+        </table>
+        <table name="Table 2D - 122 " storageaddress="0x072C2C">
+            <table type="Y Axis" storageaddress="0x072BF8" />
+        </table>
+        <table name="Table 2D - 123 " storageaddress="0x072C70">
+            <table type="Y Axis" storageaddress="0x072C3C" />
+        </table>
+        <table name="Table 2D - 124 " storageaddress="0x072CC0">
+            <table type="Y Axis" storageaddress="0x072C94" />
+        </table>
+        <table name="Table 2D - 125 " storageaddress="0x072CF8">
+            <table type="Y Axis" storageaddress="0x072CCC" />
+        </table>
+        <table name="Table 2D - 126 " storageaddress="0x072D30">
+            <table type="Y Axis" storageaddress="0x072D04" />
+        </table>
+        <table name="Table 2D - 127 " storageaddress="0x072D98">
+            <table type="Y Axis" storageaddress="0x072D68" />
+        </table>
+        <table name="Table 2D - 128 " storageaddress="0x072E24">
+            <table type="Y Axis" storageaddress="0x072E10" />
+        </table>
+        <table name="Table 2D - 129 " storageaddress="0x072E40">
+            <table type="Y Axis" storageaddress="0x072E2C" />
+        </table>
+        <table name="Table 2D - 130 " storageaddress="0x072E5C">
+            <table type="Y Axis" storageaddress="0x072E48" />
+        </table>
+        <table name="Throttle Pedal Percent Decreasing Filter Factor" storageaddress="0x073028">
+            <table type="Y Axis" storageaddress="0x073008" />
+        </table>
+        <table name="Table 2D - 132 " storageaddress="0x073050">
+            <table type="Y Axis" storageaddress="0x073030" />
+        </table>
+        <table name="Table 2D - 133 " storageaddress="0x073078">
+            <table type="Y Axis" storageaddress="0x073058" />
+        </table>
+        <table name="Table 2D - 134 " storageaddress="0x0730A0">
+            <table type="Y Axis" storageaddress="0x073080" />
+        </table>
+        <table name="Table 2D - 135 " storageaddress="0x0730C4">
+            <table type="Y Axis" storageaddress="0x0730A8" />
+        </table>
+        <table name="Table 2D - 136 " storageaddress="0x0730E8">
+            <table type="Y Axis" storageaddress="0x0730CC" />
+        </table>
+        <table name="Table 2D - 137 " storageaddress="0x07311C">
+            <table type="Y Axis" storageaddress="0x0730F0" />
+        </table>
+        <table name="Table 2D - 138 " storageaddress="0x073154">
+            <table type="Y Axis" storageaddress="0x073128" />
+        </table>
+        <table name="Table 2D - 139 " storageaddress="0x073180">
+            <table type="Y Axis" storageaddress="0x073160" />
+        </table>
+        <table name="Table 2D - 140 " storageaddress="0x0731A8">
+            <table type="Y Axis" storageaddress="0x073188" />
+        </table>
+        <table name="Table 2D - 141 " storageaddress="0x0731D0">
+            <table type="Y Axis" storageaddress="0x0731B0" />
+        </table>
+        <table name="Table 2D - 142 " storageaddress="0x0731F8">
+            <table type="Y Axis" storageaddress="0x0731D8" />
+        </table>
+        <table name="Table 2D - 143 " storageaddress="0x07321C">
+            <table type="Y Axis" storageaddress="0x073200" />
+        </table>
+        <table name="Table 2D - 144 " storageaddress="0x0740C4">
+            <table type="Y Axis" storageaddress="0x0740A0" />
+        </table>
+        <table name="Table 2D - 145 " storageaddress="0x074120">
+            <table type="Y Axis" storageaddress="0x0740D8" />
+        </table>
+        <table name="Table 2D - 146 " storageaddress="0x074168">
+            <table type="Y Axis" storageaddress="0x074144" />
+        </table>
+        <table name="Table 2D - 147 " storageaddress="0x0741A0">
+            <table type="Y Axis" storageaddress="0x07417C" />
+        </table>
+        <table name="Table 2D - 148 " storageaddress="0x074350">
+            <table type="Y Axis" storageaddress="0x074334" />
+        </table>
+        <table name="Desired Charge Voltage" storageaddress="0x07437C">
+            <table type="Y Axis" storageaddress="0x074358" />
+        </table>
+        <table name="Alternator Duty Cycle Max" storageaddress="0x0743BC">
+            <table type="Y Axis" storageaddress="0x074390" />
+        </table>
+        <table name="Alternator Diagnostic Voltage Delta to DC" storageaddress="0x074408">
+            <table type="Y Axis" storageaddress="0x0743D4" />
+        </table>
+        <table name="Table 2D - 152 " storageaddress="0x074448">
+            <table type="Y Axis" storageaddress="0x074424" />
+        </table>
+        <table name="Table 2D - 153 " storageaddress="0x074480">
+            <table type="Y Axis" storageaddress="0x07445C" />
+        </table>
+        <table name="Table 2D - 154 " storageaddress="0x0744B8">
+            <table type="Y Axis" storageaddress="0x074494" />
+        </table>
+        <table name="Table 2D - 155 " storageaddress="0x0744F0">
+            <table type="Y Axis" storageaddress="0x0744CC" />
+        </table>
+        <table name="Table 2D - 157 " storageaddress="0x074A3C">
+            <table type="Y Axis" storageaddress="0x0749F8" />
+        </table>
+        <table name="Rotor 1 Ignition Dwell" storageaddress="0x074C68">
+            <table type="Y Axis" storageaddress="0x074C34" />
+        </table>
+        <table name="Rotor 2 Ignition Dwell" storageaddress="0x074CB8">
+            <table type="Y Axis" storageaddress="0x074C84" />
+        </table>
+        <table name="Table 2D - 160 " storageaddress="0x0750AA">
+            <table type="Y Axis" storageaddress="0x075060" />
+        </table>
+        <table name="Table 2D - 161 " storageaddress="0x0750F4">
+            <table type="Y Axis" storageaddress="0x0750D0" />
+        </table>
+        <table name="Table 2D - 162 " storageaddress="0x07513E">
+            <table type="Y Axis" storageaddress="0x07510C" />
+        </table>
+        <table name="Table 2D - 163 " storageaddress="0x075DC4">
+            <table type="Y Axis" storageaddress="0x075DB4" />
+        </table>
+        <table name="Table 2D - 164 " storageaddress="0x076218">
+            <table type="Y Axis" storageaddress="0x076214" />
+        </table>
+        <table name="Table 2D - 165 " storageaddress="0x076220">
+            <table type="Y Axis" storageaddress="0x07621C" />
+        </table>
+        <table name="Table 2D - 166 " storageaddress="0x076300">
+            <table type="Y Axis" storageaddress="0x0762E0" />
+        </table>
+        <table name="Table 2D - 167 " storageaddress="0x076324">
+            <table type="Y Axis" storageaddress="0x076308" />
+        </table>
+        <table name="Table 2D - 168 " storageaddress="0x076350">
+            <table type="Y Axis" storageaddress="0x076334" />
+        </table>
+        <table name="Table 2D - 169 " storageaddress="0x07646C">
+            <table type="Y Axis" storageaddress="0x07645C" />
+        </table>
+        <table name="Injector Manifold Vacuum Multiplier" storageaddress="0x0764B8">
+            <table type="Y Axis" storageaddress="0x076474" />
+        </table>
+        <table name="Table 2D - 171 " storageaddress="0x076BC4">
+            <table type="Y Axis" storageaddress="0x076BAC" />
+        </table>
+        <table name="Table 2D - 172 " storageaddress="0x076BE0">
+            <table type="Y Axis" storageaddress="0x076BCC" />
+        </table>
+        <table name="Table 2D - 173 " storageaddress="0x076BEC">
+            <table type="Y Axis" storageaddress="0x076BE8" />
+        </table>
+        <table name="Table 2D - 174 " storageaddress="0x076BFC">
+            <table type="Y Axis" storageaddress="0x076BF0" />
+        </table>
+        <table name="Table 2D - 175 " storageaddress="0x076C40">
+            <table type="Y Axis" storageaddress="0x076C10" />
+        </table>
+        <table name="Primary Fuel Injector Cranking Pulse Width" storageaddress="0x076C8C">
+            <table type="Y Axis" storageaddress="0x076C58" />
+        </table>
+        <table name="Table 2D - 177 Might be Primary/Secondary Ratio" storageaddress="0x076D84">
+            <table type="Y Axis" storageaddress="0x076D40" />
+        </table>
+        <table name="Primary Injector Max Barometric Pressure Correction" storageaddress="0x076DB8">
+            <table type="Y Axis" storageaddress="0x076D98" />
+        </table>
+        <table name="Table 2D - 179 Injector Ratio Poss Min Sec PW #2" storageaddress="0x076E64">
+            <table type="Y Axis" storageaddress="0x076E40" />
+        </table>
+        <table name="Table 2D - 180 Injector Ratio Poss Min Sec PW #1" storageaddress="0x076E94">
+            <table type="Y Axis" storageaddress="0x076E70" />
+        </table>
+        <table name="Table 2D - 181 Minimum Lambda/EQ for Secondary Injectiors" storageaddress="0x076EC4">
+            <table type="Y Axis" storageaddress="0x076EA0" />
+        </table>
+        <table name="Table 2D - 182 " storageaddress="0x076F1C">
+            <table type="Y Axis" storageaddress="0x076ED8" />
+        </table>
+        <table name="Secondary Injectors Allowed Threshold - Coolant Temperature Based" storageaddress="0x076F64">
+            <table type="Y Axis" storageaddress="0x076F40" />
+        </table>
+        <table name="Table 2D - 188 " storageaddress="0x077328">
+            <table type="Y Axis" storageaddress="0x0772F8" />
+        </table>
+        <table name="Table 2D - 189 " storageaddress="0x077358">
+            <table type="Y Axis" storageaddress="0x077334" />
+        </table>
+        <table name="Table 2D - 190 " storageaddress="0x077460">
+            <table type="Y Axis" storageaddress="0x07743C" />
+        </table>
+        <table name="Table 2D - 191 " storageaddress="0x077490">
+            <table type="Y Axis" storageaddress="0x07746C" />
+        </table>
+        <table name="Table 2D - 192 " storageaddress="0x0774C8">
+            <table type="Y Axis" storageaddress="0x07749C" />
+        </table>
+        <table name="Table 2D - 193 " storageaddress="0x077510">
+            <table type="Y Axis" storageaddress="0x0774E0" />
+        </table>
+        <table name="Table 2D - 194 " storageaddress="0x077590">
+            <table type="Y Axis" storageaddress="0x077574" />
+        </table>
+        <table name="Table 2D - 195 " storageaddress="0x07759C">
+            <table type="Y Axis" storageaddress="0x077598" />
+        </table>
+        <table name="Max Load - Intake Temperature Compensation" storageaddress="0x0776E8">
+            <table type="Y Axis" storageaddress="0x0776C4" />
+        </table>
+        <table name="Engine Torque Max - Barometric Pressure Compensation" storageaddress="0x077720">
+            <table type="Y Axis" storageaddress="0x0776FC" />
+        </table>
+        <table name="Load Based Oil Injection Temperature Correction" storageaddress="0x0778B8">
+            <table type="Y Axis" storageaddress="0x0778AC" />
+        </table>
+        <table name="Fuel Injection - Warmup Fueling - Load Based Multiplier" storageaddress="0x077C5C">
+            <table type="Y Axis" storageaddress="0x077C34" />
+        </table>
+        <table name="Table 2D - 200 " storageaddress="0x077DD8">
+            <table type="Y Axis" storageaddress="0x077D98" />
+        </table>
+        <table name="Table 2D - 201 " storageaddress="0x077E38">
+            <table type="Y Axis" storageaddress="0x077DF8" />
+        </table>
+        <table name="Table 2D - 202 " storageaddress="0x078010">
+            <table type="Y Axis" storageaddress="0x077FE4" />
+        </table>
+        <table name="Table 2D - 203 " storageaddress="0x078050">
+            <table type="Y Axis" storageaddress="0x07801C" />
+        </table>
+        <table name="Table 2D - 204 " storageaddress="0x0780B8">
+            <table type="Y Axis" storageaddress="0x078098" />
+        </table>
+        <table name="Ignition Leading - Cranking Timing Advance" storageaddress="0x0780F0">
+            <table type="Y Axis" storageaddress="0x0780C0" />
+        </table>
+        <table name="Table 2D - 206 " storageaddress="0x07813C">
+            <table type="Y Axis" storageaddress="0x0780FC" />
+        </table>
+        <table name="Table 2D - 207 " storageaddress="0x0781E0">
+            <table type="Y Axis" storageaddress="0x0781CC" />
+        </table>
+        <table name="Table 2D - 208 " storageaddress="0x0781F8">
+            <table type="Y Axis" storageaddress="0x0781E8" />
+        </table>
+        <table name="Knock Retard Max - Knock Sensor Faulted" storageaddress="0x078210">
+            <table type="Y Axis" storageaddress="0x0781FC" />
+        </table>
+        <table name="Table 2D - 210 " storageaddress="0x078248">
+            <table type="Y Axis" storageaddress="0x078218" />
+        </table>
+        <table name="Table 2D - 211 " storageaddress="0x078284">
+            <table type="Y Axis" storageaddress="0x078254" />
+        </table>
+        <table name="Table 2D - 212 " storageaddress="0x0782C8">
+            <table type="Y Axis" storageaddress="0x0782A8" />
+        </table>
+        <table name="Table 2D - 213 " storageaddress="0x0782E0">
+            <table type="Y Axis" storageaddress="0x0782D0" />
+        </table>
+        <table name="Table 2D - 214 " storageaddress="0x078320">
+            <table type="Y Axis" storageaddress="0x0782E8" />
+        </table>
+        <table name="Table 2D - 215 " storageaddress="0x078344">
+            <table type="Y Axis" storageaddress="0x07833C" />
+        </table>
+        <table name="Table 2D - 216 " storageaddress="0x078540">
+            <table type="Y Axis" storageaddress="0x078518" />
+        </table>
+        <table name="Table 2D - 217 " storageaddress="0x078570">
+            <table type="Y Axis" storageaddress="0x07854C" />
+        </table>
+        <table name="Table 2D - 218 " storageaddress="0x07859C">
+            <table type="Y Axis" storageaddress="0x07857C" />
+        </table>
+        <table name="Table 2D - 219 " storageaddress="0x0785DC">
+            <table type="Y Axis" storageaddress="0x0785A4" />
+        </table>
+        <table name="Table 2D - 220 " storageaddress="0x078630">
+            <table type="Y Axis" storageaddress="0x0785F8" />
+        </table>
+        <table name="Table 2D - 221 " storageaddress="0x078684">
+            <table type="Y Axis" storageaddress="0x07864C" />
+        </table>
+        <table name="RPM Based Max Engine Load" storageaddress="0x078998">
+            <table type="Y Axis" storageaddress="0x078950" />
+        </table>
+        <table name="Table 2D - 223 " storageaddress="0x0789DC">
+            <table type="Y Axis" storageaddress="0x0789BC" />
+        </table>
+        <table name="Max Load - Barometric Pressure Compensation" storageaddress="0x078A0C">
+            <table type="Y Axis" storageaddress="0x0789EC" />
+        </table>
+        <table name="Table 2D - 225 " storageaddress="0x078A40">
+            <table type="Y Axis" storageaddress="0x078A1C" />
+        </table>
+        <table name="Table 2D - 226 " storageaddress="0x078A78">
+            <table type="Y Axis" storageaddress="0x078A54" />
+        </table>
+        <table name="Knock Voltage To Magnitude" storageaddress="0x078C40">
+            <table type="Y Axis" storageaddress="0x078B58" />
+        </table>
+        <table name="Table 2D - 228 " storageaddress="0x078E7C">
+            <table type="Y Axis" storageaddress="0x078E60" />
+        </table>
+        <table name="Table 2D - 229 " storageaddress="0x078EB4">
+            <table type="Y Axis" storageaddress="0x078E84" />
+        </table>
+        <table name="Airflow Or Load Related" storageaddress="0x078F50">
+            <table type="Y Axis" storageaddress="0x078F28" />
+        </table>
+        <table name="Table 2D - 231 (Airflow Related)" storageaddress="0x078F84">
+            <table type="Y Axis" storageaddress="0x078F64" />
+        </table>
+        <table name="Table 2D - 232 " storageaddress="0x078FC0">
+            <table type="Y Axis" storageaddress="0x078F94" />
+        </table>
+        <table name="Table 2D - 233 " storageaddress="0x079004">
+            <table type="Y Axis" storageaddress="0x078FD8" />
+        </table>
+        <table name="Table 2D - 234 " storageaddress="0x079048">
+            <table type="Y Axis" storageaddress="0x07901C" />
+        </table>
+        <table name="Table 2D - 235 " storageaddress="0x07B708">
+            <table type="Y Axis" storageaddress="0x07B6E8" />
+        </table>
+        <table name="Table 2D - 236 " storageaddress="0x07B774">
+            <table type="Y Axis" storageaddress="0x07B750" />
+        </table>
+        <table name="Table 2D - 237 " storageaddress="0x07B7AC">
+            <table type="Y Axis" storageaddress="0x07B788" />
+        </table>
+        <table name="Table 2D - 238 " storageaddress="0x07B7E4">
+            <table type="Y Axis" storageaddress="0x07B7C0" />
+        </table>
+        <table name="Table 2D - 239 " storageaddress="0x07B81C">
+            <table type="Y Axis" storageaddress="0x07B7F8" />
+        </table>
+        <table name="Table 2D - 240 " storageaddress="0x07B854">
+            <table type="Y Axis" storageaddress="0x07B830" />
+        </table>
+        <table name="Table 2D - 241 " storageaddress="0x07B88C">
+            <table type="Y Axis" storageaddress="0x07B868" />
+        </table>
+        <table name="Table 2D - 242 " storageaddress="0x07B8C4">
+            <table type="Y Axis" storageaddress="0x07B8A0" />
+        </table>
+        <table name="Table 2D - 243 " storageaddress="0x07B8FC">
+            <table type="Y Axis" storageaddress="0x07B8D8" />
+        </table>
+        <table name="Table 2D - 244 " storageaddress="0x07B9C0">
+            <table type="Y Axis" storageaddress="0x07B980" />
+        </table>
+        <table name="Table 2D - 245 " storageaddress="0x07BA0C">
+            <table type="Y Axis" storageaddress="0x07B9E8" />
+        </table>
+        <table name="Table 2D - 246 " storageaddress="0x07BA58">
+            <table type="Y Axis" storageaddress="0x07BA18" />
+        </table>
+        <table name="Table 2D - 247 " storageaddress="0x07BA9C">
+            <table type="Y Axis" storageaddress="0x07BA78" />
+        </table>
+        <table name="Table 2D - 248 " storageaddress="0x07BAD4">
+            <table type="Y Axis" storageaddress="0x07BAB0" />
+        </table>
+        <table name="Table 2D - 249 " storageaddress="0x07BBBC">
+            <table type="Y Axis" storageaddress="0x07BB94" />
+        </table>
+        <table name="Table 2D - 250 " storageaddress="0x07BC30">
+            <table type="Y Axis" storageaddress="0x07BC10" />
+        </table>
+        <table name="Table 2D - 251 " storageaddress="0x07BC60">
+            <table type="Y Axis" storageaddress="0x07BC40" />
+        </table>
+        <table name="Table 2D - 252 " storageaddress="0x07BCB0">
+            <table type="Y Axis" storageaddress="0x07BC8C" />
+        </table>
+        <table name="Table 2D - 253 " storageaddress="0x07BCE8">
+            <table type="Y Axis" storageaddress="0x07BCC4" />
+        </table>
+        <table name="Table 2D - 254 " storageaddress="0x079118">
+            <table type="Y Axis" storageaddress="0x0790F0" />
+        </table>
+        <table name="Table 2D - 255 " storageaddress="0x079134">
+            <table type="Y Axis" storageaddress="0x079124" />
+        </table>
+        <table name="Table 2D - 256 " storageaddress="0x079220">
+            <table type="Y Axis" storageaddress="0x079204" />
+        </table>
+        <table name="Off Throttle Leading Timing Realted" storageaddress="0x079320">
+            <table type="Y Axis" storageaddress="0x0792FC" />
+        </table>
+        <table name="Ignition Trailing - Cranking Timing Advance" storageaddress="0x079350">
+            <table type="Y Axis" storageaddress="0x07932C" />
+        </table>
+        <table name="Table 2D - 259 " storageaddress="0x0797A4">
+            <table type="Y Axis" storageaddress="0x07975C" />
+        </table>
+        <table name="Injection Angle Related AFR Input" storageaddress="0x079870">
+            <table type="Y Axis" storageaddress="0x07984C" />
+        </table>
+        <table name="Unknown Lambda Input" storageaddress="0x07989C">
+            <table type="Y Axis" storageaddress="0x07987C" />
+        </table>
+        <table name="Table 2D - 262 " storageaddress="0x0798C4">
+            <table type="Y Axis" storageaddress="0x0798A4" />
+        </table>
+        <table name="AirFlow Inj Angle Related" storageaddress="0x079930">
+            <table type="Y Axis" storageaddress="0x0798CC" />
+        </table>
+        <table name="Table 2D - 264 " storageaddress="0x079984">
+            <table type="Y Axis" storageaddress="0x079964" />
+        </table>
+        <table name="Table 2D - 265 " storageaddress="0x0799F8">
+            <table type="Y Axis" storageaddress="0x079994" />
+        </table>
+        <table name="Table 2D - 266 " storageaddress="0x079A90">
+            <table type="Y Axis" storageaddress="0x079A2C" />
+        </table>
+        <table name="Table 2D - 267 " storageaddress="0x079AE4">
+            <table type="Y Axis" storageaddress="0x079AC4" />
+        </table>
+        <table name="Table 2D - 268 " storageaddress="0x079B2C">
+            <table type="Y Axis" storageaddress="0x079AF4" />
+        </table>
+        <table name="Table 2D - 269 " storageaddress="0x079B68">
+            <table type="Y Axis" storageaddress="0x079B48" />
+        </table>
+        <table name="Table 2D - 270 " storageaddress="0x079E82">
+            <table type="Y Axis" storageaddress="0x079D64" />
+        </table>
+        <table name="Table 2D - 271 " storageaddress="0x079D8C">
+            <table type="Y Axis" storageaddress="0x079D64" />
+        </table>
+        <table name="Table 2D - 272 " storageaddress="0x079DC8">
+            <table type="Y Axis" storageaddress="0x079D98" />
+        </table>
+        <table name="Table 2D - 273 " storageaddress="0x079E00">
+            <table type="Y Axis" storageaddress="0x079DD4" />
+        </table>
+        <table name="Table 2D - 274 " storageaddress="0x079E38">
+            <table type="Y Axis" storageaddress="0x079E0C" />
+        </table>
+        <table name="Table 2D - 275 " storageaddress="0x079E5C">
+            <table type="Y Axis" storageaddress="0x079E44" />
+        </table>
+        <table name="Table 2D - 276 " storageaddress="0x079E7C">
+            <table type="Y Axis" storageaddress="0x079E64" />
+        </table>
+        <table name="Table 2D - 277 " storageaddress="0x07A9AC">
+            <table type="Y Axis" storageaddress="0x07A978" />
+        </table>
+        <table name="Load Limit C" storageaddress="0x07AC7C">
+            <table type="Y Axis" storageaddress="0x07AC54" />
+        </table>
+        <table name="Table 2D - 279 " storageaddress="0x07ADDC">
+            <table type="Y Axis" storageaddress="0x07ADB4" />
+        </table>
+        <table name="Table 2D - 280 " storageaddress="0x07AE10">
+            <table type="Y Axis" storageaddress="0x07ADE8" />
+        </table>
+        <table name="Table 2D - 281 " storageaddress="0x07AE44">
+            <table type="Y Axis" storageaddress="0x07AE1C" />
+        </table>
+        <table name="Table 2D - 282 " storageaddress="0x07B000">
+            <table type="Y Axis" storageaddress="0x07AFE4" />
+        </table>
+        <table name="Table 2D - 283 " storageaddress="0x07B030">
+            <table type="Y Axis" storageaddress="0x07B008" />
+        </table>
+        <table name="Table 2D - 284 " storageaddress="0x07B078">
+            <table type="Y Axis" storageaddress="0x07B060" />
+        </table>
+        <table name="Table 2D - 285 " storageaddress="0x07B0A8">
+            <table type="Y Axis" storageaddress="0x07B084" />
+        </table>
+        <table name="Table 2D - 286 " storageaddress="0x07B214">
+            <table type="Y Axis" storageaddress="0x07B1D8" />
+        </table>
+        <table name="Table 2D - 287 " storageaddress="0x07B248">
+            <table type="Y Axis" storageaddress="0x07B224" />
+        </table>
+        <table name="Table 2D - 288 Check DataType" storageaddress="0x06C958">
+            <table type="Y Axis" storageaddress="0x06C940" />
+        </table>
+        <table name="Table 2D - 289 Check DataType" storageaddress="0x06C978">
+            <table type="Y Axis" storageaddress="0x06C960" />
+        </table>
+        <table name="Table 2D - 290 Check DataType" storageaddress="0x06C998">
+            <table type="Y Axis" storageaddress="0x06C980" />
+        </table>
+        <table name="CLT Sensor Scaling" storageaddress="0x06E9DC">
+            <table type="Y Axis" storageaddress="0x06E95C" />
+        </table>
+        <table name="Table 2D - 292 Check DataType" storageaddress="0x06EB3C">
+            <table type="Y Axis" storageaddress="0x06EB28" />
+        </table>
+        <table name="Table 2D - 293 Check DataType" storageaddress="0x06EB64">
+            <table type="Y Axis" storageaddress="0x06EB50" />
+        </table>
+        <table name="MAF Scaling" storageaddress="0x06EC48">
+            <table type="Y Axis" storageaddress="0x06EB88" />
+        </table>
+        <table name="Table 2D - 295 Check DataType" storageaddress="0x06ED68">
+            <table type="Y Axis" storageaddress="0x06ED48" />
+        </table>
+        <table name="Table 2D - 296 Check DataType" storageaddress="0x06ED90">
+            <table type="Y Axis" storageaddress="0x06ED70" />
+        </table>
+        <table name="Lamda Sensor Barometric Pressure Compensation" storageaddress="0x06EDA8">
+            <table type="Y Axis" storageaddress="0x06ED98" />
+        </table>
+        <table name="Lambda Sensor Scaling" storageaddress="0x06EDE4">
+            <table type="Y Axis" storageaddress="0x06EDB8" />
+        </table>
+        <table name="Table 2D - 299 Check DataType" storageaddress="0x06EE50">
+            <table type="Y Axis" storageaddress="0x06EE10" />
+        </table>
+        <table name="Table 2D - 300 Check DataType" storageaddress="0x06EED0">
+            <table type="Y Axis" storageaddress="0x06EE90" />
+        </table>
+        <table name="IAT Sensor Scaling" storageaddress="0x06F058">
+            <table type="Y Axis" storageaddress="0x06F018" />
+        </table>
+        <table name="Table 2D - 302" storageaddress="0x06F33C">
+            <table type="Y Axis" storageaddress="0x06F320" />
+        </table>
+        <table name="Table 2D - 303 Check DataType" storageaddress="0x06F360">
+            <table type="Y Axis" storageaddress="0x06F344" />
+        </table>
+        <table name="Table 2D - 304 Check DataType" storageaddress="0x06F3F0">
+            <table type="Y Axis" storageaddress="0x06F3B4" />
+        </table>
+        <table name="Table 2D - 305" storageaddress="0x06F454">
+            <table type="Y Axis" storageaddress="0x06F43C" />
+        </table>
+        <table name="Table 2D - 306" storageaddress="0x06F484">
+            <table type="Y Axis" storageaddress="0x06F460" />
+        </table>
+        <table name="Table 2D - 307" storageaddress="0x06F4D8">
+            <table type="Y Axis" storageaddress="0x06F498" />
+        </table>
+        <table name="Table 2D - 308" storageaddress="0x06F574">
+            <table type="Y Axis" storageaddress="0x06F4F8" />
+        </table>
+        <table name="Table 2D - 309" storageaddress="0x06F66C">
+            <table type="Y Axis" storageaddress="0x06F5F0" />
+        </table>
+        <table name="Table 2D - 310" storageaddress="0x06F764">
+            <table type="Y Axis" storageaddress="0x06F6E8" />
+        </table>
+        <table name="Table 2D - 311" storageaddress="0x06F85C">
+            <table type="Y Axis" storageaddress="0x06F7E0" />
+        </table>
+        <table name="Table 2D - 312 Engine Speed" storageaddress="0x0707F4">
+            <table type="Y Axis" storageaddress="0x0707D0" />
+        </table>
+        <table name="Table 2D - 313 Check DataType" storageaddress="0x070920">
+            <table type="Y Axis" storageaddress="0x0708F0" />
+        </table>
+        <table name="Table 2D - 314 Check DataType" storageaddress="0x070980">
+            <table type="Y Axis" storageaddress="0x070950" />
+        </table>
+        <table name="Table 2D - 315 Check DataType" storageaddress="0x0709E0">
+            <table type="Y Axis" storageaddress="0x0709B0" />
+        </table>
+        <table name="Table 2D - 316" storageaddress="0x070B08">
+            <table type="Y Axis" storageaddress="0x070AF4" />
+        </table>
+        <table name="Table 2D - 317" storageaddress="0x070BB4">
+            <table type="Y Axis" storageaddress="0x070B8C" />
+        </table>
+        <table name="Table 2D - 318 Check DataType" storageaddress="0x070BE0">
+            <table type="Y Axis" storageaddress="0x070BC8" />
+        </table>
+        <table name="Table 2D - 319 Check DataType" storageaddress="0x070C04">
+            <table type="Y Axis" storageaddress="0x070BEC" />
+        </table>
+        <table name="Table 2D - 320 Check DataType" storageaddress="0x07112C">
+            <table type="Y Axis" storageaddress="0x0710FC" />
+        </table>
+        <table name="Table 2D - 321 Check DataType" storageaddress="0x071148">
+            <table type="Y Axis" storageaddress="0x071144" />
+        </table>
+        <table name="Table 2D - 322 Check DataType" storageaddress="0x07117C">
+            <table type="Y Axis" storageaddress="0x07114C" />
+        </table>
+        <table name="Table 2D - 323 Check DataType" storageaddress="0x0711C4">
+            <table type="Y Axis" storageaddress="0x071194" />
+        </table>
+        <table name="Table 2D - 324 Check DataType" storageaddress="0x0711F8">
+            <table type="Y Axis" storageaddress="0x0711DC" />
+        </table>
+        <table name="Table 2D - 325 Check DataType" storageaddress="0x071224">
+            <table type="Y Axis" storageaddress="0x071208" />
+        </table>
+        <table name="Table 2D - 326 Check DataType" storageaddress="0x071248">
+            <table type="Y Axis" storageaddress="0x071234" />
+        </table>
+        <table name="Table 2D - 327 Check DataType" storageaddress="0x071270">
+            <table type="Y Axis" storageaddress="0x071254" />
+        </table>
+        <table name="Table 2D - 328 Check DataType" storageaddress="0x07129C">
+            <table type="Y Axis" storageaddress="0x071280" />
+        </table>
+        <table name="Table 2D - 329 Check DataType" storageaddress="0x071BD4">
+            <table type="Y Axis" storageaddress="0x071BA8" />
+        </table>
+        <table name="Table 2D - 330" storageaddress="0x072D58">
+            <table type="Y Axis" storageaddress="0x072D3C" />
+        </table>
+        <table name="Table 2D - 331" storageaddress="0x0741C8">
+            <table type="Y Axis" storageaddress="0x0741B4" />
+        </table>
+        <table name="Table 2D - 332 Check DataType" storageaddress="0x074AE8">
+            <table type="Y Axis" storageaddress="0x074AA4" />
+        </table>
+        <table name="Table 2D - 333 Check DataType" storageaddress="0x074B50">
+            <table type="Y Axis" storageaddress="0x074B0C" />
+        </table>
+        <table name="Table 2D - 334 Check DataType" storageaddress="0x074C2C">
+            <table type="Y Axis" storageaddress="0x074C14" />
+        </table>
+        <table name="Table 2D - 345" storageaddress="0x076248">
+            <table type="Y Axis" storageaddress="0x076224" />
+        </table>
+        <table name="Table 2D - 346" storageaddress="0x076C0C">
+            <table type="Y Axis" storageaddress="0x076C00" />
+        </table>
+        <table name="Table 2D - 347 Check DataType" storageaddress="0x076DE4">
+            <table type="Y Axis" storageaddress="0x076DC0" />
+        </table>
+        <table name="Table 2D - 348 Check DataType" storageaddress="0x076DFC">
+            <table type="Y Axis" storageaddress="0x076DF0" />
+        </table>
+        <table name="Table 2D - 349 Check DataType" storageaddress="0x076E0C">
+            <table type="Y Axis" storageaddress="0x076E00" />
+        </table>
+        <table name="Table 2D - 350 Check DataType" storageaddress="0x076E34">
+            <table type="Y Axis" storageaddress="0x076E10" />
+        </table>
+        <table name="Minimum Oil Injection Amount" storageaddress="0x077828">
+            <table type="Y Axis" storageaddress="0x077804" />
+        </table>
+        <table name="Intake Air Temperature Based Oil Injection Amount" storageaddress="0x07784C">
+            <table type="Y Axis" storageaddress="0x077834" />
+        </table>
+        <table name="Manifold Pressure Based Oil Injection Amount" storageaddress="0x07786C">
+            <table type="Y Axis" storageaddress="0x077854" />
+        </table>
+        <table name="Table 2D - 355 Check DataType" storageaddress="0x0778A0">
+            <table type="Y Axis" storageaddress="0x077874" />
+        </table>
+        <table name="First Start Oil Injection Timer" storageaddress="0x0778D8">
+            <table type="Y Axis" storageaddress="0x0778C0" />
+        </table>
+        <table name="Table 2D - 357 Check DataType" storageaddress="0x0778FC">
+            <table type="Y Axis" storageaddress="0x0778E4" />
+        </table>
+        <table name="Table 2D - 358 Check DataType" storageaddress="0x07792C">
+            <table type="Y Axis" storageaddress="0x077914" />
+        </table>
+        <table name="Table 2D - 359 Check DataType" storageaddress="0x077950">
+            <table type="Y Axis" storageaddress="0x077944" />
+        </table>
+        <table name="Ignition Timing Threshold A - Knock Retard Reset Off" storageaddress="0x078CB4">
+            <table type="Y Axis" storageaddress="0x078C7C" />
+        </table>
+        <table name="Ignition Timing Threshold B - Knock Retard Reset Off" storageaddress="0x078D08">
+            <table type="Y Axis" storageaddress="0x078CD0" />
+        </table>
+        <table name="Knock Related" storageaddress="0x078D28">
+            <table type="Y Axis" storageaddress="0x078D24" />
+        </table>
+        <table name="Knock Related 3" storageaddress="0x078D30">
+            <table type="Y Axis" storageaddress="0x078D2C" />
+        </table>
+        <table name="Table 2D - 364 Check DataType" storageaddress="0x07908C">
+            <table type="Y Axis" storageaddress="0x079060" />
+        </table>
+        <table name="Table 2D - 365 Check DataType" storageaddress="0x0790CC">
+            <table type="Y Axis" storageaddress="0x0790A4" />
+        </table>
+        <table name="Table 2D - 366 Check DataType" storageaddress="0x07B588">
+            <table type="Y Axis" storageaddress="0x07B564" />
+        </table>
+        <table name="Table 2D - 367 Check DataType" storageaddress="0x07B934">
+            <table type="Y Axis" storageaddress="0x07B910" />
+        </table>
+        <table name="Table 2D - 368 Check DataType" storageaddress="0x07B96C">
+            <table type="Y Axis" storageaddress="0x07B948" />
+        </table>
+        <table name="Table 2D - 369 Check DataType" storageaddress="0x07BB0C">
+            <table type="Y Axis" storageaddress="0x07BAE8" />
+        </table>
+        <table name="Table 2D - 370 Check DataType" storageaddress="0x07BB44">
+            <table type="Y Axis" storageaddress="0x07BB20" />
+        </table>
+        <table name="Table 2D - 371 Check DataType" storageaddress="0x07BC04">
+            <table type="Y Axis" storageaddress="0x07BBE0" />
+        </table>
+        <table name="Table 2D - 372 Check DataType" storageaddress="0x07BD30">
+            <table type="Y Axis" storageaddress="0x07BD0C" />
+        </table>
+        <table name="Table 2D - 373 Check DataType" storageaddress="0x07BD78">
+            <table type="Y Axis" storageaddress="0x07BD54" />
+        </table>
+        <table name="Table 2D - 374 Check DataType" storageaddress="0x07BDC0">
+            <table type="Y Axis" storageaddress="0x07BD9C" />
+        </table>
+        <table name="Table 2D - 375 Check DataType" storageaddress="0x0791F4">
+            <table type="Y Axis" storageaddress="0x0791D8" />
+        </table>
+        <table name="Table 2D - 376 Check DataType" storageaddress="0x0797BC">
+            <table type="Y Axis" storageaddress="0x0797B8" />
+        </table>
+        <table name="Table 2D - 377 Check DataType" storageaddress="0x0797C4">
+            <table type="Y Axis" storageaddress="0x0797C0" />
+        </table>
+        <table name="Table 2D - 378 Check DataType" storageaddress="0x07A3D8">
+            <table type="Y Axis" storageaddress="0x07A3BC" />
+        </table>
+        <table name="Table 2D - 379 Check DataType" storageaddress="0x07A408">
+            <table type="Y Axis" storageaddress="0x07A3F4" />
+        </table>
+        <table name="Load Limit A" storageaddress="0x07AADC">
+            <table type="Y Axis" storageaddress="0x07AAAC" />
+        </table>
+        <table name="Load Limit B" storageaddress="0x07AB3C">
+            <table type="Y Axis" storageaddress="0x07AB0C" />
+        </table>
+        <table name="Table 2D - 382 Check DataType" storageaddress="0x07ACEC">
+            <table type="Y Axis" storageaddress="0x07ACDC" />
+        </table>
+        <table name="Table 2D - 383 Check DataType" storageaddress="0x07AD04">
+            <table type="Y Axis" storageaddress="0x07ACF4" />
+        </table>
+        <table name="Table 2D - 384 Check DataType" storageaddress="0x07AD1C">
+            <table type="Y Axis" storageaddress="0x07AD0C" />
+        </table>
+        <table name="Table 2D - 385 Check DataType" storageaddress="0x07AE78">
+            <table type="Y Axis" storageaddress="0x07AE50" />
+        </table>
+        <table name="Primary Fuel Injector Cranking Pulse Decay Time" storageaddress="0x07AEB0">
+            <table type="Y Axis" storageaddress="0x07AE8C" />
+        </table>
+        <table name="Table 2D - 387 Check DataType" storageaddress="0x07AF44">
+            <table type="Y Axis" storageaddress="0x07AF20" />
+        </table>
+        <table name="Table 2D - 388 Check DataType" storageaddress="0x07AFC8">
+            <table type="Y Axis" storageaddress="0x07AF8C" />
+        </table>
+        <table name="Table 2D - 390 Check DataType" storageaddress="0x07B058">
+            <table type="Y Axis" storageaddress="0x07B040" />
+        </table>
+        <table name="Table 3D - 0 " storageaddress="0x06CAAC">
+            <table type="X Axis" storageaddress="0x06CA54" />
+            <table type="Y Axis" storageaddress="0x06CA94" />
+        </table>
+        <table name="Table 3D - 1 " storageaddress="0x06CB64">
+            <table type="X Axis" storageaddress="0x06CB0C" />
+            <table type="Y Axis" storageaddress="0x06CB4C" />
+        </table>
+        <table name="Table 3D - 2 " storageaddress="0x06CC1C">
+            <table type="X Axis" storageaddress="0x06CBC4" />
+            <table type="Y Axis" storageaddress="0x06CC04" />
+        </table>
+        <table name="Table 3D - 3 " storageaddress="0x06CCD4">
+            <table type="X Axis" storageaddress="0x06CC7C" />
+            <table type="Y Axis" storageaddress="0x06CCBC" />
+        </table>
+        <table name="Ignition Timing Leading Idle Load Compensation" storageaddress="0x06CE50">
+            <table type="X Axis" storageaddress="0x06CE14" />
+            <table type="Y Axis" storageaddress="0x06CE34" />
+        </table>
+        <table name="Ignition Leading - Base Timing" storageaddress="0x06CF20">
+            <table type="X Axis" storageaddress="0x06CE88" />
+            <table type="Y Axis" storageaddress="0x06CED8" />
+        </table>
+        <table name="Ignition Timing Trailing Advance - Safe Mode" storageaddress="0x06D194">
+            <table type="X Axis" storageaddress="0x06D0FC" />
+            <table type="Y Axis" storageaddress="0x06D14C" />
+        </table>
+        <table name="Table 3D - 12 " storageaddress="0x06DAF8">
+            <table type="X Axis" storageaddress="0x06DAD0" />
+            <table type="Y Axis" storageaddress="0x06DAEC" />
+        </table>
+        <table name="Table 3D - 13 " storageaddress="0x06DDE8">
+            <table type="X Axis" storageaddress="0x06DDB8" />
+            <table type="Y Axis" storageaddress="0x06DDDC" />
+        </table>
+        <table name="Table 3D - 14 " storageaddress="0x06DE64">
+            <table type="X Axis" storageaddress="0x06DE14" />
+            <table type="Y Axis" storageaddress="0x06DE44" />
+        </table>
+        <table name="Igntion Leading Timing - DSC Mode A - Map 4" storageaddress="0x06DF5C">
+            <table type="X Axis" storageaddress="0x06DEC4" />
+            <table type="Y Axis" storageaddress="0x06DF14" />
+        </table>
+        <table name="Igntion Leading Timing - DSC Mode A - Map 2" storageaddress="0x06E15C">
+            <table type="X Axis" storageaddress="0x06E0C4" />
+            <table type="Y Axis" storageaddress="0x06E114" />
+        </table>
+        <table name="Ignition Minimum Leading/Trailing split" storageaddress="0x06E35C">
+            <table type="X Axis" storageaddress="0x06E2C4" />
+            <table type="Y Axis" storageaddress="0x06E314" />
+        </table>
+        <table name="Ignition 14" storageaddress="0x06E88C">
+            <table type="X Axis" storageaddress="0x06E884" />
+            <table type="Y Axis" storageaddress="0x06E888" />
+        </table>
+        <table name="Ignition 15" storageaddress="0x06E898">
+            <table type="X Axis" storageaddress="0x06E890" />
+            <table type="Y Axis" storageaddress="0x06E894" />
+        </table>
+        <table name="Ignition 16" storageaddress="0x06E8A4">
+            <table type="X Axis" storageaddress="0x06E89C" />
+            <table type="Y Axis" storageaddress="0x06E8A0" />
+        </table>
+        <table name="Ignition 17" storageaddress="0x06E8B0">
+            <table type="X Axis" storageaddress="0x06E8A8" />
+            <table type="Y Axis" storageaddress="0x06E8AC" />
+        </table>
+        <table name="Table 3D - 22 " storageaddress="0x06F918">
+            <table type="X Axis" storageaddress="0x06F8D8" />
+            <table type="Y Axis" storageaddress="0x06F8F8" />
+        </table>
+        <table name="Closed Loop WOT Enrichment??" storageaddress="0x06F994">
+            <table type="X Axis" storageaddress="0x06F958" />
+            <table type="Y Axis" storageaddress="0x06F988" />
+        </table>
+        <table name="Table 3D - 24 " storageaddress="0x06FA08">
+            <table type="X Axis" storageaddress="0x06F9B8" />
+            <table type="Y Axis" storageaddress="0x06F9EC" />
+        </table>
+        <table name="Table 3D - 25 " storageaddress="0x06FB10">
+            <table type="X Axis" storageaddress="0x06FAC0" />
+            <table type="Y Axis" storageaddress="0x06FAF4" />
+        </table>
+        <table name="Table 3D - 26 " storageaddress="0x06FC26">
+            <table type="X Axis" storageaddress="0x06FBC8" />
+            <table type="Y Axis" storageaddress="0x06FBE8" />
+        </table>
+        <table name="Table 3D - 27 " storageaddress="0x06FD2C">
+            <table type="X Axis" storageaddress="0x06FC9C" />
+            <table type="Y Axis" storageaddress="0x06FCBC" />
+        </table>
+        <table name="Table 3D - 31 " storageaddress="0x070274">
+            <table type="X Axis" storageaddress="0x070224" />
+            <table type="Y Axis" storageaddress="0x070258" />
+        </table>
+        <table name="Table 3D - 32 " storageaddress="0x07037C">
+            <table type="X Axis" storageaddress="0x07032C" />
+            <table type="Y Axis" storageaddress="0x070360" />
+        </table>
+        <table name="Open Loop Target - Throttle Tip In" storageaddress="0x0712FC">
+            <table type="X Axis" storageaddress="0x0712AC" />
+            <table type="Y Axis" storageaddress="0x0712DC" />
+        </table>
+        <table name="Open Loop Target" storageaddress="0x0713FC">
+            <table type="X Axis" storageaddress="0x07135C" />
+            <table type="Y Axis" storageaddress="0x0713B0" />
+        </table>
+        <table name="Open Loop Target - Throttle Tip In (Safe Mode)" storageaddress="0x071594">
+            <table type="X Axis" storageaddress="0x07158C" />
+            <table type="Y Axis" storageaddress="0x071590" />
+        </table>
+        <table name="Open Loop Target (Safe Mode)" storageaddress="0x0715A0">
+            <table type="X Axis" storageaddress="0x071598" />
+            <table type="Y Axis" storageaddress="0x07159C" />
+        </table>
+        <table name="Open Loop Target - Throttle Tip in - Coolant Temp Implausible B" storageaddress="0x0715F4">
+            <table type="X Axis" storageaddress="0x0715A4" />
+            <table type="Y Axis" storageaddress="0x0715D4" />
+        </table>
+        <table name="Open Loop Target - Coolant Temp Implausible B" storageaddress="0x0716F4">
+            <table type="X Axis" storageaddress="0x071654" />
+            <table type="Y Axis" storageaddress="0x0716A8" />
+        </table>
+        <table name="Open Loop Target - Throttle Tip in - Coolant Temp Implausible A" storageaddress="0x0718D4">
+            <table type="X Axis" storageaddress="0x071884" />
+            <table type="Y Axis" storageaddress="0x0718B4" />
+        </table>
+        <table name="Open Loop Target - Coolant Temp Implausible A" storageaddress="0x0719D4">
+            <table type="X Axis" storageaddress="0x071934" />
+            <table type="Y Axis" storageaddress="0x071988" />
+        </table>
+        <table name="Trans Requested Torque To Throttle Plate Position Position" storageaddress="0x072100">
+            <table type="X Axis" storageaddress="0x07204C" />
+            <table type="Y Axis" storageaddress="0x0720B4" />
+        </table>
+        <table name="Throttle Position To Torque" storageaddress="0x072564">
+            <table type="X Axis" storageaddress="0x0724DC" />
+            <table type="Y Axis" storageaddress="0x072514" />
+        </table>
+        <table name="Table 3D - 43 " storageaddress="0x072878">
+            <table type="X Axis" storageaddress="0x07284C" />
+            <table type="Y Axis" storageaddress="0x072868" />
+        </table>
+        <table name="Table 3D - 44 " storageaddress="0x0728DC">
+            <table type="X Axis" storageaddress="0x072894" />
+            <table type="Y Axis" storageaddress="0x0728B8" />
+        </table>
+        <table name="Table 3D - 45 " storageaddress="0x0729AC">
+            <table type="X Axis" storageaddress="0x072930" />
+            <table type="Y Axis" storageaddress="0x072970" />
+        </table>
+        <table name="Table 3D - 46 " storageaddress="0x072DD4">
+            <table type="X Axis" storageaddress="0x072DB0" />
+            <table type="Y Axis" storageaddress="0x072DC4" />
+        </table>
+        <table name="Table 3D - 48 " storageaddress="0x072F2C">
+            <table type="X Axis" storageaddress="0x072EFC" />
+            <table type="Y Axis" storageaddress="0x072F14" />
+        </table>
+        <table name="Throttle Pedal to Throttle Plate Request - Gear 1/2" storageaddress="0x0732C0">
+            <table type="X Axis" storageaddress="0x073224" />
+            <table type="Y Axis" storageaddress="0x073278" />
+        </table>
+        <table name="Throttle Pedal to Throttle Plate Request - Gear Neutral" storageaddress="0x073650">
+            <table type="X Axis" storageaddress="0x0735B4" />
+            <table type="Y Axis" storageaddress="0x073608" />
+        </table>
+        <table name="Throttle Pedal to Throttle Plate Request - Gear 5/6" storageaddress="0x0739E0">
+            <table type="X Axis" storageaddress="0x073944" />
+            <table type="Y Axis" storageaddress="0x073998" />
+        </table>
+        <table name="Throttle Pedal to Throttle Plate Request - Gear 3/4" storageaddress="0x073D70">
+            <table type="X Axis" storageaddress="0x073CD4" />
+            <table type="Y Axis" storageaddress="0x073D28" />
+        </table>
+        <table name="Alternator Voltage Delta" storageaddress="0x074560">
+            <table type="X Axis" storageaddress="0x074504" />
+            <table type="Y Axis" storageaddress="0x074530" />
+        </table>
+        <table name="Table 3D - 54 " storageaddress="0x0746A0">
+            <table type="X Axis" storageaddress="0x074634" />
+            <table type="Y Axis" storageaddress="0x07465C" />
+        </table>
+        <table name="Table 3D - 55 " storageaddress="0x074860">
+            <table type="X Axis" storageaddress="0x0747F4" />
+            <table type="Y Axis" storageaddress="0x07481C" />
+        </table>
+        <table name="Table 3D - 56 " storageaddress="0x074E80">
+            <table type="X Axis" storageaddress="0x074E30" />
+            <table type="Y Axis" storageaddress="0x074E74" />
+        </table>
+        <table name="Table 3D - 57 " storageaddress="0x074F38">
+            <table type="X Axis" storageaddress="0x074EE8" />
+            <table type="Y Axis" storageaddress="0x074F2C" />
+        </table>
+        <table name="Table 3D - 58 " storageaddress="0x074FF0">
+            <table type="X Axis" storageaddress="0x074FA0" />
+            <table type="Y Axis" storageaddress="0x074FE4" />
+        </table>
+        <table name="Ignition Timing Leading - DSC Mode A - Base" storageaddress="0x0751FC">
+            <table type="X Axis" storageaddress="0x07515C" />
+            <table type="Y Axis" storageaddress="0x0751B0" />
+        </table>
+        <table name="Table 3D - 60 " storageaddress="0x075470">
+            <table type="X Axis" storageaddress="0x0753A4" />
+            <table type="Y Axis" storageaddress="0x0753F8" />
+        </table>
+        <table name="Engine Torque" storageaddress="0x07585C">
+            <table type="X Axis" storageaddress="0x075790" />
+            <table type="Y Axis" storageaddress="0x0757E4" />
+        </table>
+        <table name="Table 3D - 62 " storageaddress="0x075BFE">
+            <table type="X Axis" storageaddress="0x075B78" />
+            <table type="Y Axis" storageaddress="0x075BA0" />
+        </table>
+        <table name="Table 3D - 63 " storageaddress="0x075D74">
+            <table type="X Axis" storageaddress="0x075D54" />
+            <table type="Y Axis" storageaddress="0x075D68" />
+        </table>
+        <table name="Primary Injector Weighted Engine Temp Multiplier" storageaddress="0x0763C4">
+            <table type="X Axis" storageaddress="0x07636C" />
+            <table type="Y Axis" storageaddress="0x076398" />
+        </table>
+        <table name="Secondary 1 Injector Weighted Engine Temp Multiplier" storageaddress="0x076448">
+            <table type="X Axis" storageaddress="0x076440" />
+            <table type="Y Axis" storageaddress="0x076444" />
+        </table>
+        <table name="Secondary 2 Injector Weighted Engine Temp Multiplier" storageaddress="0x076454">
+            <table type="X Axis" storageaddress="0x07644C" />
+            <table type="Y Axis" storageaddress="0x076450" />
+        </table>
+        <table name="Estimated Manifold Pressure" storageaddress="0x076570">
+            <table type="X Axis" storageaddress="0x0764DC" />
+            <table type="Y Axis" storageaddress="0x076520" />
+        </table>
+        <table name="Injector Latency Secondary" storageaddress="0x076880">
+            <table type="X Axis" storageaddress="0x076818" />
+            <table type="Y Axis" storageaddress="0x07685C" />
+        </table>
+        <table name="Injector Latency Primary" storageaddress="0x076A1C">
+            <table type="X Axis" storageaddress="0x0769B4" />
+            <table type="Y Axis" storageaddress="0x0769F8" />
+        </table>
+        <table name="Fuel Injection - Warmup Fueling" storageaddress="0x077CB4">
+            <table type="X Axis" storageaddress="0x077C68" />
+            <table type="Y Axis" storageaddress="0x077CA8" />
+        </table>
+        <table name="Fuel Injection - Warmup Fueling - Engine Speed Based" storageaddress="0x077D0C">
+            <table type="X Axis" storageaddress="0x077CE4" />
+            <table type="Y Axis" storageaddress="0x077CF8" />
+        </table>
+        <table name="Fuel Injection - Warmup Fueling - Engine Speed Based (Coolant Temp Fault)" storageaddress="0x077D5C">
+            <table type="X Axis" storageaddress="0x077D28" />
+            <table type="Y Axis" storageaddress="0x077D44" />
+        </table>
+        <table name="Table 3D - 74 " storageaddress="0x077EAC">
+            <table type="X Axis" storageaddress="0x077E58" />
+            <table type="Y Axis" storageaddress="0x077E98" />
+        </table>
+        <table name="Table 3D - 75 " storageaddress="0x077F50">
+            <table type="X Axis" storageaddress="0x077F04" />
+            <table type="Y Axis" storageaddress="0x077F3C" />
+        </table>
+        <table name="Table 3D - 76 " storageaddress="0x07837C">
+            <table type="X Axis" storageaddress="0x078348" />
+            <table type="Y Axis" storageaddress="0x078360" />
+        </table>
+        <table name="Table 3D - 77 " storageaddress="0x0783FC">
+            <table type="X Axis" storageaddress="0x0783D0" />
+            <table type="Y Axis" storageaddress="0x0783E0" />
+        </table>
+        <table name="Table 3D - 78 " storageaddress="0x078470">
+            <table type="X Axis" storageaddress="0x078434" />
+            <table type="Y Axis" storageaddress="0x078454" />
+        </table>
+        <table name="Table 3D - 79 " storageaddress="0x0786D4">
+            <table type="X Axis" storageaddress="0x0786A0" />
+            <table type="Y Axis" storageaddress="0x0786B8" />
+        </table>
+        <table name="Table 3D - 80 " storageaddress="0x078758">
+            <table type="X Axis" storageaddress="0x078728" />
+            <table type="Y Axis" storageaddress="0x07873C" />
+        </table>
+        <table name="Table 3D - 81 " storageaddress="0x0787D4">
+            <table type="X Axis" storageaddress="0x0787A0" />
+            <table type="Y Axis" storageaddress="0x0787B8" />
+        </table>
+        <table name="Table 3D - 82 " storageaddress="0x078854">
+            <table type="X Axis" storageaddress="0x078828" />
+            <table type="Y Axis" storageaddress="0x07883C" />
+        </table>
+        <table name="Table 3D - 83 " storageaddress="0x0788BC">
+            <table type="X Axis" storageaddress="0x078890" />
+            <table type="Y Axis" storageaddress="0x0788A4" />
+        </table>
+        <table name="Knock Sensitivity Rotor #1" storageaddress="0x078D78">
+            <table type="X Axis" storageaddress="0x078D34" />
+            <table type="Y Axis" storageaddress="0x078D4C" />
+        </table>
+        <table name="Knock Sensitivity Rotor #2" storageaddress="0x078E00">
+            <table type="X Axis" storageaddress="0x078DBC" />
+            <table type="Y Axis" storageaddress="0x078DD4" />
+        </table>
+        <table name="Table 3D - 86 " storageaddress="0x079160">
+            <table type="X Axis" storageaddress="0x079138" />
+            <table type="Y Axis" storageaddress="0x079150" />
+        </table>
+        <table name="Table 3D - 87 " storageaddress="0x07956C">
+            <table type="X Axis" storageaddress="0x079524" />
+            <table type="Y Axis" storageaddress="0x079548" />
+        </table>
+        <table name="Table 3D - 88 " storageaddress="0x079658">
+            <table type="X Axis" storageaddress="0x079610" />
+            <table type="Y Axis" storageaddress="0x079634" />
+        </table>
+        <table name="Table 3D - 89 " storageaddress="0x079704">
+            <table type="X Axis" storageaddress="0x0796FC" />
+            <table type="Y Axis" storageaddress="0x079700" />
+        </table>
+        <table name="Table 3D - 90 " storageaddress="0x079710">
+            <table type="X Axis" storageaddress="0x079708" />
+            <table type="Y Axis" storageaddress="0x07970C" />
+        </table>
+        <table name="Injection Angle" storageaddress="0x079BE0">
+            <table type="X Axis" storageaddress="0x079B78" />
+            <table type="Y Axis" storageaddress="0x079BC0" />
+        </table>
+        <table name="Table 3D - 92 " storageaddress="0x079EC4">
+            <table type="X Axis" storageaddress="0x079E98" />
+            <table type="Y Axis" storageaddress="0x079EB4" />
+        </table>
+        <table name="Table 3D - 93 " storageaddress="0x079F28">
+            <table type="X Axis" storageaddress="0x079EFC" />
+            <table type="Y Axis" storageaddress="0x079F18" />
+        </table>
+        <table name="Table 3D - 94 " storageaddress="0x079F8C">
+            <table type="X Axis" storageaddress="0x079F60" />
+            <table type="Y Axis" storageaddress="0x079F7C" />
+        </table>
+        <table name="Table 3D - 95 " storageaddress="0x079FF0">
+            <table type="X Axis" storageaddress="0x079FC4" />
+            <table type="Y Axis" storageaddress="0x079FE0" />
+        </table>
+        <table name="Table 3D - 96 " storageaddress="0x07A054">
+            <table type="X Axis" storageaddress="0x07A028" />
+            <table type="Y Axis" storageaddress="0x07A044" />
+        </table>
+        <table name="Table 3D - 97 " storageaddress="0x07A0D4">
+            <table type="X Axis" storageaddress="0x07A08C" />
+            <table type="Y Axis" storageaddress="0x07A0B4" />
+        </table>
+        <table name="Table 3D - 98 " storageaddress="0x07A1BC">
+            <table type="X Axis" storageaddress="0x07A174" />
+            <table type="Y Axis" storageaddress="0x07A19C" />
+        </table>
+        <table name="Table 3D - 99 " storageaddress="0x07A2A4">
+            <table type="X Axis" storageaddress="0x07A25C" />
+            <table type="Y Axis" storageaddress="0x07A284" />
+        </table>
+        <table name="Table 3D - 100 " storageaddress="0x07B0F8">
+            <table type="X Axis" storageaddress="0x07B0BC" />
+            <table type="Y Axis" storageaddress="0x07B0E0" />
+        </table>
+        <table name="Table 3D - 101 " storageaddress="0x07B16C">
+            <table type="X Axis" storageaddress="0x07B130" />
+            <table type="Y Axis" storageaddress="0x07B154" />
+        </table>
+        <table name="Table 3D - 102 " storageaddress="0x07B2DC">
+            <table type="X Axis" storageaddress="0x07B254" />
+            <table type="Y Axis" storageaddress="0x07B2B4" />
+        </table>
+        <table name="Table 3D - 103 " storageaddress="0x06CA30">
+            <table type="X Axis" storageaddress="0x06CA00" />
+            <table type="Y Axis" storageaddress="0x06CA18" />
+        </table>
+        <table name="Counter Lookup Unknown" storageaddress="0x06E53C">
+            <table type="X Axis" storageaddress="0x06E4C4" />
+            <table type="Y Axis" storageaddress="0x06E510" />
+        </table>
+        <table name="Table 3D - 108 " storageaddress="0x070478">
+            <table type="X Axis" storageaddress="0x070434" />
+            <table type="Y Axis" storageaddress="0x07045C" />
+        </table>
+        <table name="Table 3D - 109 " storageaddress="0x072F84">
+            <table type="X Axis" storageaddress="0x072F50" />
+            <table type="Y Axis" storageaddress="0x072F68" />
+        </table>
+        <table name="Table 3D - 110 " storageaddress="0x074DCC">
+            <table type="X Axis" storageaddress="0x074D68" />
+            <table type="Y Axis" storageaddress="0x074D7C" />
+        </table>
+        <table name="Oil Metering By Load" storageaddress="0x0779EC">
+            <table type="X Axis" storageaddress="0x07795C" />
+            <table type="Y Axis" storageaddress="0x0779A8" />
+        </table>
+        <table name="Oil Metering By Throttle" storageaddress="0x077B8C">
+            <table type="X Axis" storageaddress="0x077B30" />
+            <table type="Y Axis" storageaddress="0x077B7C" />
+        </table>
+        <table name="Barometric Pressure Based Oil Injection Amount" storageaddress="0x077C04">
+            <table type="X Axis" storageaddress="0x077BD8" />
+            <table type="Y Axis" storageaddress="0x077BF0" />
+        </table>
+        <table name="Table 3D - 120 " storageaddress="0x07B5E4">
+            <table type="X Axis" storageaddress="0x07B59C" />
+            <table type="Y Axis" storageaddress="0x07B5BC" />
+        </table>
+        <table name="Table 3D - 121 " storageaddress="0x07B67C">
+            <table type="X Axis" storageaddress="0x07B634" />
+            <table type="Y Axis" storageaddress="0x07B654" />
+        </table>
+        <table name="Table 3D - 122 " storageaddress="0x0793E4">
+            <table type="X Axis" storageaddress="0x07939C" />
+            <table type="Y Axis" storageaddress="0x0793C0" />
+        </table>
+        <table name="Table 3D - 123 " storageaddress="0x079480">
+            <table type="X Axis" storageaddress="0x079438" />
+            <table type="Y Axis" storageaddress="0x07945C" />
+        </table>
+        <table name="Table 3D - 124 " storageaddress="0x07A464">
+            <table type="X Axis" storageaddress="0x07A41C" />
+            <table type="Y Axis" storageaddress="0x07A440" />
+        </table>
+        <table name="Table 3D - 125 " storageaddress="0x07A500">
+            <table type="X Axis" storageaddress="0x07A4B8" />
+            <table type="Y Axis" storageaddress="0x07A4DC" />
+        </table>
+        <table name="Table 3D - 126 " storageaddress="0x07A6BC">
+            <table type="X Axis" storageaddress="0x07A650" />
+            <table type="Y Axis" storageaddress="0x07A678" />
+        </table>
+        <table name="Table 3D - 127 " storageaddress="0x07AA04">
+            <table type="X Axis" storageaddress="0x07A9BC" />
+            <table type="Y Axis" storageaddress="0x07A9E4" />
+        </table>
+        <table name="Ignition Dwell Time " storageaddress="0x07B448">
+            <table type="X Axis" storageaddress="0x07B400" />
+            <table type="Y Axis" storageaddress="0x07B424" />
+        </table>
+        <table name="DTC 0300 Enable/Disable#1" storageaddress="0x000000" />
+        <table name="DTC 0300 Enable/Disable#1" storageaddress="0x000001" />
+        <table name="DTC 0030 Enable/Disable#1" storageaddress="0x000002" />
+        <table name="DTC 0031 Enable/Disable#1" storageaddress="0x000003" />
+        <table name="DTC 0032 Enable/Disable#1" storageaddress="0x000004" />
+        <table name="DTC 0037 Enable/Disable#1" storageaddress="0x000005" />
+        <table name="DTC 0038 Enable/Disable#1" storageaddress="0x000006" />
+        <table name="DTC 0076 Enable/Disable#1" storageaddress="0x000007" />
+        <table name="DTC 0077 Enable/Disable#1" storageaddress="0x000008" />
+        <table name="DTC 0101 Enable/Disable#1" storageaddress="0x000009" />
+        <table name="DTC 0102 Enable/Disable#1" storageaddress="0x00000A" />
+        <table name="DTC 0103 Enable/Disable#1" storageaddress="0x00000B" />
+        <table name="DTC 0107 Enable/Disable#1" storageaddress="0x00000C" />
+        <table name="DTC 0108 Enable/Disable#1" storageaddress="0x00000D" />
+        <table name="DTC 0111 Enable/Disable#1" storageaddress="0x00000E" />
+        <table name="DTC 0112 Enable/Disable#1" storageaddress="0x00000F" />
+        <table name="DTC 0113 Enable/Disable#1" storageaddress="0x000010" />
+        <table name="DTC 0117 Enable/Disable#1" storageaddress="0x000011" />
+        <table name="DTC 0118 Enable/Disable#1" storageaddress="0x000012" />
+        <table name="DTC 0122 Enable/Disable#1" storageaddress="0x000013" />
+        <table name="DTC 0123 Enable/Disable#1" storageaddress="0x000014" />
+        <table name="DTC 0125 Enable/Disable#1" storageaddress="0x000015" />
+        <table name="DTC 0126 Enable/Disable#1" storageaddress="0x000016" />
+        <table name="DTC 0128 Enable/Disable#1" storageaddress="0x000017" />
+        <table name="DTC 0130 Enable/Disable#1" storageaddress="0x000018" />
+        <table name="DTC 0131 Enable/Disable#1" storageaddress="0x000019" />
+        <table name="DTC 0132 Enable/Disable#1" storageaddress="0x00001A" />
+        <table name="DTC 0133 Enable/Disable#1" storageaddress="0x00001B" />
+        <table name="DTC 0138 Enable/Disable#1" storageaddress="0x00001C" />
+        <table name="DTC 0139 Enable/Disable#1" storageaddress="0x00001D" />
+        <table name="DTC 0171 Enable/Disable#1" storageaddress="0x00001E" />
+        <table name="DTC 0172 Enable/Disable#1" storageaddress="0x00001F" />
+        <table name="DTC 0222 Enable/Disable#1" storageaddress="0x000020" />
+        <table name="DTC 0223 Enable/Disable#1" storageaddress="0x000021" />
+        <table name="DTC 0327 Enable/Disable#1" storageaddress="0x000022" />
+        <table name="DTC 0328 Enable/Disable#1" storageaddress="0x000023" />
+        <table name="DTC 0335 Enable/Disable#1" storageaddress="0x000024" />
+        <table name="DTC 0336 Enable/Disable#1" storageaddress="0x000025" />
+        <table name="DTC 0351 Enable/Disable#1" storageaddress="0x000026" />
+        <table name="DTC 0352 Enable/Disable#1" storageaddress="0x000027" />
+        <table name="DTC 0353 Enable/Disable#1" storageaddress="0x000028" />
+        <table name="DTC 0354 Enable/Disable#1" storageaddress="0x000029" />
+        <table name="DTC 0410 Enable/Disable#1" storageaddress="0x00002A" />
+        <table name="DTC 0420 Enable/Disable#1" storageaddress="0x00002B" />
+        <table name="DTC 0441 Enable/Disable#1" storageaddress="0x00002C" />
+        <table name="DTC 0442 Enable/Disable#1" storageaddress="0x00002D" />
+        <table name="DTC 0443 Enable/Disable#1" storageaddress="0x00002E" />
+        <table name="DTC 0446 Enable/Disable#1" storageaddress="0x00002F" />
+        <table name="DTC 0455 Enable/Disable#1" storageaddress="0x000030" />
+        <table name="DTC 0456 Enable/Disable#1" storageaddress="0x000031" />
+        <table name="DTC 0461 Enable/Disable#1" storageaddress="0x000032" />
+        <table name="DTC 0462 Enable/Disable#1" storageaddress="0x000033" />
+        <table name="DTC 0463 Enable/Disable#1" storageaddress="0x000034" />
+        <table name="DTC 0480 Enable/Disable#1" storageaddress="0x000035" />
+        <table name="DTC 0481 Enable/Disable#1" storageaddress="0x000036" />
+        <table name="DTC 0500 Enable/Disable#1" storageaddress="0x000037" />
+        <table name="DTC 0505 Enable/Disable#1" storageaddress="0x000038" />
+        <table name="DTC 0506 Enable/Disable#1" storageaddress="0x000039" />
+        <table name="DTC 0507 Enable/Disable#1" storageaddress="0x00003A" />
+        <table name="DTC 0562 Enable/Disable#1" storageaddress="0x00003B" />
+        <table name="DTC 0564 Enable/Disable#1" storageaddress="0x00003C" />
+        <table name="DTC 0571 Enable/Disable#1" storageaddress="0x00003D" />
+        <table name="DTC 0601 Enable/Disable#1" storageaddress="0x00003E" />
+        <table name="DTC 0602 Enable/Disable#1" storageaddress="0x00003F" />
+        <table name="DTC 0604 Enable/Disable#1" storageaddress="0x000040" />
+        <table name="DTC 0610 Enable/Disable#1" storageaddress="0x000041" />
+        <table name="DTC 0638 Enable/Disable#1" storageaddress="0x000042" />
+        <table name="DTC 0661 Enable/Disable#1" storageaddress="0x000043" />
+        <table name="DTC 0662 Enable/Disable#1" storageaddress="0x000044" />
+        <table name="DTC 0703 Enable/Disable#1" storageaddress="0x000045" />
+        <table name="DTC 0704 Enable/Disable#1" storageaddress="0x000046" />
+        <table name="DTC 0850 Enable/Disable#1" storageaddress="0x000047" />
+        <table name="DTC 1260 Enable/Disable#1" storageaddress="0x000048" />
+        <table name="DTC 1574 Enable/Disable#1" storageaddress="0x000049" />
+        <table name="DTC 1577 Enable/Disable#1" storageaddress="0x00004A" />
+        <table name="DTC 1686 Enable/Disable#1" storageaddress="0x00004B" />
+        <table name="DTC 1687 Enable/Disable#1" storageaddress="0x00004C" />
+        <table name="DTC 1688 Enable/Disable#1" storageaddress="0x00004D" />
+        <table name="DTC 2004 Enable/Disable#1" storageaddress="0x00004E" />
+        <table name="DTC 2006 Enable/Disable#1" storageaddress="0x00004F" />
+        <table name="DTC 2008 Enable/Disable#1" storageaddress="0x000050" />
+        <table name="DTC 2017 Enable/Disable#1" storageaddress="0x000051" />
+        <table name="DTC 2070 Enable/Disable#1" storageaddress="0x000052" />
+        <table name="DTC 2096 Enable/Disable#1" storageaddress="0x000053" />
+        <table name="DTC 2097 Enable/Disable#1" storageaddress="0x000054" />
+        <table name="DTC 2101 Enable/Disable#1" storageaddress="0x000055" />
+        <table name="DTC 2106 Enable/Disable#1" storageaddress="0x000056" />
+        <table name="DTC 2107 Enable/Disable#1" storageaddress="0x000057" />
+        <table name="DTC 2108 Enable/Disable#1" storageaddress="0x000058" />
+        <table name="DTC 2109 Enable/Disable#1" storageaddress="0x000059" />
+        <table name="DTC 2112 Enable/Disable#1" storageaddress="0x00005A" />
+        <table name="DTC 2119 Enable/Disable#1" storageaddress="0x00005B" />
+        <table name="DTC 2122 Enable/Disable#1" storageaddress="0x00005C" />
+        <table name="DTC 2123 Enable/Disable#1" storageaddress="0x00005D" />
+        <table name="DTC 2127 Enable/Disable#1" storageaddress="0x00005E" />
+        <table name="DTC 2128 Enable/Disable#1" storageaddress="0x00005F" />
+        <table name="DTC 2135 Enable/Disable#1" storageaddress="0x000060" />
+        <table name="DTC 2136 Enable/Disable#1" storageaddress="0x000061" />
+        <table name="DTC 2138 Enable/Disable#1" storageaddress="0x000062" />
+        <table name="DTC 2195 Enable/Disable#1" storageaddress="0x000063" />
+        <table name="DTC 2196 Enable/Disable#1" storageaddress="0x000064" />
+        <table name="DTC 2257 Enable/Disable#1" storageaddress="0x000065" />
+        <table name="DTC 2258 Enable/Disable#1" storageaddress="0x000066" />
+        <table name="DTC 2259 Enable/Disable#1" storageaddress="0x000067" />
+        <table name="DTC 2260 Enable/Disable#1" storageaddress="0x000068" />
+        <table name="DTC 2270 Enable/Disable#1" storageaddress="0x000069" />
+        <table name="DTC 2271 Enable/Disable#1" storageaddress="0x00006A" />
+        <table name="DTC 2401 Enable/Disable#1" storageaddress="0x00006B" />
+        <table name="DTC 2402 Enable/Disable#1" storageaddress="0x00006C" />
+        <table name="DTC 2404 Enable/Disable#1" storageaddress="0x00006D" />
+        <table name="DTC 2405 Enable/Disable#1" storageaddress="0x00006E" />
+        <table name="DTC 2406 Enable/Disable#1" storageaddress="0x00006F" />
+        <table name="DTC 2407 Enable/Disable#1" storageaddress="0x000070" />
+        <table name="DTC 2502 Enable/Disable#1" storageaddress="0x000071" />
+        <table name="DTC 2503 Enable/Disable#1" storageaddress="0x000072" />
+        <table name="DTC 2504 Enable/Disable#1" storageaddress="0x000073" />
+        <table name="DTC c073 Enable/Disable#1" storageaddress="0x000074" />
+        <table name="DTC c101 Enable/Disable#1" storageaddress="0x000075" />
+        <table name="DTC c121 Enable/Disable#1" storageaddress="0x000076" />
+        <table name="DTC c155 Enable/Disable#1" storageaddress="0x000077" />
+        <table name="DTC c167 Enable/Disable#1" storageaddress="0x000078" />
+        <table name="DTC 0300 Enable/Disable#2" storageaddress="0x000000" />
+        <table name="DTC 0300 Enable/Disable#2" storageaddress="0x000001" />
+        <table name="DTC 0030 Enable/Disable#2" storageaddress="0x000002" />
+        <table name="DTC 0031 Enable/Disable#2" storageaddress="0x000003" />
+        <table name="DTC 0032 Enable/Disable#2" storageaddress="0x000004" />
+        <table name="DTC 0037 Enable/Disable#2" storageaddress="0x000005" />
+        <table name="DTC 0038 Enable/Disable#2" storageaddress="0x000006" />
+        <table name="DTC 0076 Enable/Disable#2" storageaddress="0x000007" />
+        <table name="DTC 0077 Enable/Disable#2" storageaddress="0x000008" />
+        <table name="DTC 0101 Enable/Disable#2" storageaddress="0x000009" />
+        <table name="DTC 0102 Enable/Disable#2" storageaddress="0x00000A" />
+        <table name="DTC 0103 Enable/Disable#2" storageaddress="0x00000B" />
+        <table name="DTC 0107 Enable/Disable#2" storageaddress="0x00000C" />
+        <table name="DTC 0108 Enable/Disable#2" storageaddress="0x00000D" />
+        <table name="DTC 0111 Enable/Disable#2" storageaddress="0x00000E" />
+        <table name="DTC 0112 Enable/Disable#2" storageaddress="0x00000F" />
+        <table name="DTC 0113 Enable/Disable#2" storageaddress="0x000010" />
+        <table name="DTC 0117 Enable/Disable#2" storageaddress="0x000011" />
+        <table name="DTC 0118 Enable/Disable#2" storageaddress="0x000012" />
+        <table name="DTC 0122 Enable/Disable#2" storageaddress="0x000013" />
+        <table name="DTC 0123 Enable/Disable#2" storageaddress="0x000014" />
+        <table name="DTC 0125 Enable/Disable#2" storageaddress="0x000015" />
+        <table name="DTC 0126 Enable/Disable#2" storageaddress="0x000016" />
+        <table name="DTC 0128 Enable/Disable#2" storageaddress="0x000017" />
+        <table name="DTC 0130 Enable/Disable#2" storageaddress="0x000018" />
+        <table name="DTC 0131 Enable/Disable#2" storageaddress="0x000019" />
+        <table name="DTC 0132 Enable/Disable#2" storageaddress="0x00001A" />
+        <table name="DTC 0133 Enable/Disable#2" storageaddress="0x00001B" />
+        <table name="DTC 0138 Enable/Disable#2" storageaddress="0x00001C" />
+        <table name="DTC 0139 Enable/Disable#2" storageaddress="0x00001D" />
+        <table name="DTC 0171 Enable/Disable#2" storageaddress="0x00001E" />
+        <table name="DTC 0172 Enable/Disable#2" storageaddress="0x00001F" />
+        <table name="DTC 0222 Enable/Disable#2" storageaddress="0x000020" />
+        <table name="DTC 0223 Enable/Disable#2" storageaddress="0x000021" />
+        <table name="DTC 0327 Enable/Disable#2" storageaddress="0x000022" />
+        <table name="DTC 0328 Enable/Disable#2" storageaddress="0x000023" />
+        <table name="DTC 0335 Enable/Disable#2" storageaddress="0x000024" />
+        <table name="DTC 0336 Enable/Disable#2" storageaddress="0x000025" />
+        <table name="DTC 0351 Enable/Disable#2" storageaddress="0x000026" />
+        <table name="DTC 0352 Enable/Disable#2" storageaddress="0x000027" />
+        <table name="DTC 0353 Enable/Disable#2" storageaddress="0x000028" />
+        <table name="DTC 0354 Enable/Disable#2" storageaddress="0x000029" />
+        <table name="DTC 0410 Enable/Disable#2" storageaddress="0x00002A" />
+        <table name="DTC 0420 Enable/Disable#2" storageaddress="0x00002B" />
+        <table name="DTC 0441 Enable/Disable#2" storageaddress="0x00002C" />
+        <table name="DTC 0442 Enable/Disable#2" storageaddress="0x00002D" />
+        <table name="DTC 0443 Enable/Disable#2" storageaddress="0x00002E" />
+        <table name="DTC 0446 Enable/Disable#2" storageaddress="0x00002F" />
+        <table name="DTC 0455 Enable/Disable#2" storageaddress="0x000030" />
+        <table name="DTC 0456 Enable/Disable#2" storageaddress="0x000031" />
+        <table name="DTC 0461 Enable/Disable#2" storageaddress="0x000032" />
+        <table name="DTC 0462 Enable/Disable#2" storageaddress="0x000033" />
+        <table name="DTC 0463 Enable/Disable#2" storageaddress="0x000034" />
+        <table name="DTC 0480 Enable/Disable#2" storageaddress="0x000035" />
+        <table name="DTC 0481 Enable/Disable#2" storageaddress="0x000036" />
+        <table name="DTC 0500 Enable/Disable#2" storageaddress="0x000037" />
+        <table name="DTC 0505 Enable/Disable#2" storageaddress="0x000038" />
+        <table name="DTC 0506 Enable/Disable#2" storageaddress="0x000039" />
+        <table name="DTC 0507 Enable/Disable#2" storageaddress="0x00003A" />
+        <table name="DTC 0562 Enable/Disable#2" storageaddress="0x00003B" />
+        <table name="DTC 0564 Enable/Disable#2" storageaddress="0x00003C" />
+        <table name="DTC 0571 Enable/Disable#2" storageaddress="0x00003D" />
+        <table name="DTC 0601 Enable/Disable#2" storageaddress="0x00003E" />
+        <table name="DTC 0602 Enable/Disable#2" storageaddress="0x00003F" />
+        <table name="DTC 0604 Enable/Disable#2" storageaddress="0x000040" />
+        <table name="DTC 0610 Enable/Disable#2" storageaddress="0x000041" />
+        <table name="DTC 0638 Enable/Disable#2" storageaddress="0x000042" />
+        <table name="DTC 0661 Enable/Disable#2" storageaddress="0x000043" />
+        <table name="DTC 0662 Enable/Disable#2" storageaddress="0x000044" />
+        <table name="DTC 0703 Enable/Disable#2" storageaddress="0x000045" />
+        <table name="DTC 0704 Enable/Disable#2" storageaddress="0x000046" />
+        <table name="DTC 0850 Enable/Disable#2" storageaddress="0x000047" />
+        <table name="DTC 1260 Enable/Disable#2" storageaddress="0x000048" />
+        <table name="DTC 1574 Enable/Disable#2" storageaddress="0x000049" />
+        <table name="DTC 1577 Enable/Disable#2" storageaddress="0x00004A" />
+        <table name="DTC 1686 Enable/Disable#2" storageaddress="0x00004B" />
+        <table name="DTC 1687 Enable/Disable#2" storageaddress="0x00004C" />
+        <table name="DTC 1688 Enable/Disable#2" storageaddress="0x00004D" />
+        <table name="DTC 2004 Enable/Disable#2" storageaddress="0x00004E" />
+        <table name="DTC 2006 Enable/Disable#2" storageaddress="0x00004F" />
+        <table name="DTC 2008 Enable/Disable#2" storageaddress="0x000050" />
+        <table name="DTC 2017 Enable/Disable#2" storageaddress="0x000051" />
+        <table name="DTC 2070 Enable/Disable#2" storageaddress="0x000052" />
+        <table name="DTC 2096 Enable/Disable#2" storageaddress="0x000053" />
+        <table name="DTC 2097 Enable/Disable#2" storageaddress="0x000054" />
+        <table name="DTC 2101 Enable/Disable#2" storageaddress="0x000055" />
+        <table name="DTC 2106 Enable/Disable#2" storageaddress="0x000056" />
+        <table name="DTC 2107 Enable/Disable#2" storageaddress="0x000057" />
+        <table name="DTC 2108 Enable/Disable#2" storageaddress="0x000058" />
+        <table name="DTC 2109 Enable/Disable#2" storageaddress="0x000059" />
+        <table name="DTC 2112 Enable/Disable#2" storageaddress="0x00005A" />
+        <table name="DTC 2119 Enable/Disable#2" storageaddress="0x00005B" />
+        <table name="DTC 2122 Enable/Disable#2" storageaddress="0x00005C" />
+        <table name="DTC 2123 Enable/Disable#2" storageaddress="0x00005D" />
+        <table name="DTC 2127 Enable/Disable#2" storageaddress="0x00005E" />
+        <table name="DTC 2128 Enable/Disable#2" storageaddress="0x00005F" />
+        <table name="DTC 2135 Enable/Disable#2" storageaddress="0x000060" />
+        <table name="DTC 2136 Enable/Disable#2" storageaddress="0x000061" />
+        <table name="DTC 2138 Enable/Disable#2" storageaddress="0x000062" />
+        <table name="DTC 2195 Enable/Disable#2" storageaddress="0x000063" />
+        <table name="DTC 2196 Enable/Disable#2" storageaddress="0x000064" />
+        <table name="DTC 2257 Enable/Disable#2" storageaddress="0x000065" />
+        <table name="DTC 2258 Enable/Disable#2" storageaddress="0x000066" />
+        <table name="DTC 2259 Enable/Disable#2" storageaddress="0x000067" />
+        <table name="DTC 2260 Enable/Disable#2" storageaddress="0x000068" />
+        <table name="DTC 2270 Enable/Disable#2" storageaddress="0x000069" />
+        <table name="DTC 2271 Enable/Disable#2" storageaddress="0x00006A" />
+        <table name="DTC 2401 Enable/Disable#2" storageaddress="0x00006B" />
+        <table name="DTC 2402 Enable/Disable#2" storageaddress="0x00006C" />
+        <table name="DTC 2404 Enable/Disable#2" storageaddress="0x00006D" />
+        <table name="DTC 2405 Enable/Disable#2" storageaddress="0x00006E" />
+        <table name="DTC 2406 Enable/Disable#2" storageaddress="0x00006F" />
+        <table name="DTC 2407 Enable/Disable#2" storageaddress="0x000070" />
+        <table name="DTC 2502 Enable/Disable#2" storageaddress="0x000071" />
+        <table name="DTC 2503 Enable/Disable#2" storageaddress="0x000072" />
+        <table name="DTC 2504 Enable/Disable#2" storageaddress="0x000073" />
+        <table name="DTC c073 Enable/Disable#2" storageaddress="0x000074" />
+        <table name="DTC c101 Enable/Disable#2" storageaddress="0x000075" />
+        <table name="DTC c121 Enable/Disable#2" storageaddress="0x000076" />
+        <table name="DTC c155 Enable/Disable#2" storageaddress="0x000077" />
+        <table name="DTC c167 Enable/Disable#2" storageaddress="0x000078" />
     </rom>
 </roms>
