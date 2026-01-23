@@ -35,5 +35,5 @@ If you found any of this work useful and would like to support me https://www.bu
 - N3J1EM 6 Port MT
 
 60E0E600
--N3YMED 6 Port MT (NOTE: Some DTCs and other features may not be totally ported)
+- N3YMED 6 Port MT (NOTE: Some DTCs and other features may not be totally ported)
   
