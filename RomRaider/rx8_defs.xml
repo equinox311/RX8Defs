@@ -8,27 +8,27 @@
         </romid>
 		<table type="Switch" name="Immobilizer Disable - Without RKE Installed" category="Immobilizer" sizey="248" beforeram="true">
 		   <description>When enabled, this bypasses the immobilizer, WARNING: Only use one Immobilizer Switch!!.</description>
-		   <state name="on"  data="00 09 00 09 00 09 B3 D5 00 09 00 09 00 09 00 09 00 09 00 09 00 09 00 
-								   09 00 09 00 09 00 09 00 09 00 09 00 09 00 09 00 09 00 09 00 09 00 09 
-								   00 09 00 09 00 09 A0 3D 00 09 01 F4 00 FA 55 AA AA CC B5 C4 FF FF FF 
-								   FF 86 9C 00 03 E2 18 00 03 E3 30 FF FF C2 28 FF FF C2 2C FF FF C2 3E 
-								   FF FF C2 3A FF FF C2 88 FF FF C2 8C 00 01 00 01 55 AA 55 AA 00 00 FF 
-								   FF FF FF C2 96 FF FF C2 98 00 00 B7 E3 FF FF C2 39 00 03 65 C0 B0 BB 
-								   00 09 A0 11 00 09 B1 CF 00 09 A0 0D 00 09 B2 5B 00 09 A0 09 00 09 B2 
-								   FD 00 09 A0 05 00 09 B3 4E 00 09 A0 01 00 09 2D E0 DD 30 D2 30 64 20 
-								   60 4C 88 05 8D 04 64 03 60 43 88 06 8F 10 00 09 D2 2C 63 20 23 38 8F 
-								   0B 00 09 D1 2B 60 10 20 08 8F 06 00 09 D2 29 E5 01 42 0B 64 D0 A0 01 
+		   <state name="on"  data="00 09 00 09 00 09 B3 D5 00 09 00 09 00 09 00 09 00 09 00 09 00 09 00
+								   09 00 09 00 09 00 09 00 09 00 09 00 09 00 09 00 09 00 09 00 09 00 09
+								   00 09 00 09 00 09 A0 3D 00 09 01 F4 00 FA 55 AA AA CC B5 C4 FF FF FF
+								   FF 86 9C 00 03 E2 18 00 03 E3 30 FF FF C2 28 FF FF C2 2C FF FF C2 3E
+								   FF FF C2 3A FF FF C2 88 FF FF C2 8C 00 01 00 01 55 AA 55 AA 00 00 FF
+								   FF FF FF C2 96 FF FF C2 98 00 00 B7 E3 FF FF C2 39 00 03 65 C0 B0 BB
+								   00 09 A0 11 00 09 B1 CF 00 09 A0 0D 00 09 B2 5B 00 09 A0 09 00 09 B2
+								   FD 00 09 A0 05 00 09 B3 4E 00 09 A0 01 00 09 2D E0 DD 30 D2 30 64 20
+								   60 4C 88 05 8D 04 64 03 60 43 88 06 8F 10 00 09 D2 2C 63 20 23 38 8F
+								   0B 00 09 D1 2B 60 10 20 08 8F 06 00 09 D2 29 E5 01 42 0B 64 D0 A0 01
 								   2D 00 2D E0 E3 03 62 D0 62 2C 32 33 8F 0D 00 09 E1 00" />
-		   <state name="off" data="B5 6E 00 09 60 D0 60 0C 88 00 8D 11 00 09 88 01 8D 3A 00 09 88 02 8D 
-								   3B 00 09 88 03 8D 3C 00 09 88 04 8D 3D 00 09 88 05 8D 3E 00 09 A0 40 
-								   00 09 B0 8C 00 09 A0 3D 00 09 01 F4 00 FA 55 AA AA CC B5 C4 FF FF FF 
-								   FF 86 9C 00 03 E2 18 00 03 E3 30 FF FF C2 28 FF FF C2 2C FF FF C2 3E 
-								   FF FF C2 3A FF FF C2 88 FF FF C2 8C 00 01 00 01 55 AA 55 AA 00 00 FF 
-								   FF FF FF C2 96 FF FF C2 98 00 00 B7 E3 FF FF C2 39 00 03 65 C0 B0 BB 
-								   00 09 A0 11 00 09 B1 CF 00 09 A0 0D 00 09 B2 5B 00 09 A0 09 00 09 B2 
-								   FD 00 09 A0 05 00 09 B3 4E 00 09 A0 01 00 09 2D E0 DD 30 D2 30 64 20 
-								   60 4C 88 05 8D 04 64 03 60 43 88 06 8F 10 00 09 D2 2C 63 20 23 38 8F 
-								   0B 00 09 D1 2B 60 10 20 08 8F 06 00 09 D2 29 E5 01 42 0B 64 D0 A0 01 
+		   <state name="off" data="B5 6E 00 09 60 D0 60 0C 88 00 8D 11 00 09 88 01 8D 3A 00 09 88 02 8D
+								   3B 00 09 88 03 8D 3C 00 09 88 04 8D 3D 00 09 88 05 8D 3E 00 09 A0 40
+								   00 09 B0 8C 00 09 A0 3D 00 09 01 F4 00 FA 55 AA AA CC B5 C4 FF FF FF
+								   FF 86 9C 00 03 E2 18 00 03 E3 30 FF FF C2 28 FF FF C2 2C FF FF C2 3E
+								   FF FF C2 3A FF FF C2 88 FF FF C2 8C 00 01 00 01 55 AA 55 AA 00 00 FF
+								   FF FF FF C2 96 FF FF C2 98 00 00 B7 E3 FF FF C2 39 00 03 65 C0 B0 BB
+								   00 09 A0 11 00 09 B1 CF 00 09 A0 0D 00 09 B2 5B 00 09 A0 09 00 09 B2
+								   FD 00 09 A0 05 00 09 B3 4E 00 09 A0 01 00 09 2D E0 DD 30 D2 30 64 20
+								   60 4C 88 05 8D 04 64 03 60 43 88 06 8F 10 00 09 D2 2C 63 20 23 38 8F
+								   0B 00 09 D1 2B 60 10 20 08 8F 06 00 09 D2 29 E5 01 42 0B 64 D0 A0 01
 								   2D 00 2D E0 E3 03 62 D0 62 2C 32 33 8F 0D 00 09 E1 01" />
 		 </table>
 		 <table type="Switch" name="Immobilizer Disable - With RKE Installed" category="Immobilizer" sizey="2" beforeram="true">
@@ -43,8 +43,8 @@
             </table>
             <table name="Value" type="Y Axis" storagetype="float" endian="big">
                 <scaling expression="x" to_byte="x" format="0.00" />
-            </table>	
-        </table>		
+            </table>
+        </table>
 		<table name="Table 3D - Timing Ethanol Adder - Leading" category="Flex Fuel" type="3D" storagetype="uint8" endian="big" expression="x" to_byte="x" sizex="20" sizey="18">
             <scaling expression="(x * 0.5) - 50" to_byte="(x + 50.0) *2" format="0.00" />
             <table name="Engine Load" type="X Axis" storagetype="float" endian="big">
@@ -53,7 +53,7 @@
             <table name="Engine Speed" type="Y Axis" storagetype="float" endian="big">
                 <scaling units="RPM" expression="x" to_byte="x" format="0" />
             </table>
-        </table>	
+        </table>
 		<table name="Table 3D - Timing Ethanol Adder - Trailing" units="deg" category="Flex Fuel" type="3D" storagetype="uint8" endian="big" expression="x" to_byte="x" sizex="20" sizey="18">
             <scaling expression="(x * 0.5) - 50" to_byte="(x + 50.0) * 2" format="0.00" />
             <table name="Engine Load" type="X Axis" storagetype="float" endian="big">
@@ -81,7 +81,7 @@
 		<table name="Ethanol Content Sample Threshold - Engine Load" category="Flex Fuel" type="1D" storagetype="float" endian="big" expression="x" to_byte="x" size="1">
 			<scaling units="g/rev"/>
 		</table>
-		
+
 		<table name="Table 3D - Cranking Fuel Multiplier" category="Flex Fuel" type="3D" storagetype="uint8" endian="big" expression="x" to_byte="x" sizex="12" sizey="13">
             <scaling units="mult" expression="(x * 0.1) + 1" to_byte="(x - 1) / 0.1" format="0.00" />
             <table name="Ethanol Conent" type="X Axis" storagetype="float" endian="big">
@@ -91,7 +91,7 @@
                 <scaling units="degC" expression="x" to_byte="x" format="0" />
             </table>
         </table>
-		
+
 		<!-- <table name="Table 2D - Cranking Fuel Multiplier" category="Flex Fuel" type="2D" storagetype="float" endian="big" sizey="12"> -->
             <!-- <scaling units="mult" expression="x" to_byte="x" format="0.00" /> -->
             <!-- <table name="Ethanol Content" type="Y Axis" storagetype="float" endian="big" expression="x" to_byte="x"> -->
@@ -143,27 +143,27 @@
             <table name="Value" type="Y Axis" storagetype="float" endian="big">
                 <scaling expression="x" to_byte="x" format="0.00" />
             </table>
-        </table>	
+        </table>
 		<table name="Table Fueling - UNKNOWN_681bc" category="Unknown 3D" type="3D" storagetype="uint16" endian="big" expression="x" to_byte="x" sizex="12" sizey="16">
-            <scaling expression="(x*0.000099999997)-1" to_byte="x" format="0.000" />
+            <scaling expression="(x*0.000099999997)-1" to_byte="(x + 1) / 0.000099999997" format="0.000" />
             <table name="Engine Speed" units="RPM" type="X Axis" storagetype="float" endian="big"  >
                 <scaling expression="x" to_byte="x" format="0.00" />
             </table>
             <table name="Engine Load" type="Y Axis" storagetype="float" endian="big">
                 <scaling expression="x" to_byte="x" format="0.00" />
             </table>
-        </table>	
+        </table>
 		<table name="Table Unknown - GearInput" category="Unknown 3D" type="3D" storagetype="uint8" endian="big" expression="x" to_byte="x" sizex="16" sizey="6">
-            <scaling expression="x*10" to_byte="x" format="0.000" />
+            <scaling expression="x*10" to_byte="x / 10" format="0.000" />
             <table name="Coolant Temperature" units="degC" type="X Axis" storagetype="float" endian="big"  >
                 <scaling expression="x" to_byte="x" format="0.00" />
             </table>
             <table name="Calculated Gear" type="Y Axis" storagetype="float" endian="big">
                 <scaling expression="x" to_byte="x" format="0" />
             </table>
-        </table>	
+        </table>
 		<table name="Table Unknown2 - GearInput" category="Unknown 3D" type="3D" storagetype="uint8" endian="big" expression="x" to_byte="x" sizex="16" sizey="6">
-            <scaling expression="x*10" to_byte="x" format="0.000" />
+            <scaling expression="x*10" to_byte="x / 10" format="0.000" />
             <table name="Coolant Temperature" units="degC" type="X Axis" storagetype="float" endian="big"  >
                 <scaling expression="x" to_byte="x" format="0.00" />
             </table>
@@ -172,7 +172,7 @@
             </table>
         </table>
 		<table name="Table 3D - UNKNOWN_CL" category="Unknown 3D" type="3D" storagetype="uint16" endian="big" expression="x" to_byte="x" sizex="16" sizey="12">
-            <scaling expression="(x*0.000099999997) - 1" to_byte="x" format="0.000" />
+            <scaling expression="(x*0.000099999997) - 1.0" to_byte="(x + 1.0) / 0.000099999997" format="0.000" />
             <table name="Engine Load"  type="X Axis" storagetype="float" endian="big"  >
                 <scaling units="g/rev" expression="x" to_byte="x" format="0.00" />
             </table>
@@ -181,7 +181,7 @@
             </table>
         </table>
 		<table name="Table 3D - UNKNOWN_68c84" category="Unknown 3D" type="3D" storagetype="uint16" endian="big" expression="x" to_byte="x" sizex="12" sizey="3">
-            <scaling expression="(x*0.000030517578) - 1" to_byte="x" format="0.0000" />
+            <scaling expression="(x*0.000030517578) - 1" to_byte="(x + 1) / 0.000030517578" format="0.0000" />
             <table name="Engine Speed"  type="X Axis" storagetype="float" endian="big"  >
                 <scaling units="RPM" expression="x" to_byte="x" format="0.00" />
             </table>
@@ -222,12 +222,12 @@
 		<table name="Fan High Speed Disable Coolant Temperature Hysteresis" units="degC" category="Outputs" type="1D" storagetype="float" endian="big" expression="x" to_byte="x" size="1">
 			<scaling units="degC"/>
 		</table>
-		
+
 		<table name="Barometric Pressure Sensor Max ADC Count" category="Sensors" type="1D" storagetype="uint16" endian="big" expression="x" to_byte="x" size="2" />
 		<table name="Fuel Air Ratio" category="Fuel Injection" type="1D" storagetype="float" endian="big" expression="x" to_byte="x" size="1" >
 			<scaling units="1/AFR" format="0.00000" />
 		</table>
-		
+
 		<table name="Gear 1" category="Gear Detection" type="1D" storagetype="float" endian="big" expression="x" to_byte="x" size="1">
 			<scaling units="rpm/kph"/>
 		</table>
@@ -246,7 +246,7 @@
 		<table name="Gear 6" category="Gear Detection" type="1D" storagetype="float" endian="big" expression="x" to_byte="x" size="1">
 			<scaling units="rpm/kph"/>
 		</table>
-		
+
 		<table name="Cruise Control Max Speed - High Value" units="kph" category="Cruise Control" type="1D" storagetype="float" endian="big" expression="x" to_byte="x" size="1" />
 		<table name="Cruise Control Max Speed - Low Value" units="kph" category="Cruise Control" type="1D" storagetype="float" endian="big" expression="x" to_byte="x" size="1" />
         <table name="Barometric Pressure Sensor Min ADC Count" category="Sensors" type="1D" storagetype="uint16" endian="big" expression="x" to_byte="x" size="2" />
@@ -280,7 +280,7 @@
 		</table>
         <table name="Cold Rev Temperature Limit" category="Limiters" type="1D" storagetype="float" endian="big" expression="x" to_byte="x" size="2">
 			<scaling name="Coolant Temperature" units="degC"/>
-		</table>	
+		</table>
         <table name="Primary Injector Size" category="Fuel Injection" type="1D" storagetype="float" endian="big" expression="x" to_byte="x" size="1" />
 		<table name="Engine Max Torque" category="Torque Control" type="1D" storagetype="float" endian="big" expression="x" to_byte="x" size="1" />
         <table name="Secondary Injector Size" category="Fuel Injection" type="1D" storagetype="float" endian="big" expression="x" to_byte="x" size="1" />
@@ -310,14 +310,14 @@
 		<table name="Variable Dynamic Effect Intake Open Threshold Hysteresis" category="Variable Intake" type="1D" storagetype="float" endian="big" expression="x" to_byte="x" size="2">
 			<scaling name="Engine Speed" units="RPM"/>
 		</table>
-		
+
 		<table name="Variable Fresh Air Duct Open Threshold" category="Variable Intake" type="1D" storagetype="float" endian="big" expression="x" to_byte="x" size="2">
 			<scaling name="Engine Speed" units="RPM"/>
 		</table>
 		<table name="Variable Fresh Air Duct Open Threshold Hysteresis" category="Variable Intake" type="1D" storagetype="float" endian="big" expression="x" to_byte="x" size="2">
 			<scaling name="Engine Speed" units="RPM"/>
 		</table>
-		
+
 		<table name="Igntion Leading Timing - DSC Mode A - Map1" category="Ignition Leading" type="1D" storagetype="uint8" endian="big" format="0.00" expression="(x - 50) / 2" to_byte="x" size="1"/>
 		<table name="Igntion Leading Timing - DSC Mode A - Map3" category="Ignition Leading" type="1D" storagetype="uint8" endian="big" format="0.00" expression="(x - 50) / 2" to_byte="x" size="1"/>
 		<table name="Closed Loop Fuelling Threshold (Engine Speed)" category="Fuel Target (Closed Loop)" type="1D" storagetype="float" endian="big" expression="x" to_byte="x" size="1" />
@@ -393,25 +393,25 @@
             <table name="Unknown" type="Y Axis" storagetype="float" endian="big" expression="x" to_byte="x" />
         </table>
 		<table name="Cruise Control Torque Request" units="% Torque" category="Cruise Control" type="2D" storagetype="uint16" endian="big" sizey="39">
-            <scaling expression="(x * 0.099999994) - 200" to_byte="x" format="0.000" />
+            <scaling expression="(x * 0.099999994) - 200" to_byte="(x + 200) / 0.099999994" format="0.000" />
             <table name="Speed Error" units="kph" type="Y Axis" storagetype="float" endian="big" expression="x" to_byte="x" />
         </table>
-		
+
         <table name="Fuel Injector - Unknown - Max Injection Angle2???" category="Fuel Injection" type="2D" storagetype="uint8" endian="big" sizey="16">
             <scaling units="deg(MAYBE??)" expression="(x * 2 ) + 0" to_byte="(x - 0.0) / 2.0" format="0.00" />
             <table name="Engine Speed" type="Y Axis" storagetype="float" endian="big" expression="x" to_byte="x">
 				<scaling units="RPM" />
 			</table>
         </table>
-		
+
 		<table name="Open Loop Target - Throttle Tip In - Barometric Pressure Correction" category="Fuel Injection - Open Loop" type="2D" storagetype="uint8" endian="big" sizey="1">
-            <scaling units="mult" expression="(x * 0.0078125 )" to_byte="(x - 1.0) / 0.0078125" format="0.00" />
+            <scaling units="mult" expression="(x * 0.0078125 )" to_byte="x / 0.0078125" format="0.00" />
             <table name="Barometric Pressure" type="Y Axis" storagetype="float" endian="big" expression="x" to_byte="x">
 				<scaling units="kPa" />
 			</table>
         </table>
 		<table name="Open Loop Target - Throttle Tip In - Barometric Pressure Correction (Safe Mode)" category="Fuel Injection - Open Loop" type="2D" storagetype="uint8" endian="big" sizey="1">
-            <scaling units="mult" expression="(x * 0.0078125 )" to_byte="(x - 1.0) / 0.0078125" format="0.00" />
+            <scaling units="mult" expression="(x * 0.0078125 )" to_byte="x / 0.0078125" format="0.00" />
             <table name="Barometric Pressure" type="Y Axis" storagetype="float" endian="big" expression="x" to_byte="x">
 				<scaling units="kPa" />
 			</table>
@@ -420,50 +420,50 @@
 			<scaling expression="(x*0.0049999)" to_byte="(x - 0.0) / 0.0049999" format="0.00" />
         <table name="Engine Speed" units="RPM" type="Y Axis" storagetype="float" endian="big" expression="x" to_byte="x" />
 		</table>
-		
+
 		<table name="Table 2D - LoadA" category="Unknown 2D" type="2D" storagetype="uint8" endian="big" sizey="18">
-            <scaling expression="x*.00390625" to_byte="x" format="0.00" />
+            <scaling expression="x*.00390625" to_byte="x / 0.00390625" format="0.00" />
             <table name="Engine Speed" units="RPM" type="Y Axis" storagetype="float" endian="big" expression="x" to_byte="x" />
         </table>
 		<table name="Table 2D - LoadB" category="Unknown 2D" type="2D" storagetype="uint8" endian="big" sizey="18">
-            <scaling expression="x*.00390625" to_byte="x" format="0.00" />
+            <scaling expression="x*.00390625" to_byte="x / 0.00390625" format="0.00" />
             <table name="Engine Speed" units="RPM" type="Y Axis" storagetype="float" endian="big" expression="x" to_byte="x" />
         </table>
 		<table name="Table 2D - LoadC" category="Unknown 2D" type="2D" storagetype="uint8" endian="big" sizey="18">
-            <scaling expression="x*.00390625" to_byte="x" format="0.00" />
+            <scaling expression="x*.00390625" to_byte="x / 0.00390625" format="0.00" />
             <table name="Engine Speed" units="RPM" type="Y Axis" storagetype="float" endian="big" expression="x" to_byte="x" />
         </table>
 		<table name="Table 2D - LoadD" category="Unknown 2D" type="2D" storagetype="uint8" endian="big" sizey="12">
-            <scaling expression="x*0.0078125" to_byte="x" format="0.00" />
-            <table name="Engine Speed" units="RPM" type="Y Axis" storagetype="float" endian="big" expression="x" to_byte="x" />	
+            <scaling expression="x*0.0078125" to_byte="x / 0.0078125" format="0.00" />
+            <table name="Engine Speed" units="RPM" type="Y Axis" storagetype="float" endian="big" expression="x" to_byte="x" />
         </table>
 		<table name="Table 2D - Uknown_693f4" category="Knock Control" type="2D" storagetype="uint8" endian="big" sizey="12">
-            <scaling expression="(x*0.5)-64" to_byte="x" format="0.00" />
+            <scaling expression="(x*0.5)-64" to_byte="(x + 64) / 0.5" format="0.00" />
             <table name="Engine Speed" units="RPM" type="Y Axis" storagetype="float" endian="big" expression="x" to_byte="x" />
         </table>
 		<table name="Table 2D - Uknown_69408" category="Knock Control" type="2D" storagetype="uint8" endian="big" sizey="12">
-            <scaling expression="(x*0.5)-64" to_byte="x" format="0.00" />
+            <scaling expression="(x*0.5)-64" to_byte="(x + 64) / 0.5" format="0.00" />
             <table name="Engine Speed" units="RPM" type="Y Axis" storagetype="float" endian="big" expression="x" to_byte="x" />
         </table>
 		<table name="Table 2D - Uknown_693b8" category="Knock Control" type="2D" storagetype="uint8" endian="big" sizey="5">
-            <scaling expression="(x*0.5)-64" to_byte="x" format="0.00" />
+            <scaling expression="(x*0.5)-64" to_byte="(x + 64) / 0.5" format="0.00" />
             <table name="Engine Speed" units="RPM" type="Y Axis" storagetype="float" endian="big" expression="x" to_byte="x" />
         </table>
 		<table name="Table 2D - Uknown_693cc" category="Knock Control" type="2D" storagetype="uint8" endian="big" sizey="4">
-            <scaling expression="(x*0.5)-64" to_byte="x" format="0.00" />
+            <scaling expression="(x*0.5)-64" to_byte="(x + 64) / 0.5" format="0.00" />
             <table name="Engine Speed" units="RPM" type="Y Axis" storagetype="float" endian="big" expression="x" to_byte="x" />
         </table>
 		<table name="Table 2D - Unknown_693e0" category="Knock Control" type="2D" storagetype="uint8" endian="big" sizey="5">
-			<scaling expression="(x*0.5)-64" to_byte="x" format="0.00" />
+			<scaling expression="(x*0.5)-64" to_byte="(x + 64) / 0.5" format="0.00" />
 			<table name="Engine Speed" units="RPM" type="Y Axis" storagetype="float" endian="big" expression="x" to_byte="x" />
 		</table>
 		<table name="Secondary Air Enrichment" category="Fuel Injection - Open Loop" type="2D" storagetype="uint16" endian="big" sizey="1">
-			<scaling units="Lambda" expression="(x*0.0099999998)" to_byte="(x - 0.0) / 0.0099999998" format="0.00" />
+			<scaling units="Lambda" expression="(x*0.0099999998)" to_byte="x / 0.0099999998" format="0.00" />
 			<table name="Coolant Temp" type="Y Axis" storagetype="float" endian="big" expression="x" to_byte="x" >
 				<scaling units ="degC"/>
 			</table>
 		</table>
-    
+
         <table name="Fuel Injector - Unknown - Max Injection Angle3???" category="Fuel Injection" type="2D" storagetype="uint8" endian="big" sizey="16">
             <scaling units="deg(MAYBE??)" expression="(x * 2 ) + 0" to_byte="(x - 0.0) / 2.0" format="0.00" />
             <table name="Engine Speed" type="Y Axis" storagetype="float" endian="big" expression="x" to_byte="x">
@@ -519,11 +519,11 @@
 			</table>
         </table>
 		<table name="Ignition Timing Leading Intake Air Temperature Compensation - On Throttle" category="Ignition Leading" type="2D" storagetype="uint8" endian="big" sizey="9">
-            <scaling units="degress" expression="((x*0.5)-40)" to_byte="x" format="0.00" />
+            <scaling units="deg" expression="((x*0.5)-40)" to_byte="(x + 40) / 0.5" format="0.00" />
             <table name="Intake Air Temperature" units="degC" type="Y Axis" storagetype="float" endian="big" expression="x" to_byte="x" />
         </table>
 		<table name="Ignition Leading/Trailing - Intake Air Temperature Compensation - Off Throttle" category="Ignition Timing" type="2D" storagetype="uint8" endian="big" sizey="1">
-            <scaling units="deg" expression="((x*0.5)-40)" to_byte="x" format="0.00" />
+            <scaling units="deg" expression="((x*0.5)-40)" to_byte="(x + 40) / 0.5" format="0.00" />
             <table name="Intake Air Temperature" type="Y Axis" storagetype="float" endian="big" expression="x" to_byte="x">
 				<scaling units="degC"/>
 			</table>
@@ -829,7 +829,7 @@
         <table name="Table 2D - 80 " category="Fuel Injection - Open Loop" type="2D" storagetype="uint16" endian="big" sizey="9">
             <scaling expression="(x * 0.001 ) + 0" to_byte="(x - 0) / 0.001" format="0.00" />
             <table name="Barometric Pressure" type="Y Axis" storagetype="float" endian="big" expression="x" to_byte="x">
-				<scaling units="kPa" expression="(x) + 0" to_byte="(x - 0) / 0.001" format="0.00" />
+				<scaling units="kPa" expression="(x) + 0" to_byte="x" format="0.00" />
 			</table>
         </table>
         <table name="Table 2D - 81 " category="Unknown 2D" type="2D" storagetype="uint16" endian="big" sizey="8">
@@ -867,11 +867,11 @@
 			</table>
         </table>
         <table name="Open Loop Fuelling Rich Limit - Safe Mode" category="Fuel Injection - Open Loop" type="2D" storagetype="uint8" endian="big" sizey="9">
-            <scaling expression="(1 / ( (x * 0.007812) + 1 )) * 14.7" to_byte="(x - 1.0) / 0.007812" format="0.000" />
+            <scaling expression="(1 / ( (x * 0.007812) + 1 )) * 14.7" to_byte="((14.7 / x) - 1) / 0.007812" format="0.000" />
             <table name="Unknown" type="Y Axis" storagetype="float" endian="big" expression="x" to_byte="x" />
         </table>
         <table name="Open Loop Fuelling Rich Limit" category="Fuel Injection - Open Loop" type="2D" storagetype="uint8" endian="big" sizey="9">
-            <scaling expression="(1 / ( (x * 0.007812) + 1 )) * 14.7" to_byte="(x - 1.0) / 0.007812" format="0.000" />
+            <scaling expression="(1 / ( (x * 0.007812) + 1 )) * 14.7" to_byte="((14.7 / x) - 1) / 0.007812" format="0.000" />
             <table name="Unknown" type="Y Axis" storagetype="float" endian="big" expression="x" to_byte="x" />
         </table>
         <table name="Open Loop Temperature Correction #B" category="Fuel Injection - Open Loop" type="2D" storagetype="uint8" endian="big" sizey="7">
@@ -923,7 +923,7 @@
             <table name="Unknown" type="Y Axis" storagetype="float" endian="big" expression="x" to_byte="x" />
         </table>
         <table name="Open Loop Changeover Enrichment" category="Fuel Injection - Open Loop" type="2D" storagetype="uint8" endian="big" sizey="7">
-            <scaling expression="x * 0.00390625" to_byte="(x) / (0.003906*x)" format="0.000" />
+            <scaling expression="x * 0.00390625" to_byte="x / 0.00390625" format="0.000" />
             <table name="Unknown" type="Y Axis" storagetype="float" endian="big" expression="x" to_byte="x" />
         </table>
         <table name="Table 2D - 104 " category="Unknown 2D" type="2D" storagetype="uint8" endian="big" sizey="9">
@@ -1116,8 +1116,8 @@
             <scaling expression="(x * 0.1 ) + -15" to_byte="(x - -15) / 0.1" format="0.00" />
             <table name="Vehicle Speed" type="Y Axis" storagetype="float" endian="big" expression="x" to_byte="x" />
         </table>
-		<table name="Table 2D - Uknown_68d7c" category="Cruise Control" type="2D" storagetype="uint8" endian="big" sizey="7">
-            <scaling expression="x*.5" to_byte="x*.5" format="0.00" />
+		<table name="Table 2D - Unknown_68d7c" category="Cruise Control" type="2D" storagetype="uint8" endian="big" sizey="7">
+            <scaling expression="x*.5" to_byte="x/0.5" format="0.00" />
             <table name="Vehicle Speed" type="Y Axis" storagetype="float" endian="big" expression="x" to_byte="x" />
         </table>
         <table name="Desired Charge Voltage" category="Alternator Control" type="2D" storagetype="uint16" endian="big" sizey="9">
@@ -1157,13 +1157,13 @@
             <table name="Unknown" type="Y Axis" storagetype="float" endian="big" expression="x" to_byte="x" />
         </table>
         <table name="Rotor 1 Ignition Dwell" category="Ignition" type="2D" storagetype="uint16" endian="big" sizey="13">
-            <scaling units="ms" expression="(x * 4 )/1000" to_byte="(x - 0) / 4" format="0.000" />
+            <scaling units="ms" expression="(x * 4 )/1000" to_byte="(x * 1000) / 4" format="0.000" />
             <table name="Engine Speed" type="Y Axis" storagetype="float" endian="big" expression="x" to_byte="x">
 				<scaling units="RPM"/>
 			</table>
         </table>
         <table name="Rotor 2 Ignition Dwell" category="Ignition" type="2D" storagetype="uint16" endian="big" sizey="13">
-            <scaling units="ms" expression="(x * 4 ) / 1000" to_byte="(x - 0) / 4" format="0.000" />
+            <scaling units="ms" expression="(x * 4 )/1000" to_byte="(x * 1000) / 4" format="0.000" />
             <table name="Engine Speed" type="Y Axis" storagetype="float" endian="big" expression="x" to_byte="x">
 				<scaling units="RPM"/>
 			</table>
@@ -1333,16 +1333,16 @@
             <table name="Unknown" type="Y Axis" storagetype="float" endian="big" expression="x" to_byte="x" />
         </table>
         <table name="Max Load - Intake Temperature Compensation" category="Engine Load" type="2D" storagetype="uint16" endian="big" sizey="8">
-            <scaling units="mult" expression="x*0.000030517578" to_byte="(x - 0) / 0.001" format="0.00" />
+            <scaling units="mult" expression="x*0.000030517578" to_byte="x / 0.000030517578" format="0.00" />
             <table name="Intake Temp" type="Y Axis" storagetype="float" endian="big" expression="x" to_byte="x">
 				<scaling units="degC"/>
 			</table>
         </table>
         <table name="Engine Torque Max - Barometric Pressure Compensation" category="Torque Control" type="2D" storagetype="uint16" endian="big" sizey="9">
-            <scaling units="kPa" expression="x * 0.001" to_byte="(x - 0) / 0.001" format="0.000" />
+            <scaling units="kPa" expression="x * 0.001" to_byte="x / 0.001" format="0.000" />
             <table name="Barometric Pressure" type="Y Axis" storagetype="float" endian="big" expression="x" to_byte="x" />
 				<table type="Y Axis" name="Barometric Pressure" sizey="2"/>
-					<scaling units="multiplier" xpression="x" to_byte="x" format="0.00" />
+					<scaling units="multiplier" expression="x" to_byte="x" format="0.00" />
         </table>
 
 		<table name="First Start Oil Injection Timer" category="Oil Metering" type="2D" storagetype="uint16" endian="big" sizey="6">
@@ -1467,7 +1467,7 @@
             <table name="Unknown" type="Y Axis" storagetype="float" endian="big" expression="x" to_byte="x" />
         </table>
         <table name="Max Load - Barometric Pressure Compensation" category="Engine Load" type="2D" storagetype="uint16" endian="big" sizey="8">
-            <scaling units="mult" expression="x*0.000030517578" to_byte="(x - 0) / 3.1E-05" format="0.00" />
+            <scaling units="mult" expression="x*0.000030517578" to_byte="x / 0.000030517578" format="0.00" />
             <table name="Barometric Pressure" type="Y Axis" storagetype="float" endian="big" expression="x" to_byte="x">
 				<scaling units="kPa"/>
 			</table>
@@ -2002,7 +2002,7 @@
         </table>
 	<table name="Manifold Pressure Based Oil Injection Amount - Default" category="Oil Metering" type="1D" storagetype="uint8" endian="big" expression="x-100" to_byte="x+100" size="1" />
         <table name="Manifold Pressure Based Oil Injection Amount" category="Oil Metering" type="2D" storagetype="uint8" endian="big" sizey="6">
-            <scaling expression="(x-100)" to_byte="x" format="0.00" />
+            <scaling expression="(x-100)" to_byte="x + 100" format="0.00" />
             <table name="Absolute Manifold Pressure" type="Y Axis" storagetype="float" endian="big" expression="x" to_byte="x">
 				<scaling units="kPa"/>
 			</table>
@@ -2018,7 +2018,7 @@
 			</table>
         </table>
         <table name="Table 2D - 357 Check DataType" category="Oil Metering" type="2D" storagetype="float" endian="big" sizey="6">
-            <scaling expression="(x/8)+.5" to_byte="(x*8)-.5" format="0.00" />
+            <scaling expression="(x/8)+.5" to_byte="(x-.5)*8" format="0.00" />
             <table name="Unknown" type="Y Axis" storagetype="float" formate="0" endian="big" expression="x" to_byte="x" />
         </table>
         <table name="Table 2D - 358 Check DataType" category="Unknown 2D" type="2D" storagetype="uint8" endian="big" sizey="6">
@@ -2526,7 +2526,7 @@
             </table>
         </table>
         <table name="Open Loop Target - Throttle Tip In" category="Fuel Injection - Open Loop" type="3D" storagetype="uint8" endian="big" expression="x" to_byte="x" sizex="12" sizey="8">
-            <scaling units="Lambda" expression="1-(x * 0.003906)" to_byte="x" format="0.000" />
+            <scaling units="Lambda" expression="1-(x * 0.003906)" to_byte="(1 - x) / 0.003906" format="0.000" />>
             <table name="Engine Speed" type="X Axis" storagetype="float" endian="big">
                 <scaling units="RPM" expression="x" to_byte="x" />
             </table>
@@ -2535,7 +2535,7 @@
             </table>
         </table>
         <table name="Open Loop Target" category="Fuel Injection - Open Loop" type="3D" storagetype="uint8" endian="big" expression="x" to_byte="x" sizex="21" sizey="19">
-            <scaling units="Lambda" expression="1-(x * 0.003906)" to_byte="x" format="0.000" />
+            <scaling units="Lambda" expression="1-(x * 0.003906)" to_byte="(1 - x) / 0.003906" format="0.000" />>
             <table name="Engine Load" type="X Axis" storagetype="float" endian="big">
                 <scaling units="g/rev" expression="x" to_byte="x" />
             </table>
@@ -2544,7 +2544,7 @@
             </table>
         </table>
         <table name="Open Loop Target - Throttle Tip In (Safe Mode)" category="Fuel Injection - Open Loop" type="3D" storagetype="uint8" endian="big" expression="x" to_byte="x" sizex="1" sizey="1">
-            <scaling units="Lambda" expression="1-(x * 0.003906)" to_byte="x" format="0.000" />
+            <scaling units="Lambda" expression="1-(x * 0.003906)" to_byte="(1 - x) / 0.003906" format="0.000" />>
             <table name="Engine Speed" type="X Axis" storagetype="float" endian="big">
                 <scaling units="RPM" expression="x" to_byte="x" />
             </table>
@@ -2553,7 +2553,7 @@
             </table>
         </table>
         <table name="Open Loop Target (Safe Mode)" category="Fuel Injection - Open Loop" type="3D" storagetype="uint8" endian="big" expression="x" to_byte="x" sizex="1" sizey="1">
-            <scaling units="Lambda" expression="1-(x * 0.003906)" to_byte="x" format="0.000" />
+            <scaling units="Lambda" expression="1-(x * 0.003906)" to_byte="(1 - x) / 0.003906" format="0.000" />>
             <table name="Engine Load" type="X Axis" storagetype="float" endian="big">
                 <scaling units="g/rev" expression="x" to_byte="x" />
             </table>
@@ -2562,7 +2562,7 @@
             </table>
         </table>
         <table name="Open Loop Target - Throttle Tip in - Coolant Temp Implausible B" category="Fuel Injection - Open Loop" type="3D" storagetype="uint8" endian="big" expression="x" to_byte="x" sizex="12" sizey="8">
-            <scaling units="Lambda" expression="1-(x * 0.003906)" to_byte="x" format="0.000" />
+            <scaling units="Lambda" expression="1-(x * 0.003906)" to_byte="(1 - x) / 0.003906" format="0.000" />>
             <table name="Engine Speed" type="X Axis" storagetype="float" endian="big">
                 <scaling units="RPM" expression="x" to_byte="x" />
             </table>
@@ -2571,7 +2571,7 @@
             </table>
         </table>
         <table name="Open Loop Target - Coolant Temp Implausible B" category="Fuel Injection - Open Loop" type="3D" storagetype="uint8" endian="big" expression="x" to_byte="x" sizex="21" sizey="19">
-            <scaling units="Lambda" expression="(x * 0.003906)+1" to_byte="x" format="0.000" />
+            <scaling units="Lambda" expression="(x * 0.003906)+1" to_byte="(x - 1) / 0.003906" format="0.000" />
             <table name="Engine Load" type="X Axis" storagetype="float" endian="big">
                 <scaling units="g/rev" expression="x" to_byte="x" />
             </table>
@@ -2580,7 +2580,7 @@
             </table>
         </table>
         <table name="Open Loop Target - Throttle Tip in - Coolant Temp Implausible A" category="Fuel Injection - Open Loop" type="3D" storagetype="uint8" endian="big" expression="x" to_byte="x" sizex="12" sizey="8">
-            <scaling units="Lambda" expression="(x * 0.003906)+1" to_byte="x" format="0.000" />
+            <scaling units="Lambda" expression="(x * 0.003906)+1" to_byte="(x - 1) / 0.003906" format="0.000" />
             <table name="Engine Speed" type="X Axis" storagetype="float" endian="big">
                 <scaling units="RPM" expression="x" to_byte="x" />
             </table>
@@ -2589,7 +2589,7 @@
             </table>
         </table>
         <table name="Open Loop Target - Coolant Temp Implausible A" category="Fuel Injection - Open Loop" type="3D" storagetype="uint8" endian="big" expression="x" to_byte="x" sizex="21" sizey="19">
-            <scaling units="Lambda" expression="(x * 0.003906)+1" to_byte="x)" format="0.000" />
+            <scaling units="Lambda" expression="(x * 0.003906)+1" to_byte="(x - 1) / 0.003906" format="0.000" />>
             <table name="Engine Load" type="X Axis" storagetype="float" endian="big">
                 <scaling units="g/rev" expression="x" to_byte="x" />
             </table>
@@ -3154,7 +3154,7 @@
             <table name="Coolant Temp" type="X Axis" storagetype="float" endian="big">
                 <scaling units="degC" expression="x" to_byte="x" />
             </table>
-        </table>		
+        </table>
         <table name="Table 3D - 102 " category="Unknown 3D" type="3D" storagetype="uint8" endian="big" expression="x" to_byte="x" sizex="24" sizey="10">
             <scaling expression="(x * 0.390625 ) + 0" to_byte="(x - 0) / 0.390625" format="0.00" />
             <table name="Value" type="X Axis" storagetype="float" endian="big">
@@ -3388,9 +3388,9 @@
             <table name="Value" type="Y Axis" storagetype="float" endian="big">
                 <scaling expression="x" to_byte="x" />
             </table>
-        </table>	
+        </table>
         <table name="Ignition Dwell Time " category="Ignition" type="3D" storagetype="uint16" endian="big" expression="x" to_byte="x" sizex="9" sizey="9">
-            <scaling units="ms" expression="(x * 1 )/1000" to_byte="(x - 0) / 1" format="0.000" />
+            <scaling units="ms" expression="(x * 1 )/1000" to_byte="x * 1000" format="0.000" />
             <table name="Engine Speed" type="X Axis" storagetype="float" endian="big">
                 <scaling units="RPM" expression="x" to_byte="x" />
             </table>
@@ -3737,7 +3737,7 @@
 		<table name="Fan High Speed Enable Coolant Temperature Threshold" 	storageaddress="0x07794c" />
 		<table name="Fan High Speed Disable Coolant Temperature Hysteresis" 	storageaddress="0x077950" />
 		<table name="Fan 2 Disable Vehicle Speed Threshold" 				storageaddress="0x077988"/>
-		<table name="Fan 2 Disable Vehicle Speed Hysteresis" 				storageaddress="0x07798c" />	
+		<table name="Fan 2 Disable Vehicle Speed Hysteresis" 				storageaddress="0x07798c" />
         <table name="Fuel Injector - Unknown - Max Injection Angle1???" storageaddress="0x06CFE4">
             <table type="Y Axis" storageaddress="0x06CFA4" />
         </table>
@@ -5730,7 +5730,7 @@
             <year>2004</year>
             <transmission>MT</transmission>
         </romid>
-		
+
 		<table name="Gear 1" storageaddress="0x754e8"/>
 		<table name="Gear 2" storageaddress="0x754ec"/>
 		<table name="Gear 3" storageaddress="0x754f0"/>
@@ -5794,7 +5794,7 @@
 		<table name="Alternator Pulley Ratio" storageaddress="0x74a1c" />
 		<table name="Alternator Voltage Controller - Proportional Gain" storageaddress="0x74a90" />
 		<table name="Alternator Voltage Controller - Integral Gain" storageaddress="0x74a94" />
-		<table name="Alternator Voltage Controller - Derivative Gain" storageaddress="0x74a8c" />	
+		<table name="Alternator Voltage Controller - Derivative Gain" storageaddress="0x74a8c" />
 		<table name="Max Load - Intake Temperature Compensation" storageaddress="0x078DC0">
             <table type="Y Axis" storageaddress="0x078D9C" />
         </table>
@@ -5964,13 +5964,13 @@
         </table>
 		<table name="Cruise Control Torque Request" storageaddress="0x07644c">
             <table type="Y Axis" storageaddress="0x0763b0" />
-        </table>		
+        </table>
 		<table name="Table 2D - 58 " storageaddress="0x06F5F4">
             <table type="Y Axis" storageaddress="0x06F5E0" />
         </table>
-		<table name="Table 2D - Uknown_68d7c" storageaddress="0x076344">
+		<table name="Table 2D - Unknown_68d7c" storageaddress="0x076344">
             <table type="Y Axis" storageaddress="0x076320" />
-        </table>		
+        </table>
         <table name="Table 2D - 60 " storageaddress="0x06FB8C">
             <table type="Y Axis" storageaddress="0x06FB64" />
         </table>
@@ -6302,7 +6302,7 @@
 		<table name="Open Loop Target - Coolant Temperature  Implausible B - Tip In Barometric Pressure Compensation" storageaddress="0x717ec">
             <table type="Y Axis" storageaddress="0x717e8" />
         </table>
-		
+
         <table name="Max Load - Intake Temperature Compensation" storageaddress="0x077ACC">
             <table type="Y Axis" storageaddress="0x077AA8" />
         </table>
@@ -7534,9 +7534,9 @@
 		   <transmission>MT</transmission>
 		   <memmodel>SH7055</memmodel>
 		   <filesize>512kb</filesize>
-		</romid>	
+		</romid>
 		<table name="Immobilizer Disable - Without RKE Installed" storageaddress="0x35230"/>
-		<table name="Immobilizer Disable - With RKE Installed" storageaddress="0x3567C"/>	
+		<table name="Immobilizer Disable - With RKE Installed" storageaddress="0x3567C"/>
 		<table name="Barometric Pressure Sensor Max ADC Count" storageaddress="0x06D46C" />
 		<table name="Fuel Air Ratio" storageaddress="0x77150"/>
         <table name="Barometric Pressure Sensor Min ADC Count" storageaddress="0x06D46E" />
@@ -7587,12 +7587,12 @@
 		<table name="Alternator Voltage Controller - Integral Gain" storageaddress="0x74a94" />
 		<table name="Alternator Voltage Controller - Derivative Gain" storageaddress="0x74a8c" />
 		<table name="Ethanol Sensor CAN ID" storageaddress="0x4bd26" />
-		
+
 		<table name="Cold Enrichment - Coolant Temperature Threshold" storageaddress="0x714a8" />
 		<table name="Cold Enrichment - Intake Air Temperature Threshold" storageaddress="0x714ac"/>
 		<table name="Cold Enrichment - Cold Enrichment"  storageaddress="0x714b0"/>
 		<table name="Cold Enrichment - Cold Enrichment Decay" storageaddress="0x714b4"/>
-		
+
 		<table name="Max Load - Intake Temperature Compensation" storageaddress="0x078DC0">
             <table type="Y Axis" storageaddress="0x078D9C" />
         </table>
@@ -7762,13 +7762,13 @@
         </table>
 		<table name="Cruise Control Torque Request" storageaddress="0x07644c">
             <table type="Y Axis" storageaddress="0x0763b0" />
-        </table>		
+        </table>
 		<table name="Table 2D - 58 " storageaddress="0x06F5F4">
             <table type="Y Axis" storageaddress="0x06F5E0" />
         </table>
-		<table name="Table 2D - Uknown_68d7c" storageaddress="0x076344">
+		<table name="Table 2D - Unknown_68d7c" storageaddress="0x076344">
             <table type="Y Axis" storageaddress="0x076320" />
-        </table>		
+        </table>
         <table name="Table 2D - 60 " storageaddress="0x06FB8C">
             <table type="Y Axis" storageaddress="0x06FB64" />
         </table>
@@ -9080,9 +9080,9 @@
             <table type="Y Axis" storageaddress="0x6C480" />
         </table>
 		<table name="Table 3D - Cranking Fuel Multiplier" storageaddress="0x6c998">
-			<table type="X Axis" storageaddress="0x6c934" />	
-            <table type="Y Axis" storageaddress="0x6c964" />	
-        </table>	
+			<table type="X Axis" storageaddress="0x6c934" />
+            <table type="Y Axis" storageaddress="0x6c964" />
+        </table>
 		<table name="Ethanol Content Sample Threshold - Engine Speed" storageaddress="0x6C400"/>
 		<table name="Ethanol Content Sample Threshold - Engine Load" storageaddress="0x6C404"/>
         <table name="Ignition Dwell Time " storageaddress="0x07B6FC">
@@ -9331,7 +9331,7 @@
         <table name="DTC c155 Enable/Disable#2" storageaddress="0x07CAFF" />
         <table name="DTC c167 Enable/Disable#2" storageaddress="0x07CB03" />
 		<table name="DTC c167 Enable/Disable#3" storageaddress="0x07cb8f" />
-    </rom>    
+    </rom>
 	<rom base="Rx8Base">
         <romid>
             <xmlid>60E1D300</xmlid>
@@ -16848,27 +16848,27 @@
             <transmission>MT</transmission>
         </romid>
 		<table name="Immobilizer Disable - Without RKE Installed" storageaddress="0x354C8">
-			<state name="on" data="00 09 00 09 00 09 B3 D5 00 09 00 09 00 09 00 09 00 09 00 09 00 09 00 
-								   09 00 09 00 09 00 09 00 09 00 09 00 09 00 09 00 09 00 09 00 09 00 09 
-								   00 09 00 09 00 09 A0 3D 00 09 01 F4 00 FA 55 AA AA CC B5 C4 FF FF FF 
-								   FF 86 9C 00 03 E4 B0 00 03 E5 C8 FF FF C2 28 FF FF C2 2C FF FF C2 3E 
-								   FF FF C2 3A FF FF C2 88 FF FF C2 8C 00 01 00 01 55 AA 55 AA 00 00 FF 
-								   FF FF FF C2 96 FF FF C2 98 00 00 B7 E3 FF FF C2 39 00 03 68 58 B0 BB 
-								   00 09 A0 11 00 09 B1 CF 00 09 A0 0D 00 09 B2 5B 00 09 A0 09 00 09 B2 
-								   FD 00 09 A0 05 00 09 B3 4E 00 09 A0 01 00 09 2D E0 DD 30 D2 30 64 20 
-								   60 4C 88 05 8D 04 64 03 60 43 88 06 8F 10 00 09 D2 2C 63 20 23 38 8F 
-								   0B 00 09 D1 2B 60 10 20 08 8F 06 00 09 D2 29 E5 01 42 0B 64 D0 A0 01 
+			<state name="on" data="00 09 00 09 00 09 B3 D5 00 09 00 09 00 09 00 09 00 09 00 09 00 09 00
+								   09 00 09 00 09 00 09 00 09 00 09 00 09 00 09 00 09 00 09 00 09 00 09
+								   00 09 00 09 00 09 A0 3D 00 09 01 F4 00 FA 55 AA AA CC B5 C4 FF FF FF
+								   FF 86 9C 00 03 E4 B0 00 03 E5 C8 FF FF C2 28 FF FF C2 2C FF FF C2 3E
+								   FF FF C2 3A FF FF C2 88 FF FF C2 8C 00 01 00 01 55 AA 55 AA 00 00 FF
+								   FF FF FF C2 96 FF FF C2 98 00 00 B7 E3 FF FF C2 39 00 03 68 58 B0 BB
+								   00 09 A0 11 00 09 B1 CF 00 09 A0 0D 00 09 B2 5B 00 09 A0 09 00 09 B2
+								   FD 00 09 A0 05 00 09 B3 4E 00 09 A0 01 00 09 2D E0 DD 30 D2 30 64 20
+								   60 4C 88 05 8D 04 64 03 60 43 88 06 8F 10 00 09 D2 2C 63 20 23 38 8F
+								   0B 00 09 D1 2B 60 10 20 08 8F 06 00 09 D2 29 E5 01 42 0B 64 D0 A0 01
 								   2D 00 2D E0 E3 03 62 D0 62 2C 32 33 8F 0D 00 09 E1 00"/>
-			<state name="off" data="B5 6E 00 09 60 D0 60 0C 88 00 8D 11 00 09 88 01 8D 3A 00 09 88 02 8D 
-								   3B 00 09 88 03 8D 3C 00 09 88 04 8D 3D 00 09 88 05 8D 3E 00 09 A0 40 
-								   00 09 B0 8C 00 09 A0 3D 00 09 01 F4 00 FA 55 AA AA CC B5 C4 FF FF FF 
-								   FF 86 9C 00 03 E4 B0 00 03 E5 C8 FF FF C2 28 FF FF C2 2C FF FF C2 3E 
-								   FF FF C2 3A FF FF C2 88 FF FF C2 8C 00 01 00 01 55 AA 55 AA 00 00 FF 
-								   FF FF FF C2 96 FF FF C2 98 00 00 B7 E3 FF FF C2 39 00 03 68 58 B0 BB 
-								   00 09 A0 11 00 09 B1 CF 00 09 A0 0D 00 09 B2 5B 00 09 A0 09 00 09 B2 
-								   FD 00 09 A0 05 00 09 B3 4E 00 09 A0 01 00 09 2D E0 DD 30 D2 30 64 20 
-								   60 4C 88 05 8D 04 64 03 60 43 88 06 8F 10 00 09 D2 2C 63 20 23 38 8F 
-								   0B 00 09 D1 2B 60 10 20 08 8F 06 00 09 D2 29 E5 01 42 0B 64 D0 A0 01 
+			<state name="off" data="B5 6E 00 09 60 D0 60 0C 88 00 8D 11 00 09 88 01 8D 3A 00 09 88 02 8D
+								   3B 00 09 88 03 8D 3C 00 09 88 04 8D 3D 00 09 88 05 8D 3E 00 09 A0 40
+								   00 09 B0 8C 00 09 A0 3D 00 09 01 F4 00 FA 55 AA AA CC B5 C4 FF FF FF
+								   FF 86 9C 00 03 E4 B0 00 03 E5 C8 FF FF C2 28 FF FF C2 2C FF FF C2 3E
+								   FF FF C2 3A FF FF C2 88 FF FF C2 8C 00 01 00 01 55 AA 55 AA 00 00 FF
+								   FF FF FF C2 96 FF FF C2 98 00 00 B7 E3 FF FF C2 39 00 03 68 58 B0 BB
+								   00 09 A0 11 00 09 B1 CF 00 09 A0 0D 00 09 B2 5B 00 09 A0 09 00 09 B2
+								   FD 00 09 A0 05 00 09 B3 4E 00 09 A0 01 00 09 2D E0 DD 30 D2 30 64 20
+								   60 4C 88 05 8D 04 64 03 60 43 88 06 8F 10 00 09 D2 2C 63 20 23 38 8F
+								   0B 00 09 D1 2B 60 10 20 08 8F 06 00 09 D2 29 E5 01 42 0B 64 D0 A0 01
 								   2D 00 2D E0 E3 03 62 D0 62 2C 32 33 8F 0D 00 09 E1 01" />
 		</table>
 		<table name="Immobilizer Disable - With RKE Installed" storageaddress="0x35914"/>
@@ -18620,16 +18620,16 @@
 		<table name="Table 2D - Unknown_69158" storageaddress="0x0778ec">
             <table type="Y Axis" storageaddress="0x0778c0" />
         </table>
-		<table name="Table 2D - Uknown_68d7c" storageaddress="0x076344">
+		<table name="Table 2D - Unknown_68d7c" storageaddress="0x076344">
             <table type="Y Axis" storageaddress="0x076320" />
-        </table>		
+        </table>
 		<table name="Cruise Control Torque Request" storageaddress="0x07644c">
             <table type="Y Axis" storageaddress="0x0763b0" />
-        </table>	
+        </table>
         <table name="Fuel Injector - Unknown - Max Injection Angle1???" storageaddress="0x06D4E4">
             <table type="Y Axis" storageaddress="0x06D4A4" />
         </table>
-		
+
 		<table name="Table 2D - LoadA" storageaddress="0x071848">
             <table type="Y Axis" storageaddress="0x071800" />
         </table>
@@ -18657,7 +18657,7 @@
 		<table name="Table 2D - Unknown_693e0" storageaddress="0x000785f4">
 			<table type="Y Axis" storageaddress="0x000785e0" />
 		</table>
-		
+
 		<table name="Table 2D - Unknown_67824" storageaddress="0x6d614">
 			<table type="Y Axis" storageaddress="0x6d5ec" />
 		</table>
@@ -19664,7 +19664,7 @@
             <table type="X Axis" storageaddress="0x070acc" />
             <table type="Y Axis" storageaddress="0x070afc" />
         </table>
-		
+
         <table name="Ignition Timing Leading Idle Load Compensation" storageaddress="0x06DB50">
             <table type="X Axis" storageaddress="0x06DB14" />
             <table type="Y Axis" storageaddress="0x06DB34" />
@@ -19701,17 +19701,17 @@
             <table type="X Axis" storageaddress="0x06e118" />
             <table type="Y Axis" storageaddress="0x06e124" />
         </table>
-		
+
 		<table name="Table Unknown - GearInput" storageaddress="0x06d9d4">
             <table type="X Axis" storageaddress="0x06d97c" />
             <table type="Y Axis" storageaddress="0x06d9bc" />
         </table>
-		
+
 		<table name="Table Unknown2 - GearInput" storageaddress="0x06d91c">
             <table type="X Axis" storageaddress="0x06d8c4" />
             <table type="Y Axis" storageaddress="0x06d904" />
         </table>
-		
+
         <table name="Ignition Minimum Leading/Trailing split" storageaddress="0x06EE30">
             <table type="X Axis" storageaddress="0x06ED98" />
             <table type="Y Axis" storageaddress="0x06EDE8" />
@@ -20342,7 +20342,7 @@
             <year>2004</year>
             <transmission>MT</transmission>
         </romid>
-		
+
 		<table name="Gear 1" storageaddress="0x00075B20"/>
 		<table name="Gear 2" storageaddress="0x00075B24"/>
 		<table name="Gear 3" storageaddress="0x00075B28"/>
@@ -20406,7 +20406,7 @@
 		<table name="Alternator Pulley Ratio" storageaddress="0x00075054" />
 		<table name="Alternator Voltage Controller - Proportional Gain" storageaddress="0x000750C8" />
 		<table name="Alternator Voltage Controller - Integral Gain" storageaddress="0x000750CC" />
-		<table name="Alternator Voltage Controller - Derivative Gain" storageaddress="0x000750C4" />	
+		<table name="Alternator Voltage Controller - Derivative Gain" storageaddress="0x000750C4" />
 		<table name="Max Load - Intake Temperature Compensation" storageaddress="0x000793F8">
             <table type="Y Axis" storageaddress="0x000793D4" />
         </table>
@@ -20576,13 +20576,13 @@
         </table>
 		<table name="Cruise Control Torque Request" storageaddress="0x00076A84">
             <table type="Y Axis" storageaddress="0x000769E8" />
-        </table>		
+        </table>
 		<table name="Table 2D - 58 " storageaddress="0x0006FC2C">
             <table type="Y Axis" storageaddress="0x0006FC18" />
         </table>
-		<table name="Table 2D - Uknown_68d7c" storageaddress="0x0007697C">
+		<table name="Table 2D - Unknown_68d7c" storageaddress="0x0007697C">
             <table type="Y Axis" storageaddress="0x00076958" />
-        </table>		
+        </table>
         <table name="Table 2D - 60 " storageaddress="0x000701C4">
             <table type="Y Axis" storageaddress="0x0007019C" />
         </table>
@@ -20914,7 +20914,7 @@
 		<table name="Open Loop Target - Coolant Temperature  Implausible B - Tip In Barometric Pressure Compensation" storageaddress="0x00071E24">
             <table type="Y Axis" storageaddress="0x00071E20" />
         </table>
-		
+
         <table name="Max Load - Intake Temperature Compensation" storageaddress="0x00078104">
             <table type="Y Axis" storageaddress="0x000780E0" />
         </table>
