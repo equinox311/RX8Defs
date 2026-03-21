@@ -70,7 +70,7 @@
 			</table>
         </table>
 		<table name="Table 2D - Stoich Fuel Ratio" category="Flex Fuel" type="2D" storagetype="float" endian="big" sizey="12">
-            <scaling units="AFR" expression="1/x" to_byte="x" format="0.00" />
+            <scaling units="AFR" expression="1/x" to_byte="x^-1" format="0.00" />
             <table name="Ethanol Content" type="Y Axis" storagetype="float" endian="big" expression="x" to_byte="x">
 				<scaling units="%" format="0" />
 			</table>
@@ -1112,17 +1112,25 @@
             <scaling expression="(x * 0.001 ) + 0" to_byte="(x - 0) / 0.001" format="0.00" />
             <table name="Unknown" type="Y Axis" storagetype="float" endian="big" expression="x" to_byte="x" />
         </table>
-        <table name="Table 2D - 148 " category="Unknown 2D" type="2D" storagetype="uint8" endian="big" sizey="7">
+        <table name="Battery Temperature Model - Decay Amount" category="Alternator Control" type="2D" storagetype="uint8" endian="big" sizey="7">
             <scaling expression="(x * 0.1 ) + -15" to_byte="(x - -15) / 0.1" format="0.00" />
             <table name="Vehicle Speed" type="Y Axis" storagetype="float" endian="big" expression="x" to_byte="x" />
+        </table>
+		<table name="Alternator Duty Cycle Max" category="Alternator Control" type="2D" storagetype="uint16" endian="big" sizey="7">
+            <scaling units="% Duty Cycle" expression="(x * 0.0099999998 )" to_byte="(x ) / 0.0099999998" format="0.00" />
+            <table name="Alternator RPM" units="RPM" type="Y Axis" storagetype="float" endian="big" expression="x" to_byte="x">
+				<scaling units="RPM"/>
+			</table>
         </table>
 		<table name="Table 2D - Unknown_68d7c" category="Cruise Control" type="2D" storagetype="uint8" endian="big" sizey="7">
             <scaling expression="x*.5" to_byte="x/0.5" format="0.00" />
             <table name="Vehicle Speed" type="Y Axis" storagetype="float" endian="big" expression="x" to_byte="x" />
         </table>
         <table name="Desired Charge Voltage" category="Alternator Control" type="2D" storagetype="uint16" endian="big" sizey="9">
-            <scaling expression="(x * 0.01 ) + 0" to_byte="(x - 0) / 0.01" format="0.00" />
-            <table name="Unknown" type="Y Axis" storagetype="float" endian="big" expression="x" to_byte="x" />
+            <scaling units="V" expression="(x * 0.01 ) + 0" to_byte="(x - 0) / 0.01" format="0.00" />
+            <table name="Estimated Battery Temperature" type="Y Axis" storagetype="float" endian="big" expression="x" to_byte="x">
+				<scaling units="degC"/>
+			</table>
         </table>
         <table name="Table 2D - 150 " category="Unknown 2D" type="2D" storagetype="uint16" endian="big" sizey="11">
             <scaling expression="(x * 0.01 ) + 0" to_byte="(x - 0) / 0.01" format="0.00" />
@@ -2705,7 +2713,7 @@
                 <scaling units="%" expression="x" to_byte="x" />
             </table>
         </table>
-        <table name="Alternator Voltage Delta" category="Alternator Control" type="3D" storagetype="uint8" endian="big" expression="x" to_byte="x" sizex="11" sizey="12">
+        <table name="Alternator Voltage Delta - Diagnostic Request" category="Alternator Control" type="3D" storagetype="uint8" endian="big" expression="x" to_byte="x" sizex="11" sizey="12">
             <scaling expression="(x * 0.05 ) + 0" to_byte="(x - 0) / 0.05" format="0.00" />
             <table name="Alternator Speed" type="X Axis" storagetype="float" endian="big">
                 <scaling units="RPM" expression="x" to_byte="x" />
@@ -4182,7 +4190,7 @@
         <table name="Table 2D - 147 " storageaddress="0x075130">
             <table type="Y Axis" storageaddress="0x07510C" />
         </table>
-        <table name="Table 2D - 148 " storageaddress="0x0752E0">
+        <table name="Battery Temperature Model - Decay Amount" storageaddress="0x0752E0">
             <table type="Y Axis" storageaddress="0x0752C4" />
         </table>
         <table name="Desired Charge Voltage" storageaddress="0x07530C">
@@ -5162,7 +5170,7 @@
             <table type="X Axis" storageaddress="0x074C64" />
             <table type="Y Axis" storageaddress="0x074CB8" />
         </table>
-        <table name="Alternator Voltage Delta" storageaddress="0x0754F0">
+        <table name="Alternator Voltage Delta - Diagnostic Request" storageaddress="0x0754F0">
             <table type="X Axis" storageaddress="0x075494" />
             <table type="Y Axis" storageaddress="0x0754C0" />
         </table>
@@ -6169,7 +6177,7 @@
         <table name="Table 2D - 147 " storageaddress="0x07497C">
             <table type="Y Axis" storageaddress="0x074958" />
         </table>
-        <table name="Table 2D - 148 " storageaddress="0x074B34">
+        <table name="Battery Temperature Model - Decay Amount" storageaddress="0x074B34">
             <table type="Y Axis" storageaddress="0x074B18" />
         </table>
         <table name="Desired Charge Voltage" storageaddress="0x074B60">
@@ -7004,7 +7012,7 @@
             <table type="X Axis" storageaddress="0x0744B0" />
             <table type="Y Axis" storageaddress="0x074504" />
         </table>
-        <table name="Alternator Voltage Delta" storageaddress="0x074D44">
+        <table name="Alternator Voltage Delta - Diagnostic Request" storageaddress="0x074D44">
             <table type="X Axis" storageaddress="0x074CE8" />
             <table type="Y Axis" storageaddress="0x074D14" />
         </table>
@@ -7967,7 +7975,7 @@
         <table name="Table 2D - 147 " storageaddress="0x07497C">
             <table type="Y Axis" storageaddress="0x074958" />
         </table>
-        <table name="Table 2D - 148 " storageaddress="0x074B34">
+        <table name="Battery Temperature Model - Decay Amount" storageaddress="0x074B34">
             <table type="Y Axis" storageaddress="0x074B18" />
         </table>
         <table name="Desired Charge Voltage" storageaddress="0x074B60">
@@ -8800,7 +8808,7 @@
             <table type="X Axis" storageaddress="0x0744B0" />
             <table type="Y Axis" storageaddress="0x074504" />
         </table>
-        <table name="Alternator Voltage Delta" storageaddress="0x074D44">
+        <table name="Alternator Voltage Delta - Diagnostic Request" storageaddress="0x074D44">
             <table type="X Axis" storageaddress="0x074CE8" />
             <table type="Y Axis" storageaddress="0x074D14" />
         </table>
@@ -9821,7 +9829,7 @@
         <table name="Table 2D - 147 " storageaddress="0x0748F0">
             <table type="Y Axis" storageaddress="0x0748CC" />
         </table>
-        <table name="Table 2D - 148 " storageaddress="0x074AA0">
+        <table name="Battery Temperature Model - Decay Amount" storageaddress="0x074AA0">
             <table type="Y Axis" storageaddress="0x074A84" />
         </table>
         <table name="Desired Charge Voltage" storageaddress="0x074ACC">
@@ -10727,7 +10735,7 @@
             <table type="X Axis" storageaddress="0x074424" />
             <table type="Y Axis" storageaddress="0x074478" />
         </table>
-        <table name="Alternator Voltage Delta" storageaddress="0x074CB0">
+        <table name="Alternator Voltage Delta - Diagnostic Request" storageaddress="0x074CB0">
             <table type="X Axis" storageaddress="0x074C54" />
             <table type="Y Axis" storageaddress="0x074C80" />
         </table>
@@ -11752,7 +11760,7 @@
         <table name="Table 2D - 147 " storageaddress="0x075130">
             <table type="Y Axis" storageaddress="0x07510C" />
         </table>
-        <table name="Table 2D - 148 " storageaddress="0x0752E0">
+        <table name="Battery Temperature Model - Decay Amount" storageaddress="0x0752E0">
             <table type="Y Axis" storageaddress="0x0752C4" />
         </table>
         <table name="Desired Charge Voltage" storageaddress="0x07530C">
@@ -12732,7 +12740,7 @@
             <table type="X Axis" storageaddress="0x074C64" />
             <table type="Y Axis" storageaddress="0x074CB8" />
         </table>
-        <table name="Alternator Voltage Delta" storageaddress="0x0754F0">
+        <table name="Alternator Voltage Delta - Diagnostic Request" storageaddress="0x0754F0">
             <table type="X Axis" storageaddress="0x075494" />
             <table type="Y Axis" storageaddress="0x0754C0" />
         </table>
@@ -13782,7 +13790,7 @@
         <table name="Table 2D - 147 " storageaddress="0x0741A0">
             <table type="Y Axis" storageaddress="0x07417C" />
         </table>
-        <table name="Table 2D - 148 " storageaddress="0x074350">
+        <table name="Battery Temperature Model - Decay Amount" storageaddress="0x074350">
             <table type="Y Axis" storageaddress="0x074334" />
         </table>
         <table name="Desired Charge Voltage" storageaddress="0x07437C">
@@ -14636,7 +14644,7 @@
             <table type="X Axis" storageaddress="0x073CD4" />
             <table type="Y Axis" storageaddress="0x073D28" />
         </table>
-        <table name="Alternator Voltage Delta" storageaddress="0x074560">
+        <table name="Alternator Voltage Delta - Diagnostic Request" storageaddress="0x074560">
             <table type="X Axis" storageaddress="0x074504" />
             <table type="Y Axis" storageaddress="0x074530" />
         </table>
@@ -15626,7 +15634,7 @@
         <table name="Table 2D - 147 " storageaddress="0x074EF0">
             <table type="Y Axis" storageaddress="0x074ECC" />
         </table>
-        <table name="Table 2D - 148 " storageaddress="0x0750A0">
+        <table name="Battery Temperature Model - Decay Amount" storageaddress="0x0750A0">
             <table type="Y Axis" storageaddress="0x075084" />
         </table>
         <table name="Desired Charge Voltage" storageaddress="0x0750CC">
@@ -16356,7 +16364,7 @@
             <table type="X Axis" storageaddress="0x074A24" />
             <table type="Y Axis" storageaddress="0x074A78" />
         </table>
-        <table name="Alternator Voltage Delta" storageaddress="0x0752B0">
+        <table name="Alternator Voltage Delta - Diagnostic Request" storageaddress="0x0752B0">
             <table type="X Axis" storageaddress="0x075254" />
             <table type="Y Axis" storageaddress="0x075280" />
         </table>
@@ -17238,7 +17246,7 @@
         <table name="Table 2D - 147 " storageaddress="0x07497C">
             <table type="Y Axis" storageaddress="0x074958" />
         </table>
-        <table name="Table 2D - 148 " storageaddress="0x074B34">
+        <table name="Battery Temperature Model - Decay Amount" storageaddress="0x074B34">
             <table type="Y Axis" storageaddress="0x074B18" />
         </table>
         <table name="Desired Charge Voltage" storageaddress="0x074B60">
@@ -18050,7 +18058,7 @@
             <table type="X Axis" storageaddress="0x0744B0" />
             <table type="Y Axis" storageaddress="0x074504" />
         </table>
-        <table name="Alternator Voltage Delta" storageaddress="0x074D44">
+        <table name="Alternator Voltage Delta - Diagnostic Request" storageaddress="0x074D44">
             <table type="X Axis" storageaddress="0x074CE8" />
             <table type="Y Axis" storageaddress="0x074D14" />
         </table>
@@ -19003,7 +19011,7 @@
         <table name="Table 2D - 147 " storageaddress="0x07497C">
             <table type="Y Axis" storageaddress="0x074958" />
         </table>
-        <table name="Table 2D - 148 " storageaddress="0x074B34">
+        <table name="Battery Temperature Model - Decay Amount" storageaddress="0x074B34">
             <table type="Y Axis" storageaddress="0x074B18" />
         </table>
         <table name="Desired Charge Voltage" storageaddress="0x074B60">
@@ -19836,7 +19844,7 @@
             <table type="X Axis" storageaddress="0x0744B0" />
             <table type="Y Axis" storageaddress="0x074504" />
         </table>
-        <table name="Alternator Voltage Delta" storageaddress="0x074D44">
+        <table name="Alternator Voltage Delta - Diagnostic Request" storageaddress="0x074D44">
             <table type="X Axis" storageaddress="0x074CE8" />
             <table type="Y Axis" storageaddress="0x074D14" />
         </table>
@@ -20781,7 +20789,7 @@
         <table name="Table 2D - 147 " storageaddress="0x00074FB4">
             <table type="Y Axis" storageaddress="0x00074F90" />
         </table>
-        <table name="Table 2D - 148 " storageaddress="0x0007516C">
+        <table name="Battery Temperature Model - Decay Amount" storageaddress="0x0007516C">
             <table type="Y Axis" storageaddress="0x00075150" />
         </table>
         <table name="Desired Charge Voltage" storageaddress="0x00075198">
@@ -21616,7 +21624,7 @@
             <table type="X Axis" storageaddress="0x00074AE8" />
             <table type="Y Axis" storageaddress="0x00074B3C" />
         </table>
-        <table name="Alternator Voltage Delta" storageaddress="0x0007537C">
+        <table name="Alternator Voltage Delta - Diagnostic Request" storageaddress="0x0007537C">
             <table type="X Axis" storageaddress="0x00075320" />
             <table type="Y Axis" storageaddress="0x0007534C" />
         </table>
@@ -22624,7 +22632,7 @@
         <table name="Table 2D - 147 " storageaddress="0x0741A0">
             <table type="Y Axis" storageaddress="0x07417C" />
         </table>
-        <table name="Table 2D - 148 " storageaddress="0x074350">
+        <table name="Battery Temperature Model - Decay Amount" storageaddress="0x074350">
             <table type="Y Axis" storageaddress="0x074334" />
         </table>
         <table name="Desired Charge Voltage" storageaddress="0x07437C">
@@ -23478,7 +23486,7 @@
             <table type="X Axis" storageaddress="0x073CD4" />
             <table type="Y Axis" storageaddress="0x073D28" />
         </table>
-        <table name="Alternator Voltage Delta" storageaddress="0x074560">
+        <table name="Alternator Voltage Delta - Diagnostic Request" storageaddress="0x074560">
             <table type="X Axis" storageaddress="0x074504" />
             <table type="Y Axis" storageaddress="0x074530" />
         </table>
@@ -24478,7 +24486,7 @@
         <table name="Table 2D - 147 " storageaddress="0x0741A0">
             <table type="Y Axis" storageaddress="0x07417C" />
         </table>
-        <table name="Table 2D - 148 " storageaddress="0x074350">
+        <table name="Battery Temperature Model - Decay Amount" storageaddress="0x074350">
             <table type="Y Axis" storageaddress="0x074334" />
         </table>
         <table name="Desired Charge Voltage" storageaddress="0x07437C">
@@ -25332,7 +25340,7 @@
             <table type="X Axis" storageaddress="0x073CD4" />
             <table type="Y Axis" storageaddress="0x073D28" />
         </table>
-        <table name="Alternator Voltage Delta" storageaddress="0x074560">
+        <table name="Alternator Voltage Delta - Diagnostic Request" storageaddress="0x074560">
             <table type="X Axis" storageaddress="0x074504" />
             <table type="Y Axis" storageaddress="0x074530" />
         </table>
