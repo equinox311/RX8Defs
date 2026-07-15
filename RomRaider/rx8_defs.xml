@@ -245,8 +245,8 @@
 		</table>
 		<table name="Gear 6" category="Gear Detection" type="1D" storagetype="float" endian="big" expression="x" to_byte="x" size="1">
 			<scaling units="rpm/kph"/>
-		</table>
-
+		</table>	
+		<table name="Predicted Engine Speed Max" units="RPM" category="Fuel Cut - Devel" type="1D" storagetype="float" endian="big" expression="x" to_byte="x" size="1" />
 		<table name="Cruise Control Max Speed - High Value" units="kph" category="Cruise Control" type="1D" storagetype="float" endian="big" expression="x" to_byte="x" size="1" />
 		<table name="Cruise Control Max Speed - Low Value" units="kph" category="Cruise Control" type="1D" storagetype="float" endian="big" expression="x" to_byte="x" size="1" />
         <table name="Barometric Pressure Sensor Min ADC Count" category="Sensors" type="1D" storagetype="uint16" endian="big" expression="x" to_byte="x" size="2" />
@@ -508,7 +508,7 @@
             <scaling expression="(x * 25 ) + 0" to_byte="(x - 0.0) / 25.0" format="0.00" />
             <table name="Unknown" type="Y Axis" storagetype="float" endian="big" expression="x" to_byte="x" />
         </table>
-        <table name="Table 2D - 5" category="E650" type="2D" storagetype="uint16" endian="big" sizey="16">
+        <table name="Table 2D - 5" category="Fuel Cut - Devel" type="2D" storagetype="uint16" endian="big" sizey="16">
             <scaling expression="(x * 1 ) + 0" to_byte="(x - 0.0) / 1.0" format="0.00" />
             <table name="Unknown" type="Y Axis" storagetype="float" endian="big" expression="x" to_byte="x" />
         </table>
@@ -762,7 +762,7 @@
             <scaling expression="(x * 0.5 ) + 0" to_byte="(x - 0) / 0.5" format="0.00" />
             <table name="Unknown" type="Y Axis" storagetype="float" endian="big" expression="x" to_byte="x" />
         </table>
-        <table name="Table 2D - 60 " category="Unknown 2D" type="2D" storagetype="uint8" endian="big" sizey="10">
+        <table name="Table 2D - 60 " category="Fuel Injection" type="2D" storagetype="uint8" endian="big" sizey="10">
             <scaling expression="(x * 50 ) + 0" to_byte="(x - 0) / 50" format="0.00" />
             <table name="Unknown" type="Y Axis" storagetype="float" endian="big" expression="x" to_byte="x" />
         </table>
@@ -992,7 +992,7 @@
             <scaling expression="(x * 0.5 ) + -40" to_byte="(x - -40) / 0.5" format="0.00" />
             <table name="Unknown" type="Y Axis" storagetype="float" endian="big" expression="x" to_byte="x" />
         </table>
-        <table name="Table 2D - 114 " category="Unknown 2D" type="2D" storagetype="uint16" endian="big" sizey="7">
+        <table name="Table 2D - 114 " category="Alternator Control" type="2D" storagetype="uint16" endian="big" sizey="7">
             <scaling expression="(x * 0.001 ) + 0" to_byte="(x - 0) / 0.001" format="0.00" />
             <table name="Unknown" type="Y Axis" storagetype="float" endian="big" expression="x" to_byte="x" />
         </table>
@@ -1118,7 +1118,9 @@
         </table>
         <table name="Table 2D - 145 " category="Throttle Control" type="2D" storagetype="float" endian="big" sizey="18">
             <scaling expression="(x * 0.01 ) + 0" to_byte="(x - 0) / 0.01" format="0.00" />
-            <table name="Unknown" type="Y Axis" storagetype="float" endian="big" expression="x" to_byte="x" />
+            <table name="Predicted Engine Speed" type="Y Axis" storagetype="float" endian="big" expression="x" to_byte="x">
+				<scaling units="RPM" />
+			</table>
         </table>
         <table name="Table 2D - 146 " category="throttle Control" type="2D" storagetype="float" endian="big" sizey="9">
             <scaling expression="(x * 0.001 ) + 0" to_byte="(x - 0) / 0.001" format="0.00" />
@@ -1200,9 +1202,11 @@
             <scaling expression="(x * 0.007812 ) + 0" to_byte="(x - 0) / 0.007812" format="0.00" />
             <table name="Unknown" type="Y Axis" storagetype="float" endian="big" expression="x" to_byte="x" />
         </table>
-        <table name="Table 2D - 162 " category="Unknown 2D" type="2D" storagetype="uint16" endian="big" sizey="5">
+        <table name="Table 2D - 162 " category="Alternator Control" type="2D" storagetype="uint16" endian="big" sizey="5">
             <scaling expression="(x * 0.007812 ) + 0" to_byte="(x - 0) / 0.007812" format="0.00" />
-            <table name="Unknown" type="Y Axis" storagetype="float" endian="big" expression="x" to_byte="x" />
+            <table name="Alternator Speed" type="Y Axis" storagetype="float" endian="big" expression="x" to_byte="x">
+				<scaling units="RPM"/>
+			</table>
         </table>
         <table name="Table 2D - 163 " category="Unknown 2D" type="2D" storagetype="uint16" endian="big" sizey="4">
             <scaling expression="(x * 0.001 ) + 0" to_byte="(x - 0) / 0.001" format="0.00" />
@@ -1293,7 +1297,7 @@
             <scaling expression="(x * 3.1E-05 ) + 0" to_byte="(x - 0) / 3.1E-05" format="0.00" />
             <table name="Unknown" type="Y Axis" storagetype="float" endian="big" expression="x" to_byte="x" />
         </table>
-        <table name="Table 2D - 182 " category="Unknown 2D" type="2D" storagetype="uint16" endian="big" sizey="17">
+        <table name="Table 2D - 182 " category="Fuel Injection" type="2D" storagetype="uint16" endian="big" sizey="17">
             <scaling expression="(x * 0.007812 ) + 0" to_byte="(x - 0) / 0.007812" format="0.00" />
             <table name="Unknown" type="Y Axis" storagetype="float" endian="big" expression="x" to_byte="x" />
         </table>
@@ -1616,7 +1620,7 @@
             <scaling expression="(x * 0.003906 ) + 0" to_byte="(x - 0) / 0.003906" format="0.00" />
             <table name="Unknown" type="Y Axis" storagetype="float" endian="big" expression="x" to_byte="x" />
         </table>
-        <table name="Table 2D - 255 " category="Unknown 2D" type="2D" storagetype="uint8" endian="big" sizey="4">
+        <table name="Compensated Barometric Pressure" category="Catalyst Temperature" type="2D" storagetype="uint8" endian="big" sizey="4">
             <scaling expression="(x * 0.78125 ) + 0" to_byte="(x - 0) / 0.78125" format="0.00" />
             <table name="Unknown" type="Y Axis" storagetype="float" endian="big" expression="x" to_byte="x" />
         </table>
@@ -2227,7 +2231,7 @@
             <scaling expression="(x * 1 ) + 0" to_byte="(x - 0) / 1" format="0.00" />
             <table name="Unknown" type="Y Axis" storagetype="float" endian="big" expression="x" to_byte="x" />
         </table>
-        <table name="Table 3D - 0 " category="E650" type="3D" storagetype="uint8" endian="big" expression="x" to_byte="x" sizex="16" sizey="6">
+        <table name="Table 3D - 0 " category="Fuel Cut - Devel" type="3D" storagetype="uint8" endian="big" expression="x" to_byte="x" sizex="16" sizey="6">
             <scaling expression="(x * 25 ) + 0" to_byte="(x - 0) / 25" format="0.00" />
             <table name="Value" type="X Axis" storagetype="float" endian="big">
                 <scaling expression="x" to_byte="x" />
@@ -2236,7 +2240,7 @@
                 <scaling expression="x" to_byte="x" />
             </table>
         </table>
-        <table name="Table 3D - 1 " category="E650" type="3D" storagetype="uint8" endian="big" expression="x" to_byte="x" sizex="16" sizey="6">
+        <table name="Table 3D - 1 " category="Fuel Cut - Devel" type="3D" storagetype="uint8" endian="big" expression="x" to_byte="x" sizex="16" sizey="6">
             <scaling expression="(x * 10 ) + 0" to_byte="(x - 0) / 10" format="0.00" />
             <table name="Value" type="X Axis" storagetype="float" endian="big">
                 <scaling expression="x" to_byte="x" />
@@ -4527,7 +4531,7 @@
         <table name="Table 2D - 254 " storageaddress="0x07A7F0">
             <table type="Y Axis" storageaddress="0x07A7C8" />
         </table>
-        <table name="Table 2D - 255 " storageaddress="0x07A80C">
+        <table name="Compensated Barometric Pressure" storageaddress="0x07A80C">
             <table type="Y Axis" storageaddress="0x07A7FC" />
         </table>
         <table name="Table 2D - 256 " storageaddress="0x07A8F8">
@@ -5760,6 +5764,7 @@
 		<table name="Gear 4" storageaddress="0x754f4"/>
 		<table name="Gear 5" storageaddress="0x754f8"/>
 		<table name="Gear 6" storageaddress="0x754fc"/>
+		<table name="Predicted Engine Speed Max" storageaddress="0x2584c" />
 		<table name="Immobilizer Disable - Without RKE Installed" storageaddress="0x35230"/>
 		<table name="Immobilizer Disable - With RKE Installed" storageaddress="0x3567C"/>
 		<table name="Barometric Pressure Sensor Max ADC Count" storageaddress="0x06D46C" />
@@ -6496,7 +6501,7 @@
         <table name="Table 2D - 254 " storageaddress="0x0795A8">
             <table type="Y Axis" storageaddress="0x079580" />
         </table>
-        <table name="Table 2D - 255 " storageaddress="0x0795C4">
+        <table name="Compensated Barometric Pressure" storageaddress="0x0795C4">
             <table type="Y Axis" storageaddress="0x0795B4" />
         </table>
         <table name="Table 2D - 256 " storageaddress="0x0796B8">
@@ -8294,7 +8299,7 @@
         <table name="Table 2D - 254 " storageaddress="0x0795A8">
             <table type="Y Axis" storageaddress="0x079580" />
         </table>
-        <table name="Table 2D - 255 " storageaddress="0x0795C4">
+        <table name="Compensated Barometric Pressure" storageaddress="0x0795C4">
             <table type="Y Axis" storageaddress="0x0795B4" />
         </table>
         <table name="Table 2D - 256 " storageaddress="0x0796B8">
@@ -10141,7 +10146,7 @@
         <table name="Table 2D - 254 " storageaddress="0x07AA28">
             <table type="Y Axis" storageaddress="0x07AA00" />
         </table>
-        <table name="Table 2D - 255 " storageaddress="0x07AA44">
+        <table name="Compensated Barometric Pressure" storageaddress="0x07AA44">
             <table type="Y Axis" storageaddress="0x07AA34" />
         </table>
         <table name="Table 2D - 256 " storageaddress="0x07AB30">
@@ -12107,7 +12112,7 @@
         <table name="Table 2D - 254 " storageaddress="0x07A7F0">
             <table type="Y Axis" storageaddress="0x07A7C8" />
         </table>
-        <table name="Table 2D - 255 " storageaddress="0x07A80C">
+        <table name="Compensated Barometric Pressure" storageaddress="0x07A80C">
             <table type="Y Axis" storageaddress="0x07A7FC" />
         </table>
         <table name="Table 2D - 256 " storageaddress="0x07A8F8">
@@ -14122,7 +14127,7 @@
         <table name="Table 2D - 254 " storageaddress="0x079118">
             <table type="Y Axis" storageaddress="0x0790F0" />
         </table>
-        <table name="Table 2D - 255 " storageaddress="0x079134">
+        <table name="Compensated Barometric Pressure" storageaddress="0x079134">
             <table type="Y Axis" storageaddress="0x079124" />
         </table>
         <table name="Table 2D - 256 " storageaddress="0x079220">
@@ -15924,7 +15929,7 @@
         <table name="Table 2D - 254 " storageaddress="0x07B03C">
             <table type="Y Axis" storageaddress="0x07B014" />
         </table>
-        <table name="Table 2D - 255 " storageaddress="0x07B058">
+        <table name="Compensated Barometric Pressure" storageaddress="0x07B058">
             <table type="Y Axis" storageaddress="0x07B048" />
         </table>
         <table name="Table 2D - 256 " storageaddress="0x07B144">
@@ -17568,7 +17573,7 @@
         <table name="Table 2D - 254 " storageaddress="0x0795A8">
             <table type="Y Axis" storageaddress="0x079580" />
         </table>
-        <table name="Table 2D - 255 " storageaddress="0x0795C4">
+        <table name="Compensated Barometric Pressure" storageaddress="0x0795C4">
             <table type="Y Axis" storageaddress="0x0795B4" />
         </table>
         <table name="Table 2D - 256 " storageaddress="0x0796B8">
@@ -19333,7 +19338,7 @@
         <table name="Table 2D - 254 " storageaddress="0x0795A8">
             <table type="Y Axis" storageaddress="0x079580" />
         </table>
-        <table name="Table 2D - 255 " storageaddress="0x0795C4">
+        <table name="Compensated Barometric Pressure" storageaddress="0x0795C4">
             <table type="Y Axis" storageaddress="0x0795B4" />
         </table>
         <table name="Table 2D - 256 " storageaddress="0x0796B8">
@@ -20380,7 +20385,6 @@
             <year>2004</year>
             <transmission>MT</transmission>
         </romid>
-
 		<table name="Gear 1" storageaddress="0x00075B20"/>
 		<table name="Gear 2" storageaddress="0x00075B24"/>
 		<table name="Gear 3" storageaddress="0x00075B28"/>
@@ -21121,7 +21125,7 @@
         <table name="Table 2D - 254 " storageaddress="0x00079BE0">
             <table type="Y Axis" storageaddress="0x00079BB8" />
         </table>
-        <table name="Table 2D - 255 " storageaddress="0x00079BFC">
+        <table name="Compensated Barometric Pressure" storageaddress="0x00079BFC">
             <table type="Y Axis" storageaddress="0x00079BEC" />
         </table>
         <table name="Table 2D - 256 " storageaddress="0x00079CF0">
@@ -22968,7 +22972,7 @@
         <table name="Table 2D - 254 " storageaddress="0x079118">
             <table type="Y Axis" storageaddress="0x0790F0" />
         </table>
-        <table name="Table 2D - 255 " storageaddress="0x079134">
+        <table name="Compensated Barometric Pressure" storageaddress="0x079134">
             <table type="Y Axis" storageaddress="0x079124" />
         </table>
         <table name="Table 2D - 256 " storageaddress="0x079220">
@@ -24822,7 +24826,7 @@
         <table name="Table 2D - 254 " storageaddress="0x079118">
             <table type="Y Axis" storageaddress="0x0790F0" />
         </table>
-        <table name="Table 2D - 255 " storageaddress="0x079134">
+        <table name="Compensated Barometric Pressure" storageaddress="0x079134">
             <table type="Y Axis" storageaddress="0x079124" />
         </table>
         <table name="Table 2D - 256 " storageaddress="0x079220">
@@ -26661,7 +26665,7 @@
         <table name="Table 2D - 254 " storageaddress="0x07AA28">
             <table type="Y Axis" storageaddress="0x07AA00" />
         </table>
-        <table name="Table 2D - 255 " storageaddress="0x07AA44">
+        <table name="Compensated Barometric Pressure" storageaddress="0x07AA44">
             <table type="Y Axis" storageaddress="0x07AA34" />
         </table>
         <table name="Table 2D - 256 " storageaddress="0x07AB30">
@@ -28466,7 +28470,7 @@
         <table name="Table 2D - 254 " storageaddress="0x079118">
             <table type="Y Axis" storageaddress="0x0790F0" />
         </table>
-        <table name="Table 2D - 255 " storageaddress="0x079134">
+        <table name="Compensated Barometric Pressure" storageaddress="0x079134">
             <table type="Y Axis" storageaddress="0x079124" />
         </table>
         <table name="Table 2D - 256 " storageaddress="0x079220">
