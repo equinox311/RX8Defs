@@ -11314,6 +11314,14 @@
 							2D 00 2D E0 E3 03 62 D0 62 2C 32 33 8F 0D 00 09 E1 01" />
 				</table>
 		<table name="Immobilizer Disable - With RKE Installed" storageaddress="0x79aa"/>
+        <table name="Fan 1 Enable Coolant Temperature Threshold" storageaddress="0x7793C"/>
+        <table name="Fan 1 Disable Coolant Temperature Hysteresis" storageaddress="0x77940"/>
+        <table name="Fan 2 Enable Coolant Temperature Threshold" storageaddress="0x77944"/>
+        <table name="Fan 2 Disable Coolant Temperature Hysteresis" storageaddress="0x77948"/>
+        <table name="Fan High Speed Enable Coolant Temperature Threshold" storageaddress="0x7794C"/>
+        <table name="Fan High Speed Disable Coolant Temperature Hysteresis" storageaddress="0x77950"/>
+        <table name="Fan 2 Disable Vehicle Speed Threshold" storageaddress="0x77988"/>
+        <table name="Fan 2 Disable Vehicle Speed Hysteresis" storageaddress="0x7798C"/>
         <table name="Barometric Pressure Sensor Max ADC Count" storageaddress="0x06CF6C" />
         <table name="Barometric Pressure Sensor Min ADC Count" storageaddress="0x06CF6E" />
         <table name="Barometric Pressure Sensor Min Voltage" storageaddress="0x07A930" />
