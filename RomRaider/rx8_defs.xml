@@ -81,7 +81,6 @@
 		<table name="Ethanol Content Sample Threshold - Engine Load" category="Flex Fuel" type="1D" storagetype="float" endian="big" expression="x" to_byte="x" size="1">
 			<scaling units="g/rev"/>
 		</table>
-
 		<table name="Table 3D - Cranking Fuel Multiplier" category="Flex Fuel" type="3D" storagetype="uint8" endian="big" expression="x" to_byte="x" sizex="12" sizey="13">
             <scaling units="mult" expression="(x * 0.1) + 1" to_byte="(x - 1) / 0.1" format="0.00" />
             <table name="Ethanol Conent" type="X Axis" storagetype="float" endian="big">
@@ -153,7 +152,7 @@
                 <scaling expression="x" to_byte="x" format="0.00" />
             </table>
         </table>
-		<table name="Table Unknown - GearInput" category="Unknown 3D" type="3D" storagetype="uint8" endian="big" expression="x" to_byte="x" sizex="16" sizey="6">
+		<table name="Off Throttle Fuel Cut - Predicted Engine Speed Cut Hysteresis" category="Off Throttle Fuel Cut" type="3D" storagetype="uint8" endian="big" expression="x" to_byte="x" sizex="16" sizey="6">
             <scaling expression="x*10" to_byte="x / 10" format="0.000" />
             <table name="Coolant Temperature" units="degC" type="X Axis" storagetype="float" endian="big"  >
                 <scaling expression="x" to_byte="x" format="0.00" />
@@ -162,7 +161,7 @@
                 <scaling expression="x" to_byte="x" format="0" />
             </table>
         </table>
-		<table name="Table Unknown2 - GearInput" category="Unknown 3D" type="3D" storagetype="uint8" endian="big" expression="x" to_byte="x" sizex="16" sizey="6">
+		<table name="Off Throttle Fuel Cut - Actual Engine Speed Cut Hysteresis" category="Off Throttle Fuel Cut" type="3D" storagetype="uint8" endian="big" expression="x" to_byte="x" sizex="16" sizey="6">
             <scaling expression="x*10" to_byte="x / 10" format="0.000" />
             <table name="Coolant Temperature" units="degC" type="X Axis" storagetype="float" endian="big"  >
                 <scaling expression="x" to_byte="x" format="0.00" />
@@ -222,12 +221,13 @@
 		<table name="Fan High Speed Disable Coolant Temperature Hysteresis" units="degC" category="Outputs" type="1D" storagetype="float" endian="big" expression="x" to_byte="x" size="1">
 			<scaling units="degC"/>
 		</table>
-
+		<table name="Auto Transmission Related Fuel Cut Threshold" category="Off Throttle Fuel Cut" type="1D" storagetype="float" endian="big" expression="x" to_byte="x" size="1">
+			<scaling units="RPM"/>
+		</table>
 		<table name="Barometric Pressure Sensor Max ADC Count" category="Sensors" type="1D" storagetype="uint16" endian="big" expression="x" to_byte="x" size="2" />
 		<table name="Fuel Air Ratio" category="Fuel Injection" type="1D" storagetype="float" endian="big" expression="x" to_byte="x" size="1" >
 			<scaling units="1/AFR" format="0.00000" />
 		</table>
-
 		<table name="Gear 1" category="Gear Detection" type="1D" storagetype="float" endian="big" expression="x" to_byte="x" size="1">
 			<scaling units="rpm/kph"/>
 		</table>
@@ -246,7 +246,6 @@
 		<table name="Gear 6" category="Gear Detection" type="1D" storagetype="float" endian="big" expression="x" to_byte="x" size="1">
 			<scaling units="rpm/kph"/>
 		</table>	
-		<table name="Predicted Engine Speed Max" units="RPM" category="Fuel Cut - Devel" type="1D" storagetype="float" endian="big" expression="x" to_byte="x" size="1" />
 		<table name="Cruise Control Max Speed - High Value" units="kph" category="Cruise Control" type="1D" storagetype="float" endian="big" expression="x" to_byte="x" size="1" />
 		<table name="Cruise Control Max Speed - Low Value" units="kph" category="Cruise Control" type="1D" storagetype="float" endian="big" expression="x" to_byte="x" size="1" />
         <table name="Barometric Pressure Sensor Min ADC Count" category="Sensors" type="1D" storagetype="uint16" endian="big" expression="x" to_byte="x" size="2" />
@@ -281,6 +280,7 @@
         <table name="Cold Rev Temperature Limit" category="Limiters" type="1D" storagetype="float" endian="big" expression="x" to_byte="x" size="2">
 			<scaling name="Coolant Temperature" units="degC"/>
 		</table>
+		<table name="Predicted Engine Speed Max" units="RPM" category="Limiters" type="1D" storagetype="float" endian="big" expression="x" to_byte="x" size="1" />
         <table name="Primary Injector Size" category="Fuel Injection" type="1D" storagetype="float" endian="big" expression="x" to_byte="x" size="1" />
 		<table name="Engine Max Torque" category="Torque Control" type="1D" storagetype="float" endian="big" expression="x" to_byte="x" size="1" />
         <table name="Secondary Injector Size" category="Fuel Injection" type="1D" storagetype="float" endian="big" expression="x" to_byte="x" size="1" />
@@ -504,13 +504,20 @@
             <scaling expression="(x * 0.005 ) + 0" to_byte="(x - 0.0) / 0.005" format="0.00" />
             <table name="Unknown" type="Y Axis" storagetype="float" endian="big" expression="x" to_byte="x" />
         </table>
-        <table name="Table 2D - 4 " category="E560" type="2D" storagetype="uint8" endian="big" sizey="6">
-            <scaling expression="(x * 25 ) + 0" to_byte="(x - 0.0) / 25.0" format="0.00" />
-            <table name="Unknown" type="Y Axis" storagetype="float" endian="big" expression="x" to_byte="x" />
+        <table name="Off Throttle Fuel Cut - Fuel Resume - Engine Startup Threshold" category="Off Throttle Fuel Cut" type="2D" storagetype="uint8" endian="big" sizey="6">
+            <scaling units="RPM" expression="(x * 25 ) + 0" to_byte="(x - 0.0) / 25.0" format="0.00" />
+            <table name="Engine On Time" type="Y Axis" storagetype="float" endian="big" expression="x/8000" to_byte="x*8000">
+				<scaling units="8ms loops"/>
+			</table>
         </table>
-        <table name="Table 2D - 5" category="Fuel Cut - Devel" type="2D" storagetype="uint16" endian="big" sizey="16">
-            <scaling expression="(x * 1 ) + 0" to_byte="(x - 0.0) / 1.0" format="0.00" />
-            <table name="Unknown" type="Y Axis" storagetype="float" endian="big" expression="x" to_byte="x" />
+        <table name="Off Throttle Fuel Cut - Fuel Resume - In Neutral Base" category="Off Throttle Fuel Cut" type="1D" storagetype="float" endian="big" expression="x" to_byte="x" size="1">
+			<scaling units="RPM"/>
+		</table>
+		<table name="Off Throttle Fuel Cut - Fuel Resume - In Neutral Threshold" category="Off Throttle Fuel Cut" type="2D" storagetype="uint16" endian="big" sizey="16">
+            <scaling units="RPM" expression="(x * 1 ) + 0" to_byte="(x - 0.0) / 1.0" format="0.00" />
+            <table name="Coolant Temperature" type="Y Axis" storagetype="float" endian="big" expression="x" to_byte="x">
+				<scaling units="degC"/>
+			</table>
         </table>
         <table name="Ignition Leading - Idle Base Timing" category="Ignition Leading" type="2D" storagetype="uint8" endian="big" sizey="6">
             <scaling units="deg" expression="x*0.5-50" to_byte="(x+50)/.5" format="0.000" />
@@ -750,15 +757,15 @@
             <scaling expression="x*0.5-50" to_byte="(x+50)/.5" format="0.000" />
             <table name="Unknown" type="Y Axis" storagetype="float" endian="big" expression="x" to_byte="x" />
         </table>
-        <table name="Table 2D - 57 " category="Unknown 2D" type="2D" storagetype="uint16" endian="big" sizey="12">
+        <table name="Off Throttle Fuel Cut - Fuel Resume - In Neutral Threshold7 " category="Unknown 2D" type="2D" storagetype="uint16" endian="big" sizey="12">
             <scaling expression="(x * 3E-06 ) + -0.1" to_byte="(x - -0.1) / 3E-06" format="0.00" />
             <table name="Unknown" type="Y Axis" storagetype="float" endian="big" expression="x" to_byte="x" />
         </table>
-        <table name="Table 2D - 58 " category="Unknown 2D" type="2D" storagetype="uint8" endian="big" sizey="5">
+        <table name="Off Throttle Fuel Cut - Fuel Resume - In Neutral Threshold8 " category="Unknown 2D" type="2D" storagetype="uint8" endian="big" sizey="5">
             <scaling expression="(x * 0.003906 ) + 0" to_byte="(x - 0) / 0.003906" format="0.00" />
             <table name="Unknown" type="Y Axis" storagetype="float" endian="big" expression="x" to_byte="x" />
         </table>
-        <table name="Table 2D - 59 " category="Unknown 2D" type="2D" storagetype="uint16" endian="big" sizey="11">
+        <table name="Off Throttle Fuel Cut - Fuel Resume - In Neutral Threshold9 " category="Unknown 2D" type="2D" storagetype="uint16" endian="big" sizey="11">
             <scaling expression="(x * 0.5 ) + 0" to_byte="(x - 0) / 0.5" format="0.00" />
             <table name="Unknown" type="Y Axis" storagetype="float" endian="big" expression="x" to_byte="x" />
         </table>
@@ -2231,22 +2238,22 @@
             <scaling expression="(x * 1 ) + 0" to_byte="(x - 0) / 1" format="0.00" />
             <table name="Unknown" type="Y Axis" storagetype="float" endian="big" expression="x" to_byte="x" />
         </table>
-        <table name="Table 3D - 0 " category="Fuel Cut - Devel" type="3D" storagetype="uint8" endian="big" expression="x" to_byte="x" sizex="16" sizey="6">
-            <scaling expression="(x * 25 ) + 0" to_byte="(x - 0) / 25" format="0.00" />
-            <table name="Value" type="X Axis" storagetype="float" endian="big">
-                <scaling expression="x" to_byte="x" />
+        <table name="Off Throttle Fuel Cut - Fuel Resume - In Gear Threshold" category="Off Throttle Fuel Cut" type="3D" storagetype="uint8" endian="big" expression="x" to_byte="x" sizex="16" sizey="6">
+            <scaling units="RPM" expression="(x * 25 ) + 0" to_byte="(x - 0) / 25" format="0.00" />
+            <table name="Calculated Gear" type="Y Axis" storagetype="float" endian="big">
+                <scaling units="#" expression="x" to_byte="x" />
             </table>
-            <table name="Value" type="Y Axis" storagetype="float" endian="big">
-                <scaling expression="x" to_byte="x" />
+            <table name="Coolant Temperature" type="X Axis" storagetype="float" endian="big">
+                <scaling  units="degC" expression="x" to_byte="x" />
             </table>
         </table>
-        <table name="Table 3D - 1 " category="Fuel Cut - Devel" type="3D" storagetype="uint8" endian="big" expression="x" to_byte="x" sizex="16" sizey="6">
+        <table name="Off Throttle Fuel Cut - Fuel Resume - NOTUSED" category="Off Throttle Fuel Cut" type="3D" storagetype="uint8" endian="big" expression="x" to_byte="x" sizex="16" sizey="6">
             <scaling expression="(x * 10 ) + 0" to_byte="(x - 0) / 10" format="0.00" />
-            <table name="Value" type="X Axis" storagetype="float" endian="big">
-                <scaling expression="x" to_byte="x" />
+            <table name="Coolant Temperature" type="X Axis" storagetype="float" endian="big">
+                <scaling units="degC" expression="x" to_byte="x" />
             </table>
-            <table name="Value" type="Y Axis" storagetype="float" endian="big">
-                <scaling expression="x" to_byte="x" />
+            <table name="Calculated Gear" type="Y Axis" storagetype="float" endian="big">
+                <scaling units="#" expression="x" to_byte="x" />
             </table>
         </table>
         <table name="Table 3D - 2 " category="E910" type="3D" storagetype="uint8" endian="big" expression="x" to_byte="x" sizex="16" sizey="6">
@@ -3778,10 +3785,10 @@
         <table name="Table 2D - 3 " storageaddress="0x06D114">
             <table type="Y Axis" storageaddress="0x06D0EC" />
         </table>
-        <table name="Table 2D - 4 " storageaddress="0x06D138">
+        <table name="Off Throttle Fuel Cut - Fuel Resume - Engine Startup Threshold" storageaddress="0x06D138">
             <table type="Y Axis" storageaddress="0x06D120" />
         </table>
-        <table name="Table 2D - 5" storageaddress="0x06D1E0">
+        <table name="Off Throttle Fuel Cut - Fuel Resume - In Neutral Threshold" storageaddress="0x06D1E0">
             <table type="Y Axis" storageaddress="0x06D1A0" />
         </table>
         <table name="Ignition Leading - Idle Base Timing" storageaddress="0x06D59C">
@@ -3937,13 +3944,13 @@
         <table name="Ignition 13" storageaddress="0x06F810">
             <table type="Y Axis" storageaddress="0x06F80C" />
         </table>
-        <table name="Table 2D - 57 " storageaddress="0x06F878">
+        <table name="Off Throttle Fuel Cut - Fuel Resume - In Neutral Threshold7 " storageaddress="0x06F878">
             <table type="Y Axis" storageaddress="0x06F848" />
         </table>
-        <table name="Table 2D - 58 " storageaddress="0x06FAB0">
+        <table name="Off Throttle Fuel Cut - Fuel Resume - In Neutral Threshold8 " storageaddress="0x06FAB0">
             <table type="Y Axis" storageaddress="0x06FA9C" />
         </table>
-        <table name="Table 2D - 59 " storageaddress="0x06FEE4">
+        <table name="Off Throttle Fuel Cut - Fuel Resume - In Neutral Threshold9 " storageaddress="0x06FEE4">
             <table type="Y Axis" storageaddress="0x06FEB8" />
         </table>
         <table name="Table 2D - 60 " storageaddress="0x070084">
@@ -4978,11 +4985,11 @@
         <table name="Table 2D - 403 Check DataType" storageaddress="0x07D09C">
             <table type="Y Axis" storageaddress="0x07D074" />
         </table>
-        <table name="Table 3D - 0 " storageaddress="0x06D2AC">
+        <table name="Off Throttle Fuel Cut - Fuel Resume - In Gear Threshold" storageaddress="0x06D2AC">
             <table type="X Axis" storageaddress="0x06D254" />
             <table type="Y Axis" storageaddress="0x06D294" />
         </table>
-        <table name="Table 3D - 1 " storageaddress="0x06D364">
+        <table name="Off Throttle Fuel Cut - Fuel Resume - NOTUSED" storageaddress="0x06D364">
             <table type="X Axis" storageaddress="0x06D30C" />
             <table type="Y Axis" storageaddress="0x06D34C" />
         </table>
@@ -5765,6 +5772,8 @@
 		<table name="Gear 5" storageaddress="0x754f8"/>
 		<table name="Gear 6" storageaddress="0x754fc"/>
 		<table name="Predicted Engine Speed Max" storageaddress="0x2584c" />
+		<table name="Auto Transmission Related Fuel Cut Threshold" storageaddress="0x6d5e8" />
+		<table name="Off Throttle Fuel Cut - Fuel Resume - In Neutral Base" storageaddress="0x6d5e4" />
 		<table name="Immobilizer Disable - Without RKE Installed" storageaddress="0x35230"/>
 		<table name="Immobilizer Disable - With RKE Installed" storageaddress="0x3567C"/>
 		<table name="Barometric Pressure Sensor Max ADC Count" storageaddress="0x06D46C" />
@@ -5838,10 +5847,10 @@
         <table name="Table 2D - 3 " storageaddress="0x06D614">
             <table type="Y Axis" storageaddress="0x06D5EC" />
         </table>
-        <table name="Table 2D - 4 " storageaddress="0x06D638">
+        <table name="Off Throttle Fuel Cut - Fuel Resume - Engine Startup Threshold" storageaddress="0x06D638">
             <table type="Y Axis" storageaddress="0x06D620" />
         </table>
-        <table name="Table 2D - 5" storageaddress="0x06D6E0">
+        <table name="Off Throttle Fuel Cut - Fuel Resume - In Neutral Threshold" storageaddress="0x06D6E0">
             <table type="Y Axis" storageaddress="0x06D6A0" />
         </table>
         <table name="Ignition Leading - Idle Base Timing" storageaddress="0x06DA8C">
@@ -5981,7 +5990,7 @@
         <table name="Ignition 13" storageaddress="0x06F354">
             <table type="Y Axis" storageaddress="0x06F350" />
         </table>
-        <table name="Table 2D - 57 " storageaddress="0x06E8E8">
+        <table name="Off Throttle Fuel Cut - Fuel Resume - In Neutral Threshold7 " storageaddress="0x06E8E8">
             <table type="Y Axis" storageaddress="0x06E8B8" />
         </table>
 		<table name="Table 2D - Unknown_68cb4 -Desired Torque Calculation 3a" storageaddress="0x0757B4">
@@ -5993,7 +6002,7 @@
 		<table name="Cruise Control Torque Request" storageaddress="0x07644c">
             <table type="Y Axis" storageaddress="0x0763b0" />
         </table>
-		<table name="Table 2D - 58 " storageaddress="0x06F5F4">
+		<table name="Off Throttle Fuel Cut - Fuel Resume - In Neutral Threshold8 " storageaddress="0x06F5F4">
             <table type="Y Axis" storageaddress="0x06F5E0" />
         </table>
 		<table name="Table 2D - Unknown_68d7c" storageaddress="0x076344">
@@ -6853,11 +6862,11 @@
         <table name="Table 2D - 389 Check DataType" storageaddress="0x07B220">
             <table type="Y Axis" storageaddress="0x07B20C" />
         </table>
-        <table name="Table 3D - 0 " storageaddress="0x06D7AC">
+        <table name="Off Throttle Fuel Cut - Fuel Resume - In Gear Threshold" storageaddress="0x06D7AC">
             <table type="X Axis" storageaddress="0x06D754" />
             <table type="Y Axis" storageaddress="0x06D794" />
         </table>
-        <table name="Table 3D - 1 " storageaddress="0x06D864">
+        <table name="Off Throttle Fuel Cut - Fuel Resume - NOTUSED" storageaddress="0x06D864">
             <table type="X Axis" storageaddress="0x06D80C" />
             <table type="Y Axis" storageaddress="0x06D84C" />
         </table>
@@ -7000,6 +7009,14 @@
         <table name="Table 3D - UNKNOWN_69d18" storageaddress="0x07aa68">
             <table type="X Axis" storageaddress="0x07a9fc" />
             <table type="Y Axis" storageaddress="0x07aa24" />
+        </table>
+				<table name="Off Throttle Fuel Cut - Predicted Engine Speed Cut Hysteresis" storageaddress="0x06d9d4">
+            <table type="X Axis" storageaddress="0x06d97c" />
+            <table type="Y Axis" storageaddress="0x06d9bc" />
+        </table>
+		<table name="Off Throttle Fuel Cut - Actual Engine Speed Cut Hysteresis" storageaddress="0x06d91c">
+            <table type="X Axis" storageaddress="0x06d8c4" />
+            <table type="Y Axis" storageaddress="0x06d904" />
         </table>
 		<table name="Table 3D - 43 " storageaddress="0x073254">
             <table type="X Axis" storageaddress="0x073228" />
@@ -7639,10 +7656,10 @@
         <table name="Table 2D - 3 " storageaddress="0x06D614">
             <table type="Y Axis" storageaddress="0x06D5EC" />
         </table>
-        <table name="Table 2D - 4 " storageaddress="0x06D638">
+        <table name="Off Throttle Fuel Cut - Fuel Resume - Engine Startup Threshold" storageaddress="0x06D638">
             <table type="Y Axis" storageaddress="0x06D620" />
         </table>
-        <table name="Table 2D - 5" storageaddress="0x06D6E0">
+        <table name="Off Throttle Fuel Cut - Fuel Resume - In Neutral Threshold" storageaddress="0x06D6E0">
             <table type="Y Axis" storageaddress="0x06D6A0" />
         </table>
         <table name="Ignition Leading - Idle Base Timing" storageaddress="0x06DA8C">
@@ -7782,7 +7799,7 @@
         <table name="Ignition 13" storageaddress="0x06F354">
             <table type="Y Axis" storageaddress="0x06F350" />
         </table>
-        <table name="Table 2D - 57 " storageaddress="0x06E8E8">
+        <table name="Off Throttle Fuel Cut - Fuel Resume - In Neutral Threshold7 " storageaddress="0x06E8E8">
             <table type="Y Axis" storageaddress="0x06E8B8" />
         </table>
 		<table name="Table 2D - Unknown_68cb4 -Desired Torque Calculation 3a" storageaddress="0x0757B4">
@@ -7794,7 +7811,7 @@
 		<table name="Cruise Control Torque Request" storageaddress="0x07644c">
             <table type="Y Axis" storageaddress="0x0763b0" />
         </table>
-		<table name="Table 2D - 58 " storageaddress="0x06F5F4">
+		<table name="Off Throttle Fuel Cut - Fuel Resume - In Neutral Threshold8 " storageaddress="0x06F5F4">
             <table type="Y Axis" storageaddress="0x06F5E0" />
         </table>
 		<table name="Table 2D - Unknown_68d7c" storageaddress="0x076344">
@@ -8647,11 +8664,11 @@
         <table name="Table 2D - 389 Check DataType" storageaddress="0x07B220">
             <table type="Y Axis" storageaddress="0x07B20C" />
         </table>
-        <table name="Table 3D - 0 " storageaddress="0x06D7AC">
+        <table name="Off Throttle Fuel Cut - Fuel Resume - In Gear Threshold" storageaddress="0x06D7AC">
             <table type="X Axis" storageaddress="0x06D754" />
             <table type="Y Axis" storageaddress="0x06D794" />
         </table>
-        <table name="Table 3D - 1 " storageaddress="0x06D864">
+        <table name="Off Throttle Fuel Cut - Fuel Resume - NOTUSED" storageaddress="0x06D864">
             <table type="X Axis" storageaddress="0x06D80C" />
             <table type="Y Axis" storageaddress="0x06D84C" />
         </table>
@@ -9441,10 +9458,10 @@
         <table name="Table 2D - 3 " storageaddress="0x06C314">
             <table type="Y Axis" storageaddress="0x06C2EC" />
         </table>
-        <table name="Table 2D - 4 " storageaddress="0x06C338">
+        <table name="Off Throttle Fuel Cut - Fuel Resume - Engine Startup Threshold" storageaddress="0x06C338">
             <table type="Y Axis" storageaddress="0x06C320" />
         </table>
-        <table name="Table 2D - 5" storageaddress="0x06C3E0">
+        <table name="Off Throttle Fuel Cut - Fuel Resume - In Neutral Threshold" storageaddress="0x06C3E0">
             <table type="Y Axis" storageaddress="0x06C3A0" />
         </table>
         <table name="Table 2D - 10 " storageaddress="0x06D94C">
@@ -9585,10 +9602,10 @@
         <table name="Ignition 13" storageaddress="0x06ECC0">
             <table type="Y Axis" storageaddress="0x06ECBC" />
         </table>
-        <table name="Table 2D - 57 " storageaddress="0x06ED28">
+        <table name="Off Throttle Fuel Cut - Fuel Resume - In Neutral Threshold7 " storageaddress="0x06ED28">
             <table type="Y Axis" storageaddress="0x06ECF8" />
         </table>
-        <table name="Table 2D - 59 " storageaddress="0x06F3C4">
+        <table name="Off Throttle Fuel Cut - Fuel Resume - In Neutral Threshold9 " storageaddress="0x06F3C4">
             <table type="Y Axis" storageaddress="0x06F398" />
         </table>
         <table name="Table 2D - 60 " storageaddress="0x06F564">
@@ -10554,11 +10571,11 @@
         <table name="Table 2D - 403 Check DataType" storageaddress="0x07D4D0">
             <table type="Y Axis" storageaddress="0x07D4A8" />
         </table>
-        <table name="Table 3D - 0 " storageaddress="0x06C4AC">
+        <table name="Off Throttle Fuel Cut - Fuel Resume - In Gear Threshold" storageaddress="0x06C4AC">
             <table type="X Axis" storageaddress="0x06C454" />
             <table type="Y Axis" storageaddress="0x06C494" />
         </table>
-        <table name="Table 3D - 1 " storageaddress="0x06C564">
+        <table name="Off Throttle Fuel Cut - Fuel Resume - NOTUSED" storageaddress="0x06C564">
             <table type="X Axis" storageaddress="0x06C50C" />
             <table type="Y Axis" storageaddress="0x06C54C" />
         </table>
@@ -11351,10 +11368,10 @@
         <table name="Table 2D - 3 " storageaddress="0x06D114">
             <table type="Y Axis" storageaddress="0x06D0EC" />
         </table>
-        <table name="Table 2D - 4 " storageaddress="0x06D138">
+        <table name="Off Throttle Fuel Cut - Fuel Resume - Engine Startup Threshold" storageaddress="0x06D138">
             <table type="Y Axis" storageaddress="0x06D120" />
         </table>
-        <table name="Table 2D - 5" storageaddress="0x06D1E0">
+        <table name="Off Throttle Fuel Cut - Fuel Resume - In Neutral Threshold" storageaddress="0x06D1E0">
             <table type="Y Axis" storageaddress="0x06D1A0" />
         </table>
         <table name="Ignition Leading - Idle Base Timing" storageaddress="0x06D59C">
@@ -11510,13 +11527,13 @@
         <table name="Ignition 13" storageaddress="0x06F810">
             <table type="Y Axis" storageaddress="0x06F80C" />
         </table>
-        <table name="Table 2D - 57 " storageaddress="0x06F878">
+        <table name="Off Throttle Fuel Cut - Fuel Resume - In Neutral Threshold7 " storageaddress="0x06F878">
             <table type="Y Axis" storageaddress="0x06F848" />
         </table>
-        <table name="Table 2D - 58 " storageaddress="0x06FAB0">
+        <table name="Off Throttle Fuel Cut - Fuel Resume - In Neutral Threshold8 " storageaddress="0x06FAB0">
             <table type="Y Axis" storageaddress="0x06FA9C" />
         </table>
-        <table name="Table 2D - 59 " storageaddress="0x06FEE4">
+        <table name="Off Throttle Fuel Cut - Fuel Resume - In Neutral Threshold9 " storageaddress="0x06FEE4">
             <table type="Y Axis" storageaddress="0x06FEB8" />
         </table>
         <table name="Table 2D - 60 " storageaddress="0x070084">
@@ -12551,11 +12568,11 @@
         <table name="Table 2D - 403 Check DataType" storageaddress="0x07D09C">
             <table type="Y Axis" storageaddress="0x07D074" />
         </table>
-        <table name="Table 3D - 0 " storageaddress="0x06D2AC">
+        <table name="Off Throttle Fuel Cut - Fuel Resume - In Gear Threshold" storageaddress="0x06D2AC">
             <table type="X Axis" storageaddress="0x06D254" />
             <table type="Y Axis" storageaddress="0x06D294" />
         </table>
-        <table name="Table 3D - 1 " storageaddress="0x06D364">
+        <table name="Off Throttle Fuel Cut - Fuel Resume - NOTUSED" storageaddress="0x06D364">
             <table type="X Axis" storageaddress="0x06D30C" />
             <table type="Y Axis" storageaddress="0x06D34C" />
         </table>
@@ -13399,10 +13416,10 @@
         <table name="Table 2D - 3 " storageaddress="0x06C914">
             <table type="Y Axis" storageaddress="0x06C8EC" />
         </table>
-        <table name="Table 2D - 4 " storageaddress="0x06C938">
+        <table name="Off Throttle Fuel Cut - Fuel Resume - Engine Startup Threshold" storageaddress="0x06C938">
             <table type="Y Axis" storageaddress="0x06C920" />
         </table>
-        <table name="Table 2D - 5" storageaddress="0x06C9E0">
+        <table name="Off Throttle Fuel Cut - Fuel Resume - In Neutral Threshold" storageaddress="0x06C9E0">
             <table type="Y Axis" storageaddress="0x06C9A0" />
         </table>
         <table name="Ignition Leading - Idle Base Timing" storageaddress="0x06CD8C">
@@ -13555,10 +13572,10 @@
         <table name="Ignition 13" storageaddress="0x06E880">
             <table type="Y Axis" storageaddress="0x06E87C" />
         </table>
-        <table name="Table 2D - 58 " storageaddress="0x06EB20">
+        <table name="Off Throttle Fuel Cut - Fuel Resume - In Neutral Threshold8 " storageaddress="0x06EB20">
             <table type="Y Axis" storageaddress="0x06EB0C" />
         </table>
-        <table name="Table 2D - 59 " storageaddress="0x06EF54">
+        <table name="Off Throttle Fuel Cut - Fuel Resume - In Neutral Threshold9 " storageaddress="0x06EF54">
             <table type="Y Axis" storageaddress="0x06EF28" />
         </table>
         <table name="Table 2D - 60 " storageaddress="0x06F0F4">
@@ -14491,11 +14508,11 @@
         <table name="Table 2D - 390 Check DataType" storageaddress="0x07B058">
             <table type="Y Axis" storageaddress="0x07B040" />
         </table>
-        <table name="Table 3D - 0 " storageaddress="0x06CAAC">
+        <table name="Off Throttle Fuel Cut - Fuel Resume - In Gear Threshold" storageaddress="0x06CAAC">
             <table type="X Axis" storageaddress="0x06CA54" />
             <table type="Y Axis" storageaddress="0x06CA94" />
         </table>
-        <table name="Table 3D - 1 " storageaddress="0x06CB64">
+        <table name="Off Throttle Fuel Cut - Fuel Resume - NOTUSED" storageaddress="0x06CB64">
             <table type="X Axis" storageaddress="0x06CB0C" />
             <table type="Y Axis" storageaddress="0x06CB4C" />
         </table>
@@ -15252,10 +15269,10 @@
         <table name="Table 2D - 3 " storageaddress="0x06C914">
             <table type="Y Axis" storageaddress="0x06C8EC" />
         </table>
-        <table name="Table 2D - 4 " storageaddress="0x06C938">
+        <table name="Off Throttle Fuel Cut - Fuel Resume - Engine Startup Threshold" storageaddress="0x06C938">
             <table type="Y Axis" storageaddress="0x06C920" />
         </table>
-        <table name="Table 2D - 5" storageaddress="0x06C9E0">
+        <table name="Off Throttle Fuel Cut - Fuel Resume - In Neutral Threshold" storageaddress="0x06C9E0">
             <table type="Y Axis" storageaddress="0x06C9A0" />
         </table>
         <table name="Ignition Trailing- Idle Timing Load Compensation Multiplier" storageaddress="0x06CDD0">
@@ -15396,10 +15413,10 @@
         <table name="Ignition 13" storageaddress="0x06F2C0">
             <table type="Y Axis" storageaddress="0x06F2BC" />
         </table>
-        <table name="Table 2D - 57 " storageaddress="0x06F328">
+        <table name="Off Throttle Fuel Cut - Fuel Resume - In Neutral Threshold7 " storageaddress="0x06F328">
             <table type="Y Axis" storageaddress="0x06F2F8" />
         </table>
-        <table name="Table 2D - 59 " storageaddress="0x06F9C4">
+        <table name="Off Throttle Fuel Cut - Fuel Resume - In Neutral Threshold9 " storageaddress="0x06F9C4">
             <table type="Y Axis" storageaddress="0x06F998" />
         </table>
         <table name="Table 2D - 60 " storageaddress="0x06FB64">
@@ -16239,11 +16256,11 @@
         <table name="Table 2D - 390 Check DataType" storageaddress="0x07D17C">
             <table type="Y Axis" storageaddress="0x07D164" />
         </table>
-        <table name="Table 3D - 0 " storageaddress="0x06CAAC">
+        <table name="Off Throttle Fuel Cut - Fuel Resume - In Gear Threshold" storageaddress="0x06CAAC">
             <table type="X Axis" storageaddress="0x06CA54" />
             <table type="Y Axis" storageaddress="0x06CA94" />
         </table>
-        <table name="Table 3D - 1 " storageaddress="0x06CB64">
+        <table name="Off Throttle Fuel Cut - Fuel Resume - NOTUSED" storageaddress="0x06CB64">
             <table type="X Axis" storageaddress="0x06CB0C" />
             <table type="Y Axis" storageaddress="0x06CB4C" />
         </table>
@@ -16949,10 +16966,10 @@
         <table name="Table 2D - 3 " storageaddress="0x06D614">
             <table type="Y Axis" storageaddress="0x06D5EC" />
         </table>
-        <table name="Table 2D - 4 " storageaddress="0x06D638">
+        <table name="Off Throttle Fuel Cut - Fuel Resume - Engine Startup Threshold" storageaddress="0x06D638">
             <table type="Y Axis" storageaddress="0x06D620" />
         </table>
-        <table name="Table 2D - 5" storageaddress="0x06D6E0">
+        <table name="Off Throttle Fuel Cut - Fuel Resume - In Neutral Threshold" storageaddress="0x06D6E0">
             <table type="Y Axis" storageaddress="0x06D6A0" />
         </table>
         <table name="Ignition Leading - Idle Base Timing" storageaddress="0x06DA8C">
@@ -17072,7 +17089,7 @@
         <table name="Ignition 13" storageaddress="0x06F354">
             <table type="Y Axis" storageaddress="0x06F350" />
         </table>
-        <table name="Table 2D - 58 " storageaddress="0x06F5F4">
+        <table name="Off Throttle Fuel Cut - Fuel Resume - In Neutral Threshold8 " storageaddress="0x06F5F4">
             <table type="Y Axis" storageaddress="0x06F5E0" />
         </table>
         <table name="Table 2D - 60 " storageaddress="0x06FB8C">
@@ -17913,11 +17930,11 @@
         <table name="Table 2D - 389 Check DataType" storageaddress="0x07B220">
             <table type="Y Axis" storageaddress="0x07B20C" />
         </table>
-        <table name="Table 3D - 0 " storageaddress="0x06D7AC">
+        <table name="Off Throttle Fuel Cut - Fuel Resume - In Gear Threshold" storageaddress="0x06D7AC">
             <table type="X Axis" storageaddress="0x06D754" />
             <table type="Y Axis" storageaddress="0x06D794" />
         </table>
-        <table name="Table 3D - 1 " storageaddress="0x06D864">
+        <table name="Off Throttle Fuel Cut - Fuel Resume - NOTUSED" storageaddress="0x06D864">
             <table type="X Axis" storageaddress="0x06D80C" />
             <table type="Y Axis" storageaddress="0x06D84C" />
         </table>
@@ -18705,10 +18722,10 @@
         <table name="Table 2D - 3 " storageaddress="0x06D614">
             <table type="Y Axis" storageaddress="0x06D5EC" />
         </table>
-        <table name="Table 2D - 4 " storageaddress="0x06D638">
+        <table name="Off Throttle Fuel Cut - Fuel Resume - Engine Startup Threshold" storageaddress="0x06D638">
             <table type="Y Axis" storageaddress="0x06D620" />
         </table>
-        <table name="Table 2D - 5" storageaddress="0x06D6E0">
+        <table name="Off Throttle Fuel Cut - Fuel Resume - In Neutral Threshold" storageaddress="0x06D6E0">
             <table type="Y Axis" storageaddress="0x06D6A0" />
         </table>
         <table name="Ignition Leading - Idle Base Timing" storageaddress="0x06DA8C">
@@ -18828,7 +18845,7 @@
         <table name="Ignition 13" storageaddress="0x06F354">
             <table type="Y Axis" storageaddress="0x06F350" />
         </table>
-        <table name="Table 2D - 58 " storageaddress="0x06F5F4">
+        <table name="Off Throttle Fuel Cut - Fuel Resume - In Neutral Threshold8 " storageaddress="0x06F5F4">
             <table type="Y Axis" storageaddress="0x06F5E0" />
         </table>
         <table name="Table 2D - 60 " storageaddress="0x06FB8C">
@@ -19679,11 +19696,11 @@
         <table name="Table 2D - 389 Check DataType" storageaddress="0x07B220">
             <table type="Y Axis" storageaddress="0x07B20C" />
         </table>
-        <table name="Table 3D - 0 " storageaddress="0x06D7AC">
+        <table name="Off Throttle Fuel Cut - Fuel Resume - In Gear Threshold" storageaddress="0x06D7AC">
             <table type="X Axis" storageaddress="0x06D754" />
             <table type="Y Axis" storageaddress="0x06D794" />
         </table>
-        <table name="Table 3D - 1 " storageaddress="0x06D864">
+        <table name="Off Throttle Fuel Cut - Fuel Resume - NOTUSED" storageaddress="0x06D864">
             <table type="X Axis" storageaddress="0x06D80C" />
             <table type="Y Axis" storageaddress="0x06D84C" />
         </table>
@@ -19735,16 +19752,6 @@
 		<table name="Ignition Timing Leading - Low Engine Load Adder" storageaddress="0x06e134">
             <table type="X Axis" storageaddress="0x06e118" />
             <table type="Y Axis" storageaddress="0x06e124" />
-        </table>
-
-		<table name="Table Unknown - GearInput" storageaddress="0x06d9d4">
-            <table type="X Axis" storageaddress="0x06d97c" />
-            <table type="Y Axis" storageaddress="0x06d9bc" />
-        </table>
-
-		<table name="Table Unknown2 - GearInput" storageaddress="0x06d91c">
-            <table type="X Axis" storageaddress="0x06d8c4" />
-            <table type="Y Axis" storageaddress="0x06d904" />
         </table>
 
         <table name="Ignition Minimum Leading/Trailing split" storageaddress="0x06EE30">
@@ -20456,10 +20463,10 @@
         <table name="Table 2D - 3 " storageaddress="0x0006DC4C">
             <table type="Y Axis" storageaddress="0x0006DC24" />
         </table>
-        <table name="Table 2D - 4 " storageaddress="0x0006DC70">
+        <table name="Off Throttle Fuel Cut - Fuel Resume - Engine Startup Threshold" storageaddress="0x0006DC70">
             <table type="Y Axis" storageaddress="0x0006DC58" />
         </table>
-        <table name="Table 2D - 5" storageaddress="0x0006DD18">
+        <table name="Off Throttle Fuel Cut - Fuel Resume - In Neutral Threshold" storageaddress="0x0006DD18">
             <table type="Y Axis" storageaddress="0x0006DCD8" />
         </table>
         <table name="Ignition Leading - Idle Base Timing" storageaddress="0x0006E0C4">
@@ -20599,7 +20606,7 @@
         <table name="Ignition 13" storageaddress="0x0006F98C">
             <table type="Y Axis" storageaddress="0x0006F988" />
         </table>
-        <table name="Table 2D - 57 " storageaddress="0x0006EF20">
+        <table name="Off Throttle Fuel Cut - Fuel Resume - In Neutral Threshold7 " storageaddress="0x0006EF20">
             <table type="Y Axis" storageaddress="0x0006EEF0" />
         </table>
 		<table name="Table 2D - Unknown_68cb4 -Desired Torque Calculation 3a" storageaddress="0x00075DEC">
@@ -20611,7 +20618,7 @@
 		<table name="Cruise Control Torque Request" storageaddress="0x00076A84">
             <table type="Y Axis" storageaddress="0x000769E8" />
         </table>
-		<table name="Table 2D - 58 " storageaddress="0x0006FC2C">
+		<table name="Off Throttle Fuel Cut - Fuel Resume - In Neutral Threshold8 " storageaddress="0x0006FC2C">
             <table type="Y Axis" storageaddress="0x0006FC18" />
         </table>
 		<table name="Table 2D - Unknown_68d7c" storageaddress="0x0007697C">
@@ -21466,11 +21473,11 @@
         <table name="Table 2D - 389 Check DataType" storageaddress="0x0007B858">
             <table type="Y Axis" storageaddress="0x0007B844" />
         </table>
-        <table name="Table 3D - 0 " storageaddress="0x0006DDE4">
+        <table name="Off Throttle Fuel Cut - Fuel Resume - In Gear Threshold" storageaddress="0x0006DDE4">
             <table type="X Axis" storageaddress="0x0006DD8C" />
             <table type="Y Axis" storageaddress="0x0006DDCC" />
         </table>
-        <table name="Table 3D - 1 " storageaddress="0x0006DE9C">
+        <table name="Off Throttle Fuel Cut - Fuel Resume - NOTUSED" storageaddress="0x0006DE9C">
             <table type="X Axis" storageaddress="0x0006DE44" />
             <table type="Y Axis" storageaddress="0x0006DE84" />
         </table>
@@ -22244,10 +22251,10 @@
         <table name="Table 2D - 3 " storageaddress="0x06C914">
             <table type="Y Axis" storageaddress="0x06C8EC" />
         </table>
-        <table name="Table 2D - 4 " storageaddress="0x06C938">
+        <table name="Off Throttle Fuel Cut - Fuel Resume - Engine Startup Threshold" storageaddress="0x06C938">
             <table type="Y Axis" storageaddress="0x06C920" />
         </table>
-        <table name="Table 2D - 5" storageaddress="0x06C9E0">
+        <table name="Off Throttle Fuel Cut - Fuel Resume - In Neutral Threshold" storageaddress="0x06C9E0">
             <table type="Y Axis" storageaddress="0x06C9A0" />
         </table>
         <table name="Ignition Leading - Idle Base Timing" storageaddress="0x06CD8C">
@@ -22400,10 +22407,10 @@
         <table name="Ignition 13" storageaddress="0x06E880">
             <table type="Y Axis" storageaddress="0x06E87C" />
         </table>
-        <table name="Table 2D - 58 " storageaddress="0x06EB20">
+        <table name="Off Throttle Fuel Cut - Fuel Resume - In Neutral Threshold8 " storageaddress="0x06EB20">
             <table type="Y Axis" storageaddress="0x06EB0C" />
         </table>
-        <table name="Table 2D - 59 " storageaddress="0x06EF54">
+        <table name="Off Throttle Fuel Cut - Fuel Resume - In Neutral Threshold9 " storageaddress="0x06EF54">
             <table type="Y Axis" storageaddress="0x06EF28" />
         </table>
         <table name="Table 2D - 60 " storageaddress="0x06F0F4">
@@ -23336,11 +23343,11 @@
         <table name="Table 2D - 390 Check DataType" storageaddress="0x07B058">
             <table type="Y Axis" storageaddress="0x07B040" />
         </table>
-        <table name="Table 3D - 0 " storageaddress="0x06CAAC">
+        <table name="Off Throttle Fuel Cut - Fuel Resume - In Gear Threshold" storageaddress="0x06CAAC">
             <table type="X Axis" storageaddress="0x06CA54" />
             <table type="Y Axis" storageaddress="0x06CA94" />
         </table>
-        <table name="Table 3D - 1 " storageaddress="0x06CB64">
+        <table name="Off Throttle Fuel Cut - Fuel Resume - NOTUSED" storageaddress="0x06CB64">
             <table type="X Axis" storageaddress="0x06CB0C" />
             <table type="Y Axis" storageaddress="0x06CB4C" />
         </table>
@@ -24098,10 +24105,10 @@
         <table name="Table 2D - 3 " storageaddress="0x06C914">
             <table type="Y Axis" storageaddress="0x06C8EC" />
         </table>
-        <table name="Table 2D - 4 " storageaddress="0x06C938">
+        <table name="Off Throttle Fuel Cut - Fuel Resume - Engine Startup Threshold" storageaddress="0x06C938">
             <table type="Y Axis" storageaddress="0x06C920" />
         </table>
-        <table name="Table 2D - 5" storageaddress="0x06C9E0">
+        <table name="Off Throttle Fuel Cut - Fuel Resume - In Neutral Threshold" storageaddress="0x06C9E0">
             <table type="Y Axis" storageaddress="0x06C9A0" />
         </table>
         <table name="Ignition Leading - Idle Base Timing" storageaddress="0x06CD8C">
@@ -24254,10 +24261,10 @@
         <table name="Ignition 13" storageaddress="0x06E880">
             <table type="Y Axis" storageaddress="0x06E87C" />
         </table>
-        <table name="Table 2D - 58 " storageaddress="0x06EB20">
+        <table name="Off Throttle Fuel Cut - Fuel Resume - In Neutral Threshold8 " storageaddress="0x06EB20">
             <table type="Y Axis" storageaddress="0x06EB0C" />
         </table>
-        <table name="Table 2D - 59 " storageaddress="0x06EF54">
+        <table name="Off Throttle Fuel Cut - Fuel Resume - In Neutral Threshold9 " storageaddress="0x06EF54">
             <table type="Y Axis" storageaddress="0x06EF28" />
         </table>
         <table name="Table 2D - 60 " storageaddress="0x06F0F4">
@@ -25190,11 +25197,11 @@
         <table name="Table 2D - 390 Check DataType" storageaddress="0x07B058">
             <table type="Y Axis" storageaddress="0x07B040" />
         </table>
-        <table name="Table 3D - 0 " storageaddress="0x06CAAC">
+        <table name="Off Throttle Fuel Cut - Fuel Resume - In Gear Threshold" storageaddress="0x06CAAC">
             <table type="X Axis" storageaddress="0x06CA54" />
             <table type="Y Axis" storageaddress="0x06CA94" />
         </table>
-        <table name="Table 3D - 1 " storageaddress="0x06CB64">
+        <table name="Off Throttle Fuel Cut - Fuel Resume - NOTUSED" storageaddress="0x06CB64">
             <table type="X Axis" storageaddress="0x06CB0C" />
             <table type="Y Axis" storageaddress="0x06CB4C" />
         </table>
@@ -25952,10 +25959,10 @@
         <table name="Table 2D - 3 " storageaddress="0x06C314">
             <table type="Y Axis" storageaddress="0x06C2EC" />
         </table>
-        <table name="Table 2D - 4 " storageaddress="0x06C338">
+        <table name="Off Throttle Fuel Cut - Fuel Resume - Engine Startup Threshold" storageaddress="0x06C338">
             <table type="Y Axis" storageaddress="0x06C320" />
         </table>
-        <table name="Table 2D - 5" storageaddress="0x06C3E0">
+        <table name="Off Throttle Fuel Cut - Fuel Resume - In Neutral Threshold" storageaddress="0x06C3E0">
             <table type="Y Axis" storageaddress="0x06C3A0" />
         </table>
         <table name="Table 2D - 10 " storageaddress="0x06D94C">
@@ -26096,10 +26103,10 @@
         <table name="Ignition 13" storageaddress="0x06ECC0">
             <table type="Y Axis" storageaddress="0x06ECBC" />
         </table>
-        <table name="Table 2D - 57 " storageaddress="0x06ED28">
+        <table name="Off Throttle Fuel Cut - Fuel Resume - In Neutral Threshold7 " storageaddress="0x06ED28">
             <table type="Y Axis" storageaddress="0x06ECF8" />
         </table>
-        <table name="Table 2D - 59 " storageaddress="0x06F3C4">
+        <table name="Off Throttle Fuel Cut - Fuel Resume - In Neutral Threshold9 " storageaddress="0x06F3C4">
             <table type="Y Axis" storageaddress="0x06F398" />
         </table>
         <table name="Table 2D - 60 " storageaddress="0x06F564">
@@ -27065,11 +27072,11 @@
         <table name="Table 2D - 403 Check DataType" storageaddress="0x07D4D0">
             <table type="Y Axis" storageaddress="0x07D4A8" />
         </table>
-        <table name="Table 3D - 0 " storageaddress="0x06C4AC">
+        <table name="Off Throttle Fuel Cut - Fuel Resume - In Gear Threshold" storageaddress="0x06C4AC">
             <table type="X Axis" storageaddress="0x06C454" />
             <table type="Y Axis" storageaddress="0x06C494" />
         </table>
-        <table name="Table 3D - 1 " storageaddress="0x06C564">
+        <table name="Off Throttle Fuel Cut - Fuel Resume - NOTUSED" storageaddress="0x06C564">
             <table type="X Axis" storageaddress="0x06C50C" />
             <table type="Y Axis" storageaddress="0x06C54C" />
         </table>
@@ -27742,10 +27749,10 @@
         <table name="Table 2D - 3 " storageaddress="0x06C914">
             <table type="Y Axis" storageaddress="0x06C8EC" />
         </table>
-        <table name="Table 2D - 4 " storageaddress="0x06C938">
+        <table name="Off Throttle Fuel Cut - Fuel Resume - Engine Startup Threshold" storageaddress="0x06C938">
             <table type="Y Axis" storageaddress="0x06C920" />
         </table>
-        <table name="Table 2D - 5" storageaddress="0x06C9E0">
+        <table name="Off Throttle Fuel Cut - Fuel Resume - In Neutral Threshold" storageaddress="0x06C9E0">
             <table type="Y Axis" storageaddress="0x06C9A0" />
         </table>
         <table name="Ignition Leading - Idle Base Timing" storageaddress="0x06CD8C">
@@ -27898,10 +27905,10 @@
         <table name="Ignition 13" storageaddress="0x06E880">
             <table type="Y Axis" storageaddress="0x06E87C" />
         </table>
-        <table name="Table 2D - 58 " storageaddress="0x06EB20">
+        <table name="Off Throttle Fuel Cut - Fuel Resume - In Neutral Threshold8 " storageaddress="0x06EB20">
             <table type="Y Axis" storageaddress="0x06EB0C" />
         </table>
-        <table name="Table 2D - 59 " storageaddress="0x06EF54">
+        <table name="Off Throttle Fuel Cut - Fuel Resume - In Neutral Threshold9 " storageaddress="0x06EF54">
             <table type="Y Axis" storageaddress="0x06EF28" />
         </table>
         <table name="Table 2D - 60 " storageaddress="0x06F0F4">
@@ -28834,11 +28841,11 @@
         <table name="Table 2D - 390 Check DataType" storageaddress="0x07B058">
             <table type="Y Axis" storageaddress="0x07B040" />
         </table>
-        <table name="Table 3D - 0 " storageaddress="0x06CAAC">
+        <table name="Off Throttle Fuel Cut - Fuel Resume - In Gear Threshold" storageaddress="0x06CAAC">
             <table type="X Axis" storageaddress="0x06CA54" />
             <table type="Y Axis" storageaddress="0x06CA94" />
         </table>
-        <table name="Table 3D - 1 " storageaddress="0x06CB64">
+        <table name="Off Throttle Fuel Cut - Fuel Resume - NOTUSED" storageaddress="0x06CB64">
             <table type="X Axis" storageaddress="0x06CB0C" />
             <table type="Y Axis" storageaddress="0x06CB4C" />
         </table>
