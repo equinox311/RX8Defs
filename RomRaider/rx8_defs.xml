@@ -12840,11 +12840,11 @@
             <table type="X Axis" storageaddress="0x077BB4" />
             <table type="Y Axis" storageaddress="0x077BF8" />
         </table>
-        <table name="Injector Latency Secondary" storageaddress="0x077F58">
+        <table name="Injector Latency Primary" storageaddress="0x077F58">
             <table type="X Axis" storageaddress="0x077EF0" />
             <table type="Y Axis" storageaddress="0x077F34" />
         </table>
-        <table name="Injector Latency Primary" storageaddress="0x0780F4">
+        <table name="Injector Latency Secondary" storageaddress="0x0780F4">
             <table type="X Axis" storageaddress="0x07808C" />
             <table type="Y Axis" storageaddress="0x0780D0" />
         </table>
