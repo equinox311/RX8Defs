@@ -98,13 +98,13 @@
 			<!-- </table> -->
         <!-- </table> -->
 		<table name="Ethanol Sensor CAN ID" category="Flex Fuel" type="1D" storagetype="uint16" endian="big" expression="x" to_byte="x" size="1" />
-		<table name="Table 3D - UNKNOWN_68d30" category="Unknown 3D" type="3D" storagetype="uint16" endian="big" expression="x" to_byte="x" sizex="8" sizey="19">
+		<table name="Table 3D - UNKNOWN_68d30" category="Torque Control" type="3D" storagetype="uint16" endian="big" expression="x" to_byte="x" sizex="8" sizey="19">
             <scaling expression="(x * 0.0078125) + 0" to_byte="(x - 0.0) / 0.0078125" format="0.00" />
             <table name="Value" type="X Axis" storagetype="float" endian="big">
-                <scaling expression="x" to_byte="x" format="0.00" />
+                <scaling expression="x" to_byte="x" format="0" />
             </table>
-            <table name="Value" type="Y Axis" storagetype="float" endian="big">
-                <scaling expression="x" to_byte="x" format="0.00" />
+            <table name="Engine Speed" type="Y Axis" storagetype="float" endian="big">
+                <scaling units="RPM" expression="x" to_byte="x" format="0" />
             </table>
         </table>
 		<table name="Table 3D - UNKNOWN_68c4c" category="Unknown 3D" type="3D" storagetype="uint16" endian="big" expression="x" to_byte="x" sizex="13" sizey="3">
@@ -407,11 +407,11 @@
 				<scaling units="RPM"/>
 			</table>
         </table>
-		<table name="Table 2D - Unknown_68cb4 -Desired Torque Calculation 3a" category="Unknown 2D" type="2D" storagetype="uint16" endian="big" sizey="9">
-            <scaling expression="(x * 0.0078125 ) + 0" to_byte="(x - 0.0) / 0.0078125" format="0.0000" />
-            <table name="Unknown" type="Y Axis" storagetype="float" endian="big" expression="x" to_byte="x" />
+		<table name="Table 2D - Unknown_68cb4 -Desired Torque Calculation 3a" category="Torque Control" type="2D" storagetype="uint16" endian="big" sizey="9">
+            <scaling units="mult" expression="(x * 0.0078125 ) + 0" to_byte="(x - 0.0) / 0.0078125" format="0.0000" />
+            <table name="Throttle Pedal Positon" type="Y Axis" storagetype="float" endian="big" expression="x" to_byte="x" />
         </table>
-		<table name="Table 2D - Unknown_68ca0 -Desired Torque Calculation 3b" category="Unknown 2D" type="2D" storagetype="uint16" endian="big" sizey="9">
+		<table name="Table 2D - Unknown_68ca0 -Desired Torque Calculation 3b" category="Torque Control" type="2D" storagetype="uint16" endian="big" sizey="9">
             <scaling expression="(x * 0.0078125) + 0" to_byte="(x - 0.0) / 0.0078125" format="0.0000" />
             <table name="Unknown" type="Y Axis" storagetype="float" endian="big" expression="x" to_byte="x" />
         </table>
@@ -1100,10 +1100,6 @@
             <scaling expression="(x * 0.5 ) + 0" to_byte="(x - 0) / 0.5" format="0.00" />
             <table name="Unknown" type="Y Axis" storagetype="float" endian="big" expression="x" to_byte="x" />
         </table>
-        <table name="Throttle Pedal Percent Decreasing Filter Factor" category="Unknown 2D" type="2D" storagetype="uint8" endian="big" sizey="8">
-            <scaling expression="(x * 0.007812 ) + 0" to_byte="(x - 0) / 0.007812" format="0.00" />
-            <table name="Unknown" type="Y Axis" storagetype="float" endian="big" expression="x" to_byte="x" />
-        </table>
         <table name="Table 2D - 132 " category="Unknown 2D" type="2D" storagetype="uint8" endian="big" sizey="8">
             <scaling expression="(x * 0.007812 ) + 0" to_byte="(x - 0) / 0.007812" format="0.00" />
             <table name="Unknown" type="Y Axis" storagetype="float" endian="big" expression="x" to_byte="x" />
@@ -1124,21 +1120,35 @@
             <scaling expression="(x * 0.01 ) + 0" to_byte="(x - 0) / 0.01" format="0.00" />
             <table name="Unknown" type="Y Axis" storagetype="float" endian="big" expression="x" to_byte="x" />
         </table>
-        <table name="Table 2D - 137 " category="Unknown 2D" type="2D" storagetype="uint8" endian="big" sizey="11">
-            <scaling expression="(x * 0.5 ) + 0" to_byte="(x - 0) / 0.5" format="0.00" />
-            <table name="Unknown" type="Y Axis" storagetype="float" endian="big" expression="x" to_byte="x" />
+        <table name="Throttle Plate Request Max Value For Filter - In Gear" category="Throttle Control" type="2D" storagetype="uint8" endian="big" sizey="11">
+            <scaling units="%" expression="(x * 0.5 ) + 0" to_byte="(x - 0) / 0.5" format="0.00" />
+            <table name="Engine Speed" type="Y Axis" storagetype="float" endian="big" expression="x" to_byte="x">
+				<scaling units="RPM"/>
+			</table>
         </table>
-        <table name="Table 2D - 138 " category="Unknown 2D" type="2D" storagetype="uint8" endian="big" sizey="11">
-            <scaling expression="(x * 0.5 ) + 0" to_byte="(x - 0) / 0.5" format="0.00" />
-            <table name="Unknown" type="Y Axis" storagetype="float" endian="big" expression="x" to_byte="x" />
+        <table name="Throttle Plate Request Max Value For Filter - In Neutral" category="Throttle Control" type="2D" storagetype="uint8" endian="big" sizey="11">
+            <scaling units="%" expression="(x * 0.5 ) + 0" to_byte="(x - 0) / 0.5" format="0.00" />
+            <table name="Engine Speed" type="Y Axis" storagetype="float" endian="big" expression="x" to_byte="x">
+				<scaling units="RPM"/>
+			</table>
         </table>
-        <table name="Table 2D - 139 " category="Unknown 2D" type="2D" storagetype="uint8" endian="big" sizey="8">
-            <scaling expression="(x * 0.005 ) + 0" to_byte="(x - 0) / 0.005" format="0.00" />
-            <table name="Unknown" type="Y Axis" storagetype="float" endian="big" expression="x" to_byte="x" />
+		<table name="Throttle Plate Request Decreasing Filter Factor" category="Throttle Control" type="2D" storagetype="uint8" endian="big" sizey="8">
+            <scaling units="" expression="(x * 0.007812 ) + 0" to_byte="(x - 0) / 0.007812" format="0.00" />
+            <table name="Engine Speed" type="Y Axis" storagetype="float" endian="big" expression="x" to_byte="x">
+				<scaling units="RPM"/>
+			</table>
         </table>
-        <table name="Table 2D - 140 " category="Unknown 2D" type="2D" storagetype="uint8" endian="big" sizey="8">
-            <scaling expression="(x * 0.005 ) + 0" to_byte="(x - 0) / 0.005" format="0.00" />
-            <table name="Unknown" type="Y Axis" storagetype="float" endian="big" expression="x" to_byte="x" />
+        <table name="Throttle Plate Request Increasing Filter Factor - In Gear" category="Throttle Control" type="2D" storagetype="uint8" endian="big" sizey="8">
+            <scaling units="" expression="(x * 0.005 ) + 0" to_byte="(x - 0) / 0.005" format="0.00" />
+            <table name="Engine Speed" type="Y Axis" storagetype="float" endian="big" expression="x" to_byte="x">
+				<scaling units ="RPM"/>
+			</table>
+        </table>
+        <table name="Throttle Plate Request Increasing Filter Factor - In Neutral" category="Throttle Control" type="2D" storagetype="uint8" endian="big" sizey="8">
+            <scaling units ="" expression="(x * 0.005 ) + 0" to_byte="(x - 0) / 0.005" format="0.00" />
+            <table name="Engine Speed" type="Y Axis" storagetype="float" endian="big" expression="x" to_byte="x">
+				<scaling units="RPM"/>
+			</table>
         </table>
         <table name="Table 2D - 141 " category="Unknown 2D" type="2D" storagetype="uint8" endian="big" sizey="8">
             <scaling expression="(x * 0.005 ) + 0" to_byte="(x - 0) / 0.005" format="0.00" />
@@ -1242,7 +1252,7 @@
             <scaling expression="(x * 0.007812 ) + 0" to_byte="(x - 0) / 0.007812" format="0.00" />
             <table name="Unknown" type="Y Axis" storagetype="float" endian="big" expression="x" to_byte="x" />
         </table>
-        <table name="Table 2D - 162 " category="Alternator Control" type="2D" storagetype="uint16" endian="big" sizey="5">
+        <table name="Alternator Max Torque" category="Alternator Control" type="2D" storagetype="uint16" endian="big" sizey="5">
             <scaling expression="(x * 0.007812 ) + 0" to_byte="(x - 0) / 0.007812" format="0.00" />
             <table name="Alternator Speed" type="Y Axis" storagetype="float" endian="big" expression="x" to_byte="x">
 				<scaling units="RPM"/>
@@ -2860,8 +2870,8 @@
                 <scaling expression="x" to_byte="x" />
             </table>
         </table>
-        <table name="Table 3D - 60 " category="Unknown 3D" type="3D" storagetype="uint16" endian="big" expression="x" to_byte="x" sizex="18" sizey="19">
-            <scaling expression="(x * 0.0001 ) + 0" to_byte="(x - 0) / 0.0001" format="0.00" />
+        <table name="Table 3D - 60 " category="Torque Control" type="3D" storagetype="uint16" endian="big" expression="x" to_byte="x" sizex="18" sizey="19">
+            <scaling expression="(x * 0.0001 ) + 0" to_byte="(x - 0) / 0.0001" format="0.0000" />
             <table name="Value" type="X Axis" storagetype="float" endian="big">
                 <scaling expression="x" to_byte="x" />
             </table>
@@ -4221,7 +4231,7 @@
         <table name="Table 2D - 130 " storageaddress="0x073DEC">
             <table type="Y Axis" storageaddress="0x073DD8" />
         </table>
-        <table name="Throttle Pedal Percent Decreasing Filter Factor" storageaddress="0x073FB8">
+        <table name="Throttle Plate Request Decreasing Filter Factor" storageaddress="0x073FB8">
             <table type="Y Axis" storageaddress="0x073F98" />
         </table>
         <table name="Table 2D - 132 " storageaddress="0x073FE0">
@@ -4239,16 +4249,16 @@
         <table name="Table 2D - 136 " storageaddress="0x074078">
             <table type="Y Axis" storageaddress="0x07405C" />
         </table>
-        <table name="Table 2D - 137 " storageaddress="0x0740AC">
+        <table name="Throttle Plate Request Max Value For Filter - In Gear" storageaddress="0x0740AC">
             <table type="Y Axis" storageaddress="0x074080" />
         </table>
-        <table name="Table 2D - 138 " storageaddress="0x0740E4">
+        <table name="Throttle Plate Request Max Value For Filter - In Neutral" storageaddress="0x0740E4">
             <table type="Y Axis" storageaddress="0x0740B8" />
         </table>
-        <table name="Table 2D - 139 " storageaddress="0x074110">
+        <table name="Throttle Plate Request Increasing Filter Factor - In Gear" storageaddress="0x074110">
             <table type="Y Axis" storageaddress="0x0740F0" />
         </table>
-        <table name="Table 2D - 140 " storageaddress="0x074138">
+        <table name="Throttle Plate Request Increasing Filter Factor - In Neutral" storageaddress="0x074138">
             <table type="Y Axis" storageaddress="0x074118" />
         </table>
         <table name="Table 2D - 141 " storageaddress="0x074160">
@@ -4314,7 +4324,7 @@
         <table name="Table 2D - 161 " storageaddress="0x07607C">
             <table type="Y Axis" storageaddress="0x076058" />
         </table>
-        <table name="Table 2D - 162 " storageaddress="0x0760A4">
+        <table name="Alternator Max Torque" storageaddress="0x0760A4">
             <table type="Y Axis" storageaddress="0x076090" />
         </table>
         <table name="Table 2D - 163 " storageaddress="0x076B28">
@@ -6234,19 +6244,19 @@
         <table name="Table 2D - 130 " storageaddress="0x07376C">
             <table type="Y Axis" storageaddress="0x073758" />
         </table>
-        <table name="Throttle Pedal Percent Decreasing Filter Factor" storageaddress="0x073938">
+        <table name="Throttle Plate Request Decreasing Filter Factor" storageaddress="0x073938">
             <table type="Y Axis" storageaddress="0x073918" />
         </table>
-        <table name="Table 2D - 137 " storageaddress="0x07396C">
+        <table name="Throttle Plate Request Max Value For Filter - In Gear" storageaddress="0x07396C">
             <table type="Y Axis" storageaddress="0x073940" />
         </table>
-        <table name="Table 2D - 138 " storageaddress="0x0739A4">
+        <table name="Throttle Plate Request Max Value For Filter - In Neutral" storageaddress="0x0739A4">
             <table type="Y Axis" storageaddress="0x073978" />
         </table>
-        <table name="Table 2D - 139 " storageaddress="0x0739D0">
+        <table name="Throttle Plate Request Increasing Filter Factor - In Gear" storageaddress="0x0739D0">
             <table type="Y Axis" storageaddress="0x0739B0" />
         </table>
-        <table name="Table 2D - 140 " storageaddress="0x0739F8">
+        <table name="Throttle Plate Request Increasing Filter Factor - In Neutral" storageaddress="0x0739F8">
             <table type="Y Axis" storageaddress="0x0739D8" />
         </table>
         <table name="Table 2D - 144 " storageaddress="0x0748A0">
@@ -6306,7 +6316,7 @@
 		<table name="Table 2D - Off Throttle Fueling Realted" storageaddress="0x7b368">
             <table type="Y Axis" storageaddress="0x7b358" />
         </table>
-        <table name="Table 2D - 162 " storageaddress="0x0757DC">
+        <table name="Alternator Max Torque" storageaddress="0x0757DC">
             <table type="Y Axis" storageaddress="0x0757C8" />
         </table>
         <table name="Table 2D - 163 " storageaddress="0x076260">
@@ -8070,19 +8080,19 @@
         <table name="Table 2D - 130 " storageaddress="0x07376C">
             <table type="Y Axis" storageaddress="0x073758" />
         </table>
-        <table name="Throttle Pedal Percent Decreasing Filter Factor" storageaddress="0x073938">
+        <table name="Throttle Plate Request Decreasing Filter Factor" storageaddress="0x073938">
             <table type="Y Axis" storageaddress="0x073918" />
         </table>
-        <table name="Table 2D - 137 " storageaddress="0x07396C">
+        <table name="Throttle Plate Request Max Value For Filter - In Gear" storageaddress="0x07396C">
             <table type="Y Axis" storageaddress="0x073940" />
         </table>
-        <table name="Table 2D - 138 " storageaddress="0x0739A4">
+        <table name="Throttle Plate Request Max Value For Filter - In Neutral" storageaddress="0x0739A4">
             <table type="Y Axis" storageaddress="0x073978" />
         </table>
-        <table name="Table 2D - 139 " storageaddress="0x0739D0">
+        <table name="Throttle Plate Request Increasing Filter Factor - In Gear" storageaddress="0x0739D0">
             <table type="Y Axis" storageaddress="0x0739B0" />
         </table>
-        <table name="Table 2D - 140 " storageaddress="0x0739F8">
+        <table name="Throttle Plate Request Increasing Filter Factor - In Neutral" storageaddress="0x0739F8">
             <table type="Y Axis" storageaddress="0x0739D8" />
         </table>
         <table name="Table 2D - 144 " storageaddress="0x0748A0">
@@ -8139,7 +8149,7 @@
         <table name="Table 2D - 161 " storageaddress="0x0757B4">
             <table type="Y Axis" storageaddress="0x075790" />
         </table>
-        <table name="Table 2D - 162 " storageaddress="0x0757DC">
+        <table name="Alternator Max Torque" storageaddress="0x0757DC">
             <table type="Y Axis" storageaddress="0x0757C8" />
         </table>
         <table name="Table 2D - 163 " storageaddress="0x076260">
@@ -9900,7 +9910,7 @@
         <table name="Table 2D - 130 " storageaddress="0x0735AC">
             <table type="Y Axis" storageaddress="0x073598" />
         </table>
-        <table name="Throttle Pedal Percent Decreasing Filter Factor" storageaddress="0x073778">
+        <table name="Throttle Plate Request Decreasing Filter Factor" storageaddress="0x073778">
             <table type="Y Axis" storageaddress="0x073758" />
         </table>
         <table name="Table 2D - 132 " storageaddress="0x0737A0">
@@ -9918,16 +9928,16 @@
         <table name="Table 2D - 136 " storageaddress="0x073838">
             <table type="Y Axis" storageaddress="0x07381C" />
         </table>
-        <table name="Table 2D - 137 " storageaddress="0x07386C">
+        <table name="Throttle Plate Request Max Value For Filter - In Gear" storageaddress="0x07386C">
             <table type="Y Axis" storageaddress="0x073840" />
         </table>
-        <table name="Table 2D - 138 " storageaddress="0x0738A4">
+        <table name="Throttle Plate Request Max Value For Filter - In Neutral" storageaddress="0x0738A4">
             <table type="Y Axis" storageaddress="0x073878" />
         </table>
-        <table name="Table 2D - 139 " storageaddress="0x0738D0">
+        <table name="Throttle Plate Request Increasing Filter Factor - In Gear" storageaddress="0x0738D0">
             <table type="Y Axis" storageaddress="0x0738B0" />
         </table>
-        <table name="Table 2D - 140 " storageaddress="0x0738F8">
+        <table name="Throttle Plate Request Increasing Filter Factor - In Neutral" storageaddress="0x0738F8">
             <table type="Y Axis" storageaddress="0x0738D8" />
         </table>
         <table name="Table 2D - 141 " storageaddress="0x073920">
@@ -9993,7 +10003,7 @@
         <table name="Table 2D - 161 " storageaddress="0x075CA0">
             <table type="Y Axis" storageaddress="0x075C7C" />
         </table>
-        <table name="Table 2D - 162 " storageaddress="0x075CC8">
+        <table name="Alternator Max Torque" storageaddress="0x075CC8">
             <table type="Y Axis" storageaddress="0x075CB4" />
         </table>
         <table name="Table 2D - 163 " storageaddress="0x07674C">
@@ -11831,7 +11841,7 @@
         <table name="Table 2D - 130 " storageaddress="0x073DEC">
             <table type="Y Axis" storageaddress="0x073DD8" />
         </table>
-        <table name="Throttle Pedal Percent Decreasing Filter Factor" storageaddress="0x073FB8">
+        <table name="Throttle Plate Request Decreasing Filter Factor" storageaddress="0x073FB8">
             <table type="Y Axis" storageaddress="0x073F98" />
         </table>
         <table name="Table 2D - 132 " storageaddress="0x073FE0">
@@ -11849,16 +11859,16 @@
         <table name="Table 2D - 136 " storageaddress="0x074078">
             <table type="Y Axis" storageaddress="0x07405C" />
         </table>
-        <table name="Table 2D - 137 " storageaddress="0x0740AC">
+        <table name="Throttle Plate Request Max Value For Filter - In Gear" storageaddress="0x0740AC">
             <table type="Y Axis" storageaddress="0x074080" />
         </table>
-        <table name="Table 2D - 138 " storageaddress="0x0740E4">
+        <table name="Throttle Plate Request Max Value For Filter - In Neutral" storageaddress="0x0740E4">
             <table type="Y Axis" storageaddress="0x0740B8" />
         </table>
-        <table name="Table 2D - 139 " storageaddress="0x074110">
+        <table name="Throttle Plate Request Increasing Filter Factor - In Gear" storageaddress="0x074110">
             <table type="Y Axis" storageaddress="0x0740F0" />
         </table>
-        <table name="Table 2D - 140 " storageaddress="0x074138">
+        <table name="Throttle Plate Request Increasing Filter Factor - In Neutral" storageaddress="0x074138">
             <table type="Y Axis" storageaddress="0x074118" />
         </table>
         <table name="Table 2D - 141 " storageaddress="0x074160">
@@ -11924,7 +11934,7 @@
         <table name="Table 2D - 161 " storageaddress="0x07607C">
             <table type="Y Axis" storageaddress="0x076058" />
         </table>
-        <table name="Table 2D - 162 " storageaddress="0x0760A4">
+        <table name="Alternator Max Torque" storageaddress="0x0760A4">
             <table type="Y Axis" storageaddress="0x076090" />
         </table>
         <table name="Table 2D - 163 " storageaddress="0x076B28">
@@ -13861,7 +13871,7 @@
         <table name="Table 2D - 130 " storageaddress="0x072E5C">
             <table type="Y Axis" storageaddress="0x072E48" />
         </table>
-        <table name="Throttle Pedal Percent Decreasing Filter Factor" storageaddress="0x073028">
+        <table name="Throttle Plate Request Decreasing Filter Factor" storageaddress="0x073028">
             <table type="Y Axis" storageaddress="0x073008" />
         </table>
         <table name="Table 2D - 132 " storageaddress="0x073050">
@@ -13879,16 +13889,16 @@
         <table name="Table 2D - 136 " storageaddress="0x0730E8">
             <table type="Y Axis" storageaddress="0x0730CC" />
         </table>
-        <table name="Table 2D - 137 " storageaddress="0x07311C">
+        <table name="Throttle Plate Request Max Value For Filter - In Gear" storageaddress="0x07311C">
             <table type="Y Axis" storageaddress="0x0730F0" />
         </table>
-        <table name="Table 2D - 138 " storageaddress="0x073154">
+        <table name="Throttle Plate Request Max Value For Filter - In Neutral" storageaddress="0x073154">
             <table type="Y Axis" storageaddress="0x073128" />
         </table>
-        <table name="Table 2D - 139 " storageaddress="0x073180">
+        <table name="Throttle Plate Request Increasing Filter Factor - In Gear" storageaddress="0x073180">
             <table type="Y Axis" storageaddress="0x073160" />
         </table>
-        <table name="Table 2D - 140 " storageaddress="0x0731A8">
+        <table name="Throttle Plate Request Increasing Filter Factor - In Neutral" storageaddress="0x0731A8">
             <table type="Y Axis" storageaddress="0x073188" />
         </table>
         <table name="Table 2D - 141 " storageaddress="0x0731D0">
@@ -13951,7 +13961,7 @@
         <table name="Table 2D - 161 " storageaddress="0x0750F4">
             <table type="Y Axis" storageaddress="0x0750D0" />
         </table>
-        <table name="Table 2D - 162 " storageaddress="0x07513E">
+        <table name="Alternator Max Torque" storageaddress="0x07513E">
             <table type="Y Axis" storageaddress="0x07510C" />
         </table>
         <table name="Table 2D - 163 " storageaddress="0x075DC4">
@@ -15705,7 +15715,7 @@
         <table name="Table 2D - 130 " storageaddress="0x073BAC">
             <table type="Y Axis" storageaddress="0x073B98" />
         </table>
-        <table name="Throttle Pedal Percent Decreasing Filter Factor" storageaddress="0x073D78">
+        <table name="Throttle Plate Request Decreasing Filter Factor" storageaddress="0x073D78">
             <table type="Y Axis" storageaddress="0x073D58" />
         </table>
         <table name="Table 2D - 132 " storageaddress="0x073DA0">
@@ -15723,16 +15733,16 @@
         <table name="Table 2D - 136 " storageaddress="0x073E38">
             <table type="Y Axis" storageaddress="0x073E1C" />
         </table>
-        <table name="Table 2D - 137 " storageaddress="0x073E6C">
+        <table name="Throttle Plate Request Max Value For Filter - In Gear" storageaddress="0x073E6C">
             <table type="Y Axis" storageaddress="0x073E40" />
         </table>
-        <table name="Table 2D - 138 " storageaddress="0x073EA4">
+        <table name="Throttle Plate Request Max Value For Filter - In Neutral" storageaddress="0x073EA4">
             <table type="Y Axis" storageaddress="0x073E78" />
         </table>
-        <table name="Table 2D - 139 " storageaddress="0x073ED0">
+        <table name="Throttle Plate Request Increasing Filter Factor - In Gear" storageaddress="0x073ED0">
             <table type="Y Axis" storageaddress="0x073EB0" />
         </table>
-        <table name="Table 2D - 140 " storageaddress="0x073EF8">
+        <table name="Throttle Plate Request Increasing Filter Factor - In Neutral" storageaddress="0x073EF8">
             <table type="Y Axis" storageaddress="0x073ED8" />
         </table>
         <table name="Table 2D - 141 " storageaddress="0x073F20">
@@ -15789,7 +15799,7 @@
         <table name="Table 2D - 161 " storageaddress="0x0762A8">
             <table type="Y Axis" storageaddress="0x076284" />
         </table>
-        <table name="Table 2D - 162 " storageaddress="0x0762F2">
+        <table name="Alternator Max Torque" storageaddress="0x0762F2">
             <table type="Y Axis" storageaddress="0x0762C0" />
         </table>
         <table name="Table 2D - 163 " storageaddress="0x076F78">
@@ -17345,19 +17355,19 @@
         <table name="Table 2D - 130 " storageaddress="0x07376C">
             <table type="Y Axis" storageaddress="0x073758" />
         </table>
-        <table name="Throttle Pedal Percent Decreasing Filter Factor" storageaddress="0x073938">
+        <table name="Throttle Plate Request Decreasing Filter Factor" storageaddress="0x073938">
             <table type="Y Axis" storageaddress="0x073918" />
         </table>
-        <table name="Table 2D - 137 " storageaddress="0x07396C">
+        <table name="Throttle Plate Request Max Value For Filter - In Gear" storageaddress="0x07396C">
             <table type="Y Axis" storageaddress="0x073940" />
         </table>
-        <table name="Table 2D - 138 " storageaddress="0x0739A4">
+        <table name="Throttle Plate Request Max Value For Filter - In Neutral" storageaddress="0x0739A4">
             <table type="Y Axis" storageaddress="0x073978" />
         </table>
-        <table name="Table 2D - 139 " storageaddress="0x0739D0">
+        <table name="Throttle Plate Request Increasing Filter Factor - In Gear" storageaddress="0x0739D0">
             <table type="Y Axis" storageaddress="0x0739B0" />
         </table>
-        <table name="Table 2D - 140 " storageaddress="0x0739F8">
+        <table name="Throttle Plate Request Increasing Filter Factor - In Neutral" storageaddress="0x0739F8">
             <table type="Y Axis" storageaddress="0x0739D8" />
         </table>
         <table name="Table 2D - 144 " storageaddress="0x0748A0">
@@ -17414,7 +17424,7 @@
         <table name="Table 2D - 161 " storageaddress="0x0757B4">
             <table type="Y Axis" storageaddress="0x075790" />
         </table>
-        <table name="Table 2D - 162 " storageaddress="0x0757DC">
+        <table name="Alternator Max Torque" storageaddress="0x0757DC">
             <table type="Y Axis" storageaddress="0x0757C8" />
         </table>
         <table name="Table 2D - 163 " storageaddress="0x076260">
@@ -19110,19 +19120,19 @@
         <table name="Table 2D - 130 " storageaddress="0x07376C">
             <table type="Y Axis" storageaddress="0x073758" />
         </table>
-        <table name="Throttle Pedal Percent Decreasing Filter Factor" storageaddress="0x073938">
+        <table name="Throttle Plate Request Decreasing Filter Factor" storageaddress="0x073938">
             <table type="Y Axis" storageaddress="0x073918" />
         </table>
-        <table name="Table 2D - 137 " storageaddress="0x07396C">
+        <table name="Throttle Plate Request Max Value For Filter - In Gear" storageaddress="0x07396C">
             <table type="Y Axis" storageaddress="0x073940" />
         </table>
-        <table name="Table 2D - 138 " storageaddress="0x0739A4">
+        <table name="Throttle Plate Request Max Value For Filter - In Neutral" storageaddress="0x0739A4">
             <table type="Y Axis" storageaddress="0x073978" />
         </table>
-        <table name="Table 2D - 139 " storageaddress="0x0739D0">
+        <table name="Throttle Plate Request Increasing Filter Factor - In Gear" storageaddress="0x0739D0">
             <table type="Y Axis" storageaddress="0x0739B0" />
         </table>
-        <table name="Table 2D - 140 " storageaddress="0x0739F8">
+        <table name="Throttle Plate Request Increasing Filter Factor - In Neutral" storageaddress="0x0739F8">
             <table type="Y Axis" storageaddress="0x0739D8" />
         </table>
         <table name="Table 2D - 144 " storageaddress="0x0748A0">
@@ -19179,7 +19189,7 @@
         <table name="Table 2D - 161 " storageaddress="0x0757B4">
             <table type="Y Axis" storageaddress="0x075790" />
         </table>
-        <table name="Table 2D - 162 " storageaddress="0x0757DC">
+        <table name="Alternator Max Torque" storageaddress="0x0757DC">
             <table type="Y Axis" storageaddress="0x0757C8" />
         </table>
         <table name="Table 2D - 163 " storageaddress="0x076260">
@@ -20876,19 +20886,19 @@
         <table name="Table 2D - 130 " storageaddress="0x00073DA4">
             <table type="Y Axis" storageaddress="0x00073D90" />
         </table>
-        <table name="Throttle Pedal Percent Decreasing Filter Factor" storageaddress="0x00073F70">
+        <table name="Throttle Plate Request Decreasing Filter Factor" storageaddress="0x00073F70">
             <table type="Y Axis" storageaddress="0x00073F50" />
         </table>
-        <table name="Table 2D - 137 " storageaddress="0x00073FA4">
+        <table name="Throttle Plate Request Max Value For Filter - In Gear" storageaddress="0x00073FA4">
             <table type="Y Axis" storageaddress="0x00073F78" />
         </table>
-        <table name="Table 2D - 138 " storageaddress="0x00073FDC">
+        <table name="Throttle Plate Request Max Value For Filter - In Neutral" storageaddress="0x00073FDC">
             <table type="Y Axis" storageaddress="0x00073FB0" />
         </table>
-        <table name="Table 2D - 139 " storageaddress="0x00074008">
+        <table name="Throttle Plate Request Increasing Filter Factor - In Gear" storageaddress="0x00074008">
             <table type="Y Axis" storageaddress="0x00073FE8" />
         </table>
-        <table name="Table 2D - 140 " storageaddress="0x00074030">
+        <table name="Throttle Plate Request Increasing Filter Factor - In Neutral" storageaddress="0x00074030">
             <table type="Y Axis" storageaddress="0x00074010" />
         </table>
         <table name="Table 2D - 144 " storageaddress="0x00074ED8">
@@ -20945,7 +20955,7 @@
         <table name="Table 2D - 161 " storageaddress="0x00075DEC">
             <table type="Y Axis" storageaddress="0x00075DC8" />
         </table>
-        <table name="Table 2D - 162 " storageaddress="0x00075E14">
+        <table name="Alternator Max Torque" storageaddress="0x00075E14">
             <table type="Y Axis" storageaddress="0x00075E00" />
         </table>
         <table name="Table 2D - 163 " storageaddress="0x00076898">
@@ -22695,7 +22705,7 @@
         <table name="Table 2D - 130 " storageaddress="0x072E5C">
             <table type="Y Axis" storageaddress="0x072E48" />
         </table>
-        <table name="Throttle Pedal Percent Decreasing Filter Factor" storageaddress="0x073028">
+        <table name="Throttle Plate Request Decreasing Filter Factor" storageaddress="0x073028">
             <table type="Y Axis" storageaddress="0x073008" />
         </table>
         <table name="Table 2D - 132 " storageaddress="0x073050">
@@ -22713,16 +22723,16 @@
         <table name="Table 2D - 136 " storageaddress="0x0730E8">
             <table type="Y Axis" storageaddress="0x0730CC" />
         </table>
-        <table name="Table 2D - 137 " storageaddress="0x07311C">
+        <table name="Throttle Plate Request Max Value For Filter - In Gear" storageaddress="0x07311C">
             <table type="Y Axis" storageaddress="0x0730F0" />
         </table>
-        <table name="Table 2D - 138 " storageaddress="0x073154">
+        <table name="Throttle Plate Request Max Value For Filter - In Neutral" storageaddress="0x073154">
             <table type="Y Axis" storageaddress="0x073128" />
         </table>
-        <table name="Table 2D - 139 " storageaddress="0x073180">
+        <table name="Throttle Plate Request Increasing Filter Factor - In Gear" storageaddress="0x073180">
             <table type="Y Axis" storageaddress="0x073160" />
         </table>
-        <table name="Table 2D - 140 " storageaddress="0x0731A8">
+        <table name="Throttle Plate Request Increasing Filter Factor - In Neutral" storageaddress="0x0731A8">
             <table type="Y Axis" storageaddress="0x073188" />
         </table>
         <table name="Table 2D - 141 " storageaddress="0x0731D0">
@@ -22785,7 +22795,7 @@
         <table name="Table 2D - 161 " storageaddress="0x0750F4">
             <table type="Y Axis" storageaddress="0x0750D0" />
         </table>
-        <table name="Table 2D - 162 " storageaddress="0x07513E">
+        <table name="Alternator Max Torque" storageaddress="0x07513E">
             <table type="Y Axis" storageaddress="0x07510C" />
         </table>
         <table name="Table 2D - 163 " storageaddress="0x075DC4">
@@ -24549,7 +24559,7 @@
         <table name="Table 2D - 130 " storageaddress="0x072E5C">
             <table type="Y Axis" storageaddress="0x072E48" />
         </table>
-        <table name="Throttle Pedal Percent Decreasing Filter Factor" storageaddress="0x073028">
+        <table name="Throttle Plate Request Decreasing Filter Factor" storageaddress="0x073028">
             <table type="Y Axis" storageaddress="0x073008" />
         </table>
         <table name="Table 2D - 132 " storageaddress="0x073050">
@@ -24567,16 +24577,16 @@
         <table name="Table 2D - 136 " storageaddress="0x0730E8">
             <table type="Y Axis" storageaddress="0x0730CC" />
         </table>
-        <table name="Table 2D - 137 " storageaddress="0x07311C">
+        <table name="Throttle Plate Request Max Value For Filter - In Gear" storageaddress="0x07311C">
             <table type="Y Axis" storageaddress="0x0730F0" />
         </table>
-        <table name="Table 2D - 138 " storageaddress="0x073154">
+        <table name="Throttle Plate Request Max Value For Filter - In Neutral" storageaddress="0x073154">
             <table type="Y Axis" storageaddress="0x073128" />
         </table>
-        <table name="Table 2D - 139 " storageaddress="0x073180">
+        <table name="Throttle Plate Request Increasing Filter Factor - In Gear" storageaddress="0x073180">
             <table type="Y Axis" storageaddress="0x073160" />
         </table>
-        <table name="Table 2D - 140 " storageaddress="0x0731A8">
+        <table name="Throttle Plate Request Increasing Filter Factor - In Neutral" storageaddress="0x0731A8">
             <table type="Y Axis" storageaddress="0x073188" />
         </table>
         <table name="Table 2D - 141 " storageaddress="0x0731D0">
@@ -24639,7 +24649,7 @@
         <table name="Table 2D - 161 " storageaddress="0x0750F4">
             <table type="Y Axis" storageaddress="0x0750D0" />
         </table>
-        <table name="Table 2D - 162 " storageaddress="0x07513E">
+        <table name="Alternator Max Torque" storageaddress="0x07513E">
             <table type="Y Axis" storageaddress="0x07510C" />
         </table>
         <table name="Table 2D - 163 " storageaddress="0x075DC4">
@@ -26400,7 +26410,7 @@
         <table name="Table 2D - 130 " storageaddress="0x0735AC">
             <table type="Y Axis" storageaddress="0x073598" />
         </table>
-        <table name="Throttle Pedal Percent Decreasing Filter Factor" storageaddress="0x073778">
+        <table name="Throttle Plate Request Decreasing Filter Factor" storageaddress="0x073778">
             <table type="Y Axis" storageaddress="0x073758" />
         </table>
         <table name="Table 2D - 132 " storageaddress="0x0737A0">
@@ -26418,16 +26428,16 @@
         <table name="Table 2D - 136 " storageaddress="0x073838">
             <table type="Y Axis" storageaddress="0x07381C" />
         </table>
-        <table name="Table 2D - 137 " storageaddress="0x07386C">
+        <table name="Throttle Plate Request Max Value For Filter - In Gear" storageaddress="0x07386C">
             <table type="Y Axis" storageaddress="0x073840" />
         </table>
-        <table name="Table 2D - 138 " storageaddress="0x0738A4">
+        <table name="Throttle Plate Request Max Value For Filter - In Neutral" storageaddress="0x0738A4">
             <table type="Y Axis" storageaddress="0x073878" />
         </table>
-        <table name="Table 2D - 139 " storageaddress="0x0738D0">
+        <table name="Throttle Plate Request Increasing Filter Factor - In Gear" storageaddress="0x0738D0">
             <table type="Y Axis" storageaddress="0x0738B0" />
         </table>
-        <table name="Table 2D - 140 " storageaddress="0x0738F8">
+        <table name="Throttle Plate Request Increasing Filter Factor - In Neutral" storageaddress="0x0738F8">
             <table type="Y Axis" storageaddress="0x0738D8" />
         </table>
         <table name="Table 2D - 141 " storageaddress="0x073920">
@@ -26493,7 +26503,7 @@
         <table name="Table 2D - 161 " storageaddress="0x075CA0">
             <table type="Y Axis" storageaddress="0x075C7C" />
         </table>
-        <table name="Table 2D - 162 " storageaddress="0x075CC8">
+        <table name="Alternator Max Torque" storageaddress="0x075CC8">
             <table type="Y Axis" storageaddress="0x075CB4" />
         </table>
         <table name="Table 2D - 163 " storageaddress="0x07674C">
@@ -28193,7 +28203,7 @@
         <table name="Table 2D - 130 " storageaddress="0x072E5C">
             <table type="Y Axis" storageaddress="0x072E48" />
         </table>
-        <table name="Throttle Pedal Percent Decreasing Filter Factor" storageaddress="0x073028">
+        <table name="Throttle Plate Request Decreasing Filter Factor" storageaddress="0x073028">
             <table type="Y Axis" storageaddress="0x073008" />
         </table>
         <table name="Table 2D - 132 " storageaddress="0x073050">
@@ -28211,16 +28221,16 @@
         <table name="Table 2D - 136 " storageaddress="0x0730E8">
             <table type="Y Axis" storageaddress="0x0730CC" />
         </table>
-        <table name="Table 2D - 137 " storageaddress="0x07311C">
+        <table name="Throttle Plate Request Max Value For Filter - In Gear" storageaddress="0x07311C">
             <table type="Y Axis" storageaddress="0x0730F0" />
         </table>
-        <table name="Table 2D - 138 " storageaddress="0x073154">
+        <table name="Throttle Plate Request Max Value For Filter - In Neutral" storageaddress="0x073154">
             <table type="Y Axis" storageaddress="0x073128" />
         </table>
-        <table name="Table 2D - 139 " storageaddress="0x073180">
+        <table name="Throttle Plate Request Increasing Filter Factor - In Gear" storageaddress="0x073180">
             <table type="Y Axis" storageaddress="0x073160" />
         </table>
-        <table name="Table 2D - 140 " storageaddress="0x0731A8">
+        <table name="Throttle Plate Request Increasing Filter Factor - In Neutral" storageaddress="0x0731A8">
             <table type="Y Axis" storageaddress="0x073188" />
         </table>
         <table name="Table 2D - 141 " storageaddress="0x0731D0">
@@ -28283,7 +28293,7 @@
         <table name="Table 2D - 161 " storageaddress="0x0750F4">
             <table type="Y Axis" storageaddress="0x0750D0" />
         </table>
-        <table name="Table 2D - 162 " storageaddress="0x07513E">
+        <table name="Alternator Max Torque" storageaddress="0x07513E">
             <table type="Y Axis" storageaddress="0x07510C" />
         </table>
         <table name="Table 2D - 163 " storageaddress="0x075DC4">
