@@ -1,10 +1,10 @@
-# RX8 Man - RX8 ECU Definitions
+# RX8 ECU Definitions
 
-[![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=GA2ATM7VC5LZL&currency_code=USD&source=url)
+My Donate Link: [![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=GA2ATM7VC5LZL&currency_code=USD&source=url)
+
+RX8Man's Donate link: https://www.buymeacoffee.com/RX8Man
 
 These are only the beginning and a work in progress to developing open source ROM definitions for the Series 1 Mazda RX8
-
-If you found any of this work useful and would like to support me https://www.buymeacoffee.com/RX8Man
 
 ### Currently Supported Strategies/Cal IDs
 
