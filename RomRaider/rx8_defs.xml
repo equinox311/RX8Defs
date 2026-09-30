@@ -7558,70 +7558,70 @@
 		<table	name="DTC 0038 Enable/Disable #1" storageaddress="0x7CA02"/>
 		<table	name="DTC 0076 Enable/Disable #1" storageaddress="0x7CA03"/>
 		<table	name="DTC 0077 Enable/Disable #1" storageaddress="0x7CA04"/>
-		<table	name="DTC 00101 Enable/Disable #1" storageaddress="0x7CA05"/>
-		<table	name="DTC 00102 Enable/Disable #1" storageaddress="0x7CA06"/>
-		<table	name="DTC 00103 Enable/Disable #1" storageaddress="0x7CA07"/>
-		<table	name="DTC 00107 Enable/Disable #1" storageaddress="0x7CA08"/>
-		<table	name="DTC 00108 Enable/Disable #1" storageaddress="0x7CA09"/>
-		<table	name="DTC 00111 Enable/Disable #1" storageaddress="0x7CA0A"/>
-		<table	name="DTC 00112 Enable/Disable #1" storageaddress="0x7CA0B"/>
-		<table	name="DTC 00113 Enable/Disable #1" storageaddress="0x7CA0C"/>
-		<table	name="DTC 00117 Enable/Disable #1" storageaddress="0x7CA0D"/>
-		<table	name="DTC 00118 Enable/Disable #1" storageaddress="0x7CA0E"/>
-		<table	name="DTC 00122 Enable/Disable #1" storageaddress="0x7CA0F"/>
-		<table	name="DTC 00123 Enable/Disable #1" storageaddress="0x7CA10"/>
-		<table	name="DTC 00125 Enable/Disable #1" storageaddress="0x7CA11"/>
-		<table	name="DTC 00126 Enable/Disable #1" storageaddress="0x7CA12"/>
-		<table	name="DTC 00130 Enable/Disable #1" storageaddress="0x7CA13"/>
-		<table	name="DTC 00131 Enable/Disable #1" storageaddress="0x7CA14"/>
-		<table	name="DTC 00132 Enable/Disable #1" storageaddress="0x7CA15"/>
-		<table	name="DTC 00133 Enable/Disable #1" storageaddress="0x7CA16"/>
-		<table	name="DTC 00138 Enable/Disable #1" storageaddress="0x7CA17"/>
-		<table	name="DTC 00139 Enable/Disable #1" storageaddress="0x7CA18"/>
-		<table	name="DTC 00171 Enable/Disable #1" storageaddress="0x7CA19"/>
-		<table	name="DTC 00172 Enable/Disable #1" storageaddress="0x7CA1A"/>
-		<table	name="DTC 00222 Enable/Disable #1" storageaddress="0x7CA1B"/>
-		<table	name="DTC 00223 Enable/Disable #1" storageaddress="0x7CA1C"/>
-		<table	name="DTC 00327 Enable/Disable #1" storageaddress="0x7CA1D"/>
-		<table	name="DTC 00328 Enable/Disable #1" storageaddress="0x7CA1E"/>
-		<table	name="DTC 00335 Enable/Disable #1" storageaddress="0x7CA1F"/>
-		<table	name="DTC 00336 Enable/Disable #1" storageaddress="0x7CA20"/>
-		<table	name="DTC 00351 Enable/Disable #1" storageaddress="0x7CA21"/>
-		<table	name="DTC 00352 Enable/Disable #1" storageaddress="0x7CA22"/>
-		<table	name="DTC 00353 Enable/Disable #1" storageaddress="0x7CA23"/>
-		<table	name="DTC 00354 Enable/Disable #1" storageaddress="0x7CA24"/>
-		<table	name="DTC 00410 Enable/Disable #1" storageaddress="0x7CA25"/>
-		<table	name="DTC 00420 Enable/Disable #1" storageaddress="0x7CA26"/>
-		<table	name="DTC 00441 Enable/Disable #1" storageaddress="0x7CA27"/>
-		<table	name="DTC 00442 Enable/Disable #1" storageaddress="0x7CA28"/>
-		<table	name="DTC 00443 Enable/Disable #1" storageaddress="0x7CA29"/>
-		<table	name="DTC 00444 Enable/Disable #1" storageaddress="0x7CA2A"/>
-		<table	name="DTC 00445 Enable/Disable #1" storageaddress="0x7CA2B"/>
-		<table	name="DTC 00446 Enable/Disable #1" storageaddress="0x7CA2C"/>
-		<table	name="DTC 00455 Enable/Disable #1" storageaddress="0x7CA2D"/>
-		<table	name="DTC 00456 Enable/Disable #1" storageaddress="0x7CA2E"/>
-		<table	name="DTC 00461 Enable/Disable #1" storageaddress="0x7CA2F"/>
-		<table	name="DTC 00462 Enable/Disable #1" storageaddress="0x7CA30"/>
-		<table	name="DTC 00463 Enable/Disable #1" storageaddress="0x7CA31"/>
-		<table	name="DTC 00480 Enable/Disable #1" storageaddress="0x7CA32"/>
-		<table	name="DTC 00481 Enable/Disable #1" storageaddress="0x7CA33"/>
-		<table	name="DTC 00500 Enable/Disable #1" storageaddress="0x7CA34"/>
-		<table	name="DTC 00505 Enable/Disable #1" storageaddress="0x7CA35"/>
-		<table	name="DTC 00506 Enable/Disable #1" storageaddress="0x7CA36"/>
-		<table	name="DTC 00507 Enable/Disable #1" storageaddress="0x7CA37"/>
-		<table	name="DTC 00562 Enable/Disable #1" storageaddress="0x7CA38"/>
-		<table	name="DTC 00564 Enable/Disable #1" storageaddress="0x7CA39"/>
-		<table	name="DTC 00571 Enable/Disable #1" storageaddress="0x7CA3A"/>
-		<table	name="DTC 00601 Enable/Disable #1" storageaddress="0x7CA3B"/>
-		<table	name="DTC 00602 Enable/Disable #1" storageaddress="0x7CA3C"/>
-		<table	name="DTC 00604 Enable/Disable #1" storageaddress="0x7CA3D"/>
-		<table	name="DTC 00610 Enable/Disable #1" storageaddress="0x7CA3E"/>
-		<table	name="DTC 00638 Enable/Disable #1" storageaddress="0x7CA3F"/>
-		<table	name="DTC 00661 Enable/Disable #1" storageaddress="0x7CA40"/>
-		<table	name="DTC 00662 Enable/Disable #1" storageaddress="0x7CA41"/>
-		<table	name="DTC 00703 Enable/Disable #1" storageaddress="0x7CA42"/>
-		<table	name="DTC 00704 Enable/Disable #1" storageaddress="0x7CA43"/>
-		<table	name="DTC 00850 Enable/Disable #1" storageaddress="0x7CA44"/>
+		<table	name="DTC 0101 Enable/Disable #1" storageaddress="0x7CA05"/>
+		<table	name="DTC 0102 Enable/Disable #1" storageaddress="0x7CA06"/>
+		<table	name="DTC 0103 Enable/Disable #1" storageaddress="0x7CA07"/>
+		<table	name="DTC 0107 Enable/Disable #1" storageaddress="0x7CA08"/>
+		<table	name="DTC 0108 Enable/Disable #1" storageaddress="0x7CA09"/>
+		<table	name="DTC 0111 Enable/Disable #1" storageaddress="0x7CA0A"/>
+		<table	name="DTC 0112 Enable/Disable #1" storageaddress="0x7CA0B"/>
+		<table	name="DTC 0113 Enable/Disable #1" storageaddress="0x7CA0C"/>
+		<table	name="DTC 0117 Enable/Disable #1" storageaddress="0x7CA0D"/>
+		<table	name="DTC 0118 Enable/Disable #1" storageaddress="0x7CA0E"/>
+		<table	name="DTC 0122 Enable/Disable #1" storageaddress="0x7CA0F"/>
+		<table	name="DTC 0123 Enable/Disable #1" storageaddress="0x7CA10"/>
+		<table	name="DTC 0125 Enable/Disable #1" storageaddress="0x7CA11"/>
+		<table	name="DTC 0126 Enable/Disable #1" storageaddress="0x7CA12"/>
+		<table	name="DTC 0130 Enable/Disable #1" storageaddress="0x7CA13"/>
+		<table	name="DTC 0131 Enable/Disable #1" storageaddress="0x7CA14"/>
+		<table	name="DTC 0132 Enable/Disable #1" storageaddress="0x7CA15"/>
+		<table	name="DTC 0133 Enable/Disable #1" storageaddress="0x7CA16"/>
+		<table	name="DTC 0138 Enable/Disable #1" storageaddress="0x7CA17"/>
+		<table	name="DTC 0139 Enable/Disable #1" storageaddress="0x7CA18"/>
+		<table	name="DTC 0171 Enable/Disable #1" storageaddress="0x7CA19"/>
+		<table	name="DTC 0172 Enable/Disable #1" storageaddress="0x7CA1A"/>
+		<table	name="DTC 0222 Enable/Disable #1" storageaddress="0x7CA1B"/>
+		<table	name="DTC 0223 Enable/Disable #1" storageaddress="0x7CA1C"/>
+		<table	name="DTC 0327 Enable/Disable #1" storageaddress="0x7CA1D"/>
+		<table	name="DTC 0328 Enable/Disable #1" storageaddress="0x7CA1E"/>
+		<table	name="DTC 0335 Enable/Disable #1" storageaddress="0x7CA1F"/>
+		<table	name="DTC 0336 Enable/Disable #1" storageaddress="0x7CA20"/>
+		<table	name="DTC 0351 Enable/Disable #1" storageaddress="0x7CA21"/>
+		<table	name="DTC 0352 Enable/Disable #1" storageaddress="0x7CA22"/>
+		<table	name="DTC 0353 Enable/Disable #1" storageaddress="0x7CA23"/>
+		<table	name="DTC 0354 Enable/Disable #1" storageaddress="0x7CA24"/>
+		<table	name="DTC 0410 Enable/Disable #1" storageaddress="0x7CA25"/>
+		<table	name="DTC 0420 Enable/Disable #1" storageaddress="0x7CA26"/>
+		<table	name="DTC 0441 Enable/Disable #1" storageaddress="0x7CA27"/>
+		<table	name="DTC 0442 Enable/Disable #1" storageaddress="0x7CA28"/>
+		<table	name="DTC 0443 Enable/Disable #1" storageaddress="0x7CA29"/>
+		<table	name="DTC 0444 Enable/Disable #1" storageaddress="0x7CA2A"/>
+		<table	name="DTC 0445 Enable/Disable #1" storageaddress="0x7CA2B"/>
+		<table	name="DTC 0446 Enable/Disable #1" storageaddress="0x7CA2C"/>
+		<table	name="DTC 0455 Enable/Disable #1" storageaddress="0x7CA2D"/>
+		<table	name="DTC 0456 Enable/Disable #1" storageaddress="0x7CA2E"/>
+		<table	name="DTC 0461 Enable/Disable #1" storageaddress="0x7CA2F"/>
+		<table	name="DTC 0462 Enable/Disable #1" storageaddress="0x7CA30"/>
+		<table	name="DTC 0463 Enable/Disable #1" storageaddress="0x7CA31"/>
+		<table	name="DTC 0480 Enable/Disable #1" storageaddress="0x7CA32"/>
+		<table	name="DTC 0481 Enable/Disable #1" storageaddress="0x7CA33"/>
+		<table	name="DTC 0500 Enable/Disable #1" storageaddress="0x7CA34"/>
+		<table	name="DTC 0505 Enable/Disable #1" storageaddress="0x7CA35"/>
+		<table	name="DTC 0506 Enable/Disable #1" storageaddress="0x7CA36"/>
+		<table	name="DTC 0507 Enable/Disable #1" storageaddress="0x7CA37"/>
+		<table	name="DTC 0562 Enable/Disable #1" storageaddress="0x7CA38"/>
+		<table	name="DTC 0564 Enable/Disable #1" storageaddress="0x7CA39"/>
+		<table	name="DTC 0571 Enable/Disable #1" storageaddress="0x7CA3A"/>
+		<table	name="DTC 0601 Enable/Disable #1" storageaddress="0x7CA3B"/>
+		<table	name="DTC 0602 Enable/Disable #1" storageaddress="0x7CA3C"/>
+		<table	name="DTC 0604 Enable/Disable #1" storageaddress="0x7CA3D"/>
+		<table	name="DTC 0610 Enable/Disable #1" storageaddress="0x7CA3E"/>
+		<table	name="DTC 0638 Enable/Disable #1" storageaddress="0x7CA3F"/>
+		<table	name="DTC 0661 Enable/Disable #1" storageaddress="0x7CA40"/>
+		<table	name="DTC 0662 Enable/Disable #1" storageaddress="0x7CA41"/>
+		<table	name="DTC 0703 Enable/Disable #1" storageaddress="0x7CA42"/>
+		<table	name="DTC 0704 Enable/Disable #1" storageaddress="0x7CA43"/>
+		<table	name="DTC 0850 Enable/Disable #1" storageaddress="0x7CA44"/>
 		<table	name="DTC 1260 Enable/Disable #1" storageaddress="0x7CA45"/>
 		<table	name="DTC 1686 Enable/Disable #1" storageaddress="0x7CA46"/>
 		<table	name="DTC 1687 Enable/Disable #1" storageaddress="0x7CA47"/>
@@ -7806,70 +7806,70 @@
 		<table	name="DTC 0038 Enable/Disable #3" storageaddress="0x7CB1A"/>
 		<table	name="DTC 0076 Enable/Disable #3" storageaddress="0x7CB1B"/>
 		<table	name="DTC 0077 Enable/Disable #3" storageaddress="0x7CB1C"/>
-		<table	name="DTC 00101 Enable/Disable #3" storageaddress="0x7CB1D"/>
-		<table	name="DTC 00102 Enable/Disable #3" storageaddress="0x7CB1E"/>
-		<table	name="DTC 00103 Enable/Disable #3" storageaddress="0x7CB1F"/>
-		<table	name="DTC 00107 Enable/Disable #3" storageaddress="0x7CB20"/>
-		<table	name="DTC 00108 Enable/Disable #3" storageaddress="0x7CB21"/>
-		<table	name="DTC 00111 Enable/Disable #3" storageaddress="0x7CB22"/>
-		<table	name="DTC 00112 Enable/Disable #3" storageaddress="0x7CB23"/>
-		<table	name="DTC 00113 Enable/Disable #3" storageaddress="0x7CB24"/>
-		<table	name="DTC 00117 Enable/Disable #3" storageaddress="0x7CB25"/>
-		<table	name="DTC 00118 Enable/Disable #3" storageaddress="0x7CB26"/>
-		<table	name="DTC 00122 Enable/Disable #3" storageaddress="0x7CB27"/>
-		<table	name="DTC 00123 Enable/Disable #3" storageaddress="0x7CB28"/>
-		<table	name="DTC 00125 Enable/Disable #3" storageaddress="0x7CB29"/>
-		<table	name="DTC 00126 Enable/Disable #3" storageaddress="0x7CB2A"/>
-		<table	name="DTC 00130 Enable/Disable #3" storageaddress="0x7CB2B"/>
-		<table	name="DTC 00131 Enable/Disable #3" storageaddress="0x7CB2C"/>
-		<table	name="DTC 00132 Enable/Disable #3" storageaddress="0x7CB2D"/>
-		<table	name="DTC 00133 Enable/Disable #3" storageaddress="0x7CB2E"/>
-		<table	name="DTC 00138 Enable/Disable #3" storageaddress="0x7CB2F"/>
-		<table	name="DTC 00139 Enable/Disable #3" storageaddress="0x7CB30"/>
-		<table	name="DTC 00171 Enable/Disable #3" storageaddress="0x7CB31"/>
-		<table	name="DTC 00172 Enable/Disable #3" storageaddress="0x7CB32"/>
-		<table	name="DTC 00222 Enable/Disable #3" storageaddress="0x7CB33"/>
-		<table	name="DTC 00223 Enable/Disable #3" storageaddress="0x7CB34"/>
-		<table	name="DTC 00327 Enable/Disable #3" storageaddress="0x7CB35"/>
-		<table	name="DTC 00328 Enable/Disable #3" storageaddress="0x7CB36"/>
-		<table	name="DTC 00335 Enable/Disable #3" storageaddress="0x7CB37"/>
-		<table	name="DTC 00336 Enable/Disable #3" storageaddress="0x7CB38"/>
-		<table	name="DTC 00351 Enable/Disable #3" storageaddress="0x7CB39"/>
-		<table	name="DTC 00352 Enable/Disable #3" storageaddress="0x7CB3A"/>
-		<table	name="DTC 00353 Enable/Disable #3" storageaddress="0x7CB3B"/>
-		<table	name="DTC 00354 Enable/Disable #3" storageaddress="0x7CB3C"/>
-		<table	name="DTC 00410 Enable/Disable #3" storageaddress="0x7CB3D"/>
-		<table	name="DTC 00420 Enable/Disable #3" storageaddress="0x7CB3E"/>
-		<table	name="DTC 00441 Enable/Disable #3" storageaddress="0x7CB3F"/>
-		<table	name="DTC 00442 Enable/Disable #3" storageaddress="0x7CB40"/>
-		<table	name="DTC 00443 Enable/Disable #3" storageaddress="0x7CB41"/>
-		<table	name="DTC 00444 Enable/Disable #3" storageaddress="0x7CB42"/>
-		<table	name="DTC 00445 Enable/Disable #3" storageaddress="0x7CB43"/>
-		<table	name="DTC 00446 Enable/Disable #3" storageaddress="0x7CB44"/>
-		<table	name="DTC 00455 Enable/Disable #3" storageaddress="0x7CB45"/>
-		<table	name="DTC 00456 Enable/Disable #3" storageaddress="0x7CB46"/>
-		<table	name="DTC 00461 Enable/Disable #3" storageaddress="0x7CB47"/>
-		<table	name="DTC 00462 Enable/Disable #3" storageaddress="0x7CB48"/>
-		<table	name="DTC 00463 Enable/Disable #3" storageaddress="0x7CB49"/>
-		<table	name="DTC 00480 Enable/Disable #3" storageaddress="0x7CB4A"/>
-		<table	name="DTC 00481 Enable/Disable #3" storageaddress="0x7CB4B"/>
-		<table	name="DTC 00500 Enable/Disable #3" storageaddress="0x7CB4C"/>
-		<table	name="DTC 00505 Enable/Disable #3" storageaddress="0x7CB4D"/>
-		<table	name="DTC 00506 Enable/Disable #3" storageaddress="0x7CB4E"/>
-		<table	name="DTC 00507 Enable/Disable #3" storageaddress="0x7CB4F"/>
-		<table	name="DTC 00562 Enable/Disable #3" storageaddress="0x7CB50"/>
-		<table	name="DTC 00564 Enable/Disable #3" storageaddress="0x7CB51"/>
-		<table	name="DTC 00571 Enable/Disable #3" storageaddress="0x7CB52"/>
-		<table	name="DTC 00601 Enable/Disable #3" storageaddress="0x7CB53"/>
-		<table	name="DTC 00602 Enable/Disable #3" storageaddress="0x7CB54"/>
-		<table	name="DTC 00604 Enable/Disable #3" storageaddress="0x7CB55"/>
-		<table	name="DTC 00610 Enable/Disable #3" storageaddress="0x7CB56"/>
-		<table	name="DTC 00638 Enable/Disable #3" storageaddress="0x7CB57"/>
-		<table	name="DTC 00661 Enable/Disable #3" storageaddress="0x7CB58"/>
-		<table	name="DTC 00662 Enable/Disable #3" storageaddress="0x7CB59"/>
-		<table	name="DTC 00703 Enable/Disable #3" storageaddress="0x7CB5A"/>
-		<table	name="DTC 00704 Enable/Disable #3" storageaddress="0x7CB5B"/>
-		<table	name="DTC 00850 Enable/Disable #3" storageaddress="0x7CB5C"/>
+		<table	name="DTC 0101 Enable/Disable #3" storageaddress="0x7CB1D"/>
+		<table	name="DTC 0102 Enable/Disable #3" storageaddress="0x7CB1E"/>
+		<table	name="DTC 0103 Enable/Disable #3" storageaddress="0x7CB1F"/>
+		<table	name="DTC 0107 Enable/Disable #3" storageaddress="0x7CB20"/>
+		<table	name="DTC 0108 Enable/Disable #3" storageaddress="0x7CB21"/>
+		<table	name="DTC 0111 Enable/Disable #3" storageaddress="0x7CB22"/>
+		<table	name="DTC 0112 Enable/Disable #3" storageaddress="0x7CB23"/>
+		<table	name="DTC 0113 Enable/Disable #3" storageaddress="0x7CB24"/>
+		<table	name="DTC 0117 Enable/Disable #3" storageaddress="0x7CB25"/>
+		<table	name="DTC 0118 Enable/Disable #3" storageaddress="0x7CB26"/>
+		<table	name="DTC 0122 Enable/Disable #3" storageaddress="0x7CB27"/>
+		<table	name="DTC 0123 Enable/Disable #3" storageaddress="0x7CB28"/>
+		<table	name="DTC 0125 Enable/Disable #3" storageaddress="0x7CB29"/>
+		<table	name="DTC 0126 Enable/Disable #3" storageaddress="0x7CB2A"/>
+		<table	name="DTC 0130 Enable/Disable #3" storageaddress="0x7CB2B"/>
+		<table	name="DTC 0131 Enable/Disable #3" storageaddress="0x7CB2C"/>
+		<table	name="DTC 0132 Enable/Disable #3" storageaddress="0x7CB2D"/>
+		<table	name="DTC 0133 Enable/Disable #3" storageaddress="0x7CB2E"/>
+		<table	name="DTC 0138 Enable/Disable #3" storageaddress="0x7CB2F"/>
+		<table	name="DTC 0139 Enable/Disable #3" storageaddress="0x7CB30"/>
+		<table	name="DTC 0171 Enable/Disable #3" storageaddress="0x7CB31"/>
+		<table	name="DTC 0172 Enable/Disable #3" storageaddress="0x7CB32"/>
+		<table	name="DTC 0222 Enable/Disable #3" storageaddress="0x7CB33"/>
+		<table	name="DTC 0223 Enable/Disable #3" storageaddress="0x7CB34"/>
+		<table	name="DTC 0327 Enable/Disable #3" storageaddress="0x7CB35"/>
+		<table	name="DTC 0328 Enable/Disable #3" storageaddress="0x7CB36"/>
+		<table	name="DTC 0335 Enable/Disable #3" storageaddress="0x7CB37"/>
+		<table	name="DTC 0336 Enable/Disable #3" storageaddress="0x7CB38"/>
+		<table	name="DTC 0351 Enable/Disable #3" storageaddress="0x7CB39"/>
+		<table	name="DTC 0352 Enable/Disable #3" storageaddress="0x7CB3A"/>
+		<table	name="DTC 0353 Enable/Disable #3" storageaddress="0x7CB3B"/>
+		<table	name="DTC 0354 Enable/Disable #3" storageaddress="0x7CB3C"/>
+		<table	name="DTC 0410 Enable/Disable #3" storageaddress="0x7CB3D"/>
+		<table	name="DTC 0420 Enable/Disable #3" storageaddress="0x7CB3E"/>
+		<table	name="DTC 0441 Enable/Disable #3" storageaddress="0x7CB3F"/>
+		<table	name="DTC 0442 Enable/Disable #3" storageaddress="0x7CB40"/>
+		<table	name="DTC 0443 Enable/Disable #3" storageaddress="0x7CB41"/>
+		<table	name="DTC 0444 Enable/Disable #3" storageaddress="0x7CB42"/>
+		<table	name="DTC 0445 Enable/Disable #3" storageaddress="0x7CB43"/>
+		<table	name="DTC 0446 Enable/Disable #3" storageaddress="0x7CB44"/>
+		<table	name="DTC 0455 Enable/Disable #3" storageaddress="0x7CB45"/>
+		<table	name="DTC 0456 Enable/Disable #3" storageaddress="0x7CB46"/>
+		<table	name="DTC 0461 Enable/Disable #3" storageaddress="0x7CB47"/>
+		<table	name="DTC 0462 Enable/Disable #3" storageaddress="0x7CB48"/>
+		<table	name="DTC 0463 Enable/Disable #3" storageaddress="0x7CB49"/>
+		<table	name="DTC 0480 Enable/Disable #3" storageaddress="0x7CB4A"/>
+		<table	name="DTC 0481 Enable/Disable #3" storageaddress="0x7CB4B"/>
+		<table	name="DTC 0500 Enable/Disable #3" storageaddress="0x7CB4C"/>
+		<table	name="DTC 0505 Enable/Disable #3" storageaddress="0x7CB4D"/>
+		<table	name="DTC 0506 Enable/Disable #3" storageaddress="0x7CB4E"/>
+		<table	name="DTC 0507 Enable/Disable #3" storageaddress="0x7CB4F"/>
+		<table	name="DTC 0562 Enable/Disable #3" storageaddress="0x7CB50"/>
+		<table	name="DTC 0564 Enable/Disable #3" storageaddress="0x7CB51"/>
+		<table	name="DTC 0571 Enable/Disable #3" storageaddress="0x7CB52"/>
+		<table	name="DTC 0601 Enable/Disable #3" storageaddress="0x7CB53"/>
+		<table	name="DTC 0602 Enable/Disable #3" storageaddress="0x7CB54"/>
+		<table	name="DTC 0604 Enable/Disable #3" storageaddress="0x7CB55"/>
+		<table	name="DTC 0610 Enable/Disable #3" storageaddress="0x7CB56"/>
+		<table	name="DTC 0638 Enable/Disable #3" storageaddress="0x7CB57"/>
+		<table	name="DTC 0661 Enable/Disable #3" storageaddress="0x7CB58"/>
+		<table	name="DTC 0662 Enable/Disable #3" storageaddress="0x7CB59"/>
+		<table	name="DTC 0703 Enable/Disable #3" storageaddress="0x7CB5A"/>
+		<table	name="DTC 0704 Enable/Disable #3" storageaddress="0x7CB5B"/>
+		<table	name="DTC 0850 Enable/Disable #3" storageaddress="0x7CB5C"/>
 		<table	name="DTC 1260 Enable/Disable #3" storageaddress="0x7CB5D"/>
 		<table	name="DTC 1686 Enable/Disable #3" storageaddress="0x7CB5E"/>
 		<table	name="DTC 1687 Enable/Disable #3" storageaddress="0x7CB5F"/>
@@ -28047,10 +28047,10 @@
             <internalidstring>N3N5EB</internalidstring>
             <make>Mazda</make>
             <model>RX8</model>
-            <submodel></submodel>
-            <market></market>
-            <year></year>
-            <transmission></transmission>
+            <submodel>6 Port</submodel>
+            <market>JDM</market>
+            <year>2006</year>
+            <transmission>AT</transmission>
         </romid>
 		<table name="Immobilizer Disable - Without RKE Installed" storageaddress="0x371d8">
 			<state name="on" data="00 09 00 09 00 09 B3 D5 00 09 00 09 00 09 00 09 00 09 00 09 00 09 00
