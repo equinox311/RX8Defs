@@ -1011,7 +1011,7 @@
         <table name="Ignition Trailing - Idle Error Timing Correction - Unknown Bool True" category="Ignition Trailing" type="2D" storagetype="uint8" endian="big" sizey="9">
             <scaling expression="(x * 0.25 ) + -32" to_byte="(x - -32.0) / 0.25" format="0.00" />
             <table name="Idle Speed Error" type="Y Axis" storagetype="float" endian="big" expression="x" to_byte="x">
-				<scaliung units="RPM"/>
+				<scaling units="RPM"/>
 			</table>
         </table>
         <table name="Table 2D - 110 " category="Unknown 2D" type="2D" storagetype="uint8" endian="big" sizey="22">
