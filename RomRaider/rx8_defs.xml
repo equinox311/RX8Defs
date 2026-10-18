@@ -31,11 +31,22 @@
 								   0B 00 09 D1 2B 60 10 20 08 8F 06 00 09 D2 29 E5 01 42 0B 64 D0 A0 01
 								   2D 00 2D E0 E3 03 62 D0 62 2C 32 33 8F 0D 00 09 E1 01" />
 		 </table>
-		 <table type="Switch" name="Immobilizer Disable - With RKE Installed" category="Immobilizer" sizey="2" beforeram="true">
+		<table type="Switch" name="Immobilizer Disable - With RKE Installed" category="Immobilizer" sizey="2" beforeram="true">
 		   <description>When enabled, this bypasses the immobilizer, WARNING: Only use one Immobilizer Switch!!</description>
 		   <state name="on"  data="33 30" />
 		   <state name="off" data="33 20" />
 		 </table>
+		<table type="Switch" name="Launch Control - Enable" category="Launch Control" sizey="2" beforeram="true">
+		   <description>When enabled, launch control will be active</description>
+		   <state name="on"  data="01" />
+		   <state name="off" data="00" />
+		 </table>
+		<table name="Launch Control - Engine Speed Setpoint" units="RPM" category="Launch Control" type="1D" storagetype="float" endian="big" expression="x" to_byte="x" size="1">
+			<scaling units="RPM"/>
+		</table>
+		<table name="Launch Control - Engine Speed Setpoint Hysteresis" units="RPM" category="Launch Control" type="1D" storagetype="float" endian="big" expression="x" to_byte="x" size="1">
+			<scaling units="RPM"/>
+		</table>
 		<table name="Table 3D - UNKNOWN_687b0" category="Unknown 3D" type="3D" storagetype="uint16" endian="big" expression="x" to_byte="x" sizex="26" sizey="19">
             <scaling expression="(x * 0.0030517578) + 0" to_byte="(x - 0.0) / 0.0030517578" format="0.00" />
             <table name="Value" type="X Axis" storagetype="float" endian="big">
@@ -280,6 +291,7 @@
         <table name="Barometric Pressure Sensor Max Voltage" category="Sensors" type="1D" storagetype="float" endian="big" expression="x" to_byte="x" size="2" />
         <table name="Barometric Pressure Sensor Slope" category="Sensors" type="1D" storagetype="float" endian="big" expression="x" to_byte="x" size="1" />
         <table name="Barometric Pressure Sensor Offset" category="Sensors" type="1D" storagetype="float" endian="big" expression="x" to_byte="x" size="1" />
+		<table name="Knock Based Oil Injection Decay Rate" category="Oil Metering" type="1D" storagetype="float" endian="big" expression="x" to_byte="x" size="1" />		
 		<table name="Cold Enrichment - Coolant Temperature Threshold" category="Fuel Injection" type="1D" storagetype="float" endian="big" expression="x" to_byte="x" size="1">
 			<scaling format="0.000"/>
 		</table>
@@ -2103,9 +2115,11 @@
             <scaling expression="(x/8)+.5" to_byte="(x-.5)*8" format="0.00" />
             <table name="Unknown" type="Y Axis" storagetype="float" formate="0" endian="big" expression="x" to_byte="x" />
         </table>
-        <table name="Table 2D - 358 Check DataType" category="Oil Metering" type="2D" storagetype="float" endian="big" sizey="6">
-            <scaling expression="(x * 1 ) + 0" to_byte="(x - 0) / 1" format="0.00" />
-            <table name="Unknown" type="Y Axis" storagetype="float" endian="big" expression="x" to_byte="x" />
+        <table name="Knock Based Oil Injection" category="Oil Metering" type="2D" storagetype="float" endian="big" sizey="6">
+            <scaling units="Oil Injection Amount" expression="(x * 1 ) + 0" to_byte="(x - 0) / 1" format="0.00" />
+            <table name="Knock Voltage Over Threshold" type="Y Axis" storagetype="float" endian="big" expression="x" to_byte="x">
+				<scaling units="counts"/>
+			</table>
         </table>
         <table name="Table 2D - 359 Check DataType" category="Oil Metering" type="2D" storagetype="float" endian="big" sizey="3">
             <scaling expression="(x * 0.000015686273 ) + 0" to_byte="(x - 0) / 0.000015686273" format="0.00000" />
@@ -5041,7 +5055,7 @@
         <table name="Table 2D - 357 Check DataType" storageaddress="0x078FD4">
             <table type="Y Axis" storageaddress="0x078FBC" />
         </table>
-        <table name="Table 2D - 358 Check DataType" storageaddress="0x079004">
+        <table name="Knock Based Oil Injection" storageaddress="0x079004">
             <table type="Y Axis" storageaddress="0x078FEC" />
         </table>
         <table name="Table 2D - 359 Check DataType" storageaddress="0x079028">
@@ -6978,9 +6992,10 @@
         <table name="Table 2D - 357 Check DataType" storageaddress="0x077CE0">
             <table type="Y Axis" storageaddress="0x077CC8" />
         </table>
-        <table name="Table 2D - 358 Check DataType" storageaddress="0x077D10">
+        <table name="Knock Based Oil Injection" storageaddress="0x077D10">
             <table type="Y Axis" storageaddress="0x077CF8" />
         </table>
+		<table name="Knock Based Oil Injection Decay Rate" storageaddress="0x77ba8" />
         <table name="Table 2D - 359 Check DataType" storageaddress="0x077D34">
             <table type="Y Axis" storageaddress="0x077D28" />
         </table>
@@ -7941,6 +7956,9 @@
 		<table name="Immobilizer Disable - Without RKE Installed" storageaddress="0x35230"/>
 		<table name="Immobilizer Disable - With RKE Installed" storageaddress="0x3567C"/>
 		<table name="Barometric Pressure Sensor Max ADC Count" storageaddress="0x06D46C" />
+		<table name="Launch Control - Enable" storageaddress="0x6ca34"/>
+		<table name="Launch Control - Engine Speed Setpoint" storageaddress="0x6ca38"/>
+		<table name="Launch Control - Engine Speed Setpoint Hysteresis" storageaddress="0x6ca3c"/>
 		<table name="Fuel Air Ratio" storageaddress="0x77150"/>
         <table name="Barometric Pressure Sensor Min ADC Count" storageaddress="0x06D46E" />
         <table name="Barometric Pressure Sensor Min Voltage" storageaddress="0x0796FC" />
@@ -8936,7 +8954,7 @@
         <table name="Table 2D - 357 Check DataType" storageaddress="0x077CE0">
             <table type="Y Axis" storageaddress="0x077CC8" />
         </table>
-        <table name="Table 2D - 358 Check DataType" storageaddress="0x077D10">
+        <table name="Knock Based Oil Injection" storageaddress="0x077D10">
             <table type="Y Axis" storageaddress="0x077CF8" />
         </table>
         <table name="Table 2D - 359 Check DataType" storageaddress="0x077D34">
@@ -12792,7 +12810,7 @@
         <table name="Table 2D - 357 Check DataType" storageaddress="0x078FD4">
             <table type="Y Axis" storageaddress="0x078FBC" />
         </table>
-        <table name="Table 2D - 358 Check DataType" storageaddress="0x079004">
+        <table name="Knock Based Oil Injection" storageaddress="0x079004">
             <table type="Y Axis" storageaddress="0x078FEC" />
         </table>
         <table name="Table 2D - 359 Check DataType" storageaddress="0x079028">
@@ -14774,7 +14792,7 @@
         <table name="Table 2D - 357 Check DataType" storageaddress="0x0778FC">
             <table type="Y Axis" storageaddress="0x0778E4" />
         </table>
-        <table name="Table 2D - 358 Check DataType" storageaddress="0x07792C">
+        <table name="Knock Based Oil Injection" storageaddress="0x07792C">
             <table type="Y Axis" storageaddress="0x077914" />
         </table>
         <table name="Table 2D - 359 Check DataType" storageaddress="0x077950">
@@ -16534,7 +16552,7 @@
         <table name="Table 2D - 347 Check DataType" storageaddress="0x078148">
             <table type="Y Axis" storageaddress="0x078124" />
         </table>
-        <table name="Table 2D - 358 Check DataType" storageaddress="0x07A43F">
+        <table name="Knock Based Oil Injection" storageaddress="0x07A43F">
             <table type="Y Axis" storageaddress="0x07A436" />
         </table>
         <table name="Ignition Timing Threshold B - Knock Retard Reset Off" storageaddress="0x07A1FC">
@@ -18211,7 +18229,7 @@
         <table name="Table 2D - 357 Check DataType" storageaddress="0x077CE0">
             <table type="Y Axis" storageaddress="0x077CC8" />
         </table>
-        <table name="Table 2D - 358 Check DataType" storageaddress="0x077D10">
+        <table name="Knock Based Oil Injection" storageaddress="0x077D10">
             <table type="Y Axis" storageaddress="0x077CF8" />
         </table>
         <table name="Table 2D - 359 Check DataType" storageaddress="0x077D34">
@@ -19977,7 +19995,7 @@
         <table name="Table 2D - 357 Check DataType" storageaddress="0x077CE0">
             <table type="Y Axis" storageaddress="0x077CC8" />
         </table>
-        <table name="Table 2D - 358 Check DataType" storageaddress="0x077D10">
+        <table name="Knock Based Oil Injection" storageaddress="0x077D10">
             <table type="Y Axis" storageaddress="0x077CF8" />
         </table>
         <table name="Table 2D - 359 Check DataType" storageaddress="0x077D34">
@@ -21753,7 +21771,7 @@
         <table name="Table 2D - 357 Check DataType" storageaddress="0x00078318">
             <table type="Y Axis" storageaddress="0x00078300" />
         </table>
-        <table name="Table 2D - 358 Check DataType" storageaddress="0x00078348">
+        <table name="Knock Based Oil Injection" storageaddress="0x00078348">
             <table type="Y Axis" storageaddress="0x00078330" />
         </table>
         <table name="Table 2D - 359 Check DataType" storageaddress="0x0007836C">
@@ -23608,7 +23626,7 @@
         <table name="Table 2D - 357 Check DataType" storageaddress="0x0778FC">
             <table type="Y Axis" storageaddress="0x0778E4" />
         </table>
-        <table name="Table 2D - 358 Check DataType" storageaddress="0x07792C">
+        <table name="Knock Based Oil Injection" storageaddress="0x07792C">
             <table type="Y Axis" storageaddress="0x077914" />
         </table>
         <table name="Table 2D - 359 Check DataType" storageaddress="0x077950">
@@ -25462,7 +25480,7 @@
         <table name="Table 2D - 357 Check DataType" storageaddress="0x0778FC">
             <table type="Y Axis" storageaddress="0x0778E4" />
         </table>
-        <table name="Table 2D - 358 Check DataType" storageaddress="0x07792C">
+        <table name="Knock Based Oil Injection" storageaddress="0x07792C">
             <table type="Y Axis" storageaddress="0x077914" />
         </table>
         <table name="Table 2D - 359 Check DataType" storageaddress="0x077950">
@@ -29420,7 +29438,7 @@
         <table name="Table 2D - 357 Check DataType" storageaddress="0x0778FC">
             <table type="Y Axis" storageaddress="0x0778E4" />
         </table>
-        <table name="Table 2D - 358 Check DataType" storageaddress="0x07792C">
+        <table name="Knock Based Oil Injection" storageaddress="0x07792C">
             <table type="Y Axis" storageaddress="0x077914" />
         </table>
         <table name="Table 2D - 359 Check DataType" storageaddress="0x077950">
