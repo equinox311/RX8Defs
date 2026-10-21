@@ -1,0 +1,1131 @@
+                - RomRaider 1.0.0 DEC01 2023 -
+      Open-Source ECU Tuning and Logging -- www.romraider.com
+
+
+PLEASE MAKE SURE TO READ RELEASE _NOTES.TXT_ EACH TIME YOU DOWNLOAD
+A NEW VERSION OF ROMRAIDER. IMPORTANT NOTICES, KNOWN ISSUES AND
+NEW FEATURES WILL BE DISCUSSED.
+
+RomRaider is a full featured Engine Control Unit editing application
+for tuning virtually any manufacturer, meant to be used in conjunction
+with ECU flash and dump utilities. RomRaider will give you full
+control over timing, fuel, boost and many other parameters in your
+ECU, competing with very expensive and proprietary software. RomRaider
+will remove your need for piggyback systems designed to control these
+functions, and, in most cases, work as well as or better than any
+stand alone engine management. Reflashing your stock ECU also has the
+added benefit of a manufacturer tested base map, giving you top notch
+performance and saving time tuning idle and low throttle applications
+while retaining all of the benefit of the research and development
+manufacturer's spend millions of dollars on.
+
+RomRaider is currently in BETA TEST status, meaning it is not
+thoroughly tested and not intended for use by inexperienced users. In
+addition to being incomplete and untested, only experienced tuners
+with the required tools (ie, wideband oxygen sensor) should modify an
+ECU image. As with any engine management, changes could result in
+severe engine damage. Use at your own risk.
+
+Documentation is available at http://wiki.romraider.com and the
+official RomRaider FAQ can be found at
+http://www.romraider.com/about444.html. Please be aware that as
+RomRaider is still in beta status and changing frequently,
+documentation may be incomplete or out of date.
+
+--------------------------------------------
+- 1.0.0 DEC01 2023 Notes (12/01/2023) -
+--------------------------------------------
+This is the latest release of RomRaider from the GitHub repo:
+https://github.com/RomRaider/RomRaider
+
+--------------------------------------
+- 1.0.0 DEC01 2023 Known Issues -
+--------------------------------------
+- Logger
+  - Gauge min/max/step limits incomplete in logger.xml
+  - ECU connections under Linux are flaky (start the logger after
+      you've started the engine)
+  - Update latency via injector tab broken for some models (eg. 2007 2.5i)
+  - Switching between SSM, OBD, DS2 and NCS protocol mode may not update the
+    parameter list completely.  A Logger restart will update the list correctly.
+Status of these items and more can be viewed at:
+    https://github.com/RomRaider/RomRaider/issues?labels=bug&state=open
+
+--------------
+- Change Log -
+--------------
+
+1.0.0 DEC01 2023 Notes (12/01/2023)
+----------------------------------
+
+- Editor
+  - Updates parent table when scale is changed in 1D tables
+  - Fix table sizing bug and add xdfconstant support
+  - Fix table opening bug, Fix Table1D axis label bug; Fix double loaded documents; Improve XDF support
+  - Add JDF/VDF conversion layer
+  - Add shortcut for raw scale, Add number of checksums in status bar
+  - Add DTCs
+  - Fix VDF scaling name error; Fix save definition bug
+  - Add alpha version of dataflow simulation
+  - Improve rendering performance; Dataflow bugfixes
+  
+- Logger
+  - Fix issue #217, serial RTS for Openport 1.x cables
+
+
+0.9.4 MAY23 2022 Notes (05/23/2022)
+----------------------------------
+
+- Editor
+  - Fix issue #192, table display with modified axis length
+
+
+0.9.3 MAY20 2022 Notes (05/20/2022)
+----------------------------------
+
+- Editor
+  - Add ROM tree sorting option
+  - Fix GUI refresh on User level change
+  - Screen Editor definition files
+  - Display User level warning for Switch tables
+
+
+0.9.2 MAY07 2022 Notes (05/07/2022)
+----------------------------------
+
+Prepare to support Java 6 thru 11
+Remove unneeded libraries
+Prepare for limited 64bit Java support
+
+- Editor
+  - More performance improvements
+  - XDF definition support
+  - Improve Bitwise Switch map support
+  - Fix compare images
+  - Fix Nissan checksum issue #184
+
+- Logger
+  - J2534 library cleanup, better support for Linux J2534
+  - Replace RXTXcomm with JSerialComm
+
+
+0.9.1 APR26 2022 Notes (04/26/2022)
+----------------------------------
+
+Prepare to support Java 6 thru 11
+Remove unneeded libraries
+Prepare for limited 64bit Java support
+
+- Editor
+  - More performance improvements
+  - XDF definition support
+  - Improve Bitwise Switch map support
+  - Fix compare images
+
+- Logger
+  - J2534 library cleanup, better support for Linux J2534
+  - Replace RXTXcomm with JSerialComm
+
+
+0.9.0 APR18 2022 Notes (04/18/2022)
+----------------------------------
+
+Prepare to support Java 6 thru 11
+Remove unneeded libraries
+Prepare for limited 64bit Java support
+
+- Editor
+  - More performance improvements
+  - XDF definition support
+  - Improve Bitwise Switch map support
+
+- Logger
+  - J2534 library cleanup, better support for Linux J2534
+  - Replace RXTXcomm with JSerialComm
+
+
+0.8.2 DEC04 2021 (12/04/2020)
+----------------------------------
+
+- Editor
+  - Restored Definition Manager directory filter
+
+
+0.8.1 NOV27 2021 (11/27/2020)
+----------------------------------
+
+- Logger
+  - Logger fails to connect when the computer has no COM ports defined
+
+- Editor
+  - Restored Logger launch menu item
+
+
+0.8.0 NOV14 2021 (11/14/2020)
+----------------------------------
+
+- Logger
+  - Nissan CAN Logger implementation
+  - Fixed dyno locale problem
+  - Fixed timestamps, dyno def warning, NaN loading, null pointer exceptions
+  - Refined NCS protocol processing in prep for NCS CAN logging, NCS ECU ID is now 6-bytes
+
+- Editor
+  - Fixed copy paste issue and reversed copying
+  - Performance improvement
+  - Changed Bosch axis layout to dataLayout='bosch_subtract'
+  - Implemented subcategories with //
+  - Editor redesign
+  - Added Bosch axis layout
+  - Enabled xml parser to use xinclude
+  - Corrections to ALT2 16-bit checksum after code tests
+  - Expand NCS ECU ID to 6 bytes
+  - Adjust RomServer socket number, fix for issue #88
+
+
+0.7.2 NOV11 2020 (11/11/2020)
+----------------------------------
+
+- Logger
+  - Fix reversed colours in LTV
+
+
+0.7.1 AUG16 2020 (08/06/2020)
+----------------------------------
+
+- Logger
+  - Added missing locale translation entries
+  - Fix ECU/TCU relabelling of ECU ID in Logger GUI
+
+
+0.7.0 MAY28 2020 (05/28/2020)
+----------------------------------
+
+- Logger
+  - (GTO2013) Refine support for ELM327 based cables
+  - DS2 protocol now supports "Telegram", logging arbitrary addresses,
+    requires a new logger definition v352 or later to take advantage of this mode
+
+
+0.6.1 APR25 2020 (04/25/2020)
+----------------------------------
+
+- Editor
+  - Fix TableBitwiseSwitch not populating, issue #100
+
+- Logger
+  - (GTO2013) Add initial support for ELM327 based cables for CAN bus, PR #99
+
+
+0.6.0 APR6 2020 (04/06/2020)
+----------------------------------
+
+RomRaider GUI is now ready for translation.
+Visit https://github.com/RomRaider/RomRaider/wiki/GUI-Translation to see the
+guide.
+  - All GUI text moved to resource bundle property files under i18n
+
+- Editor
+  - Change RomServer TCP port, issue #88
+  - (GTO2013) Save Fine Course Values when Switching Tables, issue #61
+  - (GTO2013) Implemented Maskable and Switchable 2D Tables
+  - (stirkac) Added bitwise map editing
+  - Expand MS42 address range, fix for issue RomRaider#90
+  - Implement overlay enhancement to highlight current cell, issue #71
+  - Added support for values encoded in SH-2A MOVI20 instruction
+
+- Logger
+  - Added Nissan logging support via J2534 cable using K-line
+  - Update Dyno tab to support different Throttle parameters
+  - Create SSM Learning table properties file
+  - Add the ability to read table names from properties file
+  - Enable a warning panel when a 64-bit JRE is detected
+  - Split SSM LTV queries into two sets to fix issue #72
+  - Change LM2 MTS plugin to poll mode by default
+  - Fix Learning Tables View showing incorrect table axis values: issue#67
+
+
+0.5.9 RC3 (09/28/2016)
+----------------------------------
+
+- Editor
+  - Corrected a number of minor bugs with table copy/paste and overlay logging
+  - Enhanced table copy for non-contiguous cells and copy of overlay values if active
+  - Other optimizations to reduce ROM load time
+
+
+0.5.9 RC2 (04/29/2015)
+----------------------------------
+
+- Logger
+  - Changed the way the Logger definition update or protocol change is handled
+
+
+0.5.9 RC1 (04/21/2015)
+----------------------------------
+
+- Editor
+  - Implement a global endian attribute in ECU definitions <memmodel endian=xxx>
+    overriding table specific endian settings
+  - Rename SSM menu item as the Test App is no longer SSM specific
+  - Allow user to specific read block size in Editor Test App
+  - Fix for RomTree expand/collapse issue
+  - Fix for reversed min/max table colours
+  - Fix for table 3D view min/max ranges
+  - Changed Settings file search order for better portability, starting directory
+    is searched before user's home
+  - Added a missing ECU definition file Dialog to warn user to correct
+  - Added a catch-all exception notification branch
+  - Fix for category node open issue, Double click on node causes the node to
+    open and then close
+  - Changed code to use true Linear Interpolation rather than even cell distance
+    distribution
+  - Added warning log when a static table contains a storageType != 0
+  - Added ability to parse and save the static table data if the storageType != 0
+
+- Logger
+  - Add -logger.touch to make the Logger UI more 'touch' friendly
+  - BMW DS2 protocol implementation for MS41, MS42 and MS43 DME
+  - Implement DS2 Learning (Adaptation) Table Values read functionality
+  - Added DS2 adaptation reset tool
+  - Group individual DS2 ECU queries into a single memory read start address
+    and length query
+  - Add APSX D1|D2 Wideband O2 Externals Plugin
+  - Added support for the ECOTRONS ALM wideband O2 controller
+  - Allow setting event mode or polled mode in the lm2_mts.plugin Properties file
+  - Implement endian processing in the data converter defined in logger definition
+  - Update Logger definition DTD for new elements of DS2 protocol
+  - Added new protocol selection menu populated with all the protocols defined
+    in the Logger definition file
+  - Add protocol to query status message display
+  - Add support to use Linux Openport 2.0 library if available
+  - Add serial data bit and parity configuration setting items
+  - Added a new BitWise Logger converter to process bits in query results, see
+    Java source file for usage details com/romraider/util/BitWise.java
+
+
+0.5.8 RC1 (05/31/2014)
+----------------------------------
+
+- Editor
+  - Improved ROM image compare functions
+  - Memory utilization improvements
+  - Updates to Save As Repository option
+  - New Settings to customize table open/close and focus
+  - New Settings to customize where tables open on the screen
+  - New Settings for data cell select and highlight colours
+  - Map colourization is no longer automatic when a cell is changed. Use the
+    new button to re-colour the table after changes are made
+  - Cell Tool-Tip displays real value of cell data
+  - Fixed adding/removing associations
+  - Added ability to Ctrl+Alt+Click(Drag) to un-select cells
+  - Support added for multiple table scaling units.  With a compatible ECU
+    definition a user can select axis and/or data unit scaling such as imperial
+    or metric, etc. A sample ECU def can be found here:
+    https://raw.githubusercontent.com/scotthew/SubaruDefs/MultipleScales/RomRaider/ecu/standard/ecu_defs.xml
+  - Added a Raw Scaling definition so users can select it and see the table in
+    its natural units as stored in the ROM image
+  - Table Property updated to list all available scalings for the table as well
+    as the Logger parameter ID used for the Logger overlay function
+  - Removed JFontChooser library
+  - Added ability to convert ROM image from 160kB to 192kB
+  - Added ability to convert ROM image from 192kB to 160kB
+  - Added Table axis and data cell interpolation feature
+  - Added support for additional Checksum validation/corrections found in BRZ ROMs
+  - Removed BareBonesBrowser library, now uses existing class
+  - Updated Java 3D libraries to version 1.5.2
+
+- Logger
+  - Fixed Learning Table Values international character support
+  - Added support for PLX SM-AFR Gen 3
+  - Removed reference to minimum Logger definition XML file version
+  - Add OBD mode 1 Logging support for CAN ECUs using J2534
+  - Add protocol attribute to user Logging Profiles to indicate OBD and SSM profiles
+
+
+0.5.7 RC2 (08/28/2013)
+----------------------------------
+
+- Logger
+  - Fixed Learning Table Values reading ECU def problem for 6-cyl cars.
+
+
+0.5.7 RC1 (08/05/2013)
+----------------------------------
+
+[1] New Logger features require added parameters in the logger definition file.
+Therefore the minimum version of logger.xml is 155.  A warning will be displayed
+if the version is below this prompting the user to update.
+
+[2] The settings XML file can be stored in the RomRaider directory as an alternate
+location.  This allows multiple customized installations to exist each with their
+own settings.
+
+- Logger
+  - Added feature to read DTC via SSM connection [*1]
+  - Added feature to adjust the global timing and AC on/off idle RPM values [*1]
+  - Added feature to read ECU specific Learning Table Values [*1]
+  - Added feature to allow user to define conversion formulas for Phidget sensors
+  - TXS plugin update: by nitros
+  - changed QueryManager to break TCU queries up as TCU doesn't support long CAN queries
+  - support for signed integer values added [*1]
+  - support for non-contiguous multi-byte parameters added [*1]
+  - corrections to ISO15765 support, fixed debug messages and array index problem.
+  - changed SSM test application to write bytes rather than blocks
+  - changed SSM test application to allow selection of byte or block reads
+  - update PLX sensor types to drop data for unknown sensor address 4032
+  - force some font styles to plain as Linux seems to use bold as default
+
+Operational Notes
+    - Since RomRaider relies on various externally provided classes and vendor
+      libraries, the 64bit Java VM is not supported.  The RomRaider installer and
+      Editor will issue warnings if a 64bit Java VM is detected and advise the
+      user to uninstall it and install the 32bit Java VM.  It is unlikely that
+      64bit Java VM will even be supported as all external classes and vendor
+      libraries must be compiled for native 64bit operation. See note 3 for an
+      example.
+    - To log External sensors only, un-select both the ECU and TCU checkbox on
+      the Logger menu bar.  Then switch to the Externals tab and check the items
+      to be logged.  The log Externals only setting is not retained between
+      logging sessions.
+    - The use of ISO15765 requires a J2534 compliant cable.  Since the J2534
+      specification only defines Windows 32bit systems as a valid platform,
+      Linux systems are not officially supported.  When/if a Linux J2534 driver
+      becomes available then support can be enabled for non-Windows platforms.
+
+
+0.5.6 RC6 (03/24/2013)
+----------------------------------
+
+- Editor
+  - fix for various Table Compare operations: by scotthew
+  - added a Java 64bit VM check and warning: by lizzardo [*1]
+
+- Logger
+  - fix Logger Close while on any of the MAF, Injector or Dyno tabs: by lizzardo
+  - added a Java 64bit VM check and error then close: by lizzardo [*1]
+  - fix to allow logging of External sensors only (with no ECU connection) [*2]
+  - refactor to allow easier addition of other future Logging protocols
+  - added ISO15765 protocol support on Windows platform [*3]
+  - added a user Setting to Logger to force English US number format in log files
+  - fix for issue #4 (multiple Query Managers could be started)
+  - update 'Log to file' button to switch between 'Start/Stop' in the label
+  - add a rudimentary test app to read some OBD-II parameters [*4]
+  - reformat (shorten) display of Profile and log file names in Logger title bar
+
+- Application Installer
+  - added a Java 64bit VM check and warning during installation: by lizzardo [*1]
+
+Notes
+[1] - Since RomRaider relies on various externally provided classes and vendor
+      libraries, the 64bit Java VM is not supported.  The RomRaider installer and
+      Editor will issue warnings if a 64bit Java VM is detected and advise the
+      user to uninstall it and install the 32bit Java VM.  It is unlikely that
+      64bit Java VM will even be supported as all external classes and vendor
+      libraries must be compiled for native 64bit operation. See note 3 for an
+      example.
+[2] - To log External sensors only, un-select both the ECU and TCU checkbox on
+      the Logger menu bar.  Then switch to the Externals tab and check the items
+      to be logged.  The log Externals only setting is not retained between
+      logging sessions.
+[3] - The use of ISO15765 requires a J2534 compliant cable.  Since the J2534
+      specification only defines Windows 32bit systems as a valid platform,
+      Linux systems are not officially supported.  When/if a Linux J2534 driver
+      becomes available then support can be enabled for non-Windows platforms.
+[4] - This rudimentary test app ONLY works with J2534 compliant cables and ONLY
+      supports the ISO15765 protocol.  It can currently read out the vehicle
+      information and any active DTCs.  The app can only be started from a
+      command window in the RomRaider directory using the following syntax:
+      java -cp RomRaider.jar com.romraider.io.j2534.api.TestJ2534IsoTp [j2534dll]
+               where [j2534dll] is a valid J2534 DLL library name, default is
+               to use the Tactrix Openport 2.0 library
+
+
+0.5.6 RC5 (12/22/2012)
+----------------------------------
+
+- Editor
+  - partial fix for Table Compare to another map by scotthew
+
+- Logger
+  - fix to handle Registry FILE_NOT_FOUND error response for J2534 device lookup.
+
+
+0.5.6 RC4 (12/13/2012)
+----------------------------------
+
+Maintainability Updates
+  - remove unused imports
+  - enhanced web browser support
+  - use Font.{DIALOG,SANS_SERIF} for maintainability
+  - simplify static method call to Logger.Settings
+  - initialize caseID to avoid null being displayed in ROM tree title
+
+Application Installer
+  - changed Release Notes and License shortcut spec in Linux template to be an
+    Application to make them show in the RomRaider menu group
+  - changed Uninstaller commandline and Icon file name in shortcut spec in
+    Linux template
+
+
+0.5.6 RC3 (11/14/2012)
+----------------------------------
+
+- Editor
+  - fix for the overlay of logged data on tables by scotthew
+
+- Logger
+  - fixed Linux ZIP install run.sh script, it was failing due to file not found
+  - added missing Phidget & TXS UTEC plug-in files in the installer packages
+  - added detailed Debug list of all ROM ID details for all configured ECU def files
+  - fix for calculation of derived parameters when units of dependents
+    contain symbols
+  - changed some default unit abbreviations such as kph to km/h
+
+
+0.5.6 RC2 (10/20/2012)
+----------------------------------
+
+- Editor
+  - updates to fix a few bugs related to the ROM tree by scotthew
+  - updates to Copy & Paste tables by scotthew
+  - updates to fix ROM tree focus and reflect selected in menus and buttons
+    by scotthew
+
+
+0.5.6 RC1 (09/29/2012)
+----------------------------------
+
+- Logger
+  - TXS plugin refactored to include Tuner Pro by nitros@romraider.forum
+
+- Editor
+  - Table toolbar moved from table window and onto main window.  Toolbar can
+    now be moved.  Updates to multi-thread some major functions.  Try this,
+    open a rom, while that ROM is opening open another ROM and then launch
+    the Logger. And while all of this is going on resize the main editor
+    window.  It should all be smooth as silk. By scotthew@romraider.forum
+
+
+0.5.5 RC1 (07/29/2012)
+(Same as SNAPSHOT 86b338)
+----------------------------------
+
+--- Logger ---
+- Minimum Java version 1.6 (x86) required
+- Changed LM-2 MTS plugin from event based data reads to fixed interval data
+  reads
+- TXS plugin refactored to include Tuner Pro by nitros@romraider.forum
+- Added AEM X-Wifi Controller external plugin
+- Added Phidgets InterfaceKit external plugin
+- J2534 API updated to remove dependency on J/Invoke
+- J2534 API refactored to use JNA 3.4.0
+- Removed OpenPort 2.0 specific package (op20) as it is now supported in
+  the J2534 API
+- J2534 API supports searching all available devices and if none found will
+  default to serial. J2534 settings are stored and loaded through the
+  settings file
+- Including com4j-x86.dll to ensure it is present in the install directory
+  to avoid write permission issues on Win7
+- Created a new J2534DllLocator class based on JNA and removed third-party
+  registry Jar
+- Added extra LOGGER.debug statements to assist with troubleshooting
+- Corrected serial connection close() call in all serial plug-ins as
+  exceptions were being thrown
+- Changed QueryManager logic to try and deal with duplicate log entries
+  caused by high speed logging, it may still need some work
+- Added Logger definition version to Help->About menu
+- Updated Dyno control panel to look for cars_def.xml & .dtd in three
+  possible locations:
+    1 - the directory where the logger.xml file lives (preferred location)
+    2 - the directory where the user stores their logging profiles
+    3 - the RomRaider installation directory
+- Fixed up the Parameter List Show/Hide state when opening the Logger
+  such that the list on each tab is set the same as the last selected
+  tab's state
+
+--- Editor ---
+- Fixed Test App's ability to walk through addresses and cross the
+  0xf7fff 0xf8000 boundary correctly
+- scotthew@romraider.forum Added the ability to compare all tables in two
+  ROM images
+  Usage:
+    - Open one or more ROM images (The same image can be compared to itself.
+        Will not do much but show "Images are equal.")
+    - Select Edit->Compare Images...
+    - Select the two images to compare and click the compare button
+    - Results are displayed in the results pane
+- scotthew@romraider.forum Added ability to save as repository.  This
+   basically dumps the tables into a file structure represented by the
+   categories and saves the tables as a text file.  Use this for tracking
+   changes made to ROMs using a revision control system.
+- scotthew@romraider.forum Added ability to change the clipboard format.
+  Options are Default, Airboy's, and Custom. Custom formats are specified
+  in the settings.xml file
+
+
+0.5.4b RC1 (10/28/2011)
+-----------------------
+
+--- Logger ---
+- TXS Tuner Wideband plugin added courtesy of, nitros
+- Added support for ECU/TCU Switch filtering
+- Added (msec) designation to logged CSV column heading
+- Added support for sorting the Selected? & Description parameter list entries
+- Added support for convertors on External data items (F/C, lambda/AFR, etc.)
+- Added instance 0 of all defined PLX Sensors according to their documentation
+- Added support for additional Innovate MTS LM-2 sensors.  Sensors are now
+  loaded dynamically when the Logger starts.  Sensor units are set via LogWorks.
+  Wideband errors are reported as the negative value of the error number.  For
+  example, if an LC-1 is in need of calibration -3 will be reported to the Logger.
+  See MTSSensorInputFunction.java for more state values.
+- Updated library COM4J to version: com4j-20110322. This affects Innovate MTS
+  and Tactrix Openport 2.0 support.
+- Added a button to Un-select ALL selected parameters on all tabs.  Selections
+  can be restored by reloading the current profile or loading a different profile.
+- Moved the Fast Poll checkbox to a selection item in the Settings menu (selected
+  by default).  The polling state is reported in the queries/sec status display.
+- Added a Debugging Level selection option to the Help menu.  The setting is saved
+  and restored between sessions.  INFO should be the normal state to keep the
+  rr_system.log file in-check.
+- Moved the COM port Auto Refresh checkbox to the Settings menu.
+- Added a Logger startup Progress Bar as loading plugins sometimes takes time.
+- Added colour to "Log to File" button. Red when recording and green when not.
+  * Button colours may not appear correctly as this is platform dependent. Colours
+    may show as a border rather than a fill.
+  Also changed the colours used for the connection state:
+    * Red Square = recording to file (used to be green)
+    * Green = connected and ready to record (used to blue)
+    * Blue  = connection to ECU in progress (used to be red)
+    * Red with X = disconnected (used to be red)
+- Added colour to "Un-select ALL" button.  Yellow so it stands out.
+  * Button colours may not appear correctly as this is platform dependent. Colour
+    may show as a border rather than a fill.
+- Moved settings.xml & profile_backup.xml to the /.RomRaider/ directory under the
+  users home directory.
+- Added support to reset the TCU.  The reset target is selected via the action bar
+  Checkbox items ECU or TCU just like logging.
+--- Editor ---
+- Set JInternalFrame.isPalette in TableFarme.java so table titles are visible on
+  Mac OS.
+- Added a Checksum recalculation option when saving ROM images that have a bad Checksum
+  (re: Diesel ROMs seem to have an invalid fifth Checksum)
+
+
+0.5.3b RC10 (09/12/2011)
+------------------------
+
+--- Editor ---
+- Added support for multiple-state switches.  Switch Tables will now use
+  Radio Buttons rather than a Checkbox.
+- Added ECU definition data validation for Switch Tables.  If the ROM image data
+  does not match one of the switch states according to the definition then a
+  warning is presented and the table is locked from editing.
+- Added ROM Checksum validation on image open for 32 bit ROMs.  An ERROR message
+  is presented warning not to use the ROM image as it may be corrupt.
+- Added ROM Checksum calculation for 32 bit ROMs.  Upon file save the new
+  Checksums (if not previously disabled) are written to the ROM.
+- Added a ROM Edit Stamp to 32 bit ROMs consisting of the YYMMDD and an
+  incremental count value.  This Edit Stamp is displayed in the View->ROM
+  properties menu item.
+- Fixed the missing Table Tree problem when running RomRaider on systems
+  using IcedTea or OpenJDK JVM.
+--- Logger ---
+- Added more selections to the Right-click menu associated with the LogFile text
+  field.
+- Made Fast Polling the default mode for the Logger connection.
+
+0.5.3b RC9 (06/30/2011)
+-----------------------
+
+--- Logger ---
+- log4j.properties updated with new name for romraider.log --> rr_system.log
+- new logger field to allow arbitrary text to be added to log file name (right-
+  click on field for options)
+- Tech Edge plugin updates
+- PLX plugin update to ignore unsupported data items
+- Innovate MTS plugin updated to ignore unsupported data items
+- Logging data error handling improved and hang condition eliminated
+- Logging performance improved (fast poll may not work with 16 bit ECU, untested)
+- Log file field value delimiter changed from comma to semicolon when values use
+  comma as decimal place holder
+- Start of support for international numbers and text
+
+0.5.3b RC8 (05/14/2011)
+-----------------------
+
+--- Logger ---
+- Added support to log from ECU or TCU (not both at the same time, yet)
+- New AEM protocol support added (AEM2 plugin works at 19200 baud and reports
+  Lambda values)
+- New Tech Edge support added (currently only supports data format 2.0)
+
+0.5.3b RC7 (12/21/2010)
+-----------------------
+
+--- Editor ---
+- Fixed Compare map scroll list
+- Added support for sign integer data (used in diesel ROMs)
+
+--- Logger ---
+- Improved serial connection handling
+- MRF Stealth Gauge support added
+- Added saving parameter list show/hide to settings
+- Added USER input read ability for ZT2
+- Added check box to enable/disable COM port refreshing and save the setting
+
+0.5.3b RC6 (05/02/2009)
+-----------------------
+
+--- Logger ---
+This RC includes the new Road Dyno/ET tab, version 16.
+To use the Road Dyno:
+	- Set the Mode button to Dyno
+	- Clear all parameters from the other tabs to achieve the best data
+	  resolution.
+	- On the Dyno tab, select your vehicle and adjust the tire size and
+	  gear you will be using.
+	- Once set, press the Record Data button.
+	- With the button pressed setup to do your WOT run, no need to hurry.
+	- Hold WOT run to redline.  As soon as WOT is no longer detected the
+	  graph will be updated with your estimated wheel power and torque.
+	- Adjust temperature and humidity if they are not accurate and
+	  "recalculate" the results.
+	- Smoothing, lower is more smooth and higher is less smooth.
+	- Right click on the graph to Save as...
+	- If you wish to average two or more consecutive runs, press the
+	  Record Data button again and repeat the WOT run.  At the end of
+	  each run the datasets will be combined and the results displayed.
+	- A Reference Trace can be Saved and displayed at any time for comparison.
+	- The Clear button will delete all recorded data for a fresh start.
+
+To use the ET feature:
+	- Set the Mode button to ET
+	- Clear all parameters from the other tabs to achieve the best data
+	  resolution.
+	- On the Dyno tab, select the vehicle you will be using.
+	- Once set and the vehicle is stationary, SPEED = 0, press the Record ET button.
+	- With the button pressed complete your 1/4 mile run.
+	- As soon as 1/4 mile distance is covered the graph will be updated with
+	  your elapsed times and speeds.
+	- Right click on the graph to Save as...
+	- Or Save a Reference Trace of your times to a text file.
+
+0.5.3b RC5 (11/29/2009)
+----------------------
+
+--- Logger ---
+- 14Point7 NAW_7S UEGO support added
+- Improved serial connection handling
+
+0.5.3b RC4 (10/31/2009)
+----------------------
+
+--- Logger ---
+- LM-2 MTS support added (possibly flaky!)
+- Consolidated Innovate wideband serial plugins (LC-1, LM-1, LM-2)
+- Plugin ports automatically saved and reloaded
+
+0.5.3b RC3 (10/18/2009)
+----------------------
+
+--- Editor ---
+- Dump system props to log at startup
+
+--- Logger ---
+- Update Zeitronix item labels
+- Update installer config
+
+0.5.3b RC2 (10/17/2009)
+----------------------
+
+--- Logger ---
+- PLX and Zeitronix sensor support added
+- AEM UEGO support improved
+
+0.5.2b (02/07/2009)
+----------------------
+
+--- Editor ---
+- ECU def config check added
+
+--- Logger ---
+- Set OP2.0 loopback=1
+- Logger def config check added
+
+0.5.1b (12/24/2008)
+----------------------
+
+--- Editor ---
+- Table compare bug fixed.
+- Table drag speed improvements (disabled D3D use).
+
+--- Logger ---
+- Removed all UTEC integration.
+
+0.5.1b RC5 (11/17/2008)
+----------------------
+
+--- Logger ---
+- J2534 api tweaks.
+- External sensor connection handling updated.
+
+0.5.1b RC4 (10/9/2008)
+----------------------
+
+--- Editor ---
+- Table compare bug fixed.
+- Debug save mode enabled by default.
+- Already running detection port changed to 50001.
+
+--- Logger ---
+- Some refactoring around serial port handling.
+- Fix display of unknown rom ids.
+- Add config item for logger definition location.
+
+0.5.1b RC3 (9/25/2008)
+----------------------
+
+--- Logger ---
+- OpenPort 2.0 cable integration
+
+0.5.1b RC2 (6/14/2008)
+----------------------
+
+--- Editor ---
+- Ramtune Test app menu item name changed to SSM
+- Fixed save/restore of cell height/width bug
+
+--- Logger ---
+- Vertical control panel added for tab specific functions
+- Parameter list converted from split panes to tabs and widened
+    by default
+- Last open tab now remembered
+- Icon added to log to file button
+- Fullscreen mode via startup parameter '-logger.fullscreen'
+
+0.5.1b RC1 (6/7/2008)
+---------------------
+
+--- Editor ---
+- Vertical axis label restored on 3D tables
+
+--- Logger ---
+- Connection handling updated
+- User profile loading updated
+- Hide/show parameter list (F11) on data, graph, dash tabs
+- Switchable (F12) dash gauge styles
+- Scrollable dash pane
+- Latest data point on MAF and injector scaling tabs displayed
+    as a different colour.
+
+
+0.5.0b (5/1/2008)
+-----------------
+
+--- Editor ---
+- Minor bug fixes
+- RAMTune test application
+
+--- Logger ---
+- Plugin interface added including plugins for,
+  - Innovate LC-1
+  - Innovate LM-1
+  - AEM UEGO
+  - UTEC
+- New MAF scaler tab
+- New injector scaler tab
+- Reset ECU
+
+
+0.4.1b (2/8/2007)
+-----------------
+
+--- Tuning ---
+- Fix frame sizes too small on 2d tables
+- Fix switch tables displaying wrong icon in table tree
+
+--- Datalogging ---
+- Autoconnect
+- Reset, disconnect buttons
+- Reset data buttons per tab
+- Updated dash tab with warning levels (warning levels not currently
+  saved to profile)
+- Fixed "Manifold Relative Pressure (Corrected)" parameter
+- Fixed profile save/load problems
+- ECU id display in status bar
+- Updated address format in logger.xml (length attribute added to
+  replace multiple <byte> tags. length defauilts to 1 if not specified)
+- Autodetection of ecu specific parameters via new <ecuparam> tags in
+  logger.xml (IAM, engine load)
+- ECU connection status indicator added to interface (stopped,
+  connecting, reading data, logging to file)
+- Auto filtering of parameter list based on ECU init response (should
+  only display now what your car says it supports)
+- Enable defogger switch based file logging via menu bar (don't need to
+  select it in switch list anymore)
+- Defogger switch is only logged to file when explicitly enabled
+- Absolute timestamp option added for file logging
+- Relative timestamp now reset to zero at the beginning of each log file
+  (unless absolute timestamp is selected)
+- Graph tab color scheme updated
+- Enhancements to the map overlay feature, including display of the live
+  data and overlay of the live data values on the map cells.
+- Tooltips added to parameter list showing parameter description (not all
+  parameters have a description yet though)
+- General logger parameter updates/additions
+
+
+0.4.0b (11/10/2006)
+-------------------
+- Add file associations
+- Ability to view (but not modify) tables above userlevel
+- Add link to latest ECU definitions
+- Fix switch (CEL fix) inheritance
+- Fix table ordering in child ROMs
+- Fix table level display in property panel
+- Fix label fonts on 3D tables
+- Logging
+- 3D graphing
+- Interpolating (map smoothing)
+
+
+0.3.2b (8/12/2006)
+------------------
+- Installer/Shortcuts
+- Add status bar
+- Add support for hex ID strings for Mitsubishi support
+- Fix goofy behavior of increase/decrease at limits
+- Add multiply values function
+- Improve exception handling in XML parser
+- Add lockable tables via ECU definitions
+- Rearrange 3D table labels
+- Improve datacell colorize method
+- Add limits to table values in XML
+- Fix exiting through menu not saving settings
+- Add ECU Definition Manager
+
+
+0.3.1b (7/11/2006)
+------------------
+- Change year attribute to string from int
+- Fix incrementing in compare mode
+- Fix refresh tables working improperly with multiple ROMs open
+- Update table property panel
+- Fix float values not incrementing properly in axiis
+- Fix values not incrementing if increment amount is less than LSB
+- Add option whether to display tables higher than userlevel
+- Add option whether to save changes made to debug tables
+- Fix clicking on ROM tree opening/closing wrong tables
+- Fix switch tables not compensating for RAM
+- Fix many memory leak problems
+- List tables above userlevel, but disabled
+- Color debug tables red
+- Add "version" tag to settings
+- Show release notes on first run
+- Remove unnecessary variables from settings XML
+- Add name and description to CEL/checksum fix tables
+- Fix "(null)" text on static 2D axiis
+- Remove table name from bottom of 2D table
+- Allow single clicking to open tables (via settings)
+- Add fine adjustment values to ECU definition
+- Fix map copy/paste
+- Increment affects real instead of binary value
+- User levels
+- Fix definition parser rounding incrementby values
+- Improve table properties display
+- Fix byte/real conversion validation
+
+
+0.3.0b (7/2/2006)
+---------------------------------------
+- Finish map comparing implementation
+
+
+0.2.93a Private Test Release (7/1/2006)
+---------------------------------------
+- Added "switch" table type
+
+
+0.2.92a Private Test Release (7/1/2006)
+----------------------------------------
+- Fixed squares appearing instead of some float values
+- Fixed exception when entering decimals in coarse value
+- Fixed set value field being cast to integer instead of decimal
+- Fixed progress bar not closing on errors
+- Pressing "." now focuses set value field
+
+
+0.2.91a Private Test Release (6/30/2006)
+----------------------------------------
+- Fixed memory usage issues
+- Added performance and other memory optimizations
+
+
+0.2.90a Private Test Release (6/30/2006)
+----------------------------------------
+- Added 32-bit ECU (float) support
+
+
+0.2.7.4b (5/09/2006)
+--------------------
+- Fixed 16-bit 3D tables saving improperly
+- Added compare to original value function
+
+
+0.2.7.3b (4/17/2006)
+--------------------
+- Fix border colors not showing changes from keyboard
+- Add progress indicators
+- Remove table definition generator
+- Fix refresh button closing images with same filename
+- Fix border/background of static axiis
+- Fix rounding problems causing false conflicts for conversion expressions
+- Fix set value not updating borders
+- Reset default settings option
+- Fix cell border not saving
+- Improve warning messages
+- Fix ECU definition file settings not saving
+- Fix last image directory resetting
+- Fix updated cell border not updating
+
+
+0.2.7.2b (4/12/2006)
+--------------------
+- Fixed close all images
+
+
+0.2.7.1b (4/12/2006)
+--------------------
+- Fixed ECU definitions not saving
+- Fixed last image directory not saving
+- Fixed colors not saving
+- Fixed increased/decreased cell borders not updating
+
+
+0.2.7b (4/12/2006)
+------------------
+- Replace serialized settings object with XML
+- Settings panel
+- Custom sizes/fonts/colors for tables
+- Fix blue 2D table axiis
+- Fix exception when clicking on table list
+- Expression/to_byte conflict warning
+- Rename packages to conventional lowercase
+- Improve refresh method when saving
+- Improve exception reporting
+- Implement "obsolete" tag -- set up wiki with ROM revision info
+- Group tables by category
+- Fix descriptions not working
+- Fix 2D table navigation
+
+
+0.2.6b (4/5/2006)
+-----------------
+- Shortcut keys
+- Improve display of tables too large for window (MDI)
+- Improve exception reporting
+- Improve saved window position on exit (panel size, maximized)
+- Remove "copy" from table menu -- its in the edit menu
+- Fix vertical overhead on table size for new graphical buttons
+- Fix rounding issues with set value
+- Fix ctrl-click on tables
+- Resize cells to make best use of screen
+- Prevent simultaneous selection of axiis and table values
+- Map copying
+- Graphical icons
+- Cascade windows (MDI)
+- Fix table frame JScrollPane (MDI)
+
+
+0.2.5b (3/28/2006)
+------------------
+- Import tables by single address
+- Refresh image button
+- Table properties
+- Add "obsolete" tag for images with more recent revisions
+- Fix application not closing files after reading
+- Add file extensions to open/save dialog (HEX, BIN)
+- Fix parser searching by XML ID instead of internal storage ID
+- Image properties
+- Show positive (red) and negative (blue) value changes on tables
+BUG FIXES:
+- Decrement (fine) increments
+- Files not closing after being read
+- Set value rounds goofy
+- 1D tables not colorizing properly
+- 2D tables not working properly
+- Set value field shows negative numbers
+
+
+0.2.4a (3/21/2006)
+------------------
+- "Base" attribute for extending/duplicating tables
+- "Omit" attribute not required to omit tables -- just set storageaddress to "0"
+- Fine and coarse adjustment of values
+- Direct value input
+- Support for ROMs with or without RAM sectors
+
+
+0.2.3a (2/27/2006)
+------------------
+- ECU definitions including each other (endless loop) is now handled
+- "Omit" attribute allows incomplete tables to be removed from inheriting definitions
+- Nested includes (includes more than 1 definition deep) tested and working properly
+
+
+0.2.2a (2/26/2006)
+------------------
+- Include support in XML definitions (exception handling not yet implemented!)
+
+
+0.2.1a (2/13/2006)
+------------------
+- Handles storage addresses that are out of range
+- Fixed conflicting parent/child table sizes (done)
+- Replaced "<Table Name>" menu with "Table" -- makes it more obviously a menu
+- Fixed 3D table sizing problem
+- Fixed colorizing exception
+- Fixed backwards endians
+- Fixed storage address out of range exception
+- Improved close image method
+
+
+.20a (2/11/2006)
+----------------
+-Completely rewritten
+-XML ECU definitions
+-View multiple images and tables
+
+
+.14a (11/26/2005)
+------------------
+-Improved axis cell modification
+-Fixed absolute value calculations
+
+.13a
+-----
+-Revised text entry of values
+-Added EUDM WRX support
+-Improved multiple cell selection
+-Improved axis cell modification
+-Axis cell changes can be saved
+
+Supported ECU Versions/Version Added - Deprecated as of version .20a. ECU versions are now defined in ecu_defs.xml.
+----------------------
+2004/2005 USDM WRX:
+-A4TF300E .13a
+-A4TF400E .13a
+-A4TF800E .13a
+-A4TF500F .13a
+-A4TF510F .13a
+-A4TF800F .13a
+
+2002/2003 USDM WRX:
+-A4TC300L .13a
+-A4SGC00C .13a
+-A4SGD10C .13a
+-A4SG900C .13a
+
+2003 EUDM WRX:
+-A4TE001G .13a
