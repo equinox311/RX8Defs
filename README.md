@@ -6,7 +6,7 @@ RX8Man's Donate link: https://www.buymeacoffee.com/RX8Man
 
 These are only the beginning and a work in progress to developing open source ROM definitions for the Series 1 Mazda RX8
 
-### Currently Supported Strategies/Cal IDs
+### Currently Supported Strategies/Cal IDs (This list is not always updated)
 
 60E0G500
 - NZ3HEC 2004 EU 6 Port MT
