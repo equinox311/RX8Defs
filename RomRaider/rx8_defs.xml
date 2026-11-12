@@ -8,28 +8,6 @@
         </romid>
 		<table type="Switch" name="Immobilizer Disable - Without RKE Installed" category="Immobilizer" sizey="248" beforeram="true">
 		   <description>When enabled, this bypasses the immobilizer, WARNING: Only use one Immobilizer Switch!!.</description>
-		   <state name="on"  data="00 09 00 09 00 09 B3 D5 00 09 00 09 00 09 00 09 00 09 00 09 00 09 00
-								   09 00 09 00 09 00 09 00 09 00 09 00 09 00 09 00 09 00 09 00 09 00 09
-								   00 09 00 09 00 09 A0 3D 00 09 01 F4 00 FA 55 AA AA CC B5 C4 FF FF FF
-								   FF 86 9C 00 03 E2 18 00 03 E3 30 FF FF C2 28 FF FF C2 2C FF FF C2 3E
-								   FF FF C2 3A FF FF C2 88 FF FF C2 8C 00 01 00 01 55 AA 55 AA 00 00 FF
-								   FF FF FF C2 96 FF FF C2 98 00 00 B7 E3 FF FF C2 39 00 03 65 C0 B0 BB
-								   00 09 A0 11 00 09 B1 CF 00 09 A0 0D 00 09 B2 5B 00 09 A0 09 00 09 B2
-								   FD 00 09 A0 05 00 09 B3 4E 00 09 A0 01 00 09 2D E0 DD 30 D2 30 64 20
-								   60 4C 88 05 8D 04 64 03 60 43 88 06 8F 10 00 09 D2 2C 63 20 23 38 8F
-								   0B 00 09 D1 2B 60 10 20 08 8F 06 00 09 D2 29 E5 01 42 0B 64 D0 A0 01
-								   2D 00 2D E0 E3 03 62 D0 62 2C 32 33 8F 0D 00 09 E1 00" />
-		   <state name="off" data="B5 6E 00 09 60 D0 60 0C 88 00 8D 11 00 09 88 01 8D 3A 00 09 88 02 8D
-								   3B 00 09 88 03 8D 3C 00 09 88 04 8D 3D 00 09 88 05 8D 3E 00 09 A0 40
-								   00 09 B0 8C 00 09 A0 3D 00 09 01 F4 00 FA 55 AA AA CC B5 C4 FF FF FF
-								   FF 86 9C 00 03 E2 18 00 03 E3 30 FF FF C2 28 FF FF C2 2C FF FF C2 3E
-								   FF FF C2 3A FF FF C2 88 FF FF C2 8C 00 01 00 01 55 AA 55 AA 00 00 FF
-								   FF FF FF C2 96 FF FF C2 98 00 00 B7 E3 FF FF C2 39 00 03 65 C0 B0 BB
-								   00 09 A0 11 00 09 B1 CF 00 09 A0 0D 00 09 B2 5B 00 09 A0 09 00 09 B2
-								   FD 00 09 A0 05 00 09 B3 4E 00 09 A0 01 00 09 2D E0 DD 30 D2 30 64 20
-								   60 4C 88 05 8D 04 64 03 60 43 88 06 8F 10 00 09 D2 2C 63 20 23 38 8F
-								   0B 00 09 D1 2B 60 10 20 08 8F 06 00 09 D2 29 E5 01 42 0B 64 D0 A0 01
-								   2D 00 2D E0 E3 03 62 D0 62 2C 32 33 8F 0D 00 09 E1 01" />
 		 </table>
 		<table type="Switch" name="Immobilizer Disable - With RKE Installed" category="Immobilizer" sizey="2" beforeram="true">
 		   <description>When enabled, this bypasses the immobilizer, WARNING: Only use one Immobilizer Switch!!</description>
@@ -201,8 +179,8 @@
                 <scaling expression="x" to_byte="x" format="0" />
             </table>
         </table>
-		<table name="Table 3D - UNKNOWN_CL" category="Unknown 3D" type="3D" storagetype="uint16" endian="big" expression="x" to_byte="x" sizex="12" sizey="16">
-            <scaling expression="(x*0.000099999997) - 1.0" to_byte="(x + 1.0) / 0.000099999997" format="0.000" />
+		<table name="Closed Loop Fueling Base" category="Fuel Injection - Closed Loop" type="3D" storagetype="uint16" endian="big" expression="x" to_byte="x" sizex="12" sizey="16">
+            <scaling expression="(1-((x*0.000099999997) - 1.0))" to_byte="(((1-(x + 1.0)) / 0.000099999997)" format="0.0000" />
             <table name="Engine Load"  type="Y Axis" storagetype="float" endian="big"  >
                 <scaling units="g/rev" expression="x" to_byte="x" format="0.00" />
             </table>
@@ -352,11 +330,11 @@
 
 		<table name="Igntion Leading Timing - DSC Mode A - Map1" category="Ignition Leading" type="1D" storagetype="uint8" endian="big" format="0.00" expression="(x - 50) / 2" to_byte="x" size="1"/>
 		<table name="Igntion Leading Timing - DSC Mode A - Map3" category="Ignition Leading" type="1D" storagetype="uint8" endian="big" format="0.00" expression="(x - 50) / 2" to_byte="x" size="1"/>
-		<table name="Closed Loop Fuelling Threshold (Engine Speed)" category="Fuel Target (Closed Loop)" type="1D" storagetype="float" endian="big" expression="x" to_byte="x" size="1" />
-        <table name="Closed Loop Fuelling Threshold (Temperature A)" category="Fuel Target (Closed Loop)" type="1D" storagetype="float" endian="big" expression="x" to_byte="x" size="1" />
-        <table name="Closed Loop Fuelling Threshold (Temperature B)" category="Fuel Target (Closed Loop)" type="1D" storagetype="float" endian="big" expression="x" to_byte="x" size="1" />
-        <table name="Closed Loop Fuelling Threshold (Unknown B)" category="Fuel Target (Closed Loop)" type="1D" storagetype="float" endian="big" expression="x" to_byte="x" size="1" />
-        <table name="Closed Loop Fuelling Threshold (Temperature C)" category="Fuel Target (Closed Loop)" type="1D" storagetype="float" endian="big" expression="x" to_byte="x" size="1" />
+		<table name="Closed Loop Fuelling Threshold (Engine Speed)" category="Fuel Injection - Closed Loop" type="1D" storagetype="float" endian="big" expression="x" to_byte="x" size="1" />
+        <table name="Closed Loop Fuelling Threshold (Temperature A)" category="Fuel Injection - Closed Loop" type="1D" storagetype="float" endian="big" expression="x" to_byte="x" size="1" />
+        <table name="Closed Loop Fuelling Threshold (Temperature B)" category="Fuel Injection - Closed Loop" type="1D" storagetype="float" endian="big" expression="x" to_byte="x" size="1" />
+        <table name="Closed Loop Fuelling Threshold (Unknown B)" category="Fuel Injection - Closed Loop" type="1D" storagetype="float" endian="big" expression="x" to_byte="x" size="1" />
+        <table name="Closed Loop Fuelling Threshold (Temperature C)" category="Fuel Injection - Closed Loop" type="1D" storagetype="float" endian="big" expression="x" to_byte="x" size="1" />
         <table name="Knock Control Enable Engine Speed" category="Knock Control" type="1D" storagetype="float" endian="big" expression="x" to_byte="x" size="1" />
         <table name="Knock Control Enable Engine Load" category="Knock Control" type="1D" storagetype="float" endian="big" expression="x" to_byte="x" size="1" />
         <table name="Knock Control Enable Coolant Temp" category="Knock Control" type="1D" storagetype="float" endian="big" expression="x" to_byte="x" size="1" />
@@ -837,7 +815,7 @@
             <scaling expression="(x * 0.007812 ) + 0" to_byte="(x - 0) / 0.007812" format="0.00" />
             <table name="Unknown" type="Y Axis" storagetype="float" endian="big" expression="x" to_byte="x" />
         </table>
-        <table name="Throttle Plate Enrichment Minimum" category="Fuel Target (Closed Loop)" type="2D" storagetype="uint16" endian="big" sizey="7">
+        <table name="Throttle Plate Enrichment Minimum" category="Fuel Injection - Closed Loop" type="2D" storagetype="uint16" endian="big" sizey="7">
             <scaling expression="(x * 0.0001 ) + -1" to_byte="(x - -1) / 0.0001" format="0.00" />
             <table name="Unknown" type="Y Axis" storagetype="float" endian="big" expression="x" to_byte="x" />
         </table>
@@ -933,23 +911,23 @@
             <scaling expression="(x * 0.007812 ) + 0" to_byte="(x - 0.0) / 0.007812" format="0.00" />
             <table name="Unknown" type="Y Axis" storagetype="float" endian="big" expression="x" to_byte="x" />
         </table>
-        <table name="Closed Loop Fuelling Threshold (Engine Load A)" category="Fuel Target (Closed Loop)" type="2D" storagetype="uint8" endian="big" sizey="18">
+        <table name="Closed Loop Fuelling Threshold (Engine Load A)" category="Fuel Injection - Closed Loop" type="2D" storagetype="uint8" endian="big" sizey="18">
             <scaling expression="(x * 0.003906 ) + 0" to_byte="(x - 0.0) / 0.003906" format="0.00" />
             <table name="Unknown" type="Y Axis" storagetype="float" endian="big" expression="x" to_byte="x" />
         </table>
-        <table name="Closed Loop Fuelling Threshold (Engine Load B)" category="Fuel Target (Closed Loop)" type="2D" storagetype="uint8" endian="big" sizey="18">
+        <table name="Closed Loop Fuelling Threshold (Engine Load B)" category="Fuel Injection - Closed Loop" type="2D" storagetype="uint8" endian="big" sizey="18">
             <scaling expression="(x * 0.003906 ) + 0" to_byte="(x - 0.0) / 0.003906" format="0.00" />
             <table name="Unknown" type="Y Axis" storagetype="float" endian="big" expression="x" to_byte="x" />
         </table>
-        <table name="Closed Loop Fuelling Threshold (Engine Load C)" category="Fuel Target (Closed Loop)" type="2D" storagetype="uint8" endian="big" sizey="18">
+        <table name="Closed Loop Fuelling Threshold (Engine Load C)" category="Fuel Injection - Closed Loop" type="2D" storagetype="uint8" endian="big" sizey="18">
             <scaling expression="(x * 0.003906 ) + 0" to_byte="(x - 0.0) / 0.003906" format="0.00" />
             <table name="Unknown" type="Y Axis" storagetype="float" endian="big" expression="x" to_byte="x" />
         </table>
-        <table name="Closed Loop Fuelling Threshold (Unknown A)" category="Fuel Target (Closed Loop)" type="2D" storagetype="uint8" endian="big" sizey="12">
+        <table name="Closed Loop Fuelling Threshold (Unknown A)" category="Fuel Injection - Closed Loop" type="2D" storagetype="uint8" endian="big" sizey="12">
             <scaling expression="(x * 0.007812 ) + 0" to_byte="(x - 0.0) / 0.007812" format="0.00" />
             <table name="Unknown" type="Y Axis" storagetype="float" endian="big" expression="x" to_byte="x" />
         </table>
-        <table name="Closed Loop Fuelling Threshold (Throttle Position) " category="Fuel Target (Closed Loop)" type="2D" storagetype="uint8" endian="big" sizey="19">
+        <table name="Closed Loop Fuelling Threshold (Throttle Position) " category="Fuel Injection - Closed Loop" type="2D" storagetype="uint8" endian="big" sizey="19">
             <scaling expression="(x * 0.5 ) + 0" to_byte="(x - 0.0) / 0.5" format="0.00" />
             <table name="Unknown" type="Y Axis" storagetype="float" endian="big" expression="x" to_byte="x" />
         </table>
@@ -2526,7 +2504,7 @@
                 <scaling expression="x" to_byte="x" />
             </table>
         </table>
-        <table name="Closed Loop WOT Enrichment??" category="Fuel Target (Closed Loop)" type="3D" storagetype="uint8" endian="big" expression="x" to_byte="x" sizex="12" sizey="3">
+        <table name="Closed Loop WOT Enrichment??" category="Fuel Injection - Closed Loop" type="3D" storagetype="uint8" endian="big" expression="x" to_byte="x" sizex="12" sizey="3">
             <scaling expression="(x * 0.001 ) + 0" to_byte="(x - 0) / 0.001" format="0.00" />
             <table name="Value" type="X Axis" storagetype="float" endian="big">
                 <scaling expression="x" to_byte="x" />
@@ -2824,7 +2802,7 @@
             </table>
         </table>
 		<table name="Table 3D - Unknown CL1" category="Unknown 3D" type="3D" storagetype="uint16" endian="big" expression="x" to_byte="x" sizex="12" sizey="16">
-            <scaling expression="(x * 0.000099999997) -1 " to_byte="(x + 1) / 0.000099999997" format="0.0000" />
+            <scaling expression="(1-((x*0.000099999997) - 1.0))" to_byte="(((1-(x + 1.0)) / 0.000099999997)" format="0.0000" />
             <table name="Value" type="X Axis" storagetype="float" endian="big">
                 <scaling expression="x" to_byte="x" />
             </table>
@@ -4650,31 +4628,6 @@
             <year>2004</year>
             <transmission>MT</transmission>
         </romid>
-			<table name="Immobilizer Disable - Without RKE Installed" storageaddress="0x35af8">
-			<state name="on" data="00 09 00 09 00 09 B3 D5 00 09 00 09 00 09 00 09 00 09 00 09 00 09 00
-							09 00 09 00 09 00 09 00 09 00 09 00 09 00 09 00 09 00 09 00 09 00 09
-							00 09 00 09 00 09 A0 3D 00 09 01 F4 00 FA 55 AA AA CC B5 C4 FF FF FF
-							FF 86 9C 00 03 EB E0 00 03 EC F8 FF FF C2 28 FF FF C2 2C FF FF C2 3E
-							FF FF C2 3A FF FF C2 88 FF FF C2 8C 00 01 00 01 55 AA 55 AA 00 00 FF
-							FF FF FF C2 96 FF FF C2 98 00 00 B7 E3 FF FF C2 39 00 03 6E 88 B0 BB
-							00 09 A0 11 00 09 B1 CF 00 09 A0 0D 00 09 B2 5B 00 09 A0 09 00 09 B2
-							FD 00 09 A0 05 00 09 B3 4E 00 09 A0 01 00 09 2D E0 DD 30 D2 30 64 20
-							60 4C 88 05 8D 04 64 03 60 43 88 06 8F 10 00 09 D2 2C 63 20 23 38 8F
-							0B 00 09 D1 2B 60 10 20 08 8F 06 00 09 D2 29 E5 01 42 0B 64 D0 A0 01
-							2D 00 2D E0 E3 03 62 D0 62 2C 32 33 8F 0D 00 09 E1 00"/>
-					<state name="off" data="B5 6E 00 09 60 D0 60 0C 88 00 8D 11 00 09 88 01 8D 3A 00 09 88 02 8D
-							3B 00 09 88 03 8D 3C 00 09 88 04 8D 3D 00 09 88 05 8D 3E 00 09 A0 40
-							00 09 B0 8C 00 09 A0 3D 00 09 01 F4 00 FA 55 AA AA CC B5 C4 FF FF FF
-							FF 86 9C 00 03 EB E0 00 03 EC F8 FF FF C2 28 FF FF C2 2C FF FF C2 3E
-							FF FF C2 3A FF FF C2 88 FF FF C2 8C 00 01 00 01 55 AA 55 AA 00 00 FF
-							FF FF FF C2 96 FF FF C2 98 00 00 B7 E3 FF FF C2 39 00 03 6E 88 B0 BB
-							00 09 A0 11 00 09 B1 CF 00 09 A0 0D 00 09 B2 5B 00 09 A0 09 00 09 B2
-							FD 00 09 A0 05 00 09 B3 4E 00 09 A0 01 00 09 2D E0 DD 30 D2 30 64 20
-							60 4C 88 05 8D 04 64 03 60 43 88 06 8F 10 00 09 D2 2C 63 20 23 38 8F
-							0B 00 09 D1 2B 60 10 20 08 8F 06 00 09 D2 29 E5 01 42 0B 64 D0 A0 01
-							2D 00 2D E0 E3 03 62 D0 62 2C 32 33 8F 0D 00 09 E1 01" />
-				</table>
-			<table name="Immobilizer Disable - With RKE Installed" storageaddress="0x35f44"/>
         <romid>
             <xmlid>N3ZGEC</xmlid>
             <internalidaddress>6CE46</internalidaddress>
@@ -4686,6 +4639,25 @@
             <year>2004</year>
             <transmission>MT</transmission>
         </romid>
+		<table name="Immobilizer Disable - Without RKE Installed" storageaddress="0x35af8">
+			<state name="on" data="00 09 00 09 00 09 B3 D5 00 09 00 09 00 09 00 09 00 09 00 09 00 09 00 09 00 09 00 09 00 09 00 09 
+				00 09 00 09 00 09 00 09 00 09 00 09 00 09 00 09 00 09 00 09 A0 3D 00 09 01 F4 00 FA 55 AA AA E0 
+				B5 E8 FF FF FF FF 86 9C 00 03 EB E0 00 03 EC F8 FF FF C2 7C FF FF C2 80 FF FF C2 92 FF FF C2 8E 
+				FF FF C2 DC FF FF C2 E0 00 01 00 01 55 AA 55 AA 00 00 FF FF FF FF C2 EA FF FF C2 EC 00 00 B7 E3 
+				FF FF C2 8D 00 03 6E 88 B0 BB 00 09 A0 11 00 09 B1 CF 00 09 A0 0D 00 09 B2 5B 00 09 A0 09 00 09 
+				B2 FD 00 09 A0 05 00 09 B3 4E 00 09 A0 01 00 09 2D E0 DD 30 D2 30 64 20 60 4C 88 05 8D 04 64 03 
+				60 43 88 06 8F 10 00 09 D2 2C 63 20 23 38 8F 0B 00 09 D1 2B 60 10 20 08 8F 06 00 09 D2 29 E5 01 
+				42 0B 64 D0 A0 01 2D 00 2D E0 E3 03 62 D0 62 2C 32 33 8F 0D 00 09 E1 00" />
+			<state name="off" data="B5 6E 00 09 60 D0 60 0C 88 00 8D 11 00 09 88 01 8D 3A 00 09 88 02 8D 3B 00 09 88 03 8D 3C 00 09 
+				88 04 8D 3D 00 09 88 05 8D 3E 00 09 A0 40 00 09 B0 8C 00 09 A0 3D 00 09 01 F4 00 FA 55 AA AA E0 
+				B5 E8 FF FF FF FF 86 9C 00 03 EB E0 00 03 EC F8 FF FF C2 7C FF FF C2 80 FF FF C2 92 FF FF C2 8E 
+				FF FF C2 DC FF FF C2 E0 00 01 00 01 55 AA 55 AA 00 00 FF FF FF FF C2 EA FF FF C2 EC 00 00 B7 E3 
+				FF FF C2 8D 00 03 6E 88 B0 BB 00 09 A0 11 00 09 B1 CF 00 09 A0 0D 00 09 B2 5B 00 09 A0 09 00 09 
+				B2 FD 00 09 A0 05 00 09 B3 4E 00 09 A0 01 00 09 2D E0 DD 30 D2 30 64 20 60 4C 88 05 8D 04 64 03 
+				60 43 88 06 8F 10 00 09 D2 2C 63 20 23 38 8F 0B 00 09 D1 2B 60 10 20 08 8F 06 00 09 D2 29 E5 01 
+				42 0B 64 D0 A0 01 2D 00 2D E0 E3 03 62 D0 62 2C 32 33 8F 0D 00 09 E1 01" />
+		</table>
+		<table name="Immobilizer Disable - With RKE Installed" storageaddress="0x35f44"/>
         <table name="Barometric Pressure Sensor Max ADC Count" storageaddress="0x06CF6C" />
         <table name="Barometric Pressure Sensor Min ADC Count" storageaddress="0x06CF6E" />
         <table name="Barometric Pressure Sensor Min Voltage" storageaddress="0x07A930" />
@@ -6724,8 +6696,25 @@
 		<table name="Predicted Engine Speed Max" storageaddress="0x2584c" />
 		<table name="Auto Transmission Related Fuel Cut Threshold" storageaddress="0x6d5e8" />
 		<table name="Off Throttle Fuel Cut - Fuel Resume - In Neutral Base" storageaddress="0x6d5e4" />
-		<table name="Immobilizer Disable - Without RKE Installed" storageaddress="0x35230"/>
-		<table name="Immobilizer Disable - With RKE Installed" storageaddress="0x3567C"/>
+		<table name="Immobilizer Disable - Without RKE Installed" storageaddress="0x35230">
+			<state name="on" data="00 09 00 09 00 09 B3 D5 00 09 00 09 00 09 00 09 00 09 00 09 00 09 00 09 00 09 00 09 00 09 00 09 
+				00 09 00 09 00 09 00 09 00 09 00 09 00 09 00 09 00 09 00 09 A0 3D 00 09 01 F4 00 FA 55 AA AA CC 
+				B5 C4 FF FF FF FF 86 9C 00 03 E2 18 00 03 E3 30 FF FF C2 28 FF FF C2 2C FF FF C2 3E FF FF C2 3A 
+				FF FF C2 88 FF FF C2 8C 00 01 00 01 55 AA 55 AA 00 00 FF FF FF FF C2 96 FF FF C2 98 00 00 B7 E3 
+				FF FF C2 39 00 03 65 C0 B0 BB 00 09 A0 11 00 09 B1 CF 00 09 A0 0D 00 09 B2 5B 00 09 A0 09 00 09 
+				B2 FD 00 09 A0 05 00 09 B3 4E 00 09 A0 01 00 09 2D E0 DD 30 D2 30 64 20 60 4C 88 05 8D 04 64 03 
+				60 43 88 06 8F 10 00 09 D2 2C 63 20 23 38 8F 0B 00 09 D1 2B 60 10 20 08 8F 06 00 09 D2 29 E5 01 
+				42 0B 64 D0 A0 01 2D 00 2D E0 E3 03 62 D0 62 2C 32 33 8F 0D 00 09 E1 00" />
+			<state name="off" data="B5 6E 00 09 60 D0 60 0C 88 00 8D 11 00 09 88 01 8D 3A 00 09 88 02 8D 3B 00 09 88 03 8D 3C 00 09 
+				88 04 8D 3D 00 09 88 05 8D 3E 00 09 A0 40 00 09 B0 8C 00 09 A0 3D 00 09 01 F4 00 FA 55 AA AA CC 
+				B5 C4 FF FF FF FF 86 9C 00 03 E2 18 00 03 E3 30 FF FF C2 28 FF FF C2 2C FF FF C2 3E FF FF C2 3A 
+				FF FF C2 88 FF FF C2 8C 00 01 00 01 55 AA 55 AA 00 00 FF FF FF FF C2 96 FF FF C2 98 00 00 B7 E3 
+				FF FF C2 39 00 03 65 C0 B0 BB 00 09 A0 11 00 09 B1 CF 00 09 A0 0D 00 09 B2 5B 00 09 A0 09 00 09 
+				B2 FD 00 09 A0 05 00 09 B3 4E 00 09 A0 01 00 09 2D E0 DD 30 D2 30 64 20 60 4C 88 05 8D 04 64 03 
+				60 43 88 06 8F 10 00 09 D2 2C 63 20 23 38 8F 0B 00 09 D1 2B 60 10 20 08 8F 06 00 09 D2 29 E5 01 
+				42 0B 64 D0 A0 01 2D 00 2D E0 E3 03 62 D0 62 2C 32 33 8F 0D 00 09 E1 01" />
+		</table>
+		<table name="Immobilizer Disable - With RKE Installed" storageaddress="0x3567c"/>
 		<table name="Barometric Pressure Sensor Max ADC Count" storageaddress="0x06D46C" />
 		<table name="Fuel Air Ratio" storageaddress="0x77150"/>
         <table name="Barometric Pressure Sensor Min ADC Count" storageaddress="0x06D46E" />
@@ -7904,7 +7893,7 @@
             <table type="X Axis" storageaddress="0x070558" />
             <table type="Y Axis" storageaddress="0x07058C" />
         </table>
-		<table name="Table 3D - UNKNOWN_CL" storageaddress="0x070b3c">
+		<table name="Closed Loop Fueling Base" storageaddress="0x070b3c">
             <table type="X Axis" storageaddress="0x70AFC" />
             <table type="Y Axis" storageaddress="0x70ACC" />
         </table>
@@ -8695,8 +8684,6 @@
 		   <memmodel>SH7055</memmodel>
 		   <filesize>512kb</filesize>
 		</romid>
-		<table name="Immobilizer Disable - Without RKE Installed" storageaddress="0x35230"/>
-		<table name="Immobilizer Disable - With RKE Installed" storageaddress="0x3567C"/>
 		<table name="Barometric Pressure Sensor Max ADC Count" storageaddress="0x06D46C" />
 		<table name="Launch Control - Enable" storageaddress="0x6ca34"/>
 		<table name="Launch Control - Engine Speed Setpoint" storageaddress="0x6ca38"/>
@@ -9865,7 +9852,7 @@
             <table type="X Axis" storageaddress="0x070558" />
             <table type="Y Axis" storageaddress="0x07058C" />
         </table>
-		<table name="Table 3D - UNKNOWN_CL" storageaddress="0x070b3c">
+		<table name="Closed Loop Fueling Base" storageaddress="0x070b3c">
             <table type="X Axis" storageaddress="0x70ACC" />
             <table type="Y Axis" storageaddress="0x70AFC" />
         </table>
@@ -10515,29 +10502,23 @@
             <transmission>MT</transmission>
         </romid>
 		<table name="Immobilizer Disable - Without RKE Installed" storageaddress="0x34da8">
-			<state name="on" data="00 09 00 09 00 09 B3 D5 00 09 00 09 00 09 00 09 00 09 00 09 00 09 00
-							09 00 09 00 09 00 09 00 09 00 09 00 09 00 09 00 09 00 09 00 09 00 09
-							00 09 00 09 00 09 A0 3D 00 09 01 F4 00 FA 55 AA AA CC B5 C4 FF FF FF
-							FF 86 9C 00 03 DF 28 00 03 E0 40 FF FF C2 28 FF FF C2 2C FF FF C2 3E
-							FF FF C2 3A FF FF C2 88 FF FF C2 8C 00 01 00 01 55 AA 55 AA 00 00 FF
-							FF FF FF C2 96 FF FF C2 98 00 00 B7 E3 FF FF C2 39 00 03 61 38 B0 BB
-							00 09 A0 11 00 09 B1 CF 00 09 A0 0D 00 09 B2 5B 00 09 A0 09 00 09 B2
-							FD 00 09 A0 05 00 09 B3 4E 00 09 A0 01 00 09 2D E0 DD 30 D2 30 64 20
-							60 4C 88 05 8D 04 64 03 60 43 88 06 8F 10 00 09 D2 2C 63 20 23 38 8F
-							0B 00 09 D1 2B 60 10 20 08 8F 06 00 09 D2 29 E5 01 42 0B 64 D0 A0 01
-							2D 00 2D E0 E3 03 62 D0 62 2C 32 33 8F 0D 00 09 E1 00"/>
-					<state name="off" data="B5 6E 00 09 60 D0 60 0C 88 00 8D 11 00 09 88 01 8D 3A 00 09 88 02 8D
-							3B 00 09 88 03 8D 3C 00 09 88 04 8D 3D 00 09 88 05 8D 3E 00 09 A0 40
-							00 09 B0 8C 00 09 A0 3D 00 09 01 F4 00 FA 55 AA AA CC B5 C4 FF FF FF
-							FF 86 9C 00 03 DF 28 00 03 E0 40 FF FF C2 28 FF FF C2 2C FF FF C2 3E
-							FF FF C2 3A FF FF C2 88 FF FF C2 8C 00 01 00 01 55 AA 55 AA 00 00 FF
-							FF FF FF C2 96 FF FF C2 98 00 00 B7 E3 FF FF C2 39 00 03 61 38 B0 BB
-							00 09 A0 11 00 09 B1 CF 00 09 A0 0D 00 09 B2 5B 00 09 A0 09 00 09 B2
-							FD 00 09 A0 05 00 09 B3 4E 00 09 A0 01 00 09 2D E0 DD 30 D2 30 64 20
-							60 4C 88 05 8D 04 64 03 60 43 88 06 8F 10 00 09 D2 2C 63 20 23 38 8F
-							0B 00 09 D1 2B 60 10 20 08 8F 06 00 09 D2 29 E5 01 42 0B 64 D0 A0 01
-							2D 00 2D E0 E3 03 62 D0 62 2C 32 33 8F 0D 00 09 E1 01" />
-			</table>
+			<state name="on" data="00 09 00 09 00 09 B3 D5 00 09 00 09 00 09 00 09 00 09 00 09 00 09 00 09 00 09 00 09 00 09 00 09 
+				00 09 00 09 00 09 00 09 00 09 00 09 00 09 00 09 00 09 00 09 A0 3D 00 09 01 F4 00 FA 55 AA AA 68 
+				B5 78 FF FF FF FF 86 74 00 03 DF 28 00 03 E0 40 FF FF C2 0C FF FF C2 10 FF FF C2 22 FF FF C2 1E 
+				FF FF C2 6C FF FF C2 70 00 01 00 01 55 AA 55 AA 00 00 FF FF FF FF C2 7A FF FF C2 7C 00 00 B7 E3 
+				FF FF C2 1D 00 03 61 38 B0 BB 00 09 A0 11 00 09 B1 CF 00 09 A0 0D 00 09 B2 5B 00 09 A0 09 00 09 
+				B2 FD 00 09 A0 05 00 09 B3 4E 00 09 A0 01 00 09 2D E0 DD 30 D2 30 64 20 60 4C 88 05 8D 04 64 03 
+				60 43 88 06 8F 10 00 09 D2 2C 63 20 23 38 8F 0B 00 09 D1 2B 60 10 20 08 8F 06 00 09 D2 29 E5 01 
+				42 0B 64 D0 A0 01 2D 00 2D E0 E3 03 62 D0 62 2C 32 33 8F 0D 00 09 E1 00" />
+			<state name="off" data="B5 6E 00 09 60 D0 60 0C 88 00 8D 11 00 09 88 01 8D 3A 00 09 88 02 8D 3B 00 09 88 03 8D 3C 00 09 
+				88 04 8D 3D 00 09 88 05 8D 3E 00 09 A0 40 00 09 B0 8C 00 09 A0 3D 00 09 01 F4 00 FA 55 AA AA 68 
+				B5 78 FF FF FF FF 86 74 00 03 DF 28 00 03 E0 40 FF FF C2 0C FF FF C2 10 FF FF C2 22 FF FF C2 1E 
+				FF FF C2 6C FF FF C2 70 00 01 00 01 55 AA 55 AA 00 00 FF FF FF FF C2 7A FF FF C2 7C 00 00 B7 E3 
+				FF FF C2 1D 00 03 61 38 B0 BB 00 09 A0 11 00 09 B1 CF 00 09 A0 0D 00 09 B2 5B 00 09 A0 09 00 09 
+				B2 FD 00 09 A0 05 00 09 B3 4E 00 09 A0 01 00 09 2D E0 DD 30 D2 30 64 20 60 4C 88 05 8D 04 64 03 
+				60 43 88 06 8F 10 00 09 D2 2C 63 20 23 38 8F 0B 00 09 D1 2B 60 10 20 08 8F 06 00 09 D2 29 E5 01 
+				42 0B 64 D0 A0 01 2D 00 2D E0 E3 03 62 D0 62 2C 32 33 8F 0D 00 09 E1 01" />
+		</table>
 		<table name="Immobilizer Disable - With RKE Installed" storageaddress="0x351f4"/>
         <table name="Barometric Pressure Sensor Max ADC Count" storageaddress="0x06C16C" />
         <table name="Barometric Pressure Sensor Min ADC Count" storageaddress="0x06C16E" />
@@ -12425,31 +12406,25 @@
             <year></year>
             <transmission>MT</transmission>
         </romid>
-		<table name="Immobilizer Disable - Without RKE Installed" storageaddress="0x755e">
-			<state name="on" data="00 09 00 09 00 09 B3 D5 00 09 00 09 00 09 00 09 00 09 00 09 00 09 00
-							09 00 09 00 09 00 09 00 09 00 09 00 09 00 09 00 09 00 09 00 09 00 09
-							00 09 00 09 00 09 A0 3D 00 09 01 F4 00 FA 55 AA AA CC B5 C4 FF FF FF
-							FF 86 9C 00 03 00 09 00 03 2F 02 FF FF C2 28 FF FF C2 2C FF FF C2 3E
-							FF FF C2 3A FF FF C2 88 FF FF C2 8C 00 01 00 01 55 AA 55 AA 00 00 FF
-							FF FF FF C2 96 FF FF C2 98 00 00 B7 E3 FF FF C2 39 00 03 FF FF B0 BB
-							00 09 A0 11 00 09 B1 CF 00 09 A0 0D 00 09 B2 5B 00 09 A0 09 00 09 B2
-							FD 00 09 A0 05 00 09 B3 4E 00 09 A0 01 00 09 2D E0 DD 30 D2 30 64 20
-							60 4C 88 05 8D 04 64 03 60 43 88 06 8F 10 00 09 D2 2C 63 20 23 38 8F
-							0B 00 09 D1 2B 60 10 20 08 8F 06 00 09 D2 29 E5 01 42 0B 64 D0 A0 01
-							2D 00 2D E0 E3 03 62 D0 62 2C 32 33 8F 0D 00 09 E1 00"/>
-					<state name="off" data="B5 6E 00 09 60 D0 60 0C 88 00 8D 11 00 09 88 01 8D 3A 00 09 88 02 8D
-							3B 00 09 88 03 8D 3C 00 09 88 04 8D 3D 00 09 88 05 8D 3E 00 09 A0 40
-							00 09 B0 8C 00 09 A0 3D 00 09 01 F4 00 FA 55 AA AA CC B5 C4 FF FF FF
-							FF 86 9C 00 03 00 09 00 03 2F 02 FF FF C2 28 FF FF C2 2C FF FF C2 3E
-							FF FF C2 3A FF FF C2 88 FF FF C2 8C 00 01 00 01 55 AA 55 AA 00 00 FF
-							FF FF FF C2 96 FF FF C2 98 00 00 B7 E3 FF FF C2 39 00 03 FF FF B0 BB
-							00 09 A0 11 00 09 B1 CF 00 09 A0 0D 00 09 B2 5B 00 09 A0 09 00 09 B2
-							FD 00 09 A0 05 00 09 B3 4E 00 09 A0 01 00 09 2D E0 DD 30 D2 30 64 20
-							60 4C 88 05 8D 04 64 03 60 43 88 06 8F 10 00 09 D2 2C 63 20 23 38 8F
-							0B 00 09 D1 2B 60 10 20 08 8F 06 00 09 D2 29 E5 01 42 0B 64 D0 A0 01
-							2D 00 2D E0 E3 03 62 D0 62 2C 32 33 8F 0D 00 09 E1 01" />
-				</table>
-		<table name="Immobilizer Disable - With RKE Installed" storageaddress="0x79aa"/>
+		<table name="Immobilizer Disable - Without RKE Installed" storageaddress="0x35d90">
+			<state name="on" data="00 09 00 09 00 09 B3 D5 00 09 00 09 00 09 00 09 00 09 00 09 00 09 00 09 00 09 00 09 00 09 00 09 
+				00 09 00 09 00 09 00 09 00 09 00 09 00 09 00 09 00 09 00 09 A0 3D 00 09 01 F4 00 FA 55 AA AA E0 
+				B5 E8 FF FF FF FF 86 9C 00 03 EE 78 00 03 EF 90 FF FF C2 7C FF FF C2 80 FF FF C2 92 FF FF C2 8E 
+				FF FF C2 DC FF FF C2 E0 00 01 00 01 55 AA 55 AA 00 00 FF FF FF FF C2 EA FF FF C2 EC 00 00 B7 E3 
+				FF FF C2 8D 00 03 71 20 B0 BB 00 09 A0 11 00 09 B1 CF 00 09 A0 0D 00 09 B2 5B 00 09 A0 09 00 09 
+				B2 FD 00 09 A0 05 00 09 B3 4E 00 09 A0 01 00 09 2D E0 DD 30 D2 30 64 20 60 4C 88 05 8D 04 64 03 
+				60 43 88 06 8F 10 00 09 D2 2C 63 20 23 38 8F 0B 00 09 D1 2B 60 10 20 08 8F 06 00 09 D2 29 E5 01 
+				42 0B 64 D0 A0 01 2D 00 2D E0 E3 03 62 D0 62 2C 32 33 8F 0D 00 09 E1 00" />
+			<state name="off" data="B5 6E 00 09 60 D0 60 0C 88 00 8D 11 00 09 88 01 8D 3A 00 09 88 02 8D 3B 00 09 88 03 8D 3C 00 09 
+				88 04 8D 3D 00 09 88 05 8D 3E 00 09 A0 40 00 09 B0 8C 00 09 A0 3D 00 09 01 F4 00 FA 55 AA AA E0 
+				B5 E8 FF FF FF FF 86 9C 00 03 EE 78 00 03 EF 90 FF FF C2 7C FF FF C2 80 FF FF C2 92 FF FF C2 8E 
+				FF FF C2 DC FF FF C2 E0 00 01 00 01 55 AA 55 AA 00 00 FF FF FF FF C2 EA FF FF C2 EC 00 00 B7 E3 
+				FF FF C2 8D 00 03 71 20 B0 BB 00 09 A0 11 00 09 B1 CF 00 09 A0 0D 00 09 B2 5B 00 09 A0 09 00 09 
+				B2 FD 00 09 A0 05 00 09 B3 4E 00 09 A0 01 00 09 2D E0 DD 30 D2 30 64 20 60 4C 88 05 8D 04 64 03 
+				60 43 88 06 8F 10 00 09 D2 2C 63 20 23 38 8F 0B 00 09 D1 2B 60 10 20 08 8F 06 00 09 D2 29 E5 01 
+				42 0B 64 D0 A0 01 2D 00 2D E0 E3 03 62 D0 62 2C 32 33 8F 0D 00 09 E1 01" />
+		</table>
+		<table name="Immobilizer Disable - With RKE Installed" storageaddress="0x361dc"/>
         <table name="Fan 1 Enable Coolant Temperature Threshold" storageaddress="0x7793C"/>
         <table name="Fan 1 Disable Coolant Temperature Hysteresis" storageaddress="0x77940"/>
         <table name="Fan 2 Enable Coolant Temperature Threshold" storageaddress="0x77944"/>
@@ -14505,28 +14480,22 @@
             <transmission>MT</transmission>
         </romid>
 		<table name="Immobilizer Disable - Without RKE Installed" storageaddress="0x35a68">
-			<state name="on" data="00 09 00 09 00 09 B3 D5 00 09 00 09 00 09 00 09 00 09 00 09 00 09 00
-					09 00 09 00 09 00 09 00 09 00 09 00 09 00 09 00 09 00 09 00 09 00 09
-					00 09 00 09 00 09 A0 3D 00 09 01 F4 00 FA 55 AA AA CC B5 C4 FF FF FF
-					FF 86 9C 00 03 EB E8 00 03 ED 00 FF FF C2 28 FF FF C2 2C FF FF C2 3E
-					FF FF C2 3A FF FF C2 88 FF FF C2 8C 00 01 00 01 55 AA 55 AA 00 00 FF
-					FF FF FF C2 96 FF FF C2 98 00 00 B7 E3 FF FF C2 39 00 03 6D F8 B0 BB
-					00 09 A0 11 00 09 B1 CF 00 09 A0 0D 00 09 B2 5B 00 09 A0 09 00 09 B2
-					FD 00 09 A0 05 00 09 B3 4E 00 09 A0 01 00 09 2D E0 DD 30 D2 30 64 20
-					60 4C 88 05 8D 04 64 03 60 43 88 06 8F 10 00 09 D2 2C 63 20 23 38 8F
-					0B 00 09 D1 2B 60 10 20 08 8F 06 00 09 D2 29 E5 01 42 0B 64 D0 A0 01
-					2D 00 2D E0 E3 03 62 D0 62 2C 32 33 8F 0D 00 09 E1 00"/>
-			<state name="off" data="B5 6E 00 09 60 D0 60 0C 88 00 8D 11 00 09 88 01 8D 3A 00 09 88 02 8D
-					3B 00 09 88 03 8D 3C 00 09 88 04 8D 3D 00 09 88 05 8D 3E 00 09 A0 40
-					00 09 B0 8C 00 09 A0 3D 00 09 01 F4 00 FA 55 AA AA CC B5 C4 FF FF FF
-					FF 86 9C 00 03 EB E8 00 03 ED 00 FF FF C2 28 FF FF C2 2C FF FF C2 3E
-					FF FF C2 3A FF FF C2 88 FF FF C2 8C 00 01 00 01 55 AA 55 AA 00 00 FF
-					FF FF FF C2 96 FF FF C2 98 00 00 B7 E3 FF FF C2 39 00 03 6D F8 B0 BB
-					00 09 A0 11 00 09 B1 CF 00 09 A0 0D 00 09 B2 5B 00 09 A0 09 00 09 B2
-					FD 00 09 A0 05 00 09 B3 4E 00 09 A0 01 00 09 2D E0 DD 30 D2 30 64 20
-					60 4C 88 05 8D 04 64 03 60 43 88 06 8F 10 00 09 D2 2C 63 20 23 38 8F
-					0B 00 09 D1 2B 60 10 20 08 8F 06 00 09 D2 29 E5 01 42 0B 64 D0 A0 01
-					2D 00 2D E0 E3 03 62 D0 62 2C 32 33 8F 0D 00 09 E1 01" />
+			<state name="on" data="00 09 00 09 00 09 B3 D5 00 09 00 09 00 09 00 09 00 09 00 09 00 09 00 09 00 09 00 09 00 09 00 09 
+				00 09 00 09 00 09 00 09 00 09 00 09 00 09 00 09 00 09 00 09 A0 3D 00 09 01 F4 00 FA 55 AA AA DC 
+				B5 E4 FF FF FF FF 86 9C 00 03 EB E8 00 03 ED 00 FF FF C2 60 FF FF C2 64 FF FF C2 76 FF FF C2 72 
+				FF FF C2 C0 FF FF C2 C4 00 01 00 01 55 AA 55 AA 00 00 FF FF FF FF C2 CE FF FF C2 D0 00 00 B7 E3 
+				FF FF C2 71 00 03 6D F8 B0 BB 00 09 A0 11 00 09 B1 CF 00 09 A0 0D 00 09 B2 5B 00 09 A0 09 00 09 
+				B2 FD 00 09 A0 05 00 09 B3 4E 00 09 A0 01 00 09 2D E0 DD 30 D2 30 64 20 60 4C 88 05 8D 04 64 03 
+				60 43 88 06 8F 10 00 09 D2 2C 63 20 23 38 8F 0B 00 09 D1 2B 60 10 20 08 8F 06 00 09 D2 29 E5 01 
+				42 0B 64 D0 A0 01 2D 00 2D E0 E3 03 62 D0 62 2C 32 33 8F 0D 00 09 E1 00" />
+			<state name="off" data="B5 6E 00 09 60 D0 60 0C 88 00 8D 11 00 09 88 01 8D 3A 00 09 88 02 8D 3B 00 09 88 03 8D 3C 00 09 
+				88 04 8D 3D 00 09 88 05 8D 3E 00 09 A0 40 00 09 B0 8C 00 09 A0 3D 00 09 01 F4 00 FA 55 AA AA DC 
+				B5 E4 FF FF FF FF 86 9C 00 03 EB E8 00 03 ED 00 FF FF C2 60 FF FF C2 64 FF FF C2 76 FF FF C2 72 
+				FF FF C2 C0 FF FF C2 C4 00 01 00 01 55 AA 55 AA 00 00 FF FF FF FF C2 CE FF FF C2 D0 00 00 B7 E3 
+				FF FF C2 71 00 03 6D F8 B0 BB 00 09 A0 11 00 09 B1 CF 00 09 A0 0D 00 09 B2 5B 00 09 A0 09 00 09 
+				B2 FD 00 09 A0 05 00 09 B3 4E 00 09 A0 01 00 09 2D E0 DD 30 D2 30 64 20 60 4C 88 05 8D 04 64 03 
+				60 43 88 06 8F 10 00 09 D2 2C 63 20 23 38 8F 0B 00 09 D1 2B 60 10 20 08 8F 06 00 09 D2 29 E5 01 
+				42 0B 64 D0 A0 01 2D 00 2D E0 E3 03 62 D0 62 2C 32 33 8F 0D 00 09 E1 01" />
 		</table>
 		<table name="Immobilizer Disable - With RKE Installed" storageaddress="0x35eb4"/>
         <table name="Barometric Pressure Sensor Max ADC Count" storageaddress="0x06C76C" />
@@ -16358,29 +16327,23 @@
             <transmission>MT</transmission>
         </romid>
 		<table name="Immobilizer Disable - Without RKE Installed" storageaddress="0x34a24">
-			<state name="on" data="00 09 00 09 00 09 B3 D5 00 09 00 09 00 09 00 09 00 09 00 09 00 09 00
-							09 00 09 00 09 00 09 00 09 00 09 00 09 00 09 00 09 00 09 00 09 00 09
-							00 09 00 09 00 09 A0 3D 00 09 01 F4 00 FA 55 AA AA CC B5 C4 FF FF FF
-							FF 86 9C 00 03 DB A4 00 03 DC BC FF FF C2 28 FF FF C2 2C FF FF C2 3E
-							FF FF C2 3A FF FF C2 88 FF FF C2 8C 00 01 00 01 55 AA 55 AA 00 00 FF
-							FF FF FF C2 96 FF FF C2 98 00 00 B7 E3 FF FF C2 39 00 03 5D B4 B0 BB
-							00 09 A0 11 00 09 B1 CF 00 09 A0 0D 00 09 B2 5B 00 09 A0 09 00 09 B2
-							FD 00 09 A0 05 00 09 B3 4E 00 09 A0 01 00 09 2D E0 DD 30 D2 30 64 20
-							60 4C 88 05 8D 04 64 03 60 43 88 06 8F 10 00 09 D2 2C 63 20 23 38 8F
-							0B 00 09 D1 2B 60 10 20 08 8F 06 00 09 D2 29 E5 01 42 0B 64 D0 A0 01
-							2D 00 2D E0 E3 03 62 D0 62 2C 32 33 8F 0D 00 09 E1 00"/>
-					<state name="off" data="B5 6E 00 09 60 D0 60 0C 88 00 8D 11 00 09 88 01 8D 3A 00 09 88 02 8D
-							3B 00 09 88 03 8D 3C 00 09 88 04 8D 3D 00 09 88 05 8D 3E 00 09 A0 40
-							00 09 B0 8C 00 09 A0 3D 00 09 01 F4 00 FA 55 AA AA CC B5 C4 FF FF FF
-							FF 86 9C 00 03 DB A4 00 03 DC BC FF FF C2 28 FF FF C2 2C FF FF C2 3E
-							FF FF C2 3A FF FF C2 88 FF FF C2 8C 00 01 00 01 55 AA 55 AA 00 00 FF
-							FF FF FF C2 96 FF FF C2 98 00 00 B7 E3 FF FF C2 39 00 03 5D B4 B0 BB
-							00 09 A0 11 00 09 B1 CF 00 09 A0 0D 00 09 B2 5B 00 09 A0 09 00 09 B2
-							FD 00 09 A0 05 00 09 B3 4E 00 09 A0 01 00 09 2D E0 DD 30 D2 30 64 20
-							60 4C 88 05 8D 04 64 03 60 43 88 06 8F 10 00 09 D2 2C 63 20 23 38 8F
-							0B 00 09 D1 2B 60 10 20 08 8F 06 00 09 D2 29 E5 01 42 0B 64 D0 A0 01
-							2D 00 2D E0 E3 03 62 D0 62 2C 32 33 8F 0D 00 09 E1 01" />
- 		</table>
+			<state name="on" data="00 09 00 09 00 09 B3 D5 00 09 00 09 00 09 00 09 00 09 00 09 00 09 00 09 00 09 00 09 00 09 00 09 
+				00 09 00 09 00 09 00 09 00 09 00 09 00 09 00 09 00 09 00 09 A0 3D 00 09 01 F4 00 FA 55 AA AC 68 
+				B7 78 FF FF FF FF 86 74 00 03 DB A4 00 03 DC BC FF FF C3 F4 FF FF C3 F8 FF FF C4 0A FF FF C4 06 
+				FF FF C4 54 FF FF C4 58 00 01 00 01 55 AA 55 AA 00 00 FF FF FF FF C4 62 FF FF C4 64 00 00 B7 E3 
+				FF FF C4 05 00 03 5D B4 B0 BB 00 09 A0 11 00 09 B1 CF 00 09 A0 0D 00 09 B2 5B 00 09 A0 09 00 09 
+				B2 FD 00 09 A0 05 00 09 B3 4E 00 09 A0 01 00 09 2D E0 DD 30 D2 30 64 20 60 4C 88 05 8D 04 64 03 
+				60 43 88 06 8F 10 00 09 D2 2C 63 20 23 38 8F 0B 00 09 D1 2B 60 10 20 08 8F 06 00 09 D2 29 E5 01 
+				42 0B 64 D0 A0 01 2D 00 2D E0 E3 03 62 D0 62 2C 32 33 8F 0D 00 09 E1 00" />
+			<state name="off" data="B5 6E 00 09 60 D0 60 0C 88 00 8D 11 00 09 88 01 8D 3A 00 09 88 02 8D 3B 00 09 88 03 8D 3C 00 09 
+				88 04 8D 3D 00 09 88 05 8D 3E 00 09 A0 40 00 09 B0 8C 00 09 A0 3D 00 09 01 F4 00 FA 55 AA AC 68 
+				B7 78 FF FF FF FF 86 74 00 03 DB A4 00 03 DC BC FF FF C3 F4 FF FF C3 F8 FF FF C4 0A FF FF C4 06 
+				FF FF C4 54 FF FF C4 58 00 01 00 01 55 AA 55 AA 00 00 FF FF FF FF C4 62 FF FF C4 64 00 00 B7 E3 
+				FF FF C4 05 00 03 5D B4 B0 BB 00 09 A0 11 00 09 B1 CF 00 09 A0 0D 00 09 B2 5B 00 09 A0 09 00 09 
+				B2 FD 00 09 A0 05 00 09 B3 4E 00 09 A0 01 00 09 2D E0 DD 30 D2 30 64 20 60 4C 88 05 8D 04 64 03 
+				60 43 88 06 8F 10 00 09 D2 2C 63 20 23 38 8F 0B 00 09 D1 2B 60 10 20 08 8F 06 00 09 D2 29 E5 01 
+				42 0B 64 D0 A0 01 2D 00 2D E0 E3 03 62 D0 62 2C 32 33 8F 0D 00 09 E1 01" />
+		</table>
 		<table name="Immobilizer Disable - With RKE Installed" storageaddress="0x34e70"/>
         <table name="Barometric Pressure Sensor Max ADC Count" storageaddress="0x06C76C" />
         <table name="Barometric Pressure Sensor Min ADC Count" storageaddress="0x06C76E" />
@@ -18010,7 +17973,7 @@
     </rom>
     <rom base="Rx8Base">
         <romid>
-            <xmlid>60E1B900</xmlid>
+            <xmlid> </xmlid>
             <internalidaddress>2000</internalidaddress>
             <internalidstring>60E1B900</internalidstring>
             <make>Mazda</make>
@@ -18040,29 +18003,23 @@
             <year></year>
             <transmission>MT</transmission>
         </romid>
-		<table name="Immobilizer Disable - Without RKE Installed" storageaddress="0x354C8">
-			<state name="on" data="00 09 00 09 00 09 B3 D5 00 09 00 09 00 09 00 09 00 09 00 09 00 09 00
-								   09 00 09 00 09 00 09 00 09 00 09 00 09 00 09 00 09 00 09 00 09 00 09
-								   00 09 00 09 00 09 A0 3D 00 09 01 F4 00 FA 55 AA AA CC B5 C4 FF FF FF
-								   FF 86 9C 00 03 E4 B0 00 03 E5 C8 FF FF C2 28 FF FF C2 2C FF FF C2 3E
-								   FF FF C2 3A FF FF C2 88 FF FF C2 8C 00 01 00 01 55 AA 55 AA 00 00 FF
-								   FF FF FF C2 96 FF FF C2 98 00 00 B7 E3 FF FF C2 39 00 03 68 58 B0 BB
-								   00 09 A0 11 00 09 B1 CF 00 09 A0 0D 00 09 B2 5B 00 09 A0 09 00 09 B2
-								   FD 00 09 A0 05 00 09 B3 4E 00 09 A0 01 00 09 2D E0 DD 30 D2 30 64 20
-								   60 4C 88 05 8D 04 64 03 60 43 88 06 8F 10 00 09 D2 2C 63 20 23 38 8F
-								   0B 00 09 D1 2B 60 10 20 08 8F 06 00 09 D2 29 E5 01 42 0B 64 D0 A0 01
-								   2D 00 2D E0 E3 03 62 D0 62 2C 32 33 8F 0D 00 09 E1 00"/>
-			<state name="off" data="B5 6E 00 09 60 D0 60 0C 88 00 8D 11 00 09 88 01 8D 3A 00 09 88 02 8D
-								   3B 00 09 88 03 8D 3C 00 09 88 04 8D 3D 00 09 88 05 8D 3E 00 09 A0 40
-								   00 09 B0 8C 00 09 A0 3D 00 09 01 F4 00 FA 55 AA AA CC B5 C4 FF FF FF
-								   FF 86 9C 00 03 E4 B0 00 03 E5 C8 FF FF C2 28 FF FF C2 2C FF FF C2 3E
-								   FF FF C2 3A FF FF C2 88 FF FF C2 8C 00 01 00 01 55 AA 55 AA 00 00 FF
-								   FF FF FF C2 96 FF FF C2 98 00 00 B7 E3 FF FF C2 39 00 03 68 58 B0 BB
-								   00 09 A0 11 00 09 B1 CF 00 09 A0 0D 00 09 B2 5B 00 09 A0 09 00 09 B2
-								   FD 00 09 A0 05 00 09 B3 4E 00 09 A0 01 00 09 2D E0 DD 30 D2 30 64 20
-								   60 4C 88 05 8D 04 64 03 60 43 88 06 8F 10 00 09 D2 2C 63 20 23 38 8F
-								   0B 00 09 D1 2B 60 10 20 08 8F 06 00 09 D2 29 E5 01 42 0B 64 D0 A0 01
-								   2D 00 2D E0 E3 03 62 D0 62 2C 32 33 8F 0D 00 09 E1 01" />
+		<table name="Immobilizer Disable - Without RKE Installed" storageaddress="0x354c8">
+			<state name="on" data="00 09 00 09 00 09 B3 D5 00 09 00 09 00 09 00 09 00 09 00 09 00 09 00 09 00 09 00 09 00 09 00 09 
+				00 09 00 09 00 09 00 09 00 09 00 09 00 09 00 09 00 09 00 09 A0 3D 00 09 01 F4 00 FA 55 AA AA CC 
+				B5 C4 FF FF FF FF 86 9C 00 03 E4 B0 00 03 E5 C8 FF FF C2 28 FF FF C2 2C FF FF C2 3E FF FF C2 3A 
+				FF FF C2 88 FF FF C2 8C 00 01 00 01 55 AA 55 AA 00 00 FF FF FF FF C2 96 FF FF C2 98 00 00 B7 E3 
+				FF FF C2 39 00 03 68 58 B0 BB 00 09 A0 11 00 09 B1 CF 00 09 A0 0D 00 09 B2 5B 00 09 A0 09 00 09 
+				B2 FD 00 09 A0 05 00 09 B3 4E 00 09 A0 01 00 09 2D E0 DD 30 D2 30 64 20 60 4C 88 05 8D 04 64 03 
+				60 43 88 06 8F 10 00 09 D2 2C 63 20 23 38 8F 0B 00 09 D1 2B 60 10 20 08 8F 06 00 09 D2 29 E5 01 
+				42 0B 64 D0 A0 01 2D 00 2D E0 E3 03 62 D0 62 2C 32 33 8F 0D 00 09 E1 00" />
+			<state name="off" data="B5 6E 00 09 60 D0 60 0C 88 00 8D 11 00 09 88 01 8D 3A 00 09 88 02 8D 3B 00 09 88 03 8D 3C 00 09 
+				88 04 8D 3D 00 09 88 05 8D 3E 00 09 A0 40 00 09 B0 8C 00 09 A0 3D 00 09 01 F4 00 FA 55 AA AA CC 
+				B5 C4 FF FF FF FF 86 9C 00 03 E4 B0 00 03 E5 C8 FF FF C2 28 FF FF C2 2C FF FF C2 3E FF FF C2 3A 
+				FF FF C2 88 FF FF C2 8C 00 01 00 01 55 AA 55 AA 00 00 FF FF FF FF C2 96 FF FF C2 98 00 00 B7 E3 
+				FF FF C2 39 00 03 68 58 B0 BB 00 09 A0 11 00 09 B1 CF 00 09 A0 0D 00 09 B2 5B 00 09 A0 09 00 09 
+				B2 FD 00 09 A0 05 00 09 B3 4E 00 09 A0 01 00 09 2D E0 DD 30 D2 30 64 20 60 4C 88 05 8D 04 64 03 
+				60 43 88 06 8F 10 00 09 D2 2C 63 20 23 38 8F 0B 00 09 D1 2B 60 10 20 08 8F 06 00 09 D2 29 E5 01 
+				42 0B 64 D0 A0 01 2D 00 2D E0 E3 03 62 D0 62 2C 32 33 8F 0D 00 09 E1 01" />
 		</table>
 		<table name="Immobilizer Disable - With RKE Installed" storageaddress="0x35914"/>
         <table name="Barometric Pressure Sensor Max ADC Count" storageaddress="0x06D46C" />
@@ -19752,29 +19709,23 @@
             <transmission>MT</transmission>
         </romid>
 		<table name="Immobilizer Disable - Without RKE Installed" storageaddress="0x35230">
-			<state name="on" data="00 09 00 09 00 09 B3 D5 00 09 00 09 00 09 00 09 00 09 00 09 00 09 00
-							09 00 09 00 09 00 09 00 09 00 09 00 09 00 09 00 09 00 09 00 09 00 09
-							00 09 00 09 00 09 A0 3D 00 09 01 F4 00 FA 55 AA AA CC B5 C4 FF FF FF
-							FF 86 9C 00 03 E2 18 00 03 E3 30 FF FF C2 28 FF FF C2 2C FF FF C2 3E
-							FF FF C2 3A FF FF C2 88 FF FF C2 8C 00 01 00 01 55 AA 55 AA 00 00 FF
-							FF FF FF C2 96 FF FF C2 98 00 00 B7 E3 FF FF C2 39 00 03 65 C0 B0 BB
-							00 09 A0 11 00 09 B1 CF 00 09 A0 0D 00 09 B2 5B 00 09 A0 09 00 09 B2
-							FD 00 09 A0 05 00 09 B3 4E 00 09 A0 01 00 09 2D E0 DD 30 D2 30 64 20
-							60 4C 88 05 8D 04 64 03 60 43 88 06 8F 10 00 09 D2 2C 63 20 23 38 8F
-							0B 00 09 D1 2B 60 10 20 08 8F 06 00 09 D2 29 E5 01 42 0B 64 D0 A0 01
-							2D 00 2D E0 E3 03 62 D0 62 2C 32 33 8F 0D 00 09 E1 00"/>
- 			<state name="off" data="B5 6E 00 09 60 D0 60 0C 88 00 8D 11 00 09 88 01 8D 3A 00 09 88 02 8D
- 					3B 00 09 88 03 8D 3C 00 09 88 04 8D 3D 00 09 88 05 8D 3E 00 09 A0 40
- 					00 09 B0 8C 00 09 A0 3D 00 09 01 F4 00 FA 55 AA AA CC B5 C4 FF FF FF
- 					FF 86 9C 00 03 E2 18 00 03 E3 30 FF FF C2 28 FF FF C2 2C FF FF C2 3E
- 					FF FF C2 3A FF FF C2 88 FF FF C2 8C 00 01 00 01 55 AA 55 AA 00 00 FF
- 					FF FF FF C2 96 FF FF C2 98 00 00 B7 E3 FF FF C2 39 00 03 65 C0 B0 BB
- 					00 09 A0 11 00 09 B1 CF 00 09 A0 0D 00 09 B2 5B 00 09 A0 09 00 09 B2
- 					FD 00 09 A0 05 00 09 B3 4E 00 09 A0 01 00 09 2D E0 DD 30 D2 30 64 20
- 					60 4C 88 05 8D 04 64 03 60 43 88 06 8F 10 00 09 D2 2C 63 20 23 38 8F
- 					0B 00 09 D1 2B 60 10 20 08 8F 06 00 09 D2 29 E5 01 42 0B 64 D0 A0 01
- 					2D 00 2D E0 E3 03 62 D0 62 2C 32 33 8F 0D 00 09 E1 01" />
- 		</table>
+			<state name="on" data="00 09 00 09 00 09 B3 D5 00 09 00 09 00 09 00 09 00 09 00 09 00 09 00 09 00 09 00 09 00 09 00 09 
+				00 09 00 09 00 09 00 09 00 09 00 09 00 09 00 09 00 09 00 09 A0 3D 00 09 01 F4 00 FA 55 AA AA CC 
+				B5 C4 FF FF FF FF 86 9C 00 03 E2 18 00 03 E3 30 FF FF C2 28 FF FF C2 2C FF FF C2 3E FF FF C2 3A 
+				FF FF C2 88 FF FF C2 8C 00 01 00 01 55 AA 55 AA 00 00 FF FF FF FF C2 96 FF FF C2 98 00 00 B7 E3 
+				FF FF C2 39 00 03 65 C0 B0 BB 00 09 A0 11 00 09 B1 CF 00 09 A0 0D 00 09 B2 5B 00 09 A0 09 00 09 
+				B2 FD 00 09 A0 05 00 09 B3 4E 00 09 A0 01 00 09 2D E0 DD 30 D2 30 64 20 60 4C 88 05 8D 04 64 03 
+				60 43 88 06 8F 10 00 09 D2 2C 63 20 23 38 8F 0B 00 09 D1 2B 60 10 20 08 8F 06 00 09 D2 29 E5 01 
+				42 0B 64 D0 A0 01 2D 00 2D E0 E3 03 62 D0 62 2C 32 33 8F 0D 00 09 E1 00" />
+			<state name="off" data="B5 6E 00 09 60 D0 60 0C 88 00 8D 11 00 09 88 01 8D 3A 00 09 88 02 8D 3B 00 09 88 03 8D 3C 00 09 
+				88 04 8D 3D 00 09 88 05 8D 3E 00 09 A0 40 00 09 B0 8C 00 09 A0 3D 00 09 01 F4 00 FA 55 AA AA CC 
+				B5 C4 FF FF FF FF 86 9C 00 03 E2 18 00 03 E3 30 FF FF C2 28 FF FF C2 2C FF FF C2 3E FF FF C2 3A 
+				FF FF C2 88 FF FF C2 8C 00 01 00 01 55 AA 55 AA 00 00 FF FF FF FF C2 96 FF FF C2 98 00 00 B7 E3 
+				FF FF C2 39 00 03 65 C0 B0 BB 00 09 A0 11 00 09 B1 CF 00 09 A0 0D 00 09 B2 5B 00 09 A0 09 00 09 
+				B2 FD 00 09 A0 05 00 09 B3 4E 00 09 A0 01 00 09 2D E0 DD 30 D2 30 64 20 60 4C 88 05 8D 04 64 03 
+				60 43 88 06 8F 10 00 09 D2 2C 63 20 23 38 8F 0B 00 09 D1 2B 60 10 20 08 8F 06 00 09 D2 29 E5 01 
+				42 0B 64 D0 A0 01 2D 00 2D E0 E3 03 62 D0 62 2C 32 33 8F 0D 00 09 E1 01" />
+		</table>
 		<table name="Immobilizer Disable - With RKE Installed" storageaddress="0x3567c"/>
         <table name="Barometric Pressure Sensor Max ADC Count" storageaddress="0x06D46C" />
         <table name="Barometric Pressure Sensor Min ADC Count" storageaddress="0x06D46E" />
@@ -22705,7 +22656,7 @@
             <table type="X Axis" storageaddress="0x00070B90" />
             <table type="Y Axis" storageaddress="0x00070BC4" />
         </table>
-		<table name="Table 3D - UNKNOWN_CL" storageaddress="0x00071174">
+		<table name="Closed Loop Fueling Base" storageaddress="0x00071174">
             <table type="X Axis" storageaddress="0x00071134" />
             <table type="Y Axis" storageaddress="0x00071104" />
         </table>
@@ -23339,29 +23290,23 @@
             <transmission>MT</transmission>
         </romid>
 		<table name="Immobilizer Disable - Without RKE Installed" storageaddress="0x357c8">
-			<state name="on" data="00 09 00 09 00 09 B3 D5 00 09 00 09 00 09 00 09 00 09 00 09 00 09 00
- 		            09 00 09 00 09 00 09 00 09 00 09 00 09 00 09 00 09 00 09 00 09 00 09
- 		            00 09 00 09 00 09 A0 3D 00 09 01 F4 00 FA 55 AA AA CC B5 C4 FF FF FF
- 		            FF 86 9C 00 03 E9 24 00 03 EA 3C FF FF C2 28 FF FF C2 2C FF FF C2 3E
- 		            FF FF C2 3A FF FF C2 88 FF FF C2 8C 00 01 00 01 55 AA 55 AA 00 00 FF
- 		            FF FF FF C2 96 FF FF C2 98 00 00 B7 E3 FF FF C2 39 00 03 6B 34 B0 BB
- 		            00 09 A0 11 00 09 B1 CF 00 09 A0 0D 00 09 B2 5B 00 09 A0 09 00 09 B2
- 		            FD 00 09 A0 05 00 09 B3 4E 00 09 A0 01 00 09 2D E0 DD 30 D2 30 64 20
- 		            60 4C 88 05 8D 04 64 03 60 43 88 06 8F 10 00 09 D2 2C 63 20 23 38 8F
- 		            0B 00 09 D1 2B 60 10 20 08 8F 06 00 09 D2 29 E5 01 42 0B 64 D0 A0 01
- 		            2D 00 2D E0 E3 03 62 D0 62 2C 32 33 8F 0D 00 09 E1 00"/>
- 			<state name="off" data="B5 6E 00 09 60 D0 60 0C 88 00 8D 11 00 09 88 01 8D 3A 00 09 88 02 8D
- 					3B 00 09 88 03 8D 3C 00 09 88 04 8D 3D 00 09 88 05 8D 3E 00 09 A0 40
- 					00 09 B0 8C 00 09 A0 3D 00 09 01 F4 00 FA 55 AA AA CC B5 C4 FF FF FF
- 					FF 86 9C 00 03 E9 24 00 03 EA 3C FF FF C2 28 FF FF C2 2C FF FF C2 3E
- 					FF FF C2 3A FF FF C2 88 FF FF C2 8C 00 01 00 01 55 AA 55 AA 00 00 FF
- 					FF FF FF C2 96 FF FF C2 98 00 00 B7 E3 FF FF C2 39 00 03 6B 34 B0 BB
- 					00 09 A0 11 00 09 B1 CF 00 09 A0 0D 00 09 B2 5B 00 09 A0 09 00 09 B2
- 					FD 00 09 A0 05 00 09 B3 4E 00 09 A0 01 00 09 2D E0 DD 30 D2 30 64 20
- 					60 4C 88 05 8D 04 64 03 60 43 88 06 8F 10 00 09 D2 2C 63 20 23 38 8F
- 					0B 00 09 D1 2B 60 10 20 08 8F 06 00 09 D2 29 E5 01 42 0B 64 D0 A0 01
- 					2D 00 2D E0 E3 03 62 D0 62 2C 32 33 8F 0D 00 09 E1 01" />
- 		</table>
+			<state name="on" data="00 09 00 09 00 09 B3 D5 00 09 00 09 00 09 00 09 00 09 00 09 00 09 00 09 00 09 00 09 00 09 00 09 
+				00 09 00 09 00 09 00 09 00 09 00 09 00 09 00 09 00 09 00 09 A0 3D 00 09 01 F4 00 FA 55 AA AA DC 
+				B5 E4 FF FF FF FF 86 9C 00 03 E9 24 00 03 EA 3C FF FF C2 60 FF FF C2 64 FF FF C2 76 FF FF C2 72 
+				FF FF C2 C0 FF FF C2 C4 00 01 00 01 55 AA 55 AA 00 00 FF FF FF FF C2 CE FF FF C2 D0 00 00 B7 E3 
+				FF FF C2 71 00 03 6B 34 B0 B7 00 09 A0 11 00 09 B1 C7 00 09 A0 0D 00 09 B2 4E 00 09 A0 09 00 09 
+				B2 EF 00 09 A0 05 00 09 B3 40 00 09 A0 01 00 09 2D E0 DD 2F D2 2F 64 20 60 4C 88 05 8D 04 64 03 
+				60 43 88 06 8F 10 00 09 D2 2B 63 20 23 38 8F 0B 00 09 D1 2A 60 10 20 08 8F 06 00 09 D2 28 E5 01 
+				42 0B 64 D0 A0 01 2D 00 2D E0 E3 03 62 D0 62 2C 32 33 8F 0A 00 09 A0 00" />
+			<state name="off" data="B5 60 00 09 60 D0 60 0C 88 00 8D 11 00 09 88 01 8D 3A 00 09 88 02 8D 3B 00 09 88 03 8D 3C 00 09 
+				88 04 8D 3D 00 09 88 05 8D 3E 00 09 A0 40 00 09 B0 89 00 09 A0 3D 00 09 01 F4 00 FA 55 AA AA DC 
+				B5 E4 FF FF FF FF 86 9C 00 03 E9 24 00 03 EA 3C FF FF C2 60 FF FF C2 64 FF FF C2 76 FF FF C2 72 
+				FF FF C2 C0 FF FF C2 C4 00 01 00 01 55 AA 55 AA 00 00 FF FF FF FF C2 CE FF FF C2 D0 00 00 B7 E3 
+				FF FF C2 71 00 03 6B 34 B0 B7 00 09 A0 11 00 09 B1 C7 00 09 A0 0D 00 09 B2 4E 00 09 A0 09 00 09 
+				B2 EF 00 09 A0 05 00 09 B3 40 00 09 A0 01 00 09 2D E0 DD 2F D2 2F 64 20 60 4C 88 05 8D 04 64 03 
+				60 43 88 06 8F 10 00 09 D2 2B 63 20 23 38 8F 0B 00 09 D1 2A 60 10 20 08 8F 06 00 09 D2 28 E5 01 
+				42 0B 64 D0 A0 01 2D 00 2D E0 E3 03 62 D0 62 2C 32 33 8F 0A 00 09 A0 08" />
+		</table>
 		<table name="Immobilizer Disable - With RKE Installed" storageaddress="0x35c14"/>
         <table name="Barometric Pressure Sensor Max ADC Count" storageaddress="0x06C76C" />
         <table name="Barometric Pressure Sensor Min ADC Count" storageaddress="0x06C76E" />
@@ -25193,29 +25138,23 @@
             <transmission>AT</transmission>
         </romid>
 		<table name="Immobilizer Disable - Without RKE Installed" storageaddress="0x357c8">
-			<state name="on" data="00 09 00 09 00 09 B3 D5 00 09 00 09 00 09 00 09 00 09 00 09 00 09 00
-						09 00 09 00 09 00 09 00 09 00 09 00 09 00 09 00 09 00 09 00 09 00 09
-						00 09 00 09 00 09 A0 3D 00 09 01 F4 00 FA 55 AA AA CC B5 C4 FF FF FF
-						FF 86 9C 00 03 EA 10 00 03 EB 28 FF FF C2 28 FF FF C2 2C FF FF C2 3E
-						FF FF C2 3A FF FF C2 88 FF FF C2 8C 00 01 00 01 55 AA 55 AA 00 00 FF
-						FF FF FF C2 96 FF FF C2 98 00 00 B7 E3 FF FF C2 39 00 03 6B 34 B0 BB
-						00 09 A0 11 00 09 B1 CF 00 09 A0 0D 00 09 B2 5B 00 09 A0 09 00 09 B2
-						FD 00 09 A0 05 00 09 B3 4E 00 09 A0 01 00 09 2D E0 DD 30 D2 30 64 20
-						60 4C 88 05 8D 04 64 03 60 43 88 06 8F 10 00 09 D2 2C 63 20 23 38 8F
-						0B 00 09 D1 2B 60 10 20 08 8F 06 00 09 D2 29 E5 01 42 0B 64 D0 A0 01
-						2D 00 2D E0 E3 03 62 D0 62 2C 32 33 8F 0D 00 09 E1 00"/>
-				<state name="off" data="B5 6E 00 09 60 D0 60 0C 88 00 8D 11 00 09 88 01 8D 3A 00 09 88 02 8D
-						3B 00 09 88 03 8D 3C 00 09 88 04 8D 3D 00 09 88 05 8D 3E 00 09 A0 40
-						00 09 B0 8C 00 09 A0 3D 00 09 01 F4 00 FA 55 AA AA CC B5 C4 FF FF FF
-						FF 86 9C 00 03 EA 10 00 03 EB 28 FF FF C2 28 FF FF C2 2C FF FF C2 3E
-						FF FF C2 3A FF FF C2 88 FF FF C2 8C 00 01 00 01 55 AA 55 AA 00 00 FF
-						FF FF FF C2 96 FF FF C2 98 00 00 B7 E3 FF FF C2 39 00 03 6B 34 B0 BB
-						00 09 A0 11 00 09 B1 CF 00 09 A0 0D 00 09 B2 5B 00 09 A0 09 00 09 B2
-						FD 00 09 A0 05 00 09 B3 4E 00 09 A0 01 00 09 2D E0 DD 30 D2 30 64 20
-						60 4C 88 05 8D 04 64 03 60 43 88 06 8F 10 00 09 D2 2C 63 20 23 38 8F
-						0B 00 09 D1 2B 60 10 20 08 8F 06 00 09 D2 29 E5 01 42 0B 64 D0 A0 01
-						2D 00 2D E0 E3 03 62 D0 62 2C 32 33 8F 0D 00 09 E1 01" />
- 		</table>
+			<state name="on" data="00 09 00 09 00 09 B3 D5 00 09 00 09 00 09 00 09 00 09 00 09 00 09 00 09 00 09 00 09 00 09 00 09 
+				00 09 00 09 00 09 00 09 00 09 00 09 00 09 00 09 00 09 00 09 A0 3D 00 09 01 F4 00 FA 55 AA AA DC 
+				B5 E4 FF FF FF FF 86 9C 00 03 EA 10 00 03 EB 28 FF FF C2 60 FF FF C2 64 FF FF C2 76 FF FF C2 72 
+				FF FF C2 C0 FF FF C2 C4 00 01 00 01 55 AA 55 AA 00 00 FF FF FF FF C2 CE FF FF C2 D0 00 00 B7 E3 
+				FF FF C2 71 00 03 6B 34 B0 B7 00 09 A0 11 00 09 B1 C7 00 09 A0 0D 00 09 B2 4E 00 09 A0 09 00 09 
+				B2 EF 00 09 A0 05 00 09 B3 40 00 09 A0 01 00 09 2D E0 DD 2F D2 2F 64 20 60 4C 88 05 8D 04 64 03 
+				60 43 88 06 8F 10 00 09 D2 2B 63 20 23 38 8F 0B 00 09 D1 2A 60 10 20 08 8F 06 00 09 D2 28 E5 01 
+				42 0B 64 D0 A0 01 2D 00 2D E0 E3 03 62 D0 62 2C 32 33 8F 0A 00 09 A0 00" />
+			<state name="off" data="B5 60 00 09 60 D0 60 0C 88 00 8D 11 00 09 88 01 8D 3A 00 09 88 02 8D 3B 00 09 88 03 8D 3C 00 09 
+				88 04 8D 3D 00 09 88 05 8D 3E 00 09 A0 40 00 09 B0 89 00 09 A0 3D 00 09 01 F4 00 FA 55 AA AA DC 
+				B5 E4 FF FF FF FF 86 9C 00 03 EA 10 00 03 EB 28 FF FF C2 60 FF FF C2 64 FF FF C2 76 FF FF C2 72 
+				FF FF C2 C0 FF FF C2 C4 00 01 00 01 55 AA 55 AA 00 00 FF FF FF FF C2 CE FF FF C2 D0 00 00 B7 E3 
+				FF FF C2 71 00 03 6B 34 B0 B7 00 09 A0 11 00 09 B1 C7 00 09 A0 0D 00 09 B2 4E 00 09 A0 09 00 09 
+				B2 EF 00 09 A0 05 00 09 B3 40 00 09 A0 01 00 09 2D E0 DD 2F D2 2F 64 20 60 4C 88 05 8D 04 64 03 
+				60 43 88 06 8F 10 00 09 D2 2B 63 20 23 38 8F 0B 00 09 D1 2A 60 10 20 08 8F 06 00 09 D2 28 E5 01 
+				42 0B 64 D0 A0 01 2D 00 2D E0 E3 03 62 D0 62 2C 32 33 8F 0A 00 09 A0 08" />
+		</table>
 		<table name="Immobilizer Disable - With RKE Installed" storageaddress="0x35c14"/>
         <table name="Barometric Pressure Sensor Max ADC Count" storageaddress="0x06C76C" />
         <table name="Barometric Pressure Sensor Min ADC Count" storageaddress="0x06C76E" />
@@ -27046,31 +26985,25 @@
             <year></year>
             <transmission>MT</transmission>
         </romid>
-		<table name="Immobilizer Disable - Without RKE Installed" storageaddress="0x34da8">
-			<state name="on" data="00 09 00 09 00 09 B3 D5 00 09 00 09 00 09 00 09 00 09 00 09 00 09 00
-							09 00 09 00 09 00 09 00 09 00 09 00 09 00 09 00 09 00 09 00 09 00 09
-							00 09 00 09 00 09 A0 3D 00 09 01 F4 00 FA 55 AA AA CC B5 C4 FF FF FF
-							FF 86 9C 00 03 DF 28 00 03 E0 40 FF FF C2 28 FF FF C2 2C FF FF C2 3E
-							FF FF C2 3A FF FF C2 88 FF FF C2 8C 00 01 00 01 55 AA 55 AA 00 00 FF
-							FF FF FF C2 96 FF FF C2 98 00 00 B7 E3 FF FF C2 39 00 03 61 38 B0 BB
-							00 09 A0 11 00 09 B1 CF 00 09 A0 0D 00 09 B2 5B 00 09 A0 09 00 09 B2
-							FD 00 09 A0 05 00 09 B3 4E 00 09 A0 01 00 09 2D E0 DD 30 D2 30 64 20
-							60 4C 88 05 8D 04 64 03 60 43 88 06 8F 10 00 09 D2 2C 63 20 23 38 8F
-							0B 00 09 D1 2B 60 10 20 08 8F 06 00 09 D2 29 E5 01 42 0B 64 D0 A0 01
-							2D 00 2D E0 E3 03 62 D0 62 2C 32 33 8F 0D 00 09 E1 00"/>
-					<state name="off" data="B5 6E 00 09 60 D0 60 0C 88 00 8D 11 00 09 88 01 8D 3A 00 09 88 02 8D
-							3B 00 09 88 03 8D 3C 00 09 88 04 8D 3D 00 09 88 05 8D 3E 00 09 A0 40
-							00 09 B0 8C 00 09 A0 3D 00 09 01 F4 00 FA 55 AA AA CC B5 C4 FF FF FF
-							FF 86 9C 00 03 DF 28 00 03 E0 40 FF FF C2 28 FF FF C2 2C FF FF C2 3E
-							FF FF C2 3A FF FF C2 88 FF FF C2 8C 00 01 00 01 55 AA 55 AA 00 00 FF
-							FF FF FF C2 96 FF FF C2 98 00 00 B7 E3 FF FF C2 39 00 03 61 38 B0 BB
-							00 09 A0 11 00 09 B1 CF 00 09 A0 0D 00 09 B2 5B 00 09 A0 09 00 09 B2
-							FD 00 09 A0 05 00 09 B3 4E 00 09 A0 01 00 09 2D E0 DD 30 D2 30 64 20
-							60 4C 88 05 8D 04 64 03 60 43 88 06 8F 10 00 09 D2 2C 63 20 23 38 8F
-							0B 00 09 D1 2B 60 10 20 08 8F 06 00 09 D2 29 E5 01 42 0B 64 D0 A0 01
-							2D 00 2D E0 E3 03 62 D0 62 2C 32 33 8F 0D 00 09 E1 01" />
-			</table>
-		<table name="Immobilizer Disable - With RKE Installed" storageaddress="0x351f4"/>
+		<table name="Immobilizer Disable - Without RKE Installed" storageaddress="0x34b10">
+			<state name="on" data="00 09 00 09 00 09 B3 D5 00 09 00 09 00 09 00 09 00 09 00 09 00 09 00 09 00 09 00 09 00 09 00 09 
+				00 09 00 09 00 09 00 09 00 09 00 09 00 09 00 09 00 09 00 09 A0 3D 00 09 01 F4 00 FA 55 AA AA 68 
+				B5 78 FF FF FF FF 86 74 00 03 DC 90 00 03 DD A8 FF FF C2 0C FF FF C2 10 FF FF C2 22 FF FF C2 1E 
+				FF FF C2 6C FF FF C2 70 00 01 00 01 55 AA 55 AA 00 00 FF FF FF FF C2 7A FF FF C2 7C 00 00 B7 E3 
+				FF FF C2 1D 00 03 5E A0 B0 BB 00 09 A0 11 00 09 B1 CF 00 09 A0 0D 00 09 B2 5B 00 09 A0 09 00 09 
+				B2 FD 00 09 A0 05 00 09 B3 4E 00 09 A0 01 00 09 2D E0 DD 30 D2 30 64 20 60 4C 88 05 8D 04 64 03 
+				60 43 88 06 8F 10 00 09 D2 2C 63 20 23 38 8F 0B 00 09 D1 2B 60 10 20 08 8F 06 00 09 D2 29 E5 01 
+				42 0B 64 D0 A0 01 2D 00 2D E0 E3 03 62 D0 62 2C 32 33 8F 0D 00 09 E1 00" />
+			<state name="off" data="B5 6E 00 09 60 D0 60 0C 88 00 8D 11 00 09 88 01 8D 3A 00 09 88 02 8D 3B 00 09 88 03 8D 3C 00 09 
+				88 04 8D 3D 00 09 88 05 8D 3E 00 09 A0 40 00 09 B0 8C 00 09 A0 3D 00 09 01 F4 00 FA 55 AA AA 68 
+				B5 78 FF FF FF FF 86 74 00 03 DC 90 00 03 DD A8 FF FF C2 0C FF FF C2 10 FF FF C2 22 FF FF C2 1E 
+				FF FF C2 6C FF FF C2 70 00 01 00 01 55 AA 55 AA 00 00 FF FF FF FF C2 7A FF FF C2 7C 00 00 B7 E3 
+				FF FF C2 1D 00 03 5E A0 B0 BB 00 09 A0 11 00 09 B1 CF 00 09 A0 0D 00 09 B2 5B 00 09 A0 09 00 09 
+				B2 FD 00 09 A0 05 00 09 B3 4E 00 09 A0 01 00 09 2D E0 DD 30 D2 30 64 20 60 4C 88 05 8D 04 64 03 
+				60 43 88 06 8F 10 00 09 D2 2C 63 20 23 38 8F 0B 00 09 D1 2B 60 10 20 08 8F 06 00 09 D2 29 E5 01 
+				42 0B 64 D0 A0 01 2D 00 2D E0 E3 03 62 D0 62 2C 32 33 8F 0D 00 09 E1 01" />
+		</table>
+		<table name="Immobilizer Disable - With RKE Installed" storageaddress="0x34f5c"/>
         <table name="Barometric Pressure Sensor Max ADC Count" storageaddress="0x06C16C" />
         <table name="Barometric Pressure Sensor Min ADC Count" storageaddress="0x06C16E" />
         <table name="Barometric Pressure Sensor Min Voltage" storageaddress="0x07AB68" />
@@ -28835,31 +28768,25 @@
             <year>2006</year>
             <transmission>AT</transmission>
         </romid>
-		<table name="Immobilizer Disable - Without RKE Installed" storageaddress="0x371d8">
-			<state name="on" data="00 09 00 09 00 09 B3 D5 00 09 00 09 00 09 00 09 00 09 00 09 00 09 00
-						09 00 09 00 09 00 09 00 09 00 09 00 09 00 09 00 09 00 09 00 09 00 09
-						00 09 00 09 00 09 A0 3D 00 09 01 F4 00 FA 55 AA AA CC B5 C4 FF FF FF
-						FF 86 9C 00 03 03 C0 00 03 04 D8 FF FF C2 28 FF FF C2 2C FF FF C2 3E
-						FF FF C2 3A FF FF C2 88 FF FF C2 8C 00 01 00 01 55 AA 55 AA 00 00 FF
-						FF FF FF C2 96 FF FF C2 98 00 00 B7 E3 FF FF C2 39 00 03 85 68 B0 BB
-						00 09 A0 11 00 09 B1 CF 00 09 A0 0D 00 09 B2 5B 00 09 A0 09 00 09 B2
-						FD 00 09 A0 05 00 09 B3 4E 00 09 A0 01 00 09 2D E0 DD 30 D2 30 64 20
-						60 4C 88 05 8D 04 64 03 60 43 88 06 8F 10 00 09 D2 2C 63 20 23 38 8F
-						0B 00 09 D1 2B 60 10 20 08 8F 06 00 09 D2 29 E5 01 42 0B 64 D0 A0 01
-						2D 00 2D E0 E3 03 62 D0 62 2C 32 33 8F 0D 00 09 E1 00"/>
-				<state name="off" data="B5 6E 00 09 60 D0 60 0C 88 00 8D 11 00 09 88 01 8D 3A 00 09 88 02 8D
-						3B 00 09 88 03 8D 3C 00 09 88 04 8D 3D 00 09 88 05 8D 3E 00 09 A0 40
-						00 09 B0 8C 00 09 A0 3D 00 09 01 F4 00 FA 55 AA AA CC B5 C4 FF FF FF
-						FF 86 9C 00 03 03 C0 00 03 04 D8 FF FF C2 28 FF FF C2 2C FF FF C2 3E
-						FF FF C2 3A FF FF C2 88 FF FF C2 8C 00 01 00 01 55 AA 55 AA 00 00 FF
-						FF FF FF C2 96 FF FF C2 98 00 00 B7 E3 FF FF C2 39 00 03 85 68 B0 BB
-						00 09 A0 11 00 09 B1 CF 00 09 A0 0D 00 09 B2 5B 00 09 A0 09 00 09 B2
-						FD 00 09 A0 05 00 09 B3 4E 00 09 A0 01 00 09 2D E0 DD 30 D2 30 64 20
-						60 4C 88 05 8D 04 64 03 60 43 88 06 8F 10 00 09 D2 2C 63 20 23 38 8F
-						0B 00 09 D1 2B 60 10 20 08 8F 06 00 09 D2 29 E5 01 42 0B 64 D0 A0 01
-						2D 00 2D E0 E3 03 62 D0 62 2C 32 33 8F 0D 00 09 E1 01" />
- 		</table>
-		<table name="Immobilizer Disable - With RKE Installed" storageaddress="0x37624"/>
+		<table name="Immobilizer Disable - Without RKE Installed" storageaddress="0x37278">
+			<state name="on" data="00 09 00 09 00 09 B3 D5 00 09 00 09 00 09 00 09 00 09 00 09 00 09 00 09 00 09 00 09 00 09 00 09 
+				00 09 00 09 00 09 00 09 00 09 00 09 00 09 00 09 00 09 00 09 A0 3D 00 09 01 F4 00 FA 55 AA AA C8 
+				B5 A0 FF FF FF FF 86 BC 00 04 0E 84 00 04 0F 9C FF FF C2 00 FF FF C2 04 FF FF C2 16 FF FF C2 12 
+				FF FF C2 60 FF FF C2 64 00 01 00 01 55 AA 55 AA 00 00 FF FF FF FF C2 6E FF FF C2 70 00 00 B7 E3 
+				FF FF C2 11 00 03 86 08 B0 BB 00 09 A0 11 00 09 B1 CF 00 09 A0 0D 00 09 B2 5B 00 09 A0 09 00 09 
+				B2 FD 00 09 A0 05 00 09 B3 4E 00 09 A0 01 00 09 2D E0 DD 30 D2 30 64 20 60 4C 88 05 8D 04 64 03 
+				60 43 88 06 8F 10 00 09 D2 2C 63 20 23 38 8F 0B 00 09 D1 2B 60 10 20 08 8F 06 00 09 D2 29 E5 01 
+				42 0B 64 D0 A0 01 2D 00 2D E0 E3 03 62 D0 62 2C 32 33 8F 0D 00 09 E1 00" />
+			<state name="off" data="B5 6E 00 09 60 D0 60 0C 88 00 8D 11 00 09 88 01 8D 3A 00 09 88 02 8D 3B 00 09 88 03 8D 3C 00 09 
+				88 04 8D 3D 00 09 88 05 8D 3E 00 09 A0 40 00 09 B0 8C 00 09 A0 3D 00 09 01 F4 00 FA 55 AA AA C8 
+				B5 A0 FF FF FF FF 86 BC 00 04 0E 84 00 04 0F 9C FF FF C2 00 FF FF C2 04 FF FF C2 16 FF FF C2 12 
+				FF FF C2 60 FF FF C2 64 00 01 00 01 55 AA 55 AA 00 00 FF FF FF FF C2 6E FF FF C2 70 00 00 B7 E3 
+				FF FF C2 11 00 03 86 08 B0 BB 00 09 A0 11 00 09 B1 CF 00 09 A0 0D 00 09 B2 5B 00 09 A0 09 00 09 
+				B2 FD 00 09 A0 05 00 09 B3 4E 00 09 A0 01 00 09 2D E0 DD 30 D2 30 64 20 60 4C 88 05 8D 04 64 03 
+				60 43 88 06 8F 10 00 09 D2 2C 63 20 23 38 8F 0B 00 09 D1 2B 60 10 20 08 8F 06 00 09 D2 29 E5 01 
+				42 0B 64 D0 A0 01 2D 00 2D E0 E3 03 62 D0 62 2C 32 33 8F 0D 00 09 E1 01" />
+		</table>
+		<table name="Immobilizer Disable - With RKE Installed" storageaddress="0x376c4"/>
 		<table	name="DTC 0300 Enable/Disable #1" storageaddress="0x7E661"/>
 		<table	name="DTC 0030 Enable/Disable #1" storageaddress="0x7E662"/>
 		<table	name="DTC 0031 Enable/Disable #1" storageaddress="0x7E663"/>
